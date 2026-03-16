@@ -1099,10 +1099,8 @@ export function VideoPlayer({
 }
 
 /**
- * Inline subtitle controls split into 3 visually distinct groups:
- *   Left:   prev/next video (playback navigation)
- *   Center: prev/next subtitle (most used, slightly more prominent)
- *   Right:  freeze + save/bookmark
+ * Inline subtitle controls — single horizontal pill bar:
+ *   [ prev-video | next-video | prev-sub | next-sub | freeze | save ]
  * Shared between overlay and non-overlay subtitle modes.
  */
 function InlineSubtitleControls({
@@ -1176,21 +1174,23 @@ function InlineSubtitleControls({
 
   const isPanel = variant === 'panel'
 
-  const groupBg = isPanel ? 'var(--player-panel)' : 'rgba(0, 0, 0, 0.5)'
-  const groupBorder = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.08)'
+  const pillBg = isPanel ? 'var(--player-panel)' : 'rgba(0, 0, 0, 0.5)'
+  const pillBorder = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.08)'
   const iconColor = isPanel ? 'var(--player-text)' : 'rgba(255, 255, 255, 0.82)'
   const iconMutedColor = isPanel ? 'var(--player-muted)' : 'rgba(255, 255, 255, 0.55)'
-  const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.1)'
+  const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.12)'
 
-  const btnSize = isPanel ? 'h-[30px] w-[34px]' : 'h-[36px] w-[40px]'
-  const btnClass = `flex ${btnSize} items-center justify-center disabled:opacity-25 transition-colors`
-  const centerBtnSize = isPanel ? 'h-[30px] w-[36px]' : 'h-[36px] w-[42px]'
-  const centerBtnClass = `flex ${centerBtnSize} items-center justify-center disabled:opacity-25 transition-colors`
+  const btnH = isPanel ? 30 : 36
+  const btnW = isPanel ? 34 : 40
   const iconSize = isPanel ? 'h-3 w-3' : 'h-3.5 w-3.5'
 
-  const groupStyle: CSSProperties = {
-    backgroundColor: groupBg,
-    borderColor: groupBorder,
+  const btnStyle: CSSProperties = {
+    height: `${btnH}px`,
+    minWidth: `${btnW}px`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
   }
   const dividerStyle: CSSProperties = {
     width: '1px',
@@ -1198,122 +1198,112 @@ function InlineSubtitleControls({
     backgroundColor: dividerColor,
     flexShrink: 0,
   }
+  const activeTintBg = `rgba(var(--accent-primary-rgb), 0.2)`
 
   return (
     <div
-      className="pointer-events-auto flex flex-row items-center gap-1.5"
+      className="pointer-events-auto"
       data-no-feed-drag="true"
       onClick={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
     >
-      {/* Left Group: Playback (prev/next video) */}
       <div
-        className="flex items-center rounded-xl border backdrop-blur-sm"
-        style={groupStyle}
+        className="flex items-center rounded-full border backdrop-blur-sm"
+        style={{ backgroundColor: pillBg, borderColor: pillBorder }}
       >
+        {/* 1. Prev video — double-line UP arrow */}
         <button
           onClick={onPrevVideo ?? undefined}
           disabled={!onPrevVideo}
-          className={btnClass}
+          className="disabled:opacity-25 transition-colors"
+          style={btnStyle}
           aria-label="Previous video"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconMutedColor }}>
-            <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-            <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={iconSize} style={{ color: iconMutedColor }}>
+            <path d="M7 17l5-5 5 5" />
+            <path d="M7 11l5-5 5 5" />
           </svg>
         </button>
+
         <div style={dividerStyle} />
+
+        {/* 2. Next video — double-line DOWN arrow */}
         <button
           onClick={onNextVideo ?? undefined}
           disabled={!onNextVideo}
-          className={btnClass}
+          className="disabled:opacity-25 transition-colors"
+          style={btnStyle}
           aria-label="Next video"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconMutedColor }}>
-            <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-            <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={iconSize} style={{ color: iconMutedColor }}>
+            <path d="M7 7l5 5 5-5" />
+            <path d="M7 13l5 5 5-5" />
           </svg>
         </button>
-      </div>
 
-      {/* Center Group: Subtitle Navigation (prev/next subtitle) */}
-      <div
-        className="flex items-center rounded-xl border backdrop-blur-sm"
-        style={groupStyle}
-      >
+        <div style={dividerStyle} />
+
+        {/* 3. Prev subtitle — single UP arrow */}
         <button
           onClick={handlePrevSub}
           disabled={activeSubIndex <= 0}
-          className={centerBtnClass}
+          className="disabled:opacity-25 transition-colors"
+          style={btnStyle}
           aria-label="Previous subtitle"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconColor }}>
-            <path fillRule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clipRule="evenodd" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={iconSize} style={{ color: iconColor }}>
+            <path d="M7 14l5-5 5 5" />
           </svg>
         </button>
+
         <div style={dividerStyle} />
+
+        {/* 4. Next subtitle — single DOWN arrow */}
         <button
           onClick={handleNextSub}
           disabled={activeSubIndex >= subtitles.length - 1}
-          className={centerBtnClass}
+          className="disabled:opacity-25 transition-colors"
+          style={btnStyle}
           aria-label="Next subtitle"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconColor }}>
-            <path fillRule="evenodd" d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z" clipRule="evenodd" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className={iconSize} style={{ color: iconColor }}>
+            <path d="M7 10l5 5 5-5" />
           </svg>
         </button>
-      </div>
 
-      {/* Right Group: Actions (freeze + save) */}
-      <div
-        className="flex items-center rounded-xl border backdrop-blur-sm"
-        style={groupStyle}
-      >
-        {/* Freeze toggle */}
+        <div style={dividerStyle} />
+
+        {/* 5. Freeze toggle — snowflake */}
         <button
           onClick={onToggleFreeze ?? undefined}
           disabled={!onToggleFreeze || (!isFrozen && !canEnableFreeze)}
-          className={`${btnClass} rounded-lg`}
-          style={isFrozen ? { backgroundColor: `rgba(var(--accent-primary-rgb), 0.2)` } : undefined}
+          className="disabled:opacity-25 transition-colors"
+          style={{
+            ...btnStyle,
+            backgroundColor: isFrozen ? activeTintBg : undefined,
+          }}
           aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className={iconSize}
-            style={{
-              color: isFrozen ? 'var(--accent-primary)' : iconMutedColor,
-            }}
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className={iconSize} style={{ color: isFrozen ? 'var(--accent-primary)' : iconMutedColor }}>
             <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
           </svg>
         </button>
+
         <div style={dividerStyle} />
-        {/* Save / Bookmark toggle */}
+
+        {/* 6. Save / Bookmark toggle */}
         <button
           onClick={handleSave}
           disabled={!activeSub || !onSavePhrase}
-          className={`${btnClass} rounded-lg`}
-          style={isSaved ? { backgroundColor: `rgba(var(--accent-primary-rgb), 0.2)` } : undefined}
+          className="disabled:opacity-25 transition-colors"
+          style={{
+            ...btnStyle,
+            backgroundColor: isSaved ? activeTintBg : undefined,
+          }}
           aria-label={isSaved ? 'Remove saved phrase' : 'Save phrase'}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill={isSaved ? 'currentColor' : 'none'}
-            stroke="currentColor"
-            strokeWidth={isSaved ? 0 : 1.8}
-            className={iconSize}
-            style={{
-              color: isSaved ? 'var(--accent-primary)' : iconMutedColor,
-            }}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill={isSaved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth={isSaved ? 0 : 1.8} className={iconSize} style={{ color: isSaved ? 'var(--accent-primary)' : iconMutedColor }}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
           </svg>
         </button>
       </div>
