@@ -425,12 +425,6 @@ function ExpressionCard({
               </svg>
             </button>
             {showHints && (
-              <span
-                className="absolute bottom-3 right-4 text-[10px]"
-                style={{ color: 'rgba(255, 255, 255, 0.25)' }}
-              >
-                already know? swipe
-              </span>
             )}
           </div>
         </motion.div>
@@ -751,12 +745,6 @@ function WordCard({
               </svg>
             </button>
             {showHints && (
-              <span
-                className="absolute bottom-3 right-4 text-[10px]"
-                style={{ color: 'rgba(255, 255, 255, 0.25)' }}
-              >
-                already know? swipe
-              </span>
             )}
           </div>
         </motion.div>
