@@ -11,6 +11,7 @@ import {
   type CSSProperties,
   type ReactNode,
 } from 'react'
+import { motion } from 'framer-motion'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { useGameTrigger } from '@/hooks/useGameTrigger'
@@ -273,6 +274,7 @@ export function VideoPlayer({
     if (showPriming && playbackStarted) pause()
   }, [showPriming, playbackStarted, pause])
 
+  const playerContainerRef = useRef<HTMLDivElement>(null)
   const vibratedRef = useRef(new Set<number>())
   useEffect(() => { vibratedRef.current = new Set() }, [youtubeId, videoId])
 
@@ -706,20 +708,6 @@ export function VideoPlayer({
           )}
           {subtitleArea}
         </div>
-        {subtitleMode !== 'none' && subtitles.length > 0 && (
-          <div className="flex flex-shrink-0 items-center justify-center px-1 pb-1">
-            <InlineSubtitleControls
-              subtitles={subtitles}
-              videoId={videoId ?? youtubeId}
-              onSeek={(time) => seekTo(time)}
-              onPrevVideo={onPrevVideo}
-              onNextVideo={onNextVideo}
-              onToggleFreeze={onToggleFreeze}
-              onSavePhrase={onSavePhrase}
-              variant="panel"
-            />
-          </div>
-        )}
       </div>
     </div>
   )
@@ -971,10 +959,32 @@ export function VideoPlayer({
     </div>
   )
 
+  const floatingControls = subtitleMode !== 'none' && subtitles.length > 0 && (
+    <div
+      className="absolute bottom-[80px] left-0 right-0 z-[30] flex justify-center"
+      style={{ pointerEvents: 'none' }}
+    >
+      <div style={{ pointerEvents: 'auto' }}>
+        <InlineSubtitleControls
+          subtitles={subtitles}
+          videoId={videoId ?? youtubeId}
+          onSeek={(time) => seekTo(time)}
+          onPrevVideo={onPrevVideo}
+          onNextVideo={onNextVideo}
+          onToggleFreeze={onToggleFreeze}
+          onSavePhrase={onSavePhrase}
+          variant={isShortsFormat || useOverlaySubtitles ? 'overlay' : 'panel'}
+          dragConstraintsRef={playerContainerRef}
+        />
+      </div>
+    </div>
+  )
+
   // Shorts format: full-height video with overlay subtitles and progress bar
   if (isShortsFormat) {
     return (
       <div
+        ref={playerContainerRef}
         className="relative h-full w-full"
         style={{ backgroundColor: 'var(--player-surface)' }}
       >
@@ -994,6 +1004,8 @@ export function VideoPlayer({
           />
         )}
 
+        {floatingControls}
+
         {/* Progress bar overlaid at the very bottom */}
         <div className="absolute bottom-0 left-0 right-0 z-[15]">
           <ProgressBar />
@@ -1006,6 +1018,7 @@ export function VideoPlayer({
 
   return (
     <div
+      ref={playerContainerRef}
       className="relative h-full w-full"
       style={{ backgroundColor: 'var(--player-surface)' }}
     >
@@ -1093,14 +1106,17 @@ export function VideoPlayer({
         )}
       </div>
 
+      {floatingControls}
+
       {primingOverlay}
     </div>
   )
 }
 
 /**
- * Inline subtitle controls — single horizontal pill bar:
+ * Inline subtitle controls — draggable floating pill bar:
  *   [ prev-video | next-video | prev-sub | next-sub | freeze | save ]
+ * Can be dragged anywhere within the player area.
  * Shared between overlay and non-overlay subtitle modes.
  */
 function InlineSubtitleControls({
@@ -1112,6 +1128,7 @@ function InlineSubtitleControls({
   onToggleFreeze,
   onSavePhrase,
   variant = 'overlay',
+  dragConstraintsRef,
 }: {
   subtitles: SubtitleEntry[]
   videoId?: string
@@ -1121,6 +1138,7 @@ function InlineSubtitleControls({
   onToggleFreeze?: () => void
   onSavePhrase?: (phrase: SubtitleEntry) => void
   variant?: 'overlay' | 'panel'
+  dragConstraintsRef?: React.RefObject<HTMLElement | null>
 }) {
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -1128,6 +1146,7 @@ function InlineSubtitleControls({
   const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
   const phrases = usePhraseStore((state) => state.phrases)
   const removePhrase = usePhraseStore((state) => state.removePhrase)
+  const [isDragging, setIsDragging] = useState(false)
 
   const isFrozen = freezeSubIndex !== null
   const canEnableFreeze = activeSubIndex >= 0
@@ -1179,6 +1198,7 @@ function InlineSubtitleControls({
   const iconColor = isPanel ? 'var(--player-text)' : 'rgba(255, 255, 255, 0.82)'
   const iconMutedColor = isPanel ? 'var(--player-muted)' : 'rgba(255, 255, 255, 0.55)'
   const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.12)'
+  const handleColor = isPanel ? 'var(--player-muted)' : 'rgba(255, 255, 255, 0.35)'
 
   const btnH = isPanel ? 30 : 36
   const btnW = isPanel ? 34 : 40
@@ -1201,19 +1221,40 @@ function InlineSubtitleControls({
   const activeTintBg = `rgba(var(--accent-primary-rgb), 0.2)`
 
   return (
-    <div
-      className="pointer-events-auto"
+    <motion.div
+      drag
+      dragMomentum={false}
+      dragConstraints={dragConstraintsRef}
+      onDragStart={() => setIsDragging(true)}
+      onDragEnd={() => {
+        // Delay reset so click handlers can check isDragging
+        window.setTimeout(() => setIsDragging(false), 50)
+      }}
+      className={`pointer-events-auto z-[30] ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
       data-no-feed-drag="true"
       onClick={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
+      style={{ touchAction: 'none' }}
     >
+      {/* Drag handle indicator */}
+      <div className="flex justify-center pb-0.5">
+        <div
+          className="rounded-full"
+          style={{
+            width: '24px',
+            height: '3px',
+            backgroundColor: handleColor,
+            opacity: 0.7,
+          }}
+        />
+      </div>
       <div
         className="flex items-center rounded-full border backdrop-blur-sm"
         style={{ backgroundColor: pillBg, borderColor: pillBorder }}
       >
         {/* 1. Prev video — double-line UP arrow */}
         <button
-          onClick={onPrevVideo ?? undefined}
+          onClick={(e) => { if (isDragging) { e.preventDefault(); return; } onPrevVideo?.() }}
           disabled={!onPrevVideo}
           className="disabled:opacity-25 transition-colors"
           style={btnStyle}
@@ -1229,7 +1270,7 @@ function InlineSubtitleControls({
 
         {/* 2. Next video — double-line DOWN arrow */}
         <button
-          onClick={onNextVideo ?? undefined}
+          onClick={(e) => { if (isDragging) { e.preventDefault(); return; } onNextVideo?.() }}
           disabled={!onNextVideo}
           className="disabled:opacity-25 transition-colors"
           style={btnStyle}
@@ -1245,7 +1286,7 @@ function InlineSubtitleControls({
 
         {/* 3. Prev subtitle — single UP arrow */}
         <button
-          onClick={handlePrevSub}
+          onClick={(e) => { if (isDragging) { e.preventDefault(); return; } handlePrevSub() }}
           disabled={activeSubIndex <= 0}
           className="disabled:opacity-25 transition-colors"
           style={btnStyle}
@@ -1260,7 +1301,7 @@ function InlineSubtitleControls({
 
         {/* 4. Next subtitle — single DOWN arrow */}
         <button
-          onClick={handleNextSub}
+          onClick={(e) => { if (isDragging) { e.preventDefault(); return; } handleNextSub() }}
           disabled={activeSubIndex >= subtitles.length - 1}
           className="disabled:opacity-25 transition-colors"
           style={btnStyle}
@@ -1275,7 +1316,7 @@ function InlineSubtitleControls({
 
         {/* 5. Freeze toggle — snowflake */}
         <button
-          onClick={onToggleFreeze ?? undefined}
+          onClick={(e) => { if (isDragging) { e.preventDefault(); return; } onToggleFreeze?.() }}
           disabled={!onToggleFreeze || (!isFrozen && !canEnableFreeze)}
           className="disabled:opacity-25 transition-colors"
           style={{
@@ -1293,7 +1334,7 @@ function InlineSubtitleControls({
 
         {/* 6. Save / Bookmark toggle */}
         <button
-          onClick={handleSave}
+          onClick={(e) => { if (isDragging) { e.preventDefault(); return; } handleSave() }}
           disabled={!activeSub || !onSavePhrase}
           className="disabled:opacity-25 transition-colors"
           style={{
@@ -1307,7 +1348,7 @@ function InlineSubtitleControls({
           </svg>
         </button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -1510,17 +1551,6 @@ function ShortsSubtitleOverlay({
           )}
         </div>
 
-        {/* Inline subtitle controls (replaces floating remote) */}
-        <InlineSubtitleControls
-          subtitles={subtitles}
-          videoId={videoId}
-          onSeek={onSeek}
-          onPrevVideo={onPrevVideo}
-          onNextVideo={onNextVideo}
-          onToggleFreeze={onToggleFreeze}
-          onSavePhrase={onSavePhrase}
-          variant="overlay"
-        />
       </div>
     </div>
   )
