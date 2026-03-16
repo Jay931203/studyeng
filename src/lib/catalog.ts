@@ -52,10 +52,15 @@ export const catalogSeries: Series[] = series
   .filter((seriesItem): seriesItem is Series => seriesItem !== null)
 
 const catalogVideoById = new Map(catalogVideos.map((video) => [video.id, video]))
+const catalogVideoByYoutubeId = new Map(catalogVideos.map((video) => [video.youtubeId, video]))
 const catalogSeriesById = new Map(catalogSeries.map((seriesItem) => [seriesItem.id, seriesItem]))
 
 export function getCatalogVideoById(videoId: string) {
   return catalogVideoById.get(videoId)
+}
+
+export function getCatalogVideoByYoutubeId(youtubeId: string) {
+  return catalogVideoByYoutubeId.get(youtubeId)
 }
 
 export function getCatalogSeriesById(seriesId: string) {
