@@ -664,6 +664,7 @@ export function VideoFeed({
       if (event.button !== 0) return
 
       const target = event.target as HTMLElement | null
+      const dragSurface = target?.closest('[data-feed-drag-surface="true"]')
       if (
         target?.closest(
           'button, a, input, textarea, select, [role="button"], [data-no-feed-drag="true"]',
@@ -671,8 +672,12 @@ export function VideoFeed({
       ) {
         return
       }
+      if (!dragSurface) return
 
       if (event.pointerType === 'mouse' && event.buttons !== 1) return
+      if (event.pointerType !== 'mouse') {
+        event.preventDefault()
+      }
       feedDragControls.start(event)
     },
     [canDragFeed, feedDragControls],
@@ -731,6 +736,7 @@ export function VideoFeed({
             handleDragEnd(...args)
           }}
           className="absolute inset-0"
+          style={{ overscrollBehaviorY: 'none' }}
         >
           {showSeriesEpisodes && (
             <button

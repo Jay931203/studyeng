@@ -781,7 +781,12 @@ export function VideoPlayer({
     <div
       className="relative h-full w-full"
       onClick={handleTap}
-      style={{ backgroundColor: 'var(--player-surface)' }}
+      data-feed-drag-surface="true"
+      style={{
+        backgroundColor: 'var(--player-surface)',
+        touchAction: 'none',
+        overscrollBehaviorY: 'none',
+      }}
     >
       <div className="pointer-events-none absolute inset-0">
         <PlayerMount containerId={containerId} />
