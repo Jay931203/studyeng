@@ -550,12 +550,13 @@ export function VideoPlayer({
     useDailyMissionStore.getState().incrementMission('play-game')
   }
 
-  const gamePromptLine =
+  const gamePromptSegment =
     freezeSubIndex !== null && subtitles[freezeSubIndex]
-      ? subtitles[freezeSubIndex].en
+      ? subtitles[freezeSubIndex]
       : gameSentenceIndex !== null && subtitles[gameSentenceIndex - 1]
-        ? subtitles[gameSentenceIndex - 1].en
+        ? subtitles[gameSentenceIndex - 1]
         : null
+  const gamePromptLine = gamePromptSegment?.en ?? null
   const showGameOverlay = !videoError && gameActive && gameChoices.length > 0
   const gameOverlayInsetBottom = isShortsFormat
     ? 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 72px))'
@@ -925,6 +926,7 @@ export function VideoPlayer({
         >
           <SubtitleGame
             currentLine={gamePromptLine}
+            currentLineSegment={gamePromptSegment}
             choices={gameChoices}
             correctIndex={gameCorrectIndex}
             result={gameResult}

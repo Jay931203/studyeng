@@ -4,12 +4,21 @@ import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AnswerBurst } from './games/AnswerBurst'
 import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
 
-const TRANSLATIONS: Record<SupportedLocale, { correct: string; wrong: string; correctAnswer: string }> = {
-  ko: { correct: '정답!', wrong: '오답', correctAnswer: '정답:' },
-  ja: { correct: '正解!', wrong: '不正解', correctAnswer: '正解:' },
-  'zh-TW': { correct: '正確!', wrong: '錯誤', correctAnswer: '正確答案:' },
-  vi: { correct: 'Đúng!', wrong: 'Sai', correctAnswer: 'Đáp án:' },
+const TRANSLATIONS: Record<SupportedLocale, { correct: string; wrong: string; correctAnswer: string; currentLine: string; nextLine: string }> = {
+  ko: { correct: '정답!', wrong: '오답', correctAnswer: '정답:', currentLine: '현재 대사', nextLine: '다음 대사' },
+  ja: { correct: '正解!', wrong: '不正解', correctAnswer: '正解:', currentLine: '現在のセリフ', nextLine: '次のセリフ' },
+  'zh-TW': { correct: '正確!', wrong: '錯誤', correctAnswer: '正確答案:', currentLine: '目前台詞', nextLine: '下一句台詞' },
+  vi: { correct: 'Đúng!', wrong: 'Sai', correctAnswer: 'Đáp án:', currentLine: 'Lời thoại hiện tại', nextLine: 'Lời thoại tiếp theo' },
+}
+
+interface SubtitleSegment {
+  en: string
+  ko?: string
+  ja?: string
+  zhTW?: string
+  vi?: string
 }
 
 interface SubtitleGameProps {
@@ -19,6 +28,7 @@ interface SubtitleGameProps {
   xpAwarded?: number
   onAnswer: (choiceIndex: number) => void
   currentLine?: string | null
+  currentLineSegment?: SubtitleSegment | null
   className?: string
 }
 
@@ -29,11 +39,13 @@ export function SubtitleGame({
   xpAwarded = 0,
   onAnswer,
   currentLine,
+  currentLineSegment,
   className,
 }: SubtitleGameProps) {
   const locale = useLocaleStore((s) => s.locale)
   const t = TRANSLATIONS[locale]
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [showCurrentTranslation, setShowCurrentTranslation] = useState(false)
 
   const handleChoiceClick = useCallback(
     (idx: number) => {
@@ -63,21 +75,34 @@ export function SubtitleGame({
 
         {currentLine && (
           <div
-            className="mb-3 rounded-2xl border px-3 py-2 text-left"
+            className="mb-3 rounded-2xl border px-3 py-2 text-left cursor-pointer select-none"
             style={{
               backgroundColor: 'var(--player-panel)',
               borderColor: 'var(--player-control-border)',
             }}
+            onClick={() => setShowCurrentTranslation((prev) => !prev)}
           >
             <p
               className="text-[10px] font-semibold uppercase tracking-[0.15em]"
               style={{ color: 'var(--player-muted)' }}
             >
-              Current Line
+              {t.currentLine}
             </p>
             <p className="mt-1 line-clamp-2 text-sm font-medium" style={{ color: 'var(--player-text)' }}>
               {currentLine}
             </p>
+            {showCurrentTranslation && currentLineSegment && (
+              <motion.p
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.15 }}
+                className="mt-1 line-clamp-2 text-xs"
+                style={{ color: 'var(--player-muted)' }}
+              >
+                {getLocalizedSubtitle(currentLineSegment, locale)}
+              </motion.p>
+            )}
           </div>
         )}
 
@@ -85,7 +110,7 @@ export function SubtitleGame({
           className="text-[10px] font-semibold uppercase tracking-[0.15em]"
           style={{ color: 'var(--player-muted)' }}
         >
-          Next Line
+          {t.nextLine}
         </p>
 
         <div className="mt-3 flex flex-col gap-2">
