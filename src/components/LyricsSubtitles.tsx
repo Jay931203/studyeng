@@ -330,8 +330,6 @@ export function LyricsSubtitles({
   // Temporary "saved!" feedback
   const [justSavedIdx, setJustSavedIdx] = useState<number | null>(null)
   const savedFeedbackTimerRef = useRef<number | null>(null)
-  // Saved subtitle for replay
-  const [savedReplaySub, setSavedReplaySub] = useState<SubtitleEntry | null>(null)
   const replayTimerRef = useRef<number | null>(null)
 
   // Long-press detection refs
@@ -554,12 +552,10 @@ export function LyricsSubtitles({
           setShowFreezeIndicator(false)
           setShowFreezeTip(false)
           setJustSavedIdx(idx)
-          setSavedReplaySub(sub)
           if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
           savedFeedbackTimerRef.current = window.setTimeout(() => {
             setJustSavedIdx(null)
-            setSavedReplaySub(null)
-          }, 3000)
+          }, 1500)
         }
         lastTapRef.current = { idx: -1, time: 0 }
       } else if (freezeSubIndex !== null) {
@@ -582,6 +578,7 @@ export function LyricsSubtitles({
       enterFreeze,
       freezeSubIndex,
       getSavedPhraseId,
+      onResume,
       onSavePhrase,
       onSeek,
       removePhrase,
@@ -655,17 +652,6 @@ export function LyricsSubtitles({
     setFreezeSubIndex(null)
   }, [setFreezeSubIndex, videoId])
 
-  const handleSavedReplay = useCallback(() => {
-    if (!savedReplaySub) return
-    onPause?.()
-    onSeek?.(savedReplaySub.start)
-    const duration = (savedReplaySub.end - savedReplaySub.start) * 1000 + 300
-    if (replayTimerRef.current) clearTimeout(replayTimerRef.current)
-    replayTimerRef.current = window.setTimeout(() => {
-      onResume?.()
-    }, duration)
-  }, [savedReplaySub, onPause, onResume, onSeek])
-
   // Cleanup timers on unmount
   useEffect(() => {
     return () => {
@@ -706,29 +692,6 @@ export function LyricsSubtitles({
             placement="inline"
             tone={activeNotice?.tone ?? 'default'}
           />
-          {justSavedIdx !== null && savedReplaySub && (
-            <button
-              type="button"
-              onClick={handleSavedReplay}
-              className="z-20 flex h-7 w-7 items-center justify-center rounded-full border backdrop-blur-md transition-transform active:scale-90"
-              style={{
-                backgroundColor: 'rgba(var(--accent-primary-rgb), 0.18)',
-                borderColor: 'rgba(var(--accent-primary-rgb), 0.48)',
-              }}
-              aria-label="Replay saved subtitle"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-3 w-3"
-                style={{ color: 'var(--accent-text)' }}
-              >
-                <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.699.48h1.536l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
-                <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
-              </svg>
-            </button>
-          )}
         </div>
       </div>
 
