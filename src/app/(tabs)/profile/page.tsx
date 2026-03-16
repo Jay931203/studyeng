@@ -30,7 +30,6 @@ const TRANSLATIONS = {
     continueWithGoogle: 'Google로 계속',
     continueWithKakao: 'Kakao로 계속',
     settings: '설정',
-    translateLang: '번역 언어 선택',
     theme: '테마',
     background: '배경',
     color: '색상',
@@ -66,7 +65,6 @@ const TRANSLATIONS = {
     continueWithGoogle: 'Googleで続ける',
     continueWithKakao: 'Kakaoで続ける',
     settings: '設定',
-    translateLang: '翻訳言語を選択',
     theme: 'テーマ',
     background: '背景',
     color: 'カラー',
@@ -102,7 +100,6 @@ const TRANSLATIONS = {
     continueWithGoogle: '使用 Google 繼續',
     continueWithKakao: '使用 Kakao 繼續',
     settings: '設定',
-    translateLang: '選擇翻譯語言',
     theme: '主題',
     background: '背景',
     color: '顏色',
@@ -138,7 +135,6 @@ const TRANSLATIONS = {
     continueWithGoogle: 'Tiep tuc voi Google',
     continueWithKakao: 'Tiep tuc voi Kakao',
     settings: 'Cai dat',
-    translateLang: 'Chon ngon ngu dich',
     theme: 'Giao dien',
     background: 'Nen',
     color: 'Mau sac',
@@ -374,8 +370,7 @@ export default function ProfilePage() {
                 onClick={() => setShowLanguageModal(true)}
               >
                 <div className="text-left">
-                  <p className="text-sm font-medium text-[var(--text-primary)]">Language / 言語</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.translateLang}</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">Language</p>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm font-medium text-[var(--text-secondary)]">
@@ -722,9 +717,8 @@ export default function ProfilePage() {
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-base font-bold text-[var(--text-primary)]">
-              Language / 言語
+              Language
             </h2>
-            <p className="mt-1 text-xs text-[var(--text-muted)]">{T.translateLang}</p>
 
             <div className="mt-5 divide-y divide-[var(--border-card)]/40">
               {LOCALE_OPTIONS.map((option) => {
