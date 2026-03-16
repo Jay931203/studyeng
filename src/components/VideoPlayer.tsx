@@ -217,6 +217,9 @@ export function VideoPlayer({
   // Game trigger: watches subtitles and triggers "next line" quiz
   useGameTrigger(youtubeId, subtitles)
 
+  // --- Subtitle guides hint ---
+  const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
+
   // --- Priming card: show key expressions before video plays ---
   const primingEnabled = useSettingsStore((state) => state.primingEnabled)
   const userLevel = useOnboardingStore((state) => state.level)
@@ -690,16 +693,30 @@ export function VideoPlayer({
   ) : null
 
   const subtitlePanel = (
-    <div className="relative h-full">
-      {!useOverlaySubtitles && subtitleLayoutToggleButton && (
-        <div
-          className="absolute z-30"
-          style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
-        >
-          {subtitleLayoutToggleButton}
+    <div className="relative flex h-full">
+      <div className="relative min-w-0 flex-1">
+        {!useOverlaySubtitles && subtitleLayoutToggleButton && (
+          <div
+            className="absolute z-30"
+            style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
+          >
+            {subtitleLayoutToggleButton}
+          </div>
+        )}
+        {subtitleArea}
+      </div>
+      {subtitleMode !== 'none' && subtitles.length > 0 && (
+        <div className="flex flex-shrink-0 items-center px-1">
+          <InlineSubtitleControls
+            subtitles={subtitles}
+            onSeek={(time) => seekTo(time)}
+            onPrevVideo={onPrevVideo}
+            onNextVideo={onNextVideo}
+            onToggleFreeze={onToggleFreeze}
+            variant="panel"
+          />
         </div>
       )}
-      {subtitleArea}
     </div>
   )
 
@@ -1049,12 +1066,173 @@ export function VideoPlayer({
               )}
             </div>
 
-            {!useLandscapeSplitLayout && progressArea}
+            {!useLandscapeSplitLayout && (
+              <>
+                {subtitleGuidesEnabled && subtitleMode !== 'none' && subtitles.length > 0 && (
+                  <div className="pointer-events-none flex justify-center px-4 pb-1">
+                    <div
+                      className="rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] backdrop-blur-sm"
+                      style={{
+                        backgroundColor: 'var(--player-chip-bg)',
+                        borderColor: 'var(--player-chip-border)',
+                        color: 'var(--player-muted)',
+                      }}
+                    >
+                      Double Tap Save | Hold Freeze
+                    </div>
+                  </div>
+                )}
+                {progressArea}
+              </>
+            )}
           </>
         )}
       </div>
 
       {primingOverlay}
+    </div>
+  )
+}
+
+/**
+ * Inline subtitle controls: prev/next subtitle, freeze toggle, prev/next video.
+ * Shared between overlay and non-overlay subtitle modes.
+ */
+function InlineSubtitleControls({
+  subtitles,
+  onSeek,
+  onPrevVideo,
+  onNextVideo,
+  onToggleFreeze,
+  variant = 'overlay',
+}: {
+  subtitles: SubtitleEntry[]
+  onSeek?: (time: number) => void
+  onPrevVideo?: () => void
+  onNextVideo?: () => void
+  onToggleFreeze?: () => void
+  variant?: 'overlay' | 'panel'
+}) {
+  const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
+  const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
+  const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
+  const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
+
+  const isFrozen = freezeSubIndex !== null
+  const canEnableFreeze = activeSubIndex >= 0
+
+  const handlePrevSub = useCallback(() => {
+    if (activeSubIndex > 0) {
+      if (freezeSubIndex !== null) setFreezeSubIndex(null)
+      const prev = subtitles[activeSubIndex - 1]
+      if (prev) onSeek?.(prev.start)
+    }
+  }, [activeSubIndex, freezeSubIndex, setFreezeSubIndex, subtitles, onSeek])
+
+  const handleNextSub = useCallback(() => {
+    if (activeSubIndex < subtitles.length - 1) {
+      if (freezeSubIndex !== null) setFreezeSubIndex(null)
+      const next = subtitles[activeSubIndex + 1]
+      if (next) onSeek?.(next.start)
+    }
+  }, [activeSubIndex, freezeSubIndex, setFreezeSubIndex, subtitles, onSeek])
+
+  const showControls = remoteEnabled && (onPrevVideo || onNextVideo || onToggleFreeze)
+  if (!showControls) return null
+
+  const isPanel = variant === 'panel'
+  const containerBg = isPanel ? 'var(--player-panel)' : 'rgba(0, 0, 0, 0.55)'
+  const containerBorder = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.08)'
+  const iconColor = isPanel ? 'var(--player-text)' : 'rgba(255,255,255,0.8)'
+  const iconMutedColor = isPanel ? 'var(--player-muted)' : 'rgba(255,255,255,0.55)'
+  const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255,255,255,0.1)'
+
+  return (
+    <div
+      className="pointer-events-auto flex flex-col items-center gap-px rounded-xl border backdrop-blur-sm"
+      data-no-feed-drag="true"
+      style={{
+        backgroundColor: containerBg,
+        borderColor: containerBorder,
+      }}
+      onClick={(e) => e.stopPropagation()}
+      onPointerDown={(e) => e.stopPropagation()}
+    >
+      {/* Previous subtitle */}
+      <button
+        onClick={handlePrevSub}
+        disabled={activeSubIndex <= 0}
+        className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+        aria-label="Previous subtitle"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconColor }}>
+          <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
+        </svg>
+      </button>
+
+      <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
+
+      {/* Next subtitle */}
+      <button
+        onClick={handleNextSub}
+        disabled={activeSubIndex >= subtitles.length - 1}
+        className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+        aria-label="Next subtitle"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconColor }}>
+          <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
+        </svg>
+      </button>
+
+      <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
+
+      {/* Freeze / Pin toggle */}
+      {onToggleFreeze && (
+        <>
+          <button
+            onClick={onToggleFreeze}
+            disabled={!isFrozen && !canEnableFreeze}
+            className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+            aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" style={{ color: isFrozen ? 'var(--accent-text)' : iconMutedColor }}>
+              <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
+            </svg>
+          </button>
+          <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
+        </>
+      )}
+
+      {/* Previous video */}
+      {onPrevVideo && (
+        <>
+          <button
+            onClick={onPrevVideo}
+            className="flex h-8 w-9 items-center justify-center"
+            aria-label="Previous video"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
+              <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+              <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+            </svg>
+          </button>
+          <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
+        </>
+      )}
+
+      {/* Next video */}
+      {onNextVideo && (
+        <button
+          onClick={onNextVideo}
+          className="flex h-8 w-9 items-center justify-center"
+          aria-label="Next video"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
+            <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+            <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+          </svg>
+        </button>
+      )}
     </div>
   )
 }
@@ -1090,26 +1268,9 @@ function ShortsSubtitleOverlay({
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
   const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
-  const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
   const phrases = usePhraseStore((state) => state.phrases)
   const removePhrase = usePhraseStore((state) => state.removePhrase)
   const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
-  const isFrozen = freezeSubIndex !== null
-  const canEnableFreeze = activeSubIndex >= 0
-
-  const handlePrevSub = useCallback(() => {
-    if (activeSubIndex > 0) {
-      const prev = subtitles[activeSubIndex - 1]
-      if (prev) onSeek?.(prev.start)
-    }
-  }, [activeSubIndex, subtitles, onSeek])
-
-  const handleNextSub = useCallback(() => {
-    if (activeSubIndex < subtitles.length - 1) {
-      const next = subtitles[activeSubIndex + 1]
-      if (next) onSeek?.(next.start)
-    }
-  }, [activeSubIndex, subtitles, onSeek])
 
   const [notice, setNotice] = useState<{
     message: string
@@ -1163,8 +1324,6 @@ function ShortsSubtitleOverlay({
   }, [])
 
   if (!activeSub) return null
-
-  const showInlineControls = remoteEnabled && (onPrevVideo || onNextVideo || onToggleFreeze)
 
   return (
     <div
@@ -1278,94 +1437,14 @@ function ShortsSubtitleOverlay({
         </div>
 
         {/* Inline subtitle controls (replaces floating remote) */}
-        {showInlineControls && (
-          <div
-            className="pointer-events-auto flex flex-col items-center gap-px rounded-xl border backdrop-blur-sm"
-            data-no-feed-drag="true"
-            style={{
-              backgroundColor: 'rgba(0, 0, 0, 0.55)',
-              borderColor: 'rgba(255, 255, 255, 0.08)',
-            }}
-            onClick={(e) => e.stopPropagation()}
-            onPointerDown={(e) => e.stopPropagation()}
-          >
-            {/* Previous subtitle */}
-            <button
-              onClick={handlePrevSub}
-              disabled={activeSubIndex <= 0}
-              className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
-              aria-label="Previous subtitle"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/80">
-                <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
-              </svg>
-            </button>
-
-            <div className="h-px w-5 bg-white/10" />
-
-            {/* Next subtitle */}
-            <button
-              onClick={handleNextSub}
-              disabled={activeSubIndex >= subtitles.length - 1}
-              className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
-              aria-label="Next subtitle"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/80">
-                <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
-              </svg>
-            </button>
-
-            <div className="h-px w-5 bg-white/10" />
-
-            {/* Freeze / Pin toggle */}
-            {onToggleFreeze && (
-              <>
-                <button
-                  onClick={onToggleFreeze}
-                  disabled={!isFrozen && !canEnableFreeze}
-                  className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
-                  aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" style={{ color: isFrozen ? 'var(--accent-text)' : 'rgba(255,255,255,0.55)' }}>
-                    <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
-                  </svg>
-                </button>
-                <div className="h-px w-5 bg-white/10" />
-              </>
-            )}
-
-            {/* Previous video */}
-            {onPrevVideo && (
-              <>
-                <button
-                  onClick={onPrevVideo}
-                  className="flex h-8 w-9 items-center justify-center"
-                  aria-label="Previous video"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/55">
-                    <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-                    <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-                  </svg>
-                </button>
-                <div className="h-px w-5 bg-white/10" />
-              </>
-            )}
-
-            {/* Next video */}
-            {onNextVideo && (
-              <button
-                onClick={onNextVideo}
-                className="flex h-8 w-9 items-center justify-center"
-                aria-label="Next video"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/55">
-                  <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-                  <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-                </svg>
-              </button>
-            )}
-          </div>
-        )}
+        <InlineSubtitleControls
+          subtitles={subtitles}
+          onSeek={onSeek}
+          onPrevVideo={onPrevVideo}
+          onNextVideo={onNextVideo}
+          onToggleFreeze={onToggleFreeze}
+          variant="overlay"
+        />
       </div>
     </div>
   )

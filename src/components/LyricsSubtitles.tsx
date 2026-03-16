@@ -10,7 +10,6 @@ import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { getLocalizedSubtitle } from '@/lib/localeUtils'
-import { DoubleTapTip } from './DoubleTapTip'
 import { SaveToast } from './SaveToast'
 import type { SubtitleEntry } from '@/data/seed-videos'
 import expressionIndexData from '@/data/expression-index-v3.json'
@@ -250,7 +249,6 @@ export function LyricsSubtitles({
 }: LyricsSubtitlesProps) {
   const locale = useLocaleStore((s) => s.locale)
   const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
-  const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -700,8 +698,6 @@ export function LyricsSubtitles({
       data-no-feed-drag="true"
       onClick={(e) => e.stopPropagation()}
     >
-      {subtitleGuidesEnabled && <DoubleTapTip />}
-
       <div className="pointer-events-none absolute inset-x-0 top-3 z-20 flex justify-center px-4">
         <div className="pointer-events-auto inline-flex items-center gap-1.5">
           <SaveToast
@@ -1098,20 +1094,6 @@ export function LyricsSubtitles({
         </div>
       )}
 
-      {subtitleGuidesEnabled && (
-        <div className="pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-4">
-          <div
-            className="rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] backdrop-blur-sm"
-            style={{
-              backgroundColor: 'var(--player-chip-bg)',
-              borderColor: 'var(--player-chip-border)',
-              color: 'var(--player-muted)',
-            }}
-          >
-            Double Tap Save | Hold Freeze
-          </div>
-        </div>
-      )}
     </div>
   )
 }
