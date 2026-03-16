@@ -93,7 +93,7 @@ export const seekToRef: { current: ((seconds: number) => void) | null } = { curr
 /**
  * Shared mutable refs for play/pause functions.
  * Registered by the active VideoPlayer so that sibling components
- * (e.g. FloatingRemote) can control playback without prop drilling.
+ * (e.g. inline subtitle controls) can control playback without prop drilling.
  */
 export const playRef: { current: (() => void) | null } = { current: null }
 export const pauseRef: { current: (() => void) | null } = { current: null }
