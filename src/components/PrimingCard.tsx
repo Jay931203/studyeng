@@ -424,8 +424,6 @@ function ExpressionCard({
                 />
               </svg>
             </button>
-            {showHints && (
-            )}
           </div>
         </motion.div>
       </motion.div>
@@ -744,8 +742,6 @@ function WordCard({
                 />
               </svg>
             </button>
-            {showHints && (
-            )}
           </div>
         </motion.div>
       </motion.div>
