@@ -694,29 +694,31 @@ export function VideoPlayer({
 
   const subtitlePanel = (
     <div className="relative flex h-full">
-      <div className="relative min-w-0 flex-1">
-        {!useOverlaySubtitles && subtitleLayoutToggleButton && (
-          <div
-            className="absolute z-30"
-            style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
-          >
-            {subtitleLayoutToggleButton}
+      <div className="relative min-w-0 flex-1 flex flex-col">
+        <div className="relative min-h-0 flex-1">
+          {!useOverlaySubtitles && subtitleLayoutToggleButton && (
+            <div
+              className="absolute z-30"
+              style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
+            >
+              {subtitleLayoutToggleButton}
+            </div>
+          )}
+          {subtitleArea}
+        </div>
+        {subtitleMode !== 'none' && subtitles.length > 0 && (
+          <div className="flex flex-shrink-0 items-center justify-center px-1 pb-1">
+            <InlineSubtitleControls
+              subtitles={subtitles}
+              onSeek={(time) => seekTo(time)}
+              onPrevVideo={onPrevVideo}
+              onNextVideo={onNextVideo}
+              onToggleFreeze={onToggleFreeze}
+              variant="panel"
+            />
           </div>
         )}
-        {subtitleArea}
       </div>
-      {subtitleMode !== 'none' && subtitles.length > 0 && (
-        <div className="flex flex-shrink-0 items-center px-1">
-          <InlineSubtitleControls
-            subtitles={subtitles}
-            onSeek={(time) => seekTo(time)}
-            onPrevVideo={onPrevVideo}
-            onNextVideo={onNextVideo}
-            onToggleFreeze={onToggleFreeze}
-            variant="panel"
-          />
-        </div>
-      )}
     </div>
   )
 
@@ -1147,9 +1149,14 @@ function InlineSubtitleControls({
   const iconMutedColor = isPanel ? 'var(--player-muted)' : 'rgba(255,255,255,0.55)'
   const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255,255,255,0.1)'
 
+  const btnClass = isPanel
+    ? 'flex h-7 w-8 items-center justify-center disabled:opacity-25'
+    : 'flex h-8 w-9 items-center justify-center disabled:opacity-25'
+  const dividerStyle = { width: '1px', height: '14px', backgroundColor: dividerColor }
+
   return (
     <div
-      className="pointer-events-auto flex flex-col items-center gap-px rounded-xl border backdrop-blur-sm"
+      className="pointer-events-auto flex flex-row items-center gap-px rounded-xl border backdrop-blur-sm"
       data-no-feed-drag="true"
       style={{
         backgroundColor: containerBg,
@@ -1158,81 +1165,75 @@ function InlineSubtitleControls({
       onClick={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
     >
+      {/* Previous video */}
+      <button
+        onClick={onPrevVideo ?? undefined}
+        disabled={!onPrevVideo}
+        className={btnClass}
+        aria-label="Previous video"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
+          <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+          <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+        </svg>
+      </button>
+
+      <div style={dividerStyle} />
+
       {/* Previous subtitle */}
       <button
         onClick={handlePrevSub}
         disabled={activeSubIndex <= 0}
-        className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+        className={btnClass}
         aria-label="Previous subtitle"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconColor }}>
-          <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
+          <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
         </svg>
       </button>
 
-      <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
+      <div style={dividerStyle} />
+
+      {/* Freeze / Pin toggle */}
+      <button
+        onClick={onToggleFreeze ?? undefined}
+        disabled={!onToggleFreeze || (!isFrozen && !canEnableFreeze)}
+        className={btnClass}
+        aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" style={{ color: isFrozen ? 'var(--accent-text)' : iconMutedColor }}>
+          <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
+        </svg>
+      </button>
+
+      <div style={dividerStyle} />
 
       {/* Next subtitle */}
       <button
         onClick={handleNextSub}
         disabled={activeSubIndex >= subtitles.length - 1}
-        className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+        className={btnClass}
         aria-label="Next subtitle"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconColor }}>
-          <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
+          <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
         </svg>
       </button>
 
-      <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
-
-      {/* Freeze / Pin toggle */}
-      {onToggleFreeze && (
-        <>
-          <button
-            onClick={onToggleFreeze}
-            disabled={!isFrozen && !canEnableFreeze}
-            className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
-            aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" style={{ color: isFrozen ? 'var(--accent-text)' : iconMutedColor }}>
-              <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
-            </svg>
-          </button>
-          <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
-        </>
-      )}
-
-      {/* Previous video */}
-      {onPrevVideo && (
-        <>
-          <button
-            onClick={onPrevVideo}
-            className="flex h-8 w-9 items-center justify-center"
-            aria-label="Previous video"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
-              <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-              <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-            </svg>
-          </button>
-          <div className="h-px w-5" style={{ backgroundColor: dividerColor }} />
-        </>
-      )}
+      <div style={dividerStyle} />
 
       {/* Next video */}
-      {onNextVideo && (
-        <button
-          onClick={onNextVideo}
-          className="flex h-8 w-9 items-center justify-center"
-          aria-label="Next video"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
-            <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-            <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-          </svg>
-        </button>
-      )}
+      <button
+        onClick={onNextVideo ?? undefined}
+        disabled={!onNextVideo}
+        className={btnClass}
+        aria-label="Next video"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
+          <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+          <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+        </svg>
+      </button>
     </div>
   )
 }
@@ -1339,9 +1340,9 @@ function ShortsSubtitleOverlay({
           tone={notice?.tone ?? 'default'}
         />
       </div>
-      <div className="flex items-end gap-1.5">
+      <div className="flex flex-col items-center gap-1.5 w-full">
         <div
-          className="pointer-events-auto max-w-[92%] flex-1 min-w-0 rounded-t-xl rounded-b-lg border px-5 py-3 text-center backdrop-blur-sm transition-transform active:scale-[0.985]"
+          className="pointer-events-auto max-w-[92%] w-full rounded-t-xl rounded-b-lg border px-5 py-3 text-center backdrop-blur-sm transition-transform active:scale-[0.985]"
           style={{
             backgroundColor: 'rgba(0, 0, 0, 0.6)',
             borderColor:
