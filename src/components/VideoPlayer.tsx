@@ -963,7 +963,7 @@ export function VideoPlayer({
 
   const floatingControls = subtitleMode !== 'none' && subtitles.length > 0 && (
     <div
-      className="absolute bottom-[80px] left-0 right-0 z-[30] flex justify-center"
+      className="absolute bottom-[80px] right-3 z-[30] flex justify-end"
       style={{ pointerEvents: 'none' }}
     >
       <div style={{ pointerEvents: 'auto' }}>
