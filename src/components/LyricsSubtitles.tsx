@@ -192,6 +192,8 @@ interface LyricsSubtitlesProps {
   videoId?: string
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onSeek?: (time: number) => void
+  onPause?: () => void
+  onResume?: () => void
   visibleLineCount?: number
 }
 
@@ -234,6 +236,8 @@ export function LyricsSubtitles({
   videoId,
   onSavePhrase,
   onSeek,
+  onPause,
+  onResume,
   visibleLineCount = 3,
 }: LyricsSubtitlesProps) {
   const locale = useLocaleStore((s) => s.locale)
@@ -320,6 +324,9 @@ export function LyricsSubtitles({
   // Temporary "saved!" feedback
   const [justSavedIdx, setJustSavedIdx] = useState<number | null>(null)
   const savedFeedbackTimerRef = useRef<number | null>(null)
+  // Saved subtitle for replay
+  const [savedReplaySub, setSavedReplaySub] = useState<SubtitleEntry | null>(null)
+  const replayTimerRef = useRef<number | null>(null)
 
   // Long-press detection refs
   const longPressTimerRef = useRef<number | null>(null)
@@ -540,8 +547,12 @@ export function LyricsSubtitles({
           setShowFreezeIndicator(false)
           setShowFreezeTip(false)
           setJustSavedIdx(idx)
+          setSavedReplaySub(sub)
           if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
-          savedFeedbackTimerRef.current = window.setTimeout(() => setJustSavedIdx(null), 1200)
+          savedFeedbackTimerRef.current = window.setTimeout(() => {
+            setJustSavedIdx(null)
+            setSavedReplaySub(null)
+          }, 3000)
         }
         lastTapRef.current = { idx: -1, time: 0 }
       } else if (freezeSubIndex !== null) {
@@ -637,6 +648,17 @@ export function LyricsSubtitles({
     setFreezeSubIndex(null)
   }, [setFreezeSubIndex, videoId])
 
+  const handleSavedReplay = useCallback(() => {
+    if (!savedReplaySub) return
+    onPause?.()
+    onSeek?.(savedReplaySub.start)
+    const duration = (savedReplaySub.end - savedReplaySub.start) * 1000 + 300
+    if (replayTimerRef.current) clearTimeout(replayTimerRef.current)
+    replayTimerRef.current = window.setTimeout(() => {
+      onResume?.()
+    }, duration)
+  }, [savedReplaySub, onPause, onResume, onSeek])
+
   // Cleanup timers on unmount
   useEffect(() => {
     return () => {
@@ -646,6 +668,7 @@ export function LyricsSubtitles({
       if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
       if (userScrollTimerRef.current) clearTimeout(userScrollTimerRef.current)
       if (exprPopupTimerRef.current) clearTimeout(exprPopupTimerRef.current)
+      if (replayTimerRef.current) clearTimeout(replayTimerRef.current)
     }
   }, [])
 
@@ -671,12 +694,36 @@ export function LyricsSubtitles({
       {subtitleGuidesEnabled && <DoubleTapTip />}
 
       <div className="pointer-events-none absolute inset-x-0 top-3 z-20 flex justify-center px-4">
-        <SaveToast
-          show={Boolean(activeNotice)}
-          message={activeNotice?.message ?? ''}
-          placement="inline"
-          tone={activeNotice?.tone ?? 'default'}
-        />
+        <div className="pointer-events-auto inline-flex items-center gap-1.5">
+          <SaveToast
+            show={Boolean(activeNotice)}
+            message={activeNotice?.message ?? ''}
+            placement="inline"
+            tone={activeNotice?.tone ?? 'default'}
+          />
+          {justSavedIdx !== null && savedReplaySub && (
+            <button
+              type="button"
+              onClick={handleSavedReplay}
+              className="z-20 flex h-7 w-7 items-center justify-center rounded-full border backdrop-blur-md transition-transform active:scale-90"
+              style={{
+                backgroundColor: 'rgba(var(--accent-primary-rgb), 0.18)',
+                borderColor: 'rgba(var(--accent-primary-rgb), 0.48)',
+              }}
+              aria-label="Replay saved subtitle"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-3 w-3"
+                style={{ color: 'var(--accent-text)' }}
+              >
+                <path d="M10.5 3.75a2 2 0 0 0-2.826 0L3.162 8.36a2 2 0 0 0 0 2.828l4.512 4.61a2 2 0 0 0 2.826 0 1.786 1.786 0 0 0 0-2.573L7.26 10l3.24-3.225a1.786 1.786 0 0 0 0-2.574v-.001ZM7.5 9.25a.75.75 0 0 0 0 1.5h9.25a.75.75 0 0 0 0-1.5H7.5Z" />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
 
       <style>{`

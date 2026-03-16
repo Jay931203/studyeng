@@ -7,6 +7,7 @@ import { useLocaleStore } from '@/stores/useLocaleStore'
 import { getLocalizedMeaning, getLocalizedSentence } from '@/lib/localeUtils'
 import { triggerHaptic } from '@/lib/haptic'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
+import { getRelatedExpressions, type RelatedExpression } from '@/lib/expressionWeb'
 
 interface Expression {
   canonical: string
@@ -117,6 +118,69 @@ function getCefrColor(cefr: string): { bg: string; text: string } {
     return { bg: 'rgba(168, 85, 247, 0.16)', text: '#c084fc' }
   }
   return { bg: 'rgba(255, 255, 255, 0.08)', text: 'rgba(255, 255, 255, 0.6)' }
+}
+
+function RelatedChips({ exprId }: { exprId: string | undefined }) {
+  const [expandedIdx, setExpandedIdx] = useState<number | null>(null)
+  const expandTimerRef = useRef<number | null>(null)
+  const related = useRef<RelatedExpression[]>([])
+
+  if (related.current.length === 0 && exprId) {
+    related.current = getRelatedExpressions(exprId, 3)
+  }
+
+  const chips = related.current
+  if (chips.length === 0) return null
+
+  const handleChipTap = (idx: number, e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (expandTimerRef.current) clearTimeout(expandTimerRef.current)
+    setExpandedIdx(idx)
+    expandTimerRef.current = window.setTimeout(() => setExpandedIdx(null), 2000)
+  }
+
+  return (
+    <div className="mt-3 border-t pt-2.5" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+      <p
+        className="mb-1.5 text-[9px] font-semibold uppercase tracking-[0.14em]"
+        style={{ color: 'rgba(255, 255, 255, 0.35)' }}
+      >
+        RELATED
+      </p>
+      <div className="flex gap-1.5 overflow-x-auto no-scrollbar">
+        {chips.map((rel, idx) => {
+          const cefrColor = getCefrColor(rel.entry.cefr)
+          const isExpanded = expandedIdx === idx
+          return (
+            <button
+              key={rel.entry.id}
+              type="button"
+              onClick={(e) => handleChipTap(idx, e)}
+              className="flex shrink-0 items-center gap-1 rounded-full border px-2 py-[3px] transition-all duration-200"
+              style={{
+                borderColor: 'rgba(255, 255, 255, 0.1)',
+                backgroundColor: isExpanded ? 'rgba(255, 255, 255, 0.08)' : 'rgba(255, 255, 255, 0.04)',
+                maxWidth: isExpanded ? '200px' : '140px',
+              }}
+            >
+              <span
+                className="truncate text-[10px] font-medium leading-none"
+                style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+              >
+                {isExpanded ? rel.entry.meaning_ko : rel.entry.canonical}
+              </span>
+              <span
+                className="shrink-0 rounded-full px-1 py-[1px] text-[8px] font-bold uppercase leading-none"
+                style={{ backgroundColor: cefrColor.bg, color: cefrColor.text }}
+              >
+                {rel.entry.cefr.toUpperCase()}
+              </span>
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
 }
 
 function ExpressionCard({
@@ -320,6 +384,7 @@ function ExpressionCard({
             >
               {getLocalizedSentence(expr, locale)}
             </p>
+            <RelatedChips exprId={expr.exprId} />
             <button
               type="button"
               disabled={!onPlaySegment || expr.start == null || expr.end == null}
