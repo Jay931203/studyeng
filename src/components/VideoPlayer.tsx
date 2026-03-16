@@ -710,10 +710,12 @@ export function VideoPlayer({
           <div className="flex flex-shrink-0 items-center justify-center px-1 pb-1">
             <InlineSubtitleControls
               subtitles={subtitles}
+              videoId={videoId ?? youtubeId}
               onSeek={(time) => seekTo(time)}
               onPrevVideo={onPrevVideo}
               onNextVideo={onNextVideo}
               onToggleFreeze={onToggleFreeze}
+              onSavePhrase={onSavePhrase}
               variant="panel"
             />
           </div>
@@ -1097,31 +1099,52 @@ export function VideoPlayer({
 }
 
 /**
- * Inline subtitle controls: prev/next subtitle, freeze toggle, prev/next video.
+ * Inline subtitle controls split into 3 visually distinct groups:
+ *   Left:   prev/next video (playback navigation)
+ *   Center: prev/next subtitle (most used, slightly more prominent)
+ *   Right:  freeze + save/bookmark
  * Shared between overlay and non-overlay subtitle modes.
  */
 function InlineSubtitleControls({
   subtitles,
+  videoId,
   onSeek,
   onPrevVideo,
   onNextVideo,
   onToggleFreeze,
+  onSavePhrase,
   variant = 'overlay',
 }: {
   subtitles: SubtitleEntry[]
+  videoId?: string
   onSeek?: (time: number) => void
   onPrevVideo?: () => void
   onNextVideo?: () => void
   onToggleFreeze?: () => void
+  onSavePhrase?: (phrase: SubtitleEntry) => void
   variant?: 'overlay' | 'panel'
 }) {
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
   const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
+  const phrases = usePhraseStore((state) => state.phrases)
+  const removePhrase = usePhraseStore((state) => state.removePhrase)
 
   const isFrozen = freezeSubIndex !== null
   const canEnableFreeze = activeSubIndex >= 0
+  const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
+
+  const savedPhraseId = useMemo(() => {
+    if (!activeSub) return null
+    return (
+      phrases.find((phrase) => phrase.videoId === videoId && phrase.en === activeSub.en)?.id ??
+      phrases.find((phrase) => phrase.en === activeSub.en)?.id ??
+      null
+    )
+  }, [activeSub, phrases, videoId])
+
+  const isSaved = savedPhraseId !== null
 
   const handlePrevSub = useCallback(() => {
     if (activeSubIndex > 0) {
@@ -1139,101 +1162,161 @@ function InlineSubtitleControls({
     }
   }, [activeSubIndex, freezeSubIndex, setFreezeSubIndex, subtitles, onSeek])
 
+  const handleSave = useCallback(() => {
+    if (!activeSub) return
+    if (savedPhraseId) {
+      removePhrase(savedPhraseId)
+    } else if (onSavePhrase) {
+      onSavePhrase(activeSub)
+    }
+  }, [activeSub, savedPhraseId, removePhrase, onSavePhrase])
+
   const showControls = remoteEnabled && (onPrevVideo || onNextVideo || onToggleFreeze)
   if (!showControls) return null
 
   const isPanel = variant === 'panel'
-  const containerBg = isPanel ? 'var(--player-panel)' : 'rgba(0, 0, 0, 0.55)'
-  const containerBorder = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.08)'
-  const iconColor = isPanel ? 'var(--player-text)' : 'rgba(255,255,255,0.8)'
-  const iconMutedColor = isPanel ? 'var(--player-muted)' : 'rgba(255,255,255,0.55)'
-  const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255,255,255,0.1)'
 
-  const btnClass = isPanel
-    ? 'flex h-7 w-8 items-center justify-center disabled:opacity-25'
-    : 'flex h-8 w-9 items-center justify-center disabled:opacity-25'
-  const dividerStyle = { width: '1px', height: '14px', backgroundColor: dividerColor }
+  const groupBg = isPanel ? 'var(--player-panel)' : 'rgba(0, 0, 0, 0.5)'
+  const groupBorder = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.08)'
+  const iconColor = isPanel ? 'var(--player-text)' : 'rgba(255, 255, 255, 0.82)'
+  const iconMutedColor = isPanel ? 'var(--player-muted)' : 'rgba(255, 255, 255, 0.55)'
+  const dividerColor = isPanel ? 'var(--player-divider)' : 'rgba(255, 255, 255, 0.1)'
+
+  const btnSize = isPanel ? 'h-[30px] w-[34px]' : 'h-[36px] w-[40px]'
+  const btnClass = `flex ${btnSize} items-center justify-center disabled:opacity-25 transition-colors`
+  const centerBtnSize = isPanel ? 'h-[30px] w-[36px]' : 'h-[36px] w-[42px]'
+  const centerBtnClass = `flex ${centerBtnSize} items-center justify-center disabled:opacity-25 transition-colors`
+  const iconSize = isPanel ? 'h-3 w-3' : 'h-3.5 w-3.5'
+
+  const groupStyle: CSSProperties = {
+    backgroundColor: groupBg,
+    borderColor: groupBorder,
+  }
+  const dividerStyle: CSSProperties = {
+    width: '1px',
+    height: isPanel ? '12px' : '14px',
+    backgroundColor: dividerColor,
+    flexShrink: 0,
+  }
 
   return (
     <div
-      className="pointer-events-auto flex flex-row items-center gap-px rounded-xl border backdrop-blur-sm"
+      className="pointer-events-auto flex flex-row items-center gap-1.5"
       data-no-feed-drag="true"
-      style={{
-        backgroundColor: containerBg,
-        borderColor: containerBorder,
-      }}
       onClick={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()}
     >
-      {/* Previous video */}
-      <button
-        onClick={onPrevVideo ?? undefined}
-        disabled={!onPrevVideo}
-        className={btnClass}
-        aria-label="Previous video"
+      {/* Left Group: Playback (prev/next video) */}
+      <div
+        className="flex items-center rounded-xl border backdrop-blur-sm"
+        style={groupStyle}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
-          <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-          <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-        </svg>
-      </button>
+        <button
+          onClick={onPrevVideo ?? undefined}
+          disabled={!onPrevVideo}
+          className={btnClass}
+          aria-label="Previous video"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconMutedColor }}>
+            <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+            <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+          </svg>
+        </button>
+        <div style={dividerStyle} />
+        <button
+          onClick={onNextVideo ?? undefined}
+          disabled={!onNextVideo}
+          className={btnClass}
+          aria-label="Next video"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconMutedColor }}>
+            <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+            <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+          </svg>
+        </button>
+      </div>
 
-      <div style={dividerStyle} />
-
-      {/* Previous subtitle */}
-      <button
-        onClick={handlePrevSub}
-        disabled={activeSubIndex <= 0}
-        className={btnClass}
-        aria-label="Previous subtitle"
+      {/* Center Group: Subtitle Navigation (prev/next subtitle) */}
+      <div
+        className="flex items-center rounded-xl border backdrop-blur-sm"
+        style={groupStyle}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconColor }}>
-          <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
-        </svg>
-      </button>
+        <button
+          onClick={handlePrevSub}
+          disabled={activeSubIndex <= 0}
+          className={centerBtnClass}
+          aria-label="Previous subtitle"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconColor }}>
+            <path fillRule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clipRule="evenodd" />
+          </svg>
+        </button>
+        <div style={dividerStyle} />
+        <button
+          onClick={handleNextSub}
+          disabled={activeSubIndex >= subtitles.length - 1}
+          className={centerBtnClass}
+          aria-label="Next subtitle"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className={iconSize} style={{ color: iconColor }}>
+            <path fillRule="evenodd" d="M10 3a.75.75 0 0 1 .75.75v10.638l3.96-4.158a.75.75 0 1 1 1.08 1.04l-5.25 5.5a.75.75 0 0 1-1.08 0l-5.25-5.5a.75.75 0 1 1 1.08-1.04l3.96 4.158V3.75A.75.75 0 0 1 10 3Z" clipRule="evenodd" />
+          </svg>
+        </button>
+      </div>
 
-      <div style={dividerStyle} />
-
-      {/* Freeze / Pin toggle */}
-      <button
-        onClick={onToggleFreeze ?? undefined}
-        disabled={!onToggleFreeze || (!isFrozen && !canEnableFreeze)}
-        className={btnClass}
-        aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
+      {/* Right Group: Actions (freeze + save) */}
+      <div
+        className="flex items-center rounded-xl border backdrop-blur-sm"
+        style={groupStyle}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" style={{ color: isFrozen ? 'var(--accent-text)' : iconMutedColor }}>
-          <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
-        </svg>
-      </button>
-
-      <div style={dividerStyle} />
-
-      {/* Next subtitle */}
-      <button
-        onClick={handleNextSub}
-        disabled={activeSubIndex >= subtitles.length - 1}
-        className={btnClass}
-        aria-label="Next subtitle"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconColor }}>
-          <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-        </svg>
-      </button>
-
-      <div style={dividerStyle} />
-
-      {/* Next video */}
-      <button
-        onClick={onNextVideo ?? undefined}
-        disabled={!onNextVideo}
-        className={btnClass}
-        aria-label="Next video"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" style={{ color: iconMutedColor }}>
-          <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-          <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
-        </svg>
-      </button>
+        {/* Freeze toggle */}
+        <button
+          onClick={onToggleFreeze ?? undefined}
+          disabled={!onToggleFreeze || (!isFrozen && !canEnableFreeze)}
+          className={btnClass}
+          aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={iconSize}
+            style={{
+              color: isFrozen ? 'var(--accent-text)' : iconMutedColor,
+              filter: isFrozen ? 'drop-shadow(0 0 4px rgba(var(--accent-primary-rgb), 0.6))' : 'none',
+            }}
+          >
+            <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
+          </svg>
+        </button>
+        <div style={dividerStyle} />
+        {/* Save / Bookmark toggle */}
+        <button
+          onClick={handleSave}
+          disabled={!activeSub || !onSavePhrase}
+          className={btnClass}
+          aria-label={isSaved ? 'Remove saved phrase' : 'Save phrase'}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill={isSaved ? 'currentColor' : 'none'}
+            stroke="currentColor"
+            strokeWidth={isSaved ? 0 : 1.8}
+            className={iconSize}
+            style={{
+              color: isSaved ? 'var(--accent-text)' : iconMutedColor,
+              filter: isSaved ? 'drop-shadow(0 0 4px rgba(var(--accent-primary-rgb), 0.6))' : 'none',
+            }}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   )
 }
@@ -1440,10 +1523,12 @@ function ShortsSubtitleOverlay({
         {/* Inline subtitle controls (replaces floating remote) */}
         <InlineSubtitleControls
           subtitles={subtitles}
+          videoId={videoId}
           onSeek={onSeek}
           onPrevVideo={onPrevVideo}
           onNextVideo={onNextVideo}
           onToggleFreeze={onToggleFreeze}
+          onSavePhrase={onSavePhrase}
           variant="overlay"
         />
       </div>
