@@ -183,12 +183,12 @@ export function TodayDashboard() {
   const benefitSnapshot = getBenefitSnapshot()
   const gameXpToday = getDailyTotalGameXP()
   const streakMultiplier = useUserStore((state) => state.getStreakMultiplier())
-  const streakTarget = streakDays > 0 ? getStreakBonusXP(streakDays) : 10
   const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
-  const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
+  const todayBase = gameXpToday + dailyVideoXP + streakBonusToday
+  const todayTotal = Math.round(todayBase * streakMultiplier)
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
-  const streakBonusPct = streakTarget > 0 ? Math.min((streakBonusToday / streakTarget) * 100, 100) : 0
+  const streakPct = Math.min((streakDays / 30) * 100, 100)
 
   const priceLocale = locale === 'ja' ? 'ja' : 'ko'
   const currentMonthlyPrice = getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)
@@ -261,7 +261,7 @@ export function TodayDashboard() {
           <StatCard
             label={t.todayEarned}
             value={`+${todayTotal} XP`}
-            detail={t.todayEarnedDetail}
+            detail={streakMultiplier > 1 ? `${todayBase} × ${streakMultiplier.toFixed(1)}x` : t.todayEarnedDetail}
           />
         </div>
 
@@ -280,12 +280,12 @@ export function TodayDashboard() {
           />
           <ProgressRow
             label={t.streakLabel}
-            value={`${streakBonusToday}/${streakTarget} XP`}
-            progress={streakBonusPct}
-            badge={streakDays > 0 ? `${streakMultiplier.toFixed(2)}x` : undefined}
+            value={`${streakDays}/30`}
+            progress={streakPct}
+            badge={streakMultiplier > 1 ? `${streakMultiplier.toFixed(1)}x` : undefined}
             detail={
               streakDays > 0
-                ? `${t.streakDetailActive(streakTarget, streakDays)} · ${streakMultiplier.toFixed(2)}x XP`
+                ? `${streakDays}일 연속 · ${streakMultiplier.toFixed(1)}x XP`
                 : t.streakDetailNew
             }
           />
