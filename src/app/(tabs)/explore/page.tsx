@@ -9,6 +9,7 @@ import {
   type Series as SeriesType,
   type VideoData,
 } from '@/data/seed-videos'
+import { ComprehensionBadge, SceneCompleteBadge } from '@/components/ComprehensionBadge'
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
@@ -490,10 +491,12 @@ export default function ExplorePage() {
                       <p className="truncate text-sm font-semibold text-[var(--text-primary)]">
                         {video.episodeNumber}. {video.title}
                       </p>
-                      <p className="mt-1 flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                      <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-[var(--text-muted)]">
                         <span>Lv.{video.difficulty}</span>
                         <span className="font-mono text-[var(--text-secondary)]">&times;{views}</span>
-                      </p>
+                        <ComprehensionBadge videoId={video.id} compact />
+                        <SceneCompleteBadge videoId={video.id} />
+                      </div>
                     </div>
                   </motion.button>
                 )

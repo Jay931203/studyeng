@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'
@@ -16,6 +16,7 @@ import { getLocalizedMeaning } from '@/lib/localeUtils'
 import { triggerHaptic } from '@/lib/haptic'
 import { calculateSessionXP } from '@/lib/xp/sessionXp'
 import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
+import { useReplayStore } from '@/stores/useReplayStore'
 
 const TRANSLATIONS = {
   ko: {
@@ -119,6 +120,8 @@ interface CardData {
   cefr: string
   category: string
   contextEn: string | null
+  contextVideoId: string | null
+  contextSentenceIdx: number | null
   choices: ChoiceData[]
 }
 
@@ -218,6 +221,32 @@ function pickContextSentence(exprId: string): string | null {
   if (!matches?.length) return null
   const pick = matches[Math.floor(Math.random() * matches.length)]
   return pick.en
+}
+
+function pickContextWithSource(exprId: string): { en: string; videoId: string; sentenceIdx: number } | null {
+  const byExpr = getContextByExprId()[exprId]
+  if (!byExpr?.length) return null
+
+  // Find the videoId that contains this match
+  for (const [videoId, matches] of Object.entries(index)) {
+    for (const match of matches) {
+      if (match.exprId === exprId) {
+        return { en: match.en, videoId, sentenceIdx: match.sentenceIdx }
+      }
+    }
+  }
+  return null
+}
+
+function pickWordContextWithSource(wordId: string): { en: string; videoId: string; sentenceIdx: number } | null {
+  for (const [videoId, matches] of Object.entries(wordIndex)) {
+    for (const match of matches) {
+      if (match.wordId === wordId) {
+        return { en: match.en, videoId, sentenceIdx: match.sentenceIdx }
+      }
+    }
+  }
+  return null
 }
 
 function hasExpressionSupportContext(exprId: string) {
@@ -448,6 +477,7 @@ function selectCards(level: string, locale: SupportedLocale): CardData[] {
 
   const expressionCards = selectedExpressionIds.map((exprId) => {
     const entry = entries[exprId]
+    const ctxSource = pickContextWithSource(exprId)
     const baseCard = {
       type: 'expression' as const,
       exprId,
@@ -455,7 +485,9 @@ function selectCards(level: string, locale: SupportedLocale): CardData[] {
       actualMeaning: normalizeMeaning(entry ? getLocalizedMeaning(entry as Record<string, unknown>, locale) : ''),
       cefr: entry?.cefr?.toUpperCase() ?? 'B1',
       category: entry?.category ?? '',
-      contextEn: pickContextSentence(exprId),
+      contextEn: ctxSource?.en ?? pickContextSentence(exprId),
+      contextVideoId: ctxSource?.videoId ?? null,
+      contextSentenceIdx: ctxSource?.sentenceIdx ?? null,
     }
 
     return {
@@ -466,6 +498,7 @@ function selectCards(level: string, locale: SupportedLocale): CardData[] {
 
   const wordCards = selectedWordIds.map((wordId) => {
     const entry = wordEntries[wordId]
+    const ctxSource = pickWordContextWithSource(wordId)
     const baseCard = {
       type: 'word' as const,
       exprId: `word:${wordId}`,
@@ -473,7 +506,9 @@ function selectCards(level: string, locale: SupportedLocale): CardData[] {
       actualMeaning: normalizeMeaning(entry ? getLocalizedMeaning(entry as Record<string, unknown>, locale) : ''),
       cefr: entry?.cefr?.toUpperCase() ?? 'B1',
       category: entry?.pos ?? '',
-      contextEn: pickWordContextSentence(wordId) ?? entry?.example_en ?? null,
+      contextEn: ctxSource?.en ?? pickWordContextSentence(wordId) ?? entry?.example_en ?? null,
+      contextVideoId: ctxSource?.videoId ?? null,
+      contextSentenceIdx: ctxSource?.sentenceIdx ?? null,
     }
 
     return {
@@ -505,6 +540,110 @@ function StreakFlash({ streak }: { streak: number }) {
   )
 }
 
+/**
+ * Lazily loads a transcript to find timestamps for a given sentenceIdx,
+ * then plays the clip via the replay store.
+ */
+function GameResultReplayButton({
+  videoId,
+  sentenceIdx,
+  expressionText,
+}: {
+  videoId: string
+  sentenceIdx: number
+  expressionText: string
+}) {
+  const play = useReplayStore((s) => s.play)
+  const currentClip = useReplayStore((s) => s.clip)
+  const isPlaying = useReplayStore((s) => s.isPlaying)
+  const stop = useReplayStore((s) => s.stop)
+  const [loading, setLoading] = useState(false)
+
+  const isThisPlaying =
+    isPlaying && currentClip?.videoId === videoId && currentClip?.expressionText === expressionText
+
+  const handleClick = useCallback(async () => {
+    if (isThisPlaying) {
+      stop()
+      return
+    }
+
+    setLoading(true)
+    try {
+      const res = await fetch(`/transcripts/${videoId}.json`)
+      if (!res.ok) return
+      const data = await res.json()
+      if (!Array.isArray(data) || !data[sentenceIdx]) return
+
+      const sub = data[sentenceIdx]
+      if (sub.start != null && sub.end != null) {
+        play({
+          videoId,
+          start: sub.start,
+          end: sub.end,
+          expressionText,
+        })
+      }
+    } catch {
+      // Silently fail — replay is best-effort
+    } finally {
+      setLoading(false)
+    }
+  }, [videoId, sentenceIdx, expressionText, play, stop, isThisPlaying])
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      disabled={loading}
+      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all active:scale-90 disabled:opacity-50"
+      style={{
+        backgroundColor: isThisPlaying
+          ? 'rgba(var(--accent-primary-rgb), 0.2)'
+          : 'rgba(255, 255, 255, 0.06)',
+      }}
+      aria-label={isThisPlaying ? 'Stop replay' : 'Play clip'}
+    >
+      {loading ? (
+        <motion.div
+          className="h-3 w-3 rounded-full border-2 border-transparent border-t-current"
+          style={{ color: 'var(--text-muted)' }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 0.6, repeat: Infinity, ease: 'linear' }}
+        />
+      ) : isThisPlaying ? (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-3 w-3"
+          style={{ color: 'var(--accent-text, #5eead4)' }}
+        >
+          <path
+            fillRule="evenodd"
+            d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z"
+            clipRule="evenodd"
+          />
+        </svg>
+      ) : (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="h-3 w-3"
+          style={{ color: 'var(--text-secondary, rgba(255,255,255,0.7))' }}
+        >
+          <path
+            fillRule="evenodd"
+            d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+            clipRule="evenodd"
+          />
+        </svg>
+      )}
+    </button>
+  )
+}
+
 export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const locale = useLocaleStore((s) => s.locale)
   const T = getT(locale)
@@ -529,6 +668,8 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       selectedMeaning: string
       actualMeaning: string
       correct: boolean
+      contextVideoId: string | null
+      contextSentenceIdx: number | null
     }>
   >([])
   const [flashColor, setFlashColor] = useState<'green' | 'red' | null>(null)
@@ -608,6 +749,28 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       triggerHaptic(isCorrect ? 40 : [30, 50, 30])
       updateLeitner(exprId, isCorrect)
 
+      // Auto-play clip via MiniReplayPlayer (fire-and-forget)
+      if (currentCard.contextVideoId && currentCard.contextSentenceIdx !== null) {
+        const ctxVideoId = currentCard.contextVideoId
+        const ctxIdx = currentCard.contextSentenceIdx
+        const ctxExpr = currentCard.expression
+        fetch(`/transcripts/${ctxVideoId}.json`)
+          .then((res) => res.json())
+          .then((data: unknown) => {
+            if (!Array.isArray(data) || !data[ctxIdx]) return
+            const sub = data[ctxIdx]
+            if (sub.start != null && sub.end != null) {
+              useReplayStore.getState().play({
+                videoId: ctxVideoId,
+                start: sub.start,
+                end: sub.end,
+                expressionText: ctxExpr,
+              })
+            }
+          })
+          .catch(() => {})
+      }
+
       if (isCorrect) {
         markFamiliar(exprId)
         window.setTimeout(() => {
@@ -636,6 +799,8 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
           selectedMeaning: choice.text,
           actualMeaning: currentCard.actualMeaning,
           correct: isCorrect,
+          contextVideoId: currentCard.contextVideoId,
+          contextSentenceIdx: currentCard.contextSentenceIdx,
         },
       ])
 
@@ -662,10 +827,12 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const wrongResults = results.filter((result) => !result.correct)
 
   const handleReplay = useCallback(() => {
+    useReplayStore.getState().stop()
     onComplete(false)
   }, [onComplete])
 
   const handleExit = useCallback(() => {
+    useReplayStore.getState().stop()
     onComplete(correctCount >= cards.length / 2)
   }, [cards.length, correctCount, onComplete])
 
@@ -724,21 +891,30 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
               {wrongResults.map((result) => (
                 <div
                   key={`${result.exprId}-${result.selectedMeaning}`}
-                  className="rounded-xl border px-4 py-3"
+                  className="flex items-start gap-3 rounded-xl border px-4 py-3"
                   style={{
                     backgroundColor: 'var(--bg-card)',
                     borderColor: 'var(--border-card)',
                   }}
                 >
-                  <p className="font-medium" style={{ color: 'var(--text-primary)' }}>
-                    {result.expression}
-                  </p>
-                  <p className="mt-1 text-xs" style={{ color: 'var(--text-muted)' }}>
-                    {T.myChoice}: {result.selectedMeaning}
-                  </p>
-                  <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
-                    {T.correctAnswer}: {result.actualMeaning}
-                  </p>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                      {result.expression}
+                    </p>
+                    <p className="mt-1 text-xs" style={{ color: 'var(--text-muted)' }}>
+                      {T.myChoice}: {result.selectedMeaning}
+                    </p>
+                    <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
+                      {T.correctAnswer}: {result.actualMeaning}
+                    </p>
+                  </div>
+                  {result.contextVideoId && result.contextSentenceIdx !== null && (
+                    <GameResultReplayButton
+                      videoId={result.contextVideoId}
+                      sentenceIdx={result.contextSentenceIdx}
+                      expressionText={result.expression}
+                    />
+                  )}
                 </div>
               ))}
             </div>

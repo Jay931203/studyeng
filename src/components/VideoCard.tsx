@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { type VideoData } from '@/data/seed-videos'
+import { ComprehensionBadge } from '@/components/ComprehensionBadge'
 import { getCatalogSeriesById } from '@/lib/catalog'
 import { getCategoryLabels } from '@/lib/uiTranslations'
 import { useLocaleStore } from '@/stores/useLocaleStore'
@@ -51,9 +52,12 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
               {seriesTitle}
             </p>
           )}
-          <p className="line-clamp-2 text-base font-semibold leading-tight text-white">
-            {video.title}
-          </p>
+          <div className="flex items-end justify-between gap-2">
+            <p className="line-clamp-2 min-w-0 flex-1 text-base font-semibold leading-tight text-white">
+              {video.title}
+            </p>
+            <ComprehensionBadge videoId={video.id} compact className="shrink-0 rounded-full bg-black/45 px-1.5 py-0.5 backdrop-blur-sm" />
+          </div>
         </div>
       </div>
     </motion.button>

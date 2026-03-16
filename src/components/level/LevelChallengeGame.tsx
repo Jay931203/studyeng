@@ -10,7 +10,7 @@ import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { triggerHaptic } from '@/lib/haptic'
-import type { ChallengeTransition } from '@/types/level'
+import type { CefrLevel, ChallengeTransition } from '@/types/level'
 import { displayLevelName } from '@/types/level'
 
 const TRANSLATIONS = {
@@ -156,9 +156,12 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   const [isAnimating, setIsAnimating] = useState(false)
   const [slideDir, setSlideDir] = useState<'left' | 'right' | null>(null)
   const [showCelebration, setShowCelebration] = useState(false)
+  // Capture the level the user started at. currentLevel from the store updates
+  // immediately on setLevel(), so we need a snapshot taken before the level change.
+  const [levelBeforeChallenge] = useState<CefrLevel>(() => currentLevel)
 
   const currentCard = cards[currentIdx] ?? null
-  const fromLabel = displayLevelName(currentLevel)
+  const fromLabel = displayLevelName(levelBeforeChallenge)
   const toLabel = displayLevelName(targetLevel)
 
   // ---------------------------------------------------------------------------
@@ -193,7 +196,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
       // Trigger level up
       const familiarEntries = useFamiliarityStore.getState().entries
       const familiarCount = Object.values(familiarEntries).filter((e) => e.count >= 3).length
-      addManualLevelChange(currentLevel, targetLevel, rawScore, familiarCount)
+      addManualLevelChange(levelBeforeChallenge, targetLevel, rawScore, familiarCount)
       setLevel(targetLevel)
       setShowCelebration(true)
 
@@ -205,7 +208,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
     } else {
       setPhase('result')
     }
-  }, [incrementSessionCount, knownCount, recordAttempt, targetLevel, addManualLevelChange, currentLevel, rawScore, setLevel])
+  }, [incrementSessionCount, knownCount, recordAttempt, targetLevel, addManualLevelChange, levelBeforeChallenge, rawScore, setLevel])
 
   // ---------------------------------------------------------------------------
   // Advance card
@@ -587,8 +590,8 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
 
   return (
     <div className="relative flex flex-col h-full px-5 py-4">
-      {/* Header: progress */}
-      <div className="flex items-center justify-between mb-4">
+      {/* Header: progress — pr-10 avoids overlap with the parent's absolute X close button */}
+      <div className="flex items-center justify-between mb-4 pr-10">
         <p className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
           {currentIdx + 1} / {cards.length}
         </p>

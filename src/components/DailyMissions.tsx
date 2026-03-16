@@ -182,6 +182,7 @@ export function TodayDashboard() {
   const today = getTodayIsoDate()
   const benefitSnapshot = getBenefitSnapshot()
   const gameXpToday = getDailyTotalGameXP()
+  const streakMultiplier = useUserStore((state) => state.getStreakMultiplier())
   const streakTarget = streakDays > 0 ? getStreakBonusXP(streakDays) : 10
   const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
   const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
@@ -242,7 +243,7 @@ export function TodayDashboard() {
                 {TIER_NAMES[benefitSnapshot.benefitTier]}
               </p>
               <p className="mt-1 text-[11px] leading-relaxed text-[var(--text-muted)]">
-                {getBenefitStatusLine(benefitSnapshot)}
+                {getBenefitStatusLine(benefitSnapshot, locale)}
               </p>
             </div>
             <span className="shrink-0 rounded-full bg-[var(--bg-primary)] px-2.5 py-1 text-[10px] font-medium text-[var(--text-muted)]">
@@ -281,9 +282,10 @@ export function TodayDashboard() {
             label={t.streakLabel}
             value={`${streakBonusToday}/${streakTarget} XP`}
             progress={streakBonusPct}
+            badge={streakDays > 0 ? `${streakMultiplier.toFixed(2)}x` : undefined}
             detail={
               streakDays > 0
-                ? t.streakDetailActive(streakTarget, streakDays)
+                ? `${t.streakDetailActive(streakTarget, streakDays)} · ${streakMultiplier.toFixed(2)}x XP`
                 : t.streakDetailNew
             }
           />
@@ -300,23 +302,12 @@ export function TodayDashboard() {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="sticky top-0 z-10 border-b border-[var(--border-card)] bg-[var(--bg-primary)] px-5 py-4">
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                    {t.benefitGuide}
-                  </p>
-                  <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                    {t.benefitGuideDescription}
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setShowTierGuide(false)}
-                  className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-xs font-semibold text-[var(--text-secondary)]"
-                >
-                  {t.close}
-                </button>
-              </div>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                {t.benefitGuide}
+              </p>
+              <p className="mt-1 text-sm text-[var(--text-secondary)]">
+                {t.benefitGuideDescription}
+              </p>
             </div>
 
             <div className="max-h-[70vh] overflow-y-auto px-5 py-4">
@@ -389,6 +380,14 @@ export function TodayDashboard() {
               <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
                 {t.footerNote}
               </p>
+
+              <button
+                type="button"
+                onClick={() => setShowTierGuide(false)}
+                className="mt-5 w-full rounded-xl py-3 text-center text-sm font-semibold text-[var(--text-secondary)] bg-[var(--bg-secondary)]"
+              >
+                {t.close}
+              </button>
             </div>
           </div>
         </div>
@@ -402,16 +401,25 @@ function ProgressRow({
   value,
   progress,
   detail,
+  badge,
 }: {
   label: string
   value: string
   progress: number
   detail?: string
+  badge?: string
 }) {
   return (
     <div>
       <div className="mb-1 flex items-center justify-between text-[11px]">
-        <span className="text-[var(--text-secondary)]">{label}</span>
+        <span className="flex items-center gap-1.5 text-[var(--text-secondary)]">
+          {label}
+          {badge && (
+            <span className="rounded-full bg-[var(--accent-glow)] px-1.5 py-0.5 text-[9px] font-semibold text-[var(--accent-text)]">
+              {badge}
+            </span>
+          )}
+        </span>
         <span className="font-medium text-[var(--text-primary)]">{value}</span>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">

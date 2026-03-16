@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { getLocalizedSubtitle } from '@/lib/localeUtils'
+import { ExpressionReplayButton } from './ExpressionReplayButton'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 
 interface SavedPhraseCardProps {
@@ -27,9 +28,18 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
       className="cursor-pointer rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]"
       onClick={onPlay}
     >
-      <div className="min-w-0">
-        <p className="font-medium leading-relaxed text-[var(--text-primary)]">{phrase.en}</p>
-        <p className="mt-1.5 text-sm text-[var(--text-muted)]">{getLocalizedSubtitle(phrase, locale)}</p>
+      <div className="flex items-start gap-3">
+        <div className="min-w-0 flex-1">
+          <p className="font-medium leading-relaxed text-[var(--text-primary)]">{phrase.en}</p>
+          <p className="mt-1.5 text-sm text-[var(--text-muted)]">{getLocalizedSubtitle(phrase, locale)}</p>
+        </div>
+        <ExpressionReplayButton
+          videoId={phrase.videoId}
+          start={phrase.timestampStart}
+          end={phrase.timestampEnd}
+          expressionText={phrase.en}
+          size="md"
+        />
       </div>
 
       <div className="mt-3 flex items-center justify-between gap-3 border-t border-[var(--border-card)] pt-3">

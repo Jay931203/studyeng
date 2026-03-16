@@ -365,7 +365,8 @@ export function BillingManagementCard({
   const native = isNative()
   const isDetail = mode === 'detail'
   const { user } = useAuth()
-  const locale = toBillingLocale(useLocaleStore((s) => s.locale))
+  const rawLocale = useLocaleStore((s) => s.locale)
+  const locale = toBillingLocale(rawLocale)
   const t = TRANSLATIONS[locale]
   const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
   const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
@@ -744,7 +745,7 @@ export function BillingManagementCard({
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
               )}
               <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                {getBenefitStatusLine(benefitSnapshot)}
+                {getBenefitStatusLine(benefitSnapshot, rawLocale)}
               </p>
             </div>
             {currentPremium && (
@@ -818,7 +819,7 @@ export function BillingManagementCard({
                 {TIER_NAMES[benefitSnapshot.benefitTier]}
               </p>
               <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                {getBenefitStatusLine(benefitSnapshot)}
+                {getBenefitStatusLine(benefitSnapshot, rawLocale)}
               </p>
               <p className="mt-2 text-[11px] text-[var(--text-muted)]">
                 {t.thisMonth} {benefitSnapshot.currentMonthXp.toLocaleString()} / {MONTHLY_ACTIVE_THRESHOLD} XP

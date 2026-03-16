@@ -218,9 +218,9 @@ const LOCALE_OPTIONS: Array<{
   native: string
   english: string
 }> = [
-  { id: 'ko', native: '한국어', english: 'Korean' },
-  { id: 'ja', native: '日本語', english: 'Japanese' },
   { id: 'zh-TW', native: '繁體中文', english: 'Chinese' },
+  { id: 'ja', native: '日本語', english: 'Japanese' },
+  { id: 'ko', native: '한국어', english: 'Korean' },
   { id: 'vi', native: 'Tiếng Việt', english: 'Vietnamese' },
 ]
 
@@ -369,12 +369,10 @@ export default function ProfilePage() {
                 className="flex w-full items-center justify-between px-1 py-3"
                 onClick={() => setShowLanguageModal(true)}
               >
-                <div className="text-left">
-                  <p className="text-sm font-medium text-[var(--text-primary)]">Language</p>
-                </div>
+                <p className="text-sm font-medium text-[var(--text-primary)]">Language</p>
                 <div className="flex items-center gap-1.5">
                   <span className="text-sm font-medium text-[var(--text-secondary)]">
-                    {LOCALE_OPTIONS.find((o) => o.id === locale)?.native}
+                    {(() => { const o = LOCALE_OPTIONS.find((o) => o.id === locale); return o ? `${o.english} (${o.native})` : '' })()}
                   </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -706,12 +704,12 @@ export default function ProfilePage() {
 
       {showLanguageModal && (
         <div
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 px-4 pb-8 sm:items-center sm:pb-0"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4"
           onClick={() => setShowLanguageModal(false)}
         >
           <motion.div
-            initial={{ y: 120, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
             transition={{ type: 'spring', damping: 28, stiffness: 340 }}
             className="w-full max-w-sm rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-xl"
             onClick={(e) => e.stopPropagation()}
@@ -732,14 +730,9 @@ export default function ProfilePage() {
                     }}
                     className="flex w-full items-center justify-between px-2 py-3.5 text-left"
                   >
-                    <div>
-                      <p className={`text-sm font-semibold ${selected ? 'text-[var(--accent-primary)]' : 'text-[var(--text-primary)]'}`}>
-                        {option.native}
-                      </p>
-                      <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                        {option.english}
-                      </p>
-                    </div>
+                    <p className={`text-sm font-semibold ${selected ? 'text-[var(--accent-primary)]' : 'text-[var(--text-primary)]'}`}>
+                      {option.english} ({option.native})
+                    </p>
                     {selected && (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

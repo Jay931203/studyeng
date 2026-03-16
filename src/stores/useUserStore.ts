@@ -28,6 +28,7 @@ interface UserState {
   checkAndUpdateStreak: () => void
   dismissLevelUp: () => void
   getTotalXP: () => number
+  getStreakMultiplier: () => number
 }
 
 function getXpForLevel(level: number) {
@@ -53,6 +54,12 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
       reason = getLocaleStrings(useLocaleStore.getState().locale).xpReasons.defaultReward
     }
     if (amount <= 0) return
+
+    // Apply streak multiplier: 1 + min(streakDays * 0.01, 1.0) → max 2x at 100 days
+    const streakDays = get().streakDays
+    const multiplier = 1 + Math.min(streakDays * 0.01, 1.0)
+    amount = Math.round(amount * multiplier * 100) / 100
+
     const { level, xp, totalXpEarned, xpHistory } = get()
     const xpForLevel = getXpForLevel(level)
     const newXp = xp + amount
@@ -108,6 +115,14 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   },
 
   dismissLevelUp: () => set({ showLevelUp: false }),
+
+  /**
+   * Returns the current streak XP multiplier: 1.0x to 2.0x based on streakDays.
+   */
+  getStreakMultiplier: () => {
+    const { streakDays } = get()
+    return 1 + Math.min(streakDays * 0.01, 1.0)
+  },
 
   /**
    * Returns total lifetime reward XP earned across all sources.

@@ -7,6 +7,7 @@ import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
 import { PushPermissionPrompt } from '@/components/PushPermissionPrompt'
+import { MiniReplayPlayer } from '@/components/MiniReplayPlayer'
 import { buildPathWithNext } from '@/lib/navigation'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -124,6 +125,7 @@ export default function TabsLayout({
       <PushPermissionPrompt
         visible={watchedVideoIds.length >= 1}
       />
+      <MiniReplayPlayer />
       <Suspense fallback={null}>
         <AdminActivator />
       </Suspense>

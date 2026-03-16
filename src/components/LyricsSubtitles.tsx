@@ -7,10 +7,185 @@ import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useThemeStore } from '@/stores/useThemeStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
+import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
+import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { getLocalizedSubtitle } from '@/lib/localeUtils'
 import { DoubleTapTip } from './DoubleTapTip'
 import { SaveToast } from './SaveToast'
 import type { SubtitleEntry } from '@/data/seed-videos'
+import expressionIndexData from '@/data/expression-index-v3.json'
+import expressionEntriesData from '@/data/expression-entries-v2.json'
+import { CEFR_ORDER } from '@/types/level'
+import type { CefrLevel } from '@/types/level'
+
+const expressionIndex = expressionIndexData as Record<string, Array<{
+  exprId: string
+  sentenceIdx: number
+  en: string
+  ko: string
+  surfaceForm: string
+}>>
+
+const expressionEntries = expressionEntriesData as Record<string, {
+  canonical: string
+  meaning_ko: string
+  category: string
+  cefr: string
+  [key: string]: unknown
+}>
+
+/** Check if an expression's CEFR level matches the user's level (within 1 step) */
+function isAtUserLevel(exprCefr: string, userLevel: CefrLevel): boolean {
+  const exprIdx = CEFR_ORDER.indexOf(exprCefr as CefrLevel)
+  const userIdx = CEFR_ORDER.indexOf(userLevel)
+  if (exprIdx < 0 || userIdx < 0) return false
+  return Math.abs(exprIdx - userIdx) <= 1
+}
+
+interface ExpressionMatch {
+  exprId: string
+  surfaceForm: string
+  meaning: string
+  cefr: string
+  isFamiliar: boolean
+  isAtLevel: boolean
+}
+
+/** Find expression matches within a subtitle line for the given video */
+function findExpressionMatches(
+  text: string,
+  videoId: string | undefined,
+  sentenceIdx: number,
+  familiarCheck: (id: string) => boolean,
+  userLevel: CefrLevel,
+): ExpressionMatch[] {
+  if (!videoId) return []
+  const videoExprs = expressionIndex[videoId]
+  if (!videoExprs) return []
+
+  const matches: ExpressionMatch[] = []
+  const textLower = text.toLowerCase()
+
+  for (const entry of videoExprs) {
+    // Match by sentence index for precision
+    if (entry.sentenceIdx !== sentenceIdx) continue
+
+    const surfaceLower = entry.surfaceForm.toLowerCase()
+    if (!textLower.includes(surfaceLower)) continue
+
+    const dictEntry = expressionEntries[entry.exprId]
+    const cefr = dictEntry?.cefr ?? 'B1'
+    const meaning = dictEntry?.meaning_ko ?? entry.ko ?? ''
+
+    matches.push({
+      exprId: entry.exprId,
+      surfaceForm: entry.surfaceForm,
+      meaning,
+      cefr,
+      isFamiliar: familiarCheck(entry.exprId),
+      isAtLevel: isAtUserLevel(cefr, userLevel),
+    })
+  }
+
+  return matches
+}
+
+/** Render subtitle text with expression underlines */
+function AnnotatedSubtitleText({
+  text,
+  matches,
+  onExpressionTap,
+}: {
+  text: string
+  matches: ExpressionMatch[]
+  onExpressionTap: (match: ExpressionMatch, rect: DOMRect) => void
+}) {
+  if (matches.length === 0) return <>{text}</>
+
+  // Sort matches by position in text (first occurrence), longest first for overlapping
+  const sortedMatches = [...matches]
+    .map((m) => {
+      const idx = text.toLowerCase().indexOf(m.surfaceForm.toLowerCase())
+      return { ...m, startIdx: idx, endIdx: idx + m.surfaceForm.length }
+    })
+    .filter((m) => m.startIdx >= 0)
+    .sort((a, b) => a.startIdx - b.startIdx || b.surfaceForm.length - a.surfaceForm.length)
+
+  // Remove overlapping matches (keep the first/longest)
+  const nonOverlapping: typeof sortedMatches = []
+  let lastEnd = 0
+  for (const m of sortedMatches) {
+    if (m.startIdx >= lastEnd) {
+      nonOverlapping.push(m)
+      lastEnd = m.endIdx
+    }
+  }
+
+  const parts: React.ReactNode[] = []
+  let cursor = 0
+
+  for (const m of nonOverlapping) {
+    // Text before this match
+    if (m.startIdx > cursor) {
+      parts.push(<span key={`t-${cursor}`}>{text.slice(cursor, m.startIdx)}</span>)
+    }
+
+    const matchedText = text.slice(m.startIdx, m.endIdx)
+
+    if (m.isFamiliar) {
+      // Familiar: subtle green underline
+      parts.push(
+        <span
+          key={`e-${m.startIdx}`}
+          style={{
+            textDecorationLine: 'underline',
+            textDecorationColor: 'rgba(74, 222, 128, 0.5)',
+            textDecorationStyle: 'solid',
+            textDecorationThickness: '1.5px',
+            textUnderlineOffset: '3px',
+          }}
+        >
+          {matchedText}
+        </span>,
+      )
+    } else if (m.isAtLevel) {
+      // At user's level but not familiar: subtle blue dotted underline, tappable
+      parts.push(
+        <span
+          key={`e-${m.startIdx}`}
+          role="button"
+          tabIndex={-1}
+          onClick={(e) => {
+            e.stopPropagation()
+            const rect = (e.target as HTMLElement).getBoundingClientRect()
+            onExpressionTap(m, rect)
+          }}
+          style={{
+            textDecorationLine: 'underline',
+            textDecorationColor: 'rgba(96, 165, 250, 0.5)',
+            textDecorationStyle: 'dotted',
+            textDecorationThickness: '1.5px',
+            textUnderlineOffset: '3px',
+            cursor: 'pointer',
+          }}
+        >
+          {matchedText}
+        </span>,
+      )
+    } else {
+      parts.push(<span key={`e-${m.startIdx}`}>{matchedText}</span>)
+    }
+
+    cursor = m.endIdx
+  }
+
+  // Remaining text
+  if (cursor < text.length) {
+    parts.push(<span key={`t-${cursor}`}>{text.slice(cursor)}</span>)
+  }
+
+  return <>{parts}</>
+}
 
 interface LyricsSubtitlesProps {
   subtitles: SubtitleEntry[]
@@ -100,6 +275,11 @@ export function LyricsSubtitles({
     return index
   }, [phrases])
 
+  // Dismiss expression popup on subtitle change
+  useEffect(() => {
+    setExprPopup(null)
+  }, [activeSubIndex])
+
   // Similar-phrase vibration on subtitle change
   const lastSimilarVibrateRef = useRef<{ token: string; time: number }>({ token: '', time: 0 })
 
@@ -151,6 +331,30 @@ export function LyricsSubtitles({
   const [freezeIndicatorText, setFreezeIndicatorText] = useState('FREEZE ON')
   const freezeIndicatorTimerRef = useRef<number | null>(null)
   const [edgeSpacerHeight, setEdgeSpacerHeight] = useState(60)
+
+  // Smart subtitle expression matching
+  const familiarityIsFamiliar = useFamiliarityStore((s) => s.isFamiliar)
+  const userCefrLevel = useOnboardingStore((s) => s.level)
+
+  // Expression popup state
+  const [exprPopup, setExprPopup] = useState<{
+    match: ExpressionMatch
+    x: number
+    y: number
+  } | null>(null)
+  const exprPopupTimerRef = useRef<number | null>(null)
+
+  const handleExpressionTap = useCallback((match: ExpressionMatch, rect: DOMRect) => {
+    // Position popup above the tapped word
+    setExprPopup({
+      match,
+      x: rect.left + rect.width / 2,
+      y: rect.top - 8,
+    })
+    // Auto-dismiss after 3 seconds
+    if (exprPopupTimerRef.current) clearTimeout(exprPopupTimerRef.current)
+    exprPopupTimerRef.current = window.setTimeout(() => setExprPopup(null), 3000)
+  }, [])
 
   // First-time tooltip
   const [showFreezeTip, setShowFreezeTip] = useState(() => {
@@ -441,6 +645,7 @@ export function LyricsSubtitles({
       if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current)
       if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
       if (userScrollTimerRef.current) clearTimeout(userScrollTimerRef.current)
+      if (exprPopupTimerRef.current) clearTimeout(exprPopupTimerRef.current)
     }
   }, [])
 
@@ -769,7 +974,17 @@ export function LyricsSubtitles({
                     }}
                   >
                     <>
-                      <span>{sub.en}</span>
+                      <span>
+                        {(isActive || isFrozen) ? (
+                          <AnnotatedSubtitleText
+                            text={sub.en}
+                            matches={findExpressionMatches(sub.en, videoId, idx, familiarityIsFamiliar, userCefrLevel)}
+                            onExpressionTap={handleExpressionTap}
+                          />
+                        ) : (
+                          sub.en
+                        )}
+                      </span>
                       {(isActive || isFrozen) && showTranslation && getLocalizedSubtitle(sub, locale) && (
                         <p
                           className="mt-0.5 text-xs"
@@ -790,6 +1005,41 @@ export function LyricsSubtitles({
           <div className="flex-shrink-0" style={{ height: `${edgeSpacerHeight}px` }} />
         </div>
       </div>
+
+      {/* Expression meaning popup */}
+      {exprPopup && (
+        <div
+          className="pointer-events-auto fixed z-[100]"
+          style={{
+            left: `${exprPopup.x}px`,
+            top: `${exprPopup.y}px`,
+            transform: 'translate(-50%, -100%)',
+          }}
+          onClick={(e) => {
+            e.stopPropagation()
+            setExprPopup(null)
+          }}
+        >
+          <div
+            className="rounded-xl border px-3 py-2 shadow-lg backdrop-blur-md"
+            style={{
+              backgroundColor: 'var(--player-panel)',
+              borderColor: 'var(--player-chip-border)',
+              maxWidth: '220px',
+            }}
+          >
+            <p className="text-xs font-semibold" style={{ color: 'var(--player-text)' }}>
+              {exprPopup.match.surfaceForm}
+            </p>
+            <p className="mt-0.5 text-[11px]" style={{ color: 'var(--player-muted)' }}>
+              {exprPopup.match.meaning}
+            </p>
+            <p className="mt-0.5 text-[9px] uppercase tracking-wider" style={{ color: 'rgba(96, 165, 250, 0.7)' }}>
+              {exprPopup.match.cefr}
+            </p>
+          </div>
+        </div>
+      )}
 
       {subtitleGuidesEnabled && (
         <div className="pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-4">

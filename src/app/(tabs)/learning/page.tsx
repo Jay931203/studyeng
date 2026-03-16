@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
+import { ComprehensionBadge } from '@/components/ComprehensionBadge'
 import { TodayDashboard } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
@@ -206,6 +207,7 @@ export default function LearningPage() {
                         <span className="text-xs text-[var(--text-muted)]">{categoryLabel}</span>
                         <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
                         <span className="text-xs text-[var(--text-muted)]">Lv.{video.difficulty}</span>
+                        <ComprehensionBadge videoId={video.id} compact />
                       </div>
                     </div>
                   </button>

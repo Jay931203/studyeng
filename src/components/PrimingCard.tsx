@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, useMotionValue, useTransform, type PanInfo } from 'framer-motion'
+import { animate, AnimatePresence, motion, useMotionValue, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { getLocalizedMeaning, getLocalizedSentence } from '@/lib/localeUtils'
@@ -128,6 +128,7 @@ function ExpressionCard({
   familiarCount,
   showHints,
   showSwipeHint,
+  isFirstCard,
 }: {
   expr: Expression
   index: number
@@ -137,12 +138,14 @@ function ExpressionCard({
   familiarCount?: number
   showHints?: boolean
   showSwipeHint?: boolean
+  isFirstCard?: boolean
 }) {
   const locale = useLocaleStore((s) => s.locale)
   const langKey = locale === 'zh-TW' || locale === 'vi' || locale === 'ja' ? locale : 'ko'
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const didDragRef = useRef(false)
+  const dismissingRef = useRef(false)
   const cefrColor = getCefrColor(expr.cefr)
   const categoryLabel = CATEGORY_LABELS[langKey]?.[expr.category] ?? expr.category
 
@@ -150,13 +153,25 @@ function ExpressionCard({
 
   // Swipe gesture — purely horizontal, no rotation
   const x = useMotionValue(0)
-  const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
+  const cardOpacity = useMotionValue(1)
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
+    if (dismissingRef.current) return
     const absOffset = Math.abs(info.offset.x)
     const absVelocity = Math.abs(info.velocity.x)
     if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
-      onSwipeDismiss?.()
+      // Fly off in the swipe direction
+      dismissingRef.current = true
+      const direction = info.offset.x > 0 ? 1 : -1
+      animate(x, direction * 400, { type: 'spring', stiffness: 300, damping: 30 })
+      animate(cardOpacity, 0, { duration: 0.2 })
+      setTimeout(() => {
+        onSwipeDismiss?.()
+      }, 150)
+    } else {
+      // Snap back to origin
+      animate(x, 0, { type: 'spring', stiffness: 500, damping: 30 })
+      animate(cardOpacity, 1, { duration: 0.15 })
     }
   }
 
@@ -179,7 +194,7 @@ function ExpressionCard({
         style={{
           perspective: 800,
           x,
-          opacity,
+          opacity: cardOpacity,
           touchAction: 'none',
           userSelect: 'none',
           WebkitUserSelect: 'none',
@@ -187,9 +202,9 @@ function ExpressionCard({
         drag="x"
         dragDirectionLock
         dragPropagation={false}
-        dragSnapToOrigin
-        dragElastic={0.24}
+        dragElastic={0.5}
         dragMomentum={false}
+        dragConstraints={{ left: 0, right: 0 }}
         whileDrag={{ scale: 0.985 }}
         onDragStart={() => {
           didDragRef.current = true
@@ -215,6 +230,10 @@ function ExpressionCard({
           onInteract?.()
           setFlipped((current) => !current)
         }}
+        {...(isFirstCard ? {
+          animate: { x: [0, -8, 8, -8, 8, 0] },
+          transition: { delay: 1, duration: 0.6, ease: 'easeInOut' as const },
+        } : {})}
       >
         <motion.div
           className="relative min-h-[120px]"
@@ -437,6 +456,7 @@ function WordCard({
   familiarCount,
   showHints,
   showSwipeHint,
+  isFirstCard,
 }: {
   word: WordItem
   index: number
@@ -446,24 +466,38 @@ function WordCard({
   familiarCount?: number
   showHints?: boolean
   showSwipeHint?: boolean
+  isFirstCard?: boolean
 }) {
   const locale = useLocaleStore((s) => s.locale)
   const langKey = locale === 'zh-TW' || locale === 'vi' || locale === 'ja' ? locale : 'ko'
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const didDragRef = useRef(false)
+  const dismissingRef = useRef(false)
   const cefrColor = getCefrColor(word.cefr)
   const posLabel = POS_LABELS[langKey]?.[word.pos] ?? word.pos
   const count = familiarCount ?? 0
 
   const x = useMotionValue(0)
-  const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
+  const cardOpacity = useMotionValue(1)
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
+    if (dismissingRef.current) return
     const absOffset = Math.abs(info.offset.x)
     const absVelocity = Math.abs(info.velocity.x)
     if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
-      onSwipeDismiss?.()
+      // Fly off in the swipe direction
+      dismissingRef.current = true
+      const direction = info.offset.x > 0 ? 1 : -1
+      animate(x, direction * 400, { type: 'spring', stiffness: 300, damping: 30 })
+      animate(cardOpacity, 0, { duration: 0.2 })
+      setTimeout(() => {
+        onSwipeDismiss?.()
+      }, 150)
+    } else {
+      // Snap back to origin
+      animate(x, 0, { type: 'spring', stiffness: 500, damping: 30 })
+      animate(cardOpacity, 1, { duration: 0.15 })
     }
   }
 
@@ -486,7 +520,7 @@ function WordCard({
         style={{
           perspective: 800,
           x,
-          opacity,
+          opacity: cardOpacity,
           touchAction: 'none',
           userSelect: 'none',
           WebkitUserSelect: 'none',
@@ -494,9 +528,9 @@ function WordCard({
         drag="x"
         dragDirectionLock
         dragPropagation={false}
-        dragSnapToOrigin
-        dragElastic={0.24}
+        dragElastic={0.5}
         dragMomentum={false}
+        dragConstraints={{ left: 0, right: 0 }}
         whileDrag={{ scale: 0.985 }}
         onDragStart={() => {
           didDragRef.current = true
@@ -522,6 +556,10 @@ function WordCard({
           onInteract?.()
           setFlipped((current) => !current)
         }}
+        {...(isFirstCard ? {
+          animate: { x: [0, -8, 8, -8, 8, 0] },
+          transition: { delay: 1, duration: 0.6, ease: 'easeInOut' as const },
+        } : {})}
       >
         <motion.div
           className="relative min-h-[96px]"
@@ -899,6 +937,7 @@ export function PrimingCard({
                           familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
                           showHints={guideHintsEnabled}
                           showSwipeHint={guideHintsEnabled && displayCardIndex === 0}
+                          isFirstCard={displayCardIndex === 0 && dismissedIds.size === 0}
                         />
                       </motion.div>
                     )
@@ -921,6 +960,7 @@ export function PrimingCard({
                         familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
                         showHints={guideHintsEnabled}
                         showSwipeHint={guideHintsEnabled && displayCardIndex === 0}
+                        isFirstCard={displayCardIndex === 0 && dismissedIds.size === 0}
                       />
                     </motion.div>
                   )
