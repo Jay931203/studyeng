@@ -33211,17 +33211,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-A35gds8NBws',
-    youtubeId: 'A35gds8NBws',
-    title: 'Breaking Bad Opening Credits/Scene (Intro) 1080p Full HD',
-    category: 'drama',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-A4FMZpNNrzA',
     youtubeId: 'A4FMZpNNrzA',
     title: 'Minions Opening Credits - The Office US',
