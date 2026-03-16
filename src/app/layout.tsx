@@ -72,34 +72,17 @@ export default function RootLayout({
           try {
             var stored = JSON.parse(localStorage.getItem('studyeng-theme') || '{}');
             var state = stored.state || {};
-            var backgroundTheme = state.backgroundTheme;
             var colorTheme = state.colorTheme;
             var legacyTheme = state.theme;
 
-            if ((!backgroundTheme || !colorTheme) && legacyTheme) {
-              if (legacyTheme === 'blue-dark') {
-                backgroundTheme = 'dark';
+            if (!colorTheme && legacyTheme) {
+              if (legacyTheme === 'blue-dark' || legacyTheme === 'light-blue') {
                 colorTheme = 'blue';
-              } else if (legacyTheme === 'purple-dark') {
-                backgroundTheme = 'dark';
+              } else if (legacyTheme === 'purple-dark' || legacyTheme === 'light-purple') {
                 colorTheme = 'purple';
-              } else if (legacyTheme === 'light') {
-                backgroundTheme = 'light';
-                colorTheme = 'teal';
-              } else if (legacyTheme === 'light-blue') {
-                backgroundTheme = 'light';
-                colorTheme = 'blue';
-              } else if (legacyTheme === 'light-purple') {
-                backgroundTheme = 'light';
-                colorTheme = 'purple';
-              } else if (legacyTheme === 'rainbow-dark') {
-                backgroundTheme = 'dark';
-                colorTheme = 'rainbow';
-              } else if (legacyTheme === 'light-rainbow') {
-                backgroundTheme = 'light';
+              } else if (legacyTheme === 'rainbow-dark' || legacyTheme === 'light-rainbow') {
                 colorTheme = 'rainbow';
               } else {
-                backgroundTheme = 'dark';
                 colorTheme = 'teal';
               }
             }
@@ -108,38 +91,18 @@ export default function RootLayout({
               colorTheme = 'purple';
             }
 
-            if (backgroundTheme && colorTheme) {
+            if (colorTheme) {
               var themeId;
-              if (backgroundTheme === 'dark') {
-                if (colorTheme === 'blue') {
-                  themeId = 'blue-dark';
-                } else if (colorTheme === 'purple') {
-                  themeId = 'purple-dark';
-                } else if (colorTheme === 'rainbow') {
-                  themeId = 'rainbow-dark';
-                } else {
-                  themeId = 'teal-dark';
-                }
+              if (colorTheme === 'blue') {
+                themeId = 'blue-dark';
+              } else if (colorTheme === 'purple') {
+                themeId = 'purple-dark';
+              } else if (colorTheme === 'rainbow') {
+                themeId = 'rainbow-dark';
               } else {
-                if (colorTheme === 'blue') {
-                  themeId = 'light-blue';
-                } else if (colorTheme === 'purple') {
-                  themeId = 'light-purple';
-                } else if (colorTheme === 'rainbow') {
-                  themeId = 'light-rainbow';
-                } else {
-                  themeId = 'light';
-                }
+                themeId = 'teal-dark';
               }
-
               document.documentElement.setAttribute('data-theme', themeId);
-              if (backgroundTheme === 'light') {
-                document.documentElement.classList.remove('dark');
-                document.documentElement.style.colorScheme = 'light';
-              } else {
-                document.documentElement.classList.add('dark');
-                document.documentElement.style.colorScheme = 'dark';
-              }
             }
           } catch(e) {}
         ` }} />

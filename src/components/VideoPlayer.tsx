@@ -92,6 +92,10 @@ interface VideoPlayerProps {
   landscapeBottomSubtitleHeight?: number
   initialSeekTime?: number
   children?: ReactNode
+  /** Inline subtitle controls (replaces floating remote) */
+  onPrevVideo?: () => void
+  onNextVideo?: () => void
+  onToggleFreeze?: () => void
 }
 
 const SIMILAR_CUE_STOPWORDS = new Set([
@@ -158,6 +162,9 @@ export function VideoPlayer({
   landscapeBottomSubtitleHeight = 184,
   initialSeekTime,
   children,
+  onPrevVideo,
+  onNextVideo,
+  onToggleFreeze,
 }: VideoPlayerProps) {
   const isShortsFormat = format === 'shorts'
   const locale = useLocaleStore((s) => s.locale)
@@ -960,6 +967,9 @@ export function VideoPlayer({
             showTranslation={subtitleMode === 'en-ko'}
             onSavePhrase={onSavePhrase}
             onSeek={(time) => seekTo(time)}
+            onPrevVideo={onPrevVideo}
+            onNextVideo={onNextVideo}
+            onToggleFreeze={onToggleFreeze}
           />
         )}
 
@@ -996,6 +1006,9 @@ export function VideoPlayer({
               onSavePhrase={onSavePhrase}
               onSeek={(time) => seekTo(time)}
               bottomOffset={isLandscapeViewport ? '24px' : '56px'}
+              onPrevVideo={onPrevVideo}
+              onNextVideo={onNextVideo}
+              onToggleFreeze={onToggleFreeze}
             />
           )}
 
@@ -1058,6 +1071,9 @@ function ShortsSubtitleOverlay({
   onSavePhrase,
   onSeek,
   bottomOffset = '48px',
+  onPrevVideo,
+  onNextVideo,
+  onToggleFreeze,
 }: {
   subtitles: SubtitleEntry[]
   videoId: string
@@ -1065,15 +1081,36 @@ function ShortsSubtitleOverlay({
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onSeek?: (time: number) => void
   bottomOffset?: string
+  onPrevVideo?: () => void
+  onNextVideo?: () => void
+  onToggleFreeze?: () => void
 }) {
   const locale = useLocaleStore((s) => s.locale)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
   const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
+  const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
   const phrases = usePhraseStore((state) => state.phrases)
   const removePhrase = usePhraseStore((state) => state.removePhrase)
   const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
+  const isFrozen = freezeSubIndex !== null
+  const canEnableFreeze = activeSubIndex >= 0
+
+  const handlePrevSub = useCallback(() => {
+    if (activeSubIndex > 0) {
+      const prev = subtitles[activeSubIndex - 1]
+      if (prev) onSeek?.(prev.start)
+    }
+  }, [activeSubIndex, subtitles, onSeek])
+
+  const handleNextSub = useCallback(() => {
+    if (activeSubIndex < subtitles.length - 1) {
+      const next = subtitles[activeSubIndex + 1]
+      if (next) onSeek?.(next.start)
+    }
+  }, [activeSubIndex, subtitles, onSeek])
+
   const [notice, setNotice] = useState<{
     message: string
     tone: 'saved' | 'freeze'
@@ -1127,6 +1164,8 @@ function ShortsSubtitleOverlay({
 
   if (!activeSub) return null
 
+  const showInlineControls = remoteEnabled && (onPrevVideo || onNextVideo || onToggleFreeze)
+
   return (
     <div
       className="absolute left-0 right-0 z-[12] flex justify-center px-4"
@@ -1141,98 +1180,190 @@ function ShortsSubtitleOverlay({
           tone={notice?.tone ?? 'default'}
         />
       </div>
-      <div
-        className="pointer-events-auto max-w-[92%] rounded-t-xl rounded-b-lg border px-5 py-3 text-center backdrop-blur-sm transition-transform active:scale-[0.985]"
-        style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-          borderColor:
-            freezeSubIndex === activeSubIndex
-              ? 'rgba(var(--accent-primary-rgb), 0.5)'
-              : 'rgba(255, 255, 255, 0.08)',
-        }}
-        onClick={(event) => {
-          event.stopPropagation()
+      <div className="flex items-end gap-1.5">
+        <div
+          className="pointer-events-auto max-w-[92%] flex-1 min-w-0 rounded-t-xl rounded-b-lg border px-5 py-3 text-center backdrop-blur-sm transition-transform active:scale-[0.985]"
+          style={{
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+            borderColor:
+              freezeSubIndex === activeSubIndex
+                ? 'rgba(var(--accent-primary-rgb), 0.5)'
+                : 'rgba(255, 255, 255, 0.08)',
+          }}
+          onClick={(event) => {
+            event.stopPropagation()
 
-          if (longPressFiredRef.current) {
-            longPressFiredRef.current = false
-            return
-          }
-
-          const now = Date.now()
-          if (now - lastTapRef.current < 550) {
-            if (savedPhraseId) {
-              removePhrase(savedPhraseId)
-              showNotice('REMOVED', 'saved')
-            } else if (onSavePhrase) {
-              onSavePhrase(activeSub)
-              showNotice('SAVED', 'saved')
+            if (longPressFiredRef.current) {
+              longPressFiredRef.current = false
+              return
             }
-            lastTapRef.current = 0
-            return
-          }
 
-          lastTapRef.current = now
+            const now = Date.now()
+            if (now - lastTapRef.current < 550) {
+              if (savedPhraseId) {
+                removePhrase(savedPhraseId)
+                showNotice('REMOVED', 'saved')
+              } else if (onSavePhrase) {
+                onSavePhrase(activeSub)
+                showNotice('SAVED', 'saved')
+              }
+              lastTapRef.current = 0
+              return
+            }
 
-          if (freezeSubIndex === activeSubIndex) {
-            onSeek?.(activeSub.start)
-          }
-        }}
-        onPointerDown={(event) => {
-          event.stopPropagation()
-          longPressFiredRef.current = false
-          pointerStartRef.current = { x: event.clientX, y: event.clientY }
-          clearLongPress()
-          longPressTimerRef.current = window.setTimeout(() => {
-            longPressFiredRef.current = true
+            lastTapRef.current = now
+
             if (freezeSubIndex === activeSubIndex) {
-              setFreezeSubIndex(null)
-              showNotice('FREEZE OFF', 'freeze', 1200)
-            } else {
-              setFreezeSubIndex(activeSubIndex)
               onSeek?.(activeSub.start)
-              showNotice('FREEZE ON', 'freeze', 1800)
             }
-          }, 500)
-        }}
-        onPointerMove={(event) => {
-          event.stopPropagation()
-          if (!pointerStartRef.current) return
-          const dx = event.clientX - pointerStartRef.current.x
-          const dy = event.clientY - pointerStartRef.current.y
-          if (Math.hypot(dx, dy) > 10) {
+          }}
+          onPointerDown={(event) => {
+            event.stopPropagation()
+            longPressFiredRef.current = false
+            pointerStartRef.current = { x: event.clientX, y: event.clientY }
             clearLongPress()
-          }
-        }}
-        onPointerUp={(event) => {
-          event.stopPropagation()
-          pointerStartRef.current = null
-          clearLongPress()
-        }}
-        onPointerCancel={(event) => {
-          event.stopPropagation()
-          pointerStartRef.current = null
-          clearLongPress()
-        }}
-      >
-        <p
-          className="text-[15px] font-semibold leading-snug"
-          style={{ color: '#ffffff' }}
+            longPressTimerRef.current = window.setTimeout(() => {
+              longPressFiredRef.current = true
+              if (freezeSubIndex === activeSubIndex) {
+                setFreezeSubIndex(null)
+                showNotice('FREEZE OFF', 'freeze', 1200)
+              } else {
+                setFreezeSubIndex(activeSubIndex)
+                onSeek?.(activeSub.start)
+                showNotice('FREEZE ON', 'freeze', 1800)
+              }
+            }, 500)
+          }}
+          onPointerMove={(event) => {
+            event.stopPropagation()
+            if (!pointerStartRef.current) return
+            const dx = event.clientX - pointerStartRef.current.x
+            const dy = event.clientY - pointerStartRef.current.y
+            if (Math.hypot(dx, dy) > 10) {
+              clearLongPress()
+            }
+          }}
+          onPointerUp={(event) => {
+            event.stopPropagation()
+            pointerStartRef.current = null
+            clearLongPress()
+          }}
+          onPointerCancel={(event) => {
+            event.stopPropagation()
+            pointerStartRef.current = null
+            clearLongPress()
+          }}
         >
-          {activeSub.en}
-        </p>
-        {showTranslation && getLocalizedSubtitle(activeSub, locale) && (
           <p
-            className="mt-1 text-[13px] leading-snug"
-            style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+            className="text-[15px] font-semibold leading-snug"
+            style={{ color: '#ffffff' }}
           >
-            {getLocalizedSubtitle(activeSub, locale)}
+            {activeSub.en}
           </p>
-        )}
-        {subtitleGuidesEnabled && (
-          <div className="mt-2 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
-            <span>{savedPhraseId ? 'Saved' : 'Double Tap Save'}</span>
-            <span className="text-white/25">|</span>
-            <span>{freezeSubIndex === activeSubIndex ? 'Hold Unfreeze' : 'Hold Freeze'}</span>
+          {showTranslation && getLocalizedSubtitle(activeSub, locale) && (
+            <p
+              className="mt-1 text-[13px] leading-snug"
+              style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+            >
+              {getLocalizedSubtitle(activeSub, locale)}
+            </p>
+          )}
+          {subtitleGuidesEnabled && (
+            <div className="mt-2 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+              <span>{savedPhraseId ? 'Saved' : 'Double Tap Save'}</span>
+              <span className="text-white/25">|</span>
+              <span>{freezeSubIndex === activeSubIndex ? 'Hold Unfreeze' : 'Hold Freeze'}</span>
+            </div>
+          )}
+        </div>
+
+        {/* Inline subtitle controls (replaces floating remote) */}
+        {showInlineControls && (
+          <div
+            className="pointer-events-auto flex flex-col items-center gap-px rounded-xl border backdrop-blur-sm"
+            data-no-feed-drag="true"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.55)',
+              borderColor: 'rgba(255, 255, 255, 0.08)',
+            }}
+            onClick={(e) => e.stopPropagation()}
+            onPointerDown={(e) => e.stopPropagation()}
+          >
+            {/* Previous subtitle */}
+            <button
+              onClick={handlePrevSub}
+              disabled={activeSubIndex <= 0}
+              className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+              aria-label="Previous subtitle"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/80">
+                <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
+              </svg>
+            </button>
+
+            <div className="h-px w-5 bg-white/10" />
+
+            {/* Next subtitle */}
+            <button
+              onClick={handleNextSub}
+              disabled={activeSubIndex >= subtitles.length - 1}
+              className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+              aria-label="Next subtitle"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/80">
+                <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
+              </svg>
+            </button>
+
+            <div className="h-px w-5 bg-white/10" />
+
+            {/* Freeze / Pin toggle */}
+            {onToggleFreeze && (
+              <>
+                <button
+                  onClick={onToggleFreeze}
+                  disabled={!isFrozen && !canEnableFreeze}
+                  className="flex h-8 w-9 items-center justify-center disabled:opacity-25"
+                  aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" style={{ color: isFrozen ? 'var(--accent-text)' : 'rgba(255,255,255,0.55)' }}>
+                    <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
+                  </svg>
+                </button>
+                <div className="h-px w-5 bg-white/10" />
+              </>
+            )}
+
+            {/* Previous video */}
+            {onPrevVideo && (
+              <>
+                <button
+                  onClick={onPrevVideo}
+                  className="flex h-8 w-9 items-center justify-center"
+                  aria-label="Previous video"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/55">
+                    <path d="M15.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L11.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+                    <path d="M11.79 14.77a.75.75 0 0 1-1.06.02l-4.5-4.25a.75.75 0 0 1 0-1.08l4.5-4.25a.75.75 0 1 1 1.04 1.08L7.832 10l3.938 3.71a.75.75 0 0 1 .02 1.06Z" />
+                  </svg>
+                </button>
+                <div className="h-px w-5 bg-white/10" />
+              </>
+            )}
+
+            {/* Next video */}
+            {onNextVideo && (
+              <button
+                onClick={onNextVideo}
+                className="flex h-8 w-9 items-center justify-center"
+                aria-label="Next video"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 text-white/55">
+                  <path d="M4.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L8.168 10 4.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+                  <path d="M8.21 5.23a.75.75 0 0 1 1.06-.02l4.5 4.25a.75.75 0 0 1 0 1.08l-4.5 4.25a.75.75 0 1 1-1.04-1.08L12.168 10 8.23 6.29a.75.75 0 0 1-.02-1.06Z" />
+                </svg>
+              </button>
+            )}
           </div>
         )}
       </div>

@@ -31,7 +31,7 @@ import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { difficultyToCefrLevel } from '@/types/level'
 import { AdminReportButton } from './AdminReportButton'
-import { FloatingRemote } from './FloatingRemote'
+// FloatingRemote replaced by inline subtitle controls in VideoPlayer
 import { PremiumModal } from './PremiumModal'
 import { UnifiedControls } from './UnifiedControls'
 import { VideoPlayer } from './VideoPlayer'
@@ -757,6 +757,9 @@ export function VideoFeed({
             onVideoErrorSkip={canGoNext ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
+            onPrevVideo={canGoPrev ? handlePrevVideo : undefined}
+            onNextVideo={canGoNext ? handleNextVideo : undefined}
+            onToggleFreeze={onToggleFreeze}
             onPlaybackStarted={() => {
               if (
                 initialReviewMarkedRef.current ||
@@ -981,13 +984,6 @@ export function VideoFeed({
           />
         </motion.div>
       </AnimatePresence>
-
-      <FloatingRemote
-        onPrevVideo={canGoPrev ? handlePrevVideo : undefined}
-        onNextVideo={canGoNext ? handleNextVideo : undefined}
-        onToggleFreeze={onToggleFreeze}
-        bottomOffset={isLandscapeViewport ? 12 : 92}
-      />
 
       {repeatIndicator && (
         <div

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useRef, useEffect } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'

@@ -19,7 +19,6 @@ import { usePushStore } from '@/stores/usePushStore'
 import {
   useThemeStore,
   type ThemeAccent,
-  type ThemeBackground,
 } from '@/stores/useThemeStore'
 
 const TRANSLATIONS = {
@@ -165,11 +164,6 @@ const TRANSLATIONS = {
   },
 } as const
 
-const BACKGROUND_OPTIONS = [
-  { id: 'dark' as const, swatchClass: 'bg-[#050505] border border-white/10' },
-  { id: 'light' as const, swatchClass: 'bg-[#f8fafc] border border-slate-300' },
-] satisfies Array<{ id: ThemeBackground; swatchClass: string }>
-
 const COLOR_OPTIONS = [
   {
     id: 'rainbow' as const,
@@ -248,9 +242,7 @@ export default function ProfilePage() {
   const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
   const premiumOverride = usePremiumStore((state) => state.premiumOverride)
   const setPremiumOverride = usePremiumStore((state) => state.setPremiumOverride)
-  const backgroundTheme = useThemeStore((state) => state.backgroundTheme)
   const colorTheme = useThemeStore((state) => state.colorTheme)
-  const setBackgroundTheme = useThemeStore((state) => state.setBackgroundTheme)
   const setColorTheme = useThemeStore((state) => state.setColorTheme)
   const {
     adminEnabled,
@@ -391,47 +383,21 @@ export default function ProfilePage() {
               </button>
 
               <div className="px-1 py-4">
-                <div className="mb-4">
+                <div className="flex items-center justify-between">
                   <p className="text-sm font-medium text-[var(--text-primary)]">{T.theme}</p>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-4">
-                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">
-                      {T.background}
-                    </p>
-                    <div className="flex min-h-10 items-center gap-3">
-                      {BACKGROUND_OPTIONS.map((option) => (
-                        <button
-                          key={option.id}
-                          onClick={() => setBackgroundTheme(option.id)}
-                          className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                            backgroundTheme === option.id
-                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                              : ''
-                          }`}
-                          aria-label={`Set background theme to ${option.id}`}
-                        />
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">{T.color}</p>
-                    <div className="flex min-h-10 items-center gap-3">
-                      {COLOR_OPTIONS.map((option) => (
-                        <button
-                          key={option.id}
-                          onClick={() => setColorTheme(option.id)}
-                          className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                            colorTheme === option.id
-                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                              : ''
-                          }`}
-                          aria-label={`Set color theme to ${option.id}`}
-                        />
-                      ))}
-                    </div>
+                  <div className="flex items-center gap-3">
+                    {COLOR_OPTIONS.map((option) => (
+                      <button
+                        key={option.id}
+                        onClick={() => setColorTheme(option.id)}
+                        className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                          colorTheme === option.id
+                            ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
+                            : ''
+                        }`}
+                        aria-label={`Set color theme to ${option.id}`}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
