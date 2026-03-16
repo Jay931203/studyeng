@@ -1273,7 +1273,8 @@ function InlineSubtitleControls({
         <button
           onClick={onToggleFreeze ?? undefined}
           disabled={!onToggleFreeze || (!isFrozen && !canEnableFreeze)}
-          className={btnClass}
+          className={`${btnClass} rounded-lg`}
+          style={isFrozen ? { backgroundColor: `rgba(var(--accent-primary-rgb), 0.2)` } : undefined}
           aria-label={isFrozen ? 'Unfreeze subtitle' : 'Freeze subtitle'}
         >
           <svg
@@ -1282,8 +1283,7 @@ function InlineSubtitleControls({
             fill="currentColor"
             className={iconSize}
             style={{
-              color: isFrozen ? 'var(--accent-text)' : iconMutedColor,
-              filter: isFrozen ? 'drop-shadow(0 0 4px rgba(var(--accent-primary-rgb), 0.6))' : 'none',
+              color: isFrozen ? 'var(--accent-primary)' : iconMutedColor,
             }}
           >
             <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
@@ -1294,7 +1294,8 @@ function InlineSubtitleControls({
         <button
           onClick={handleSave}
           disabled={!activeSub || !onSavePhrase}
-          className={btnClass}
+          className={`${btnClass} rounded-lg`}
+          style={isSaved ? { backgroundColor: `rgba(var(--accent-primary-rgb), 0.2)` } : undefined}
           aria-label={isSaved ? 'Remove saved phrase' : 'Save phrase'}
         >
           <svg
@@ -1305,8 +1306,7 @@ function InlineSubtitleControls({
             strokeWidth={isSaved ? 0 : 1.8}
             className={iconSize}
             style={{
-              color: isSaved ? 'var(--accent-text)' : iconMutedColor,
-              filter: isSaved ? 'drop-shadow(0 0 4px rgba(var(--accent-primary-rgb), 0.6))' : 'none',
+              color: isSaved ? 'var(--accent-primary)' : iconMutedColor,
             }}
           >
             <path
