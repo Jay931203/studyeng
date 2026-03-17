@@ -1,6 +1,6 @@
 'use client'
 
-import { type ReactNode, useState } from 'react'
+import { type ReactNode, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ExpressionSwipeGame } from './ExpressionSwipeGame'
@@ -95,6 +95,27 @@ export function GameLauncher() {
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
   const incrementMission = useDailyMissionStore((state) => state.incrementMission)
   const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
+
+  useEffect(() => {
+    if (!activeGame || typeof document === 'undefined') return
+
+    const previousBodyOverflow = document.body.style.overflow
+    const previousHtmlOverflow = document.documentElement.style.overflow
+    const previousBodyOverscroll = document.body.style.overscrollBehavior
+    const previousHtmlOverscroll = document.documentElement.style.overscrollBehavior
+
+    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overscrollBehavior = 'none'
+    document.documentElement.style.overscrollBehavior = 'none'
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow
+      document.documentElement.style.overflow = previousHtmlOverflow
+      document.body.style.overscrollBehavior = previousBodyOverscroll
+      document.documentElement.style.overscrollBehavior = previousHtmlOverscroll
+    }
+  }, [activeGame])
 
   const handleComplete = (correct: boolean) => {
     void correct
@@ -194,29 +215,51 @@ export function GameLauncher() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[120] overflow-hidden"
-            style={{
-              backgroundColor: 'var(--bg-primary)',
-              paddingTop: 'calc(env(safe-area-inset-top, 0px) + 2.75rem)',
-              paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 0.75rem)',
-            }}
+            className="fixed inset-0 z-[120] overflow-hidden overscroll-none"
+            style={{ backgroundColor: 'var(--bg-primary)' }}
           >
-            <button
-              onClick={() => setActiveGame(null)}
-              className="absolute right-4 z-[130] flex h-8 w-8 items-center justify-center rounded-full"
+            <div
+              className="relative h-full w-full overflow-hidden"
               style={{
-                top: 'calc(env(safe-area-inset-top, 0px) + 0.75rem)',
-                backgroundColor: 'var(--bg-secondary)',
-                color: 'var(--text-secondary)',
+                paddingTop: 'calc(env(safe-area-inset-top, 0px) + 0.5rem)',
+                paddingBottom: 'max(env(safe-area-inset-bottom, 0px), 0.5rem)',
               }}
             >
-              {'\u2715'}
-            </button>
-
-            {activeGame === 'expression-swipe' && (
-              <ExpressionSwipeGame onComplete={handleComplete} />
-            )}
-            {activeGame === 'listen-fill' && <ListenFillGame onComplete={handleComplete} />}
+              {activeGame === 'expression-swipe' && (
+                <>
+                  <button
+                    onClick={() => setActiveGame(null)}
+                    className="absolute right-4 z-[130] rounded-xl border px-3 py-1.5 text-xs transition-colors active:scale-[0.97]"
+                    style={{
+                      top: 'calc(env(safe-area-inset-top, 0px) + 0.25rem)',
+                      borderColor: 'var(--border-card)',
+                      backgroundColor: 'var(--bg-secondary)',
+                      color: 'var(--text-secondary)',
+                    }}
+                  >
+                    {'\uB098\uAC00\uAE30'}
+                  </button>
+                  <ExpressionSwipeGame onComplete={handleComplete} />
+                </>
+              )}
+              {activeGame === 'listen-fill' && (
+                <>
+                  <button
+                    onClick={() => setActiveGame(null)}
+                    className="absolute right-4 z-[130] rounded-xl border px-3 py-1.5 text-xs transition-colors active:scale-[0.97]"
+                    style={{
+                      top: 'calc(env(safe-area-inset-top, 0px) + 0.25rem)',
+                      borderColor: 'var(--border-card)',
+                      backgroundColor: 'var(--bg-secondary)',
+                      color: 'var(--text-secondary)',
+                    }}
+                  >
+                    {'\uB098\uAC00\uAE30'}
+                  </button>
+                  <ListenFillGame onComplete={handleComplete} />
+                </>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -938,10 +938,10 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="flex flex-col items-center h-full px-5 py-8 overflow-y-auto"
+        className="flex h-full flex-col items-center overflow-hidden px-5 py-5"
       >
         {/* Score */}
-        <div className="mb-6 text-center">
+        <div className="mb-4 text-center">
           <p
             className="text-sm uppercase tracking-wider mb-2"
             style={{ color: 'var(--text-muted)' }}
@@ -962,7 +962,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
 
         {/* Stats */}
         <div
-          className="w-full max-w-sm rounded-2xl border p-4 mb-6"
+          className="mb-4 w-full max-w-sm rounded-2xl border p-4"
           style={{
             backgroundColor: 'var(--bg-card)',
             borderColor: 'var(--border-card)',
@@ -981,14 +981,14 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
 
         {/* Learned expressions */}
         {results.length > 0 && (
-          <div className="w-full max-w-sm mb-6">
+          <div className="mb-5 flex min-h-0 w-full max-w-md flex-1 flex-col">
             <p
               className="text-xs uppercase tracking-wider mb-3"
               style={{ color: 'var(--text-muted)' }}
             >
               {T.learnedExpressions}
             </p>
-            <div className="space-y-2">
+            <div className="grid grid-cols-2 gap-2">
               {results.map(({ exprId, correct }) => {
                 const isWord = exprId.startsWith('word:')
                 const lookupId = isWord ? exprId.slice(5) : exprId
@@ -996,13 +996,13 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                 return (
                   <div
                     key={exprId}
-                    className="rounded-xl border px-4 py-3 flex items-center justify-between"
+                    className="flex min-h-[72px] flex-col justify-between rounded-xl border px-3 py-2.5"
                     style={{
                       backgroundColor: 'var(--bg-card)',
                       borderColor: 'var(--border-card)',
                     }}
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-start gap-2">
                       {correct ? (
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -1036,14 +1036,14 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                         </svg>
                       )}
                       <span
-                        className="font-medium text-sm"
+                        className="line-clamp-2 text-sm font-medium"
                         style={{ color: 'var(--text-primary)' }}
                       >
                         {entry?.canonical ?? lookupId}
                       </span>
                     </div>
                     <span
-                      className="text-xs"
+                      className="mt-2 line-clamp-2 text-[11px]"
                       style={{ color: 'var(--text-secondary)' }}
                     >
                       {entry ? getLocalizedMeaning(entry as Record<string, unknown>, locale) : ''}
@@ -1056,7 +1056,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
         )}
 
         {/* Exit button */}
-        <div className="w-full max-w-sm mt-auto">
+        <div className="mt-auto w-full max-w-sm">
           <button
             onClick={handleExit}
             className="w-full rounded-xl py-3.5 font-medium text-sm transition-colors active:scale-[0.98]"
@@ -1099,25 +1099,14 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
         style={{ top: -9999, left: -9999, width: 0, height: 0 }}
       />
 
-      {/* Header: progress + exit */}
-      <div className="flex items-center justify-between mb-4">
+      {/* Header: progress */}
+      <div className="mb-4 flex items-center justify-start">
         <p
           className="text-sm font-medium"
           style={{ color: 'var(--text-secondary)' }}
         >
           {currentIdx + 1} / {questions.length}
         </p>
-        <button
-          onClick={handleExit}
-          className="text-xs px-3 py-1.5 rounded-lg border transition-colors active:scale-[0.97]"
-          style={{
-            borderColor: 'var(--border-card)',
-            color: 'var(--text-muted)',
-            backgroundColor: 'var(--bg-secondary)',
-          }}
-        >
-          {T.quit}
-        </button>
       </div>
 
       {/* Progress bar */}
