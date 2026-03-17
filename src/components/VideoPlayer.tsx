@@ -695,18 +695,32 @@ export function VideoPlayer({
     </button>
   ) : null
 
+  const subtitleLayoutToggleAnchor =
+    showSubtitleLayoutToggle && subtitleLayoutToggleButton ? (
+      <div
+        className="absolute z-[31]"
+        style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
+        onPointerDown={(event) => {
+          suppressVideoTap()
+          event.stopPropagation()
+        }}
+        onPointerUp={(event) => {
+          suppressVideoTap()
+          event.stopPropagation()
+        }}
+        onClick={(event) => {
+          suppressVideoTap()
+          event.stopPropagation()
+        }}
+      >
+        {subtitleLayoutToggleButton}
+      </div>
+    ) : null
+
   const subtitlePanel = (
     <div className="relative flex h-full">
       <div className="relative min-w-0 flex-1 flex flex-col">
         <div className="relative min-h-0 flex-1">
-          {!useOverlaySubtitles && subtitleLayoutToggleButton && (
-            <div
-              className="absolute z-30"
-              style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
-            >
-              {subtitleLayoutToggleButton}
-            </div>
-          )}
           {subtitleArea}
         </div>
       </div>
@@ -942,27 +956,6 @@ export function VideoPlayer({
       )}
 
       {children}
-
-      {useOverlaySubtitles && subtitleLayoutToggleButton && (
-        <div
-          className="absolute z-[26]"
-          style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
-          onPointerDown={(event) => {
-            suppressVideoTap()
-            event.stopPropagation()
-          }}
-          onPointerUp={(event) => {
-            suppressVideoTap()
-            event.stopPropagation()
-          }}
-          onClick={(event) => {
-            suppressVideoTap()
-            event.stopPropagation()
-          }}
-        >
-          {subtitleLayoutToggleButton}
-        </div>
-      )}
     </div>
   )
 
@@ -1114,6 +1107,8 @@ export function VideoPlayer({
       </div>
 
       {floatingControls}
+
+      {subtitleLayoutToggleAnchor}
 
       {primingOverlay}
     </div>

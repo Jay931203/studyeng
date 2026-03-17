@@ -213,7 +213,7 @@ export function LandscapeFeedSwitcher() {
 
   return (
     <div
-      className="pointer-events-auto flex w-[108px] flex-col items-center gap-2 rounded-[22px] border px-2.5 py-3 shadow-[var(--card-shadow)] backdrop-blur-2xl"
+      className="pointer-events-auto flex items-center gap-2 rounded-full border px-2.5 py-2 shadow-[var(--card-shadow)] backdrop-blur-2xl"
       style={{
         backgroundColor: 'rgba(10, 12, 18, 0.74)',
         borderColor: 'var(--border-card)',

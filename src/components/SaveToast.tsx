@@ -20,7 +20,7 @@ export function SaveToast({
       ? {
           backgroundColor: 'var(--freeze-bg)',
           borderColor: 'var(--freeze-border)',
-          color: 'var(--freeze-text)',
+          color: 'var(--accent-text)',
           glow: 'rgba(0, 0, 0, 0.28)',
         }
       : tone === 'saved'
@@ -61,7 +61,7 @@ export function SaveToast({
   const showIndicator = tone !== 'default'
   const indicatorColor =
     tone === 'freeze'
-      ? 'var(--freeze-text)'
+      ? 'var(--accent-text)'
       : tone === 'muted'
         ? 'var(--player-muted)'
         : 'var(--accent-text)'
