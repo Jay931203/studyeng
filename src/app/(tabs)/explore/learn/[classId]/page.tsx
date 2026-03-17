@@ -100,7 +100,7 @@ function ClipCard({
   return (
     <button
       onClick={onPlay}
-      className="group flex w-[182px] shrink-0 flex-col overflow-hidden rounded-xl border transition-all active:scale-[0.97]"
+      className="group flex w-[172px] shrink-0 flex-col overflow-hidden rounded-xl border transition-all active:scale-[0.97]"
       style={{
         borderColor: isPlaying ? 'var(--accent-primary)' : 'var(--border-card)',
         backgroundColor: isPlaying ? 'var(--accent-glow)' : 'var(--bg-card)',
@@ -111,7 +111,7 @@ function ClipCard({
           src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`}
           alt={videoTitle}
           fill
-          sizes="182px"
+          sizes="172px"
           className="object-cover"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity group-hover:opacity-100">
@@ -140,7 +140,7 @@ function ClipCard({
           />
         )}
       </div>
-      <div className="flex flex-1 flex-col px-2.5 py-2">
+      <div className="flex flex-1 flex-col px-2.5 py-1.5">
         <p className="mb-1 line-clamp-1 text-[10px] font-medium text-[var(--text-muted)]">
           {videoTitle}
         </p>
@@ -208,7 +208,7 @@ function ExpressionSection({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: Math.min(index * 0.05, 0.25), duration: 0.32 }}
-      className="mb-5"
+      className="mb-4"
     >
       <div className="mb-3 flex items-center gap-3">
         <span className="text-xs font-medium text-[var(--text-muted)]">
@@ -218,7 +218,7 @@ function ExpressionSection({
       </div>
 
       <div
-        className="relative mb-2.5 rounded-xl border p-3.5"
+        className="relative mb-2 rounded-xl border p-3"
         style={{
           borderColor: 'var(--border-card)',
           backgroundColor: 'var(--bg-card)',
@@ -266,10 +266,10 @@ function ExpressionSection({
           )}
         </div>
 
-        <h3 className="pr-20 text-base font-bold text-[var(--text-primary)]">
+        <h3 className="pr-20 text-[15px] font-bold text-[var(--text-primary)]">
           {entry.canonical}
         </h3>
-        <p className="mt-1 text-[13px] text-[var(--text-secondary)]">
+        <p className="mt-1 text-xs text-[var(--text-secondary)]">
           {entry.meaning_ko}
         </p>
 
@@ -296,7 +296,7 @@ function ExpressionSection({
       </div>
 
       <div
-        className="no-scrollbar flex gap-2.5 overflow-x-auto pb-1"
+        className="no-scrollbar flex gap-2 overflow-x-auto pb-1"
         style={{ scrollSnapType: 'x mandatory' }}
       >
         {clips.map((clip, clipIndex) => {
@@ -432,7 +432,7 @@ export default function ClassDetailPage() {
         </p>
       </div>
 
-      <div className="mb-5 rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3.5 shadow-[var(--card-shadow)]">
+      <div className="mb-4 rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3 shadow-[var(--card-shadow)]">
         <div className="mb-2 flex flex-wrap items-center gap-2">
           <span
             className={`rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
@@ -447,13 +447,9 @@ export default function ClassDetailPage() {
           </span>
         </div>
 
-        <h1 className="text-xl font-bold text-[var(--text-primary)]">{cls.titleKo}</h1>
+        <h1 className="text-lg font-bold text-[var(--text-primary)]">{cls.titleKo}</h1>
         <p className="mt-1 text-xs text-[var(--text-muted)]">{cls.title}</p>
-        <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-[var(--text-secondary)]">
-          {cls.descriptionKo}
-        </p>
-
-        <div className="mt-2.5 flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
           <span>{expressionData.length}개 표현</span>
           <span>{cls.videoIds.length}개 영상</span>
           <span>클립을 누르면 해당 구간이 바로 재생됩니다.</span>
