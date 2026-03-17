@@ -121,6 +121,7 @@ function getCefrColor(cefr: string): { bg: string; text: string } {
 }
 
 function RelatedChips({ exprId }: { exprId: string | undefined }) {
+  const locale = useLocaleStore((s) => s.locale)
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null)
   const expandTimerRef = useRef<number | null>(null)
   const related = useRef<RelatedExpression[]>([])
@@ -167,7 +168,7 @@ function RelatedChips({ exprId }: { exprId: string | undefined }) {
                 className="truncate text-[10px] font-medium leading-none"
                 style={{ color: 'rgba(255, 255, 255, 0.7)' }}
               >
-                {isExpanded ? rel.entry.meaning_ko : rel.entry.canonical}
+                {isExpanded ? getLocalizedMeaning(rel.entry, locale) : rel.entry.canonical}
               </span>
               <span
                 className="shrink-0 rounded-full px-1 py-[1px] text-[8px] font-bold uppercase leading-none"
