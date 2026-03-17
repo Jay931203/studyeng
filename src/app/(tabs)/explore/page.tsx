@@ -610,7 +610,7 @@ export default function ExplorePage() {
           </div>
         </SurfaceCard>
 
-        <div className="flex flex-col gap-4">
+        <div>
           <SearchBar />
         </div>
       </section>
