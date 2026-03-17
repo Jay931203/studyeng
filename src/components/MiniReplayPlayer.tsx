@@ -56,6 +56,7 @@ function MiniPlayerInner({
   const intervalRef = useRef<number | null>(null)
   const endTimerRef = useRef<number | null>(null)
   const clipKeyRef = useRef<string | null>(null)
+  const activeVideoIdRef = useRef<string | null>(null)
 
   const cleanup = useCallback(() => {
     if (intervalRef.current !== null) {
@@ -73,6 +74,7 @@ function MiniPlayerInner({
       playerRef.current = null
     }
     clipKeyRef.current = null
+    activeVideoIdRef.current = null
   }, [])
 
   useEffect(() => {
@@ -85,9 +87,42 @@ function MiniPlayerInner({
     if (clipKeyRef.current === key) return
     clipKeyRef.current = key
 
-    cleanup()
-
     let disposed = false
+
+    const startPlaybackWindow = (player: YT.Player, start: number, end: number) => {
+      try {
+        player.seekTo(start, true)
+        player.playVideo()
+      } catch {
+        return
+      }
+
+      const duration = (end - start) * 1000 + 300
+
+      intervalRef.current = window.setInterval(() => {
+        if (!playerRef.current) return
+        try {
+          const t = playerRef.current.getCurrentTime()
+          const elapsed = t - start
+          const total = end - start
+          const pct = Math.min(1, Math.max(0, elapsed / total))
+          setProgress(pct)
+        } catch {
+          // ignore
+        }
+      }, 50)
+
+      endTimerRef.current = window.setTimeout(() => {
+        if (!disposed) {
+          const { queue, queueIndex } = useReplayStore.getState()
+          if (queueIndex < queue.length - 1) {
+            next()
+          } else {
+            stop()
+          }
+        }
+      }, duration)
+    }
 
     const initPlayer = async () => {
       try {
@@ -98,12 +133,6 @@ function MiniPlayerInner({
       }
 
       if (disposed || !containerRef.current) return
-
-      // Create a fresh div for the player
-      const el = document.createElement('div')
-      el.id = 'mini-replay-yt-' + Date.now()
-      containerRef.current.innerHTML = ''
-      containerRef.current.appendChild(el)
 
       let resolvedClip = clip
 
@@ -137,6 +166,43 @@ function MiniPlayerInner({
       const resolvedEnd =
         resolvedClip.end > resolvedClip.start ? resolvedClip.end : resolvedClip.start + 5
 
+      if (playerRef.current && activeVideoIdRef.current === resolvedClip.videoId) {
+        if (intervalRef.current !== null) {
+          window.clearInterval(intervalRef.current)
+          intervalRef.current = null
+        }
+        if (endTimerRef.current !== null) {
+          window.clearTimeout(endTimerRef.current)
+          endTimerRef.current = null
+        }
+        startPlaybackWindow(playerRef.current, resolvedStart, resolvedEnd)
+        return
+      }
+
+      // Create a fresh div for the player only when a new iframe is needed.
+      const el = document.createElement('div')
+      el.id = 'mini-replay-yt-' + Date.now()
+      containerRef.current.innerHTML = ''
+      containerRef.current.appendChild(el)
+
+      if (intervalRef.current !== null) {
+        window.clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+      if (endTimerRef.current !== null) {
+        window.clearTimeout(endTimerRef.current)
+        endTimerRef.current = null
+      }
+      if (playerRef.current) {
+        try {
+          playerRef.current.destroy()
+        } catch {
+          // ignore
+        }
+        playerRef.current = null
+      }
+      activeVideoIdRef.current = null
+
       playerRef.current = new window.YT.Player(el.id, {
         videoId: clip.videoId,
         width: '100%',
@@ -155,38 +221,12 @@ function MiniPlayerInner({
           onReady: (event) => {
             if (disposed) return
             const p = event.target as YT.Player
+            activeVideoIdRef.current = resolvedClip.videoId
             try {
               p.unMute?.()
               p.setVolume?.(100)
             } catch { /* ignore */ }
-            p.seekTo(resolvedStart, true)
-            p.playVideo()
-
-            const duration = (resolvedEnd - resolvedStart) * 1000 + 300
-
-            // Progress polling
-            intervalRef.current = window.setInterval(() => {
-              if (!playerRef.current) return
-              try {
-                const t = playerRef.current.getCurrentTime()
-                const elapsed = t - resolvedStart
-                const total = resolvedEnd - resolvedStart
-                const pct = Math.min(1, Math.max(0, elapsed / total))
-                setProgress(pct)
-              } catch { /* ignore */ }
-            }, 50)
-
-            // Auto-stop after clip ends
-            endTimerRef.current = window.setTimeout(() => {
-              if (!disposed) {
-                const { queue, queueIndex } = useReplayStore.getState()
-                if (queueIndex < queue.length - 1) {
-                  next()
-                } else {
-                  stop()
-                }
-              }
-            }, duration)
+            startPlaybackWindow(p, resolvedStart, resolvedEnd)
           },
           onStateChange: (event) => {
             if (disposed) return
@@ -214,7 +254,6 @@ function MiniPlayerInner({
 
     return () => {
       disposed = true
-      cleanup()
     }
   }, [clip, cleanup, next, stop, setProgress, setIsPlaying, updateCurrentClip, visibleVideo])
 

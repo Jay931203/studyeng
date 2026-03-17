@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { AppPage } from '@/components/ui/AppPage'
 import { useReplayStore } from '@/stores/useReplayStore'
+import type { ReplayClip } from '@/stores/useReplayStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import expressionClasses from '@/data/expression-classes.json'
@@ -156,12 +157,16 @@ function ExpressionSection({
   data,
   index,
   total,
+  replayQueue,
+  queueIndexByKey,
 }: {
   data: ExpressionWithClips
   index: number
   total: number
+  replayQueue: ReplayClip[]
+  queueIndexByKey: Map<string, number>
 }) {
-  const play = useReplayStore((s) => s.play)
+  const playQueue = useReplayStore((s) => s.playQueue)
   const currentClip = useReplayStore((s) => s.clip)
   const isFamiliar = useFamiliarityStore((s) => s.isFamiliar)
   const getFamiliarCount = useFamiliarityStore((s) => s.getFamiliarCount)
@@ -173,34 +178,12 @@ function ExpressionSection({
   const familiarCount = getFamiliarCount(entry.id)
 
   const handlePlayClip = useCallback(
-    async (clip: (typeof clips)[number]) => {
-      let start = clip.start
-      let end = clip.end
-
-      if (start === 0 && end === 0) {
-        try {
-          const response = await fetch(`/transcripts/${clip.youtubeId}.json`)
-          if (response.ok) {
-            const subtitles = await response.json()
-            const matchedSubtitle = subtitles[clip.sentenceIdx]
-            if (matchedSubtitle) {
-              start = matchedSubtitle.start
-              end = matchedSubtitle.end
-            }
-          }
-        } catch {
-          // Keep the resolved fallback below.
-        }
-      }
-
-      play({
-        videoId: clip.youtubeId,
-        start,
-        end: end || start + 5,
-        expressionText: entry.canonical,
-      })
+    (clip: (typeof clips)[number]) => {
+      const key = `${clip.youtubeId}:${clip.sentenceIdx}:${entry.canonical}`
+      const queueIndex = queueIndexByKey.get(key) ?? 0
+      playQueue(replayQueue, queueIndex)
     },
-    [entry.canonical, play],
+    [entry.canonical, playQueue, queueIndexByKey, replayQueue],
   )
 
   return (
@@ -302,7 +285,8 @@ function ExpressionSection({
         {clips.map((clip, clipIndex) => {
           const isPlaying =
             currentClip?.videoId === clip.youtubeId &&
-            currentClip?.start === clip.start
+            currentClip?.sentenceIdx === clip.sentenceIdx &&
+            currentClip?.expressionText === entry.canonical
 
           return (
             <div
@@ -328,6 +312,7 @@ export default function ClassDetailPage() {
   const params = useParams()
   const router = useRouter()
   const currentLevel = useOnboardingStore((s) => s.level)
+  const playQueue = useReplayStore((s) => s.playQueue)
   const classId = params.classId as string
 
   const cls: ExpressionClass | undefined = useMemo(
@@ -339,6 +324,32 @@ export default function ClassDetailPage() {
     if (!cls) return []
     return buildClassExpressionClips(cls.expressions, cls.videoIds)
   }, [cls])
+
+  const replayQueue = useMemo<ReplayClip[]>(
+    () =>
+      expressionData.flatMap((section) =>
+        section.clips.map((clip) => ({
+          videoId: clip.youtubeId,
+          start: clip.start,
+          end: clip.end,
+          expressionText: section.entry.canonical,
+          sentenceEn: clip.sentenceEn,
+          sentenceKo: clip.sentenceKo,
+          videoTitle: clip.videoTitle,
+          sentenceIdx: clip.sentenceIdx,
+          source: 'learn',
+        })),
+      ),
+    [expressionData],
+  )
+
+  const queueIndexByKey = useMemo(() => {
+    const map = new Map<string, number>()
+    replayQueue.forEach((clip, index) => {
+      map.set(`${clip.videoId}:${clip.sentenceIdx ?? -1}:${clip.expressionText ?? ''}`, index)
+    })
+    return map
+  }, [replayQueue])
 
   const [renderCount, setRenderCount] = useState(INITIAL_RENDER_COUNT)
   const visibleData = expressionData.slice(0, renderCount)
@@ -433,7 +444,8 @@ export default function ClassDetailPage() {
       </div>
 
       <div className="mb-4 rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3 shadow-[var(--card-shadow)]">
-        <div className="mb-2 flex flex-wrap items-center gap-2">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+          <div className="flex flex-wrap items-center gap-2">
           <span
             className={`rounded-full border px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
               LEVEL_COLORS[cls.level] ??
@@ -445,6 +457,16 @@ export default function ClassDetailPage() {
           <span className="text-[10px] font-medium uppercase tracking-wider text-[var(--text-muted)]">
             {CATEGORY_LABELS[cls.category] ?? cls.category}
           </span>
+          </div>
+          {replayQueue.length > 0 && (
+            <button
+              type="button"
+              onClick={() => playQueue(replayQueue, 0)}
+              className="rounded-full bg-[var(--accent-primary)] px-3 py-1.5 text-[11px] font-semibold text-white"
+            >
+              바로 시작
+            </button>
+          )}
         </div>
 
         <h1 className="text-lg font-bold text-[var(--text-primary)]">{cls.titleKo}</h1>
@@ -462,6 +484,8 @@ export default function ClassDetailPage() {
           data={data}
           index={index}
           total={expressionData.length}
+          replayQueue={replayQueue}
+          queueIndexByKey={queueIndexByKey}
         />
       ))}
 
