@@ -104,20 +104,21 @@ export function getClipsForExpression(
   for (const { youtubeId, row } of matches) {
     if (allowedVideoIds && !allowedVideoIds.has(youtubeId)) continue
 
+    // Get video title from catalog if available
     const video = getCatalogVideoByYoutubeId(youtubeId)
-    if (!video) continue
+    const videoTitle = video?.title ?? ''
 
-    const subtitle = video.subtitles?.[row.sentenceIdx]
-    if (!subtitle) continue
-
+    // Timing will be resolved at runtime when clip is tapped
+    // (transcript loaded dynamically via useTranscript hook)
+    // For now store sentenceIdx — the page component fetches exact timing on tap
     clips.push({
       youtubeId,
-      videoTitle: video.title,
+      videoTitle,
       sentenceEn: row.en,
       sentenceKo: row.ko,
       surfaceForm: row.surfaceForm ?? exprId,
-      start: subtitle.start,
-      end: subtitle.end,
+      start: 0,
+      end: 0,
       sentenceIdx: row.sentenceIdx,
     })
   }

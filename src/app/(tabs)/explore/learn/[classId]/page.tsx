@@ -165,11 +165,24 @@ function ExpressionSection({
   const familiarCount = getFamiliarCount(entry.id)
 
   const handlePlayClip = useCallback(
-    (clip: (typeof clips)[number]) => {
+    async (clip: (typeof clips)[number]) => {
+      let start = clip.start
+      let end = clip.end
+      // If timing not pre-resolved, fetch from transcript
+      if (start === 0 && end === 0) {
+        try {
+          const res = await fetch(`/transcripts/${clip.youtubeId}.json`)
+          if (res.ok) {
+            const subs = await res.json()
+            const sub = subs[clip.sentenceIdx]
+            if (sub) { start = sub.start; end = sub.end }
+          }
+        } catch { /* fallback to 0 */ }
+      }
       play({
         videoId: clip.youtubeId,
-        start: clip.start,
-        end: clip.end,
+        start,
+        end: end || start + 5,
         expressionText: entry.canonical,
       })
     },
