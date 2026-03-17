@@ -122,24 +122,21 @@ export async function syncIssueReport(
   reporterEmail?: string | null,
 ) {
   if (!supabase) return false
-  const { error } = await supabase.from('issue_reports').upsert(
-    {
-      id: issue.id,
-      user_id: userId,
-      video_id: issue.videoId,
-      youtube_id: issue.youtubeId,
-      type: issue.type,
-      description: issue.description,
-      reporter_email: reporterEmail ?? issue.reporterEmail ?? null,
-      resolved: issue.resolved,
-      created_at: new Date(issue.timestamp).toISOString(),
-      resolved_at: issue.resolved ? new Date().toISOString() : null,
-    },
-    { onConflict: 'id' },
-  )
+  const { error } = await supabase.from('issue_reports').insert({
+    id: issue.id,
+    user_id: userId,
+    video_id: issue.videoId,
+    youtube_id: issue.youtubeId,
+    type: issue.type,
+    description: issue.description,
+    reporter_email: reporterEmail ?? issue.reporterEmail ?? null,
+    resolved: issue.resolved,
+    created_at: new Date(issue.timestamp).toISOString(),
+    resolved_at: issue.resolved ? new Date().toISOString() : null,
+  })
 
   if (error) {
-    console.warn('[ops-sync] issue report upsert failed:', error.message)
+    console.warn('[ops-sync] issue report insert failed:', error.message)
     return false
   }
 
