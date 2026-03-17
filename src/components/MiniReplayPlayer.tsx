@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useCallback } from 'react'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useReplayStore } from '@/stores/useReplayStore'
 
@@ -38,11 +39,17 @@ function ensureYouTubeAPI(): Promise<void> {
   })
 }
 
-function MiniPlayerInner() {
+function MiniPlayerInner({
+  visibleVideo = false,
+}: {
+  visibleVideo?: boolean
+}) {
   const clip = useReplayStore((s) => s.clip)
   const stop = useReplayStore((s) => s.stop)
+  const next = useReplayStore((s) => s.next)
   const setProgress = useReplayStore((s) => s.setProgress)
   const setIsPlaying = useReplayStore((s) => s.setIsPlaying)
+  const updateCurrentClip = useReplayStore((s) => s.updateCurrentClip)
 
   const playerRef = useRef<YT.Player | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -74,7 +81,7 @@ function MiniPlayerInner() {
       return
     }
 
-    const key = `${clip.videoId}:${clip.start}:${clip.end}`
+    const key = `${clip.videoId}:${clip.start}:${clip.end}:${clip.sentenceIdx ?? -1}`
     if (clipKeyRef.current === key) return
     clipKeyRef.current = key
 
@@ -98,19 +105,51 @@ function MiniPlayerInner() {
       containerRef.current.innerHTML = ''
       containerRef.current.appendChild(el)
 
+      let resolvedClip = clip
+
+      if (
+        (resolvedClip.start <= 0 || resolvedClip.end <= resolvedClip.start) &&
+        typeof resolvedClip.sentenceIdx === 'number'
+      ) {
+        try {
+          const response = await fetch(`/transcripts/${resolvedClip.videoId}.json`)
+          if (response.ok) {
+            const subtitles = await response.json()
+            const matchedSubtitle = subtitles[resolvedClip.sentenceIdx]
+            if (matchedSubtitle) {
+              resolvedClip = {
+                ...resolvedClip,
+                start: matchedSubtitle.start,
+                end: matchedSubtitle.end,
+              }
+              updateCurrentClip({
+                start: matchedSubtitle.start,
+                end: matchedSubtitle.end,
+              })
+            }
+          }
+        } catch {
+          // Fallback below.
+        }
+      }
+
+      const resolvedStart = resolvedClip.start
+      const resolvedEnd =
+        resolvedClip.end > resolvedClip.start ? resolvedClip.end : resolvedClip.start + 5
+
       playerRef.current = new window.YT.Player(el.id, {
         videoId: clip.videoId,
-        width: 1,
-        height: 1,
+        width: '100%',
+        height: visibleVideo ? '100%' : 1,
         playerVars: {
           autoplay: 1,
-          controls: 0,
+          controls: visibleVideo ? 1 : 0,
           disablekb: 1,
           fs: 0,
           modestbranding: 1,
           playsinline: 1,
           rel: 0,
-          start: Math.floor(clip.start),
+          start: Math.floor(resolvedStart),
         },
         events: {
           onReady: (event) => {
@@ -120,18 +159,18 @@ function MiniPlayerInner() {
               p.unMute?.()
               p.setVolume?.(100)
             } catch { /* ignore */ }
-            p.seekTo(clip.start, true)
+            p.seekTo(resolvedStart, true)
             p.playVideo()
 
-            const duration = (clip.end - clip.start) * 1000 + 300
+            const duration = (resolvedEnd - resolvedStart) * 1000 + 300
 
             // Progress polling
             intervalRef.current = window.setInterval(() => {
               if (!playerRef.current) return
               try {
                 const t = playerRef.current.getCurrentTime()
-                const elapsed = t - clip.start
-                const total = clip.end - clip.start
+                const elapsed = t - resolvedStart
+                const total = resolvedEnd - resolvedStart
                 const pct = Math.min(1, Math.max(0, elapsed / total))
                 setProgress(pct)
               } catch { /* ignore */ }
@@ -140,7 +179,12 @@ function MiniPlayerInner() {
             // Auto-stop after clip ends
             endTimerRef.current = window.setTimeout(() => {
               if (!disposed) {
-                stop()
+                const { queue, queueIndex } = useReplayStore.getState()
+                if (queueIndex < queue.length - 1) {
+                  next()
+                } else {
+                  stop()
+                }
               }
             }, duration)
           },
@@ -151,7 +195,12 @@ function MiniPlayerInner() {
             }
             // If playback ended before our timer
             if (event.data === 0 && !disposed) {
-              stop()
+              const { queue, queueIndex } = useReplayStore.getState()
+              if (queueIndex < queue.length - 1) {
+                next()
+              } else {
+                stop()
+              }
             }
           },
           onError: () => {
@@ -167,7 +216,7 @@ function MiniPlayerInner() {
       disposed = true
       cleanup()
     }
-  }, [clip, cleanup, stop, setProgress, setIsPlaying])
+  }, [clip, cleanup, next, stop, setProgress, setIsPlaying, updateCurrentClip, visibleVideo])
 
   // Cleanup on unmount
   useEffect(() => cleanup, [cleanup])
@@ -175,14 +224,19 @@ function MiniPlayerInner() {
   return (
     <div
       ref={containerRef}
-      style={{
-        position: 'absolute',
-        width: 1,
-        height: 1,
-        overflow: 'hidden',
-        opacity: 0,
-        pointerEvents: 'none',
-      }}
+      className={visibleVideo ? 'relative aspect-video w-full overflow-hidden bg-black' : ''}
+      style={
+        visibleVideo
+          ? undefined
+          : {
+              position: 'absolute',
+              width: 1,
+              height: 1,
+              overflow: 'hidden',
+              opacity: 0,
+              pointerEvents: 'none',
+            }
+      }
     />
   )
 }
@@ -207,20 +261,37 @@ function ProgressBar() {
 }
 
 export function MiniReplayPlayer() {
+  const pathname = usePathname()
   const clip = useReplayStore((s) => s.clip)
+  const queue = useReplayStore((s) => s.queue)
+  const queueIndex = useReplayStore((s) => s.queueIndex)
   const isPlaying = useReplayStore((s) => s.isPlaying)
   const stop = useReplayStore((s) => s.stop)
+  const next = useReplayStore((s) => s.next)
+  const prev = useReplayStore((s) => s.prev)
 
   const visible = clip !== null
+  const isLearnPlayer = visible && pathname?.startsWith('/explore/learn')
+  const hasPrev = queueIndex > 0
+  const hasNext = queueIndex < queue.length - 1
+
+  useEffect(() => {
+    if (!isLearnPlayer) return
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [isLearnPlayer])
 
   return (
     <>
-      {/* Hidden YouTube player (always mounted when clip exists) */}
-      {visible && <MiniPlayerInner />}
+      {visible && <MiniPlayerInner visibleVideo={isLearnPlayer} />}
 
-      {/* Floating UI */}
       <AnimatePresence>
-        {visible && (
+        {visible && !isLearnPlayer && (
           <motion.div
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -314,6 +385,95 @@ export function MiniReplayPlayer() {
                   <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                 </svg>
               </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {visible && isLearnPlayer && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[120] bg-black/86 backdrop-blur-sm"
+          >
+            <div className="flex h-full flex-col">
+              <div className="flex items-center justify-between px-4 pb-2 pt-[max(16px,env(safe-area-inset-top,0px)+12px)]">
+                <div className="min-w-0">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+                    Learn
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-white/90">
+                    {queueIndex + 1} / {queue.length}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={stop}
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 transition-colors active:scale-95"
+                  aria-label="Close replay"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="h-4 w-4"
+                  >
+                    <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                  </svg>
+                </button>
+              </div>
+
+              <div className="flex flex-1 items-center justify-center px-3 pb-[max(16px,env(safe-area-inset-bottom,0px)+12px)]">
+                <div className="w-full max-w-md overflow-hidden rounded-[28px] border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+                  <div className="relative">
+                    <MiniPlayerInner visibleVideo />
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent px-4 pb-4 pt-10">
+                      <p className="text-base font-semibold leading-snug text-white">
+                        {clip?.sentenceEn ?? clip?.expressionText ?? 'Learning clip'}
+                      </p>
+                      {clip?.sentenceKo && (
+                        <p className="mt-1 text-sm leading-relaxed text-white/78">
+                          {clip.sentenceKo}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="border-t border-white/10 px-4 py-3">
+                    <ProgressBar />
+                    <div className="mt-3 flex items-center gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-sm font-semibold text-white">
+                          {clip?.expressionText ?? 'Expression'}
+                        </p>
+                        {clip?.videoTitle && (
+                          <p className="mt-0.5 truncate text-xs text-white/55">
+                            {clip.videoTitle}
+                          </p>
+                        )}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={prev}
+                        disabled={!hasPrev}
+                        className="rounded-full bg-white/10 px-3 py-2 text-xs font-medium text-white transition disabled:opacity-35"
+                      >
+                        이전
+                      </button>
+                      <button
+                        type="button"
+                        onClick={next}
+                        disabled={!hasNext}
+                        className="rounded-full bg-[var(--accent-primary)] px-3 py-2 text-xs font-semibold text-white transition disabled:opacity-35"
+                      >
+                        다음
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}

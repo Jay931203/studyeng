@@ -57,6 +57,7 @@ function findExpressionMatches(
   sentenceIdx: number,
   familiarCheck: (id: string) => boolean,
   userLevel: CefrLevel,
+  locale: string = 'ko',
 ): ExpressionMatch[] {
   if (!videoId) return []
   const videoExprs = expressionIndex[videoId]
@@ -74,7 +75,9 @@ function findExpressionMatches(
 
     const dictEntry = expressionEntries[entry.exprId]
     const cefr = dictEntry?.cefr ?? 'B1'
-    const meaning = dictEntry?.meaning_ko ?? entry.ko ?? ''
+    const meaning = dictEntry
+      ? getLocalizedMeaning(dictEntry as { meaning_ko?: string; meaning_ja?: string; meaning_zhTW?: string; meaning_vi?: string }, locale as 'ko' | 'ja' | 'zh-TW' | 'vi')
+      : entry.ko ?? ''
 
     matches.push({
       exprId: entry.exprId,
@@ -994,7 +997,7 @@ export function LyricsSubtitles({
                         {(smartSubtitlesEnabled && isFrozen) ? (
                           <AnnotatedSubtitleText
                             text={sub.en}
-                            matches={findExpressionMatches(sub.en, videoId, idx, familiarityIsFamiliar, userCefrLevel)}
+                            matches={findExpressionMatches(sub.en, videoId, idx, familiarityIsFamiliar, userCefrLevel, locale)}
                             onExpressionTap={handleExpressionTap}
                           />
                         ) : (

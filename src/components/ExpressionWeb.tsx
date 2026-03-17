@@ -3,6 +3,7 @@
 import { useRef, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocalizedMeaning } from '@/lib/localeUtils'
 import { getRelatedExpressions, type RelatedExpression } from '@/lib/expressionWeb'
 
 // ---------------------------------------------------------------------------
@@ -173,12 +174,12 @@ function RelatedCard({
         {item.entry.canonical}
       </p>
 
-      {/* Korean meaning */}
+      {/* Localized meaning */}
       <p
         className="mt-0.5 truncate text-[12px] leading-snug"
         style={{ color: 'rgba(255, 255, 255, 0.5)' }}
       >
-        {item.entry.meaning_ko}
+        {getLocalizedMeaning(item.entry as { meaning_ko?: string; meaning_ja?: string; meaning_zhTW?: string; meaning_vi?: string }, langKey as 'ko' | 'ja' | 'zh-TW' | 'vi')}
       </p>
 
       {/* Badges row */}
