@@ -9,8 +9,6 @@ import { Logo } from './Logo'
 
 type NavTabIcon = 'home' | 'play' | 'bookmark' | 'settings'
 type FeedOption = 'series' | 'shorts'
-type BrowseOption = 'home' | 'learn'
-
 type NavTab = {
   href: string
   icon: NavTabIcon
@@ -171,28 +169,6 @@ function useFeedNavigation() {
   }
 }
 
-function useBrowseNavigation() {
-  const pathname = usePathname()
-  const router = useRouter()
-  const isOnLearnPage = pathname.startsWith('/explore/learn')
-  const isOnExploreRoute = pathname === '/explore' || pathname.startsWith('/explore/')
-  const activeBrowse: BrowseOption | null = isOnExploreRoute
-    ? isOnLearnPage
-      ? 'learn'
-      : 'home'
-    : null
-  const browseAnimationKey = activeBrowse ? `${activeBrowse}-entry` : null
-
-  const navigateToBrowse = (browse: BrowseOption) => {
-    router.push(browse === 'learn' ? '/explore/learn' : '/explore', { scroll: false })
-  }
-
-  return {
-    activeBrowse,
-    browseAnimationKey,
-    navigateToBrowse,
-  }
-}
 
 function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolean) {
   if (href === '/shorts') {
@@ -272,7 +248,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     navigateToFeed,
     getTabHref,
   } = useFeedNavigation()
-  const { activeBrowse, browseAnimationKey, navigateToBrowse } = useBrowseNavigation()
   const getTabLabel = (tab: NavTab) => t(`nav.${tab.labelKey}`) as string
   const getTabDesc = (tab: NavTab) => t(`nav.${tab.descKey}`) as string
 
@@ -286,61 +261,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         <nav className="flex flex-1 flex-col items-center gap-2">
           {tabs.map((tab) => {
             const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
-
-            if (tab.href === '/explore') {
-              return (
-                <div
-                  key={tab.href}
-                  className={`flex w-full flex-col items-center justify-center gap-1 rounded-[20px] px-2 py-3 text-center transition-all ${
-                    active
-                      ? 'bg-[var(--accent-glow)] text-[var(--nav-active)]'
-                      : 'text-[var(--nav-inactive)] hover:bg-[var(--bg-secondary)]/45'
-                  }`}
-                >
-                  <motion.button
-                    type="button"
-                    onClick={() => {
-                      if (!activeBrowse) {
-                        navigateToBrowse('home')
-                        return
-                      }
-
-                      navigateToBrowse(activeBrowse === 'home' ? 'learn' : 'home')
-                    }}
-                    aria-label="Toggle browse"
-                    animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
-                    transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                    className="relative z-10 rounded-full transition-opacity active:scale-95"
-                    style={{ color: active ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
-                  >
-                    {icons.home(active)}
-                  </motion.button>
-                  <div className="flex items-center gap-1 text-[10px] font-medium leading-none">
-                    <FeedLabel
-                      label="Home"
-                      selected={activeBrowse === 'home'}
-                      animationKey={browseAnimationKey}
-                      onClick={() => {
-                        if (activeBrowse === 'home') return
-                        navigateToBrowse('home')
-                      }}
-                    />
-                    <span aria-hidden="true" style={{ color: 'var(--nav-divider)' }}>
-                      |
-                    </span>
-                    <FeedLabel
-                      label="Learn"
-                      selected={activeBrowse === 'learn'}
-                      animationKey={browseAnimationKey}
-                      onClick={() => {
-                        if (activeBrowse === 'learn') return
-                        navigateToBrowse('learn')
-                      }}
-                    />
-                  </div>
-                </div>
-              )
-            }
 
             return (
               <Link
@@ -372,69 +292,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         <nav className="flex flex-1 flex-col gap-2">
           {tabs.map((tab) => {
             const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
-
-            if (tab.href === '/explore') {
-              return (
-                <div
-                  key={tab.href}
-                  className={`rounded-2xl border px-4 py-3 transition-all ${
-                    active
-                      ? 'border-[var(--accent-primary)]/35 bg-[var(--accent-glow)]'
-                      : 'border-transparent hover:border-[var(--border-card)] hover:bg-[var(--bg-secondary)]/45'
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <motion.button
-                      type="button"
-                      onClick={() => {
-                        if (!activeBrowse) {
-                          navigateToBrowse('home')
-                          return
-                        }
-
-                        navigateToBrowse(activeBrowse === 'home' ? 'learn' : 'home')
-                      }}
-                      aria-label="Toggle browse"
-                      animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
-                      transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                      className={`flex h-10 w-10 items-center justify-center rounded-2xl transition-opacity active:scale-95 ${
-                        active
-                          ? 'bg-[var(--accent-primary)] text-white'
-                          : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                      }`}
-                    >
-                      {icons.home(active)}
-                    </motion.button>
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-1 text-sm font-semibold leading-none">
-                        <FeedLabel
-                          label="Home"
-                          selected={activeBrowse === 'home'}
-                          animationKey={browseAnimationKey}
-                          onClick={() => {
-                            if (activeBrowse === 'home') return
-                            navigateToBrowse('home')
-                          }}
-                        />
-                        <span aria-hidden="true" style={{ color: 'var(--nav-divider)' }}>
-                          |
-                        </span>
-                        <FeedLabel
-                          label="Learn"
-                          selected={activeBrowse === 'learn'}
-                          animationKey={browseAnimationKey}
-                          onClick={() => {
-                            if (activeBrowse === 'learn') return
-                            navigateToBrowse('learn')
-                          }}
-                        />
-                      </div>
-                      <p className="mt-1 text-xs text-[var(--text-muted)]">추천과 표현 학습</p>
-                    </div>
-                  </div>
-                </div>
-              )
-            }
 
             return (
               <Link
@@ -481,67 +338,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         {tabs.map((tab) => {
           const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
           const effectiveHref = getTabHref(tab)
-
-          if (tab.href === '/explore') {
-            return (
-              <div
-                key={tab.href}
-                className={`flex flex-col items-center justify-center gap-1 rounded-[20px] px-1 py-2 transition-all ${
-                  active ? 'bg-[var(--accent-glow)]' : ''
-                }`}
-              >
-                {active && (
-                  <motion.div
-                    layoutId="nav-active"
-                    className="absolute inset-x-4 top-0 h-[2px] rounded-full bg-[var(--nav-indicator)]"
-                    transition={{ type: 'spring', stiffness: 520, damping: 36 }}
-                  />
-                )}
-
-                <motion.button
-                  type="button"
-                  onClick={() => {
-                    if (!activeBrowse) {
-                      navigateToBrowse('home')
-                      return
-                    }
-
-                    navigateToBrowse(activeBrowse === 'home' ? 'learn' : 'home')
-                  }}
-                  aria-label="Toggle browse"
-                  animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
-                  transition={{ type: 'spring', stiffness: 420, damping: 28 }}
-                  className="relative z-10 rounded-full transition-opacity active:scale-95"
-                  style={{ color: active ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
-                >
-                  {icons.home(active)}
-                </motion.button>
-                <div className="flex items-center gap-1 text-[9px] font-medium leading-none">
-                  <FeedLabel
-                    label="Home"
-                    selected={activeBrowse === 'home'}
-                    animationKey={browseAnimationKey}
-                    onClick={() => {
-                      if (activeBrowse === 'home') return
-                      navigateToBrowse('home')
-                    }}
-                  />
-                  <span aria-hidden="true" style={{ color: 'var(--nav-divider)' }}>
-                    |
-                  </span>
-                  <FeedLabel
-                    label="Learn"
-                    selected={activeBrowse === 'learn'}
-                    animationKey={browseAnimationKey}
-                    onClick={() => {
-                      if (activeBrowse === 'learn') return
-                      navigateToBrowse('learn')
-                    }}
-                  />
-                </div>
-              </div>
-            )
-          }
 
           if (tab.href === '/shorts') {
             return (
