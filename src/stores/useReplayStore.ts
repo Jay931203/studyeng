@@ -4,6 +4,7 @@ export interface ReplayClip {
   videoId: string
   start: number
   end: number
+  contextId?: string
   expressionText?: string
   sentenceEn?: string
   sentenceKo?: string

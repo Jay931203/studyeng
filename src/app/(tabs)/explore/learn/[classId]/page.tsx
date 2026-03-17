@@ -1,12 +1,13 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { AppPage } from '@/components/ui/AppPage'
 import { useReplayStore } from '@/stores/useReplayStore'
 import type { ReplayClip } from '@/stores/useReplayStore'
+import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import expressionClasses from '@/data/expression-classes.json'
@@ -313,6 +314,11 @@ export default function ClassDetailPage() {
   const router = useRouter()
   const currentLevel = useOnboardingStore((s) => s.level)
   const playQueue = useReplayStore((s) => s.playQueue)
+  const replayClip = useReplayStore((s) => s.clip)
+  const replayQueueIndex = useReplayStore((s) => s.queueIndex)
+  const savedProgress = useLearnProgressStore((s) => s.classProgress[classId])
+  const saveClassProgress = useLearnProgressStore((s) => s.saveClassProgress)
+  const clearClassProgress = useLearnProgressStore((s) => s.clearClassProgress)
   const classId = params.classId as string
 
   const cls: ExpressionClass | undefined = useMemo(
@@ -332,6 +338,7 @@ export default function ClassDetailPage() {
           videoId: clip.youtubeId,
           start: clip.start,
           end: clip.end,
+          contextId: classId,
           expressionText: section.entry.canonical,
           sentenceEn: clip.sentenceEn,
           sentenceKo: clip.sentenceKo,
@@ -340,8 +347,13 @@ export default function ClassDetailPage() {
           source: 'learn',
         })),
       ),
-    [expressionData],
+    [classId, expressionData],
   )
+
+  const resumeIndex = savedProgress
+    ? Math.min(savedProgress.lastIndex, Math.max(0, replayQueue.length - 1))
+    : 0
+  const hasResume = Boolean(savedProgress && replayQueue.length > 0 && resumeIndex > 0)
 
   const queueIndexByKey = useMemo(() => {
     const map = new Map<string, number>()
@@ -366,6 +378,16 @@ export default function ClassDetailPage() {
     }
     router.replace('/explore/learn', { scroll: false })
   }, [router])
+
+  useEffect(() => {
+    if (!replayClip || replayClip.source !== 'learn' || replayClip.contextId !== classId) {
+      return
+    }
+
+    if (replayQueue.length === 0) return
+
+    saveClassProgress(classId, replayQueueIndex, replayQueue.length)
+  }, [classId, replayClip, replayQueue.length, replayQueueIndex, saveClassProgress])
 
   if (!cls) {
     return (
@@ -459,13 +481,27 @@ export default function ClassDetailPage() {
           </span>
           </div>
           {replayQueue.length > 0 && (
-            <button
-              type="button"
-              onClick={() => playQueue(replayQueue, 0)}
-              className="rounded-full bg-[var(--accent-primary)] px-3 py-1.5 text-[11px] font-semibold text-white"
-            >
-              바로 시작
-            </button>
+            <div className="flex flex-wrap items-center gap-2">
+              {hasResume && (
+                <button
+                  type="button"
+                  onClick={() => playQueue(replayQueue, resumeIndex)}
+                  className="rounded-full bg-[var(--accent-primary)] px-3 py-1.5 text-[11px] font-semibold text-white"
+                >
+                  이어보기
+                </button>
+              )}
+              <button
+                type="button"
+                onClick={() => {
+                  clearClassProgress(classId)
+                  playQueue(replayQueue, 0)
+                }}
+                className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-3 py-1.5 text-[11px] font-semibold text-[var(--text-primary)]"
+              >
+                {hasResume ? '처음부터' : '바로 시작'}
+              </button>
+            </div>
           )}
         </div>
 
@@ -474,6 +510,11 @@ export default function ClassDetailPage() {
         <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
           <span>{expressionData.length}개 표현</span>
           <span>{cls.videoIds.length}개 영상</span>
+          {savedProgress && (
+            <span>
+              이어보기 {Math.min(savedProgress.lastIndex + 1, replayQueue.length)} / {replayQueue.length}
+            </span>
+          )}
           <span>클립을 누르면 해당 구간이 바로 재생됩니다.</span>
         </div>
       </div>

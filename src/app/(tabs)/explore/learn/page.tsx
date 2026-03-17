@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { AppPage } from '@/components/ui/AppPage'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
 import expressionClasses from '@/data/expression-classes.json'
 
 type ExpressionClass = (typeof expressionClasses)[number]
@@ -30,6 +31,7 @@ const LEVEL_COLORS: Record<string, string> = {
 export default function LearnPage() {
   const router = useRouter()
   const currentLevel = useOnboardingStore((s) => s.level)
+  const classProgress = useLearnProgressStore((s) => s.classProgress)
   const [activeCategory, setActiveCategory] = useState<Category>('all')
 
   const filtered = useMemo(() => {
@@ -158,6 +160,11 @@ export default function LearnPage() {
               <span>{entry.expressions.length}개 표현</span>
               <span>{entry.videoIds.length}개 영상</span>
             </div>
+            {classProgress[entry.id] && (
+              <p className="mt-2 text-[11px] font-medium text-[var(--accent-text)]">
+                이어보기 {Math.min(classProgress[entry.id].lastIndex + 1, classProgress[entry.id].total)} / {classProgress[entry.id].total}
+              </p>
+            )}
           </motion.button>
         ))}
       </div>
