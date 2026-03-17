@@ -24,7 +24,9 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    expect(screen.getByLabelText('Home')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Toggle browse' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Home' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Learn' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Toggle feed' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Series' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Shorts' })).toBeInTheDocument()
@@ -71,5 +73,24 @@ describe('BottomNav', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Toggle feed' }))
 
     expect(mockPush).toHaveBeenCalledWith('/shorts', { scroll: false })
+  })
+
+  it('shows the home/learn switcher and highlights Learn on the learn page', () => {
+    mockUsePathname.mockReturnValue('/explore/learn')
+
+    render(<BottomNav />)
+
+    expect(screen.getByRole('button', { name: 'Home' })).toHaveAttribute('aria-pressed', 'false')
+    expect(screen.getByRole('button', { name: 'Learn' })).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  it('toggles browse when the home button is pressed', () => {
+    mockUsePathname.mockReturnValue('/explore')
+
+    render(<BottomNav />)
+
+    fireEvent.click(screen.getByRole('button', { name: 'Toggle browse' }))
+
+    expect(mockPush).toHaveBeenCalledWith('/explore/learn', { scroll: false })
   })
 })
