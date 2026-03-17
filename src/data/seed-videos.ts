@@ -6,6 +6,9 @@ export interface SubtitleEntry {
   end: number
   en: string
   ko: string
+  ja?: string
+  zhTW?: string
+  vi?: string
 }
 
 export interface VideoData {

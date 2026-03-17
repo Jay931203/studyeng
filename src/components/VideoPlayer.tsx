@@ -738,40 +738,42 @@ export function VideoPlayer({
       key={videoSessionKey}
       expressions={primingExpressions.map((ve) => {
         const sub = findPrimingSubtitle(subtitles, ve.sentence.en, ve.expression.canonical)
+        const exprAny = ve.expression as unknown as Record<string, unknown>
         return {
           exprId: ve.expression.id,
           canonical: ve.expression.canonical,
           meaning_ko: ve.expression.meaning_ko,
-          meaning_ja: (ve.expression as unknown as Record<string, unknown>).meaning_ja as string | undefined,
-          meaning_zhTW: (ve.expression as unknown as Record<string, unknown>).meaning_zhTW as string | undefined,
-          meaning_vi: (ve.expression as unknown as Record<string, unknown>).meaning_vi as string | undefined,
+          meaning_ja: exprAny.meaning_ja as string | undefined,
+          meaning_zhTW: exprAny.meaning_zhTW as string | undefined,
+          meaning_vi: exprAny.meaning_vi as string | undefined,
           category: ve.expression.category,
           cefr: ve.expression.cefr,
           sentenceEn: ve.sentence.en,
           sentenceKo: ve.sentence.ko,
-          sentenceJa: (ve.sentence as unknown as Record<string, unknown>).ja as string | undefined,
-          sentenceZhTW: (ve.sentence as unknown as Record<string, unknown>).zhTW as string | undefined,
-          sentenceVi: (ve.sentence as unknown as Record<string, unknown>).vi as string | undefined,
+          sentenceJa: sub?.ja,
+          sentenceZhTW: sub?.zhTW,
+          sentenceVi: sub?.vi,
           start: sub?.start,
           end: sub?.end,
         }
       })}
       words={primingWords.map((vw) => {
         const sub = findPrimingSubtitle(subtitles, vw.sentence.en, vw.word.canonical)
+        const wordAny = vw.word as unknown as Record<string, unknown>
         return {
           wordId: `word:${vw.word.id}`,
           canonical: vw.word.canonical,
           meaning_ko: vw.word.meaning_ko,
-          meaning_ja: (vw.word as unknown as Record<string, unknown>).meaning_ja as string | undefined,
-          meaning_zhTW: (vw.word as unknown as Record<string, unknown>).meaning_zhTW as string | undefined,
-          meaning_vi: (vw.word as unknown as Record<string, unknown>).meaning_vi as string | undefined,
+          meaning_ja: wordAny.meaning_ja as string | undefined,
+          meaning_zhTW: wordAny.meaning_zhTW as string | undefined,
+          meaning_vi: wordAny.meaning_vi as string | undefined,
           pos: vw.word.pos,
           cefr: vw.word.cefr,
           sentenceEn: vw.sentence.en,
           sentenceKo: vw.sentence.ko,
-          sentenceJa: (vw.sentence as unknown as Record<string, unknown>).ja as string | undefined,
-          sentenceZhTW: (vw.sentence as unknown as Record<string, unknown>).zhTW as string | undefined,
-          sentenceVi: (vw.sentence as unknown as Record<string, unknown>).vi as string | undefined,
+          sentenceJa: sub?.ja,
+          sentenceZhTW: sub?.zhTW,
+          sentenceVi: sub?.vi,
           surfaceForm: vw.surfaceForm,
           start: sub?.start,
           end: sub?.end,

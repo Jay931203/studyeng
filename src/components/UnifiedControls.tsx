@@ -12,7 +12,7 @@ import { useThemeStore } from '@/stores/useThemeStore'
 import { SaveToast } from './SaveToast'
 
 const LOCALE_ABBREV: Record<SupportedLocale, string> = {
-  ko: 'Ko', ja: '\u65E5', 'zh-TW': '\u4E2D', vi: 'Vi',
+  ko: 'Ko', ja: 'Jp', 'zh-TW': 'Ch', vi: 'Vi',
 }
 
 const TRANSLATIONS: Record<SupportedLocale, {
