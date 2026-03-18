@@ -16,6 +16,24 @@ import { useSettingsStore } from '@/stores/useSettingsStore'
 
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
 
+function LockTabIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      className="h-3.5 w-3.5"
+      aria-hidden="true"
+    >
+      <path
+        fillRule="evenodd"
+        d="M10 1.75A4.25 4.25 0 005.75 6v2.083A2.75 2.75 0 003 10.833v4.417A2.75 2.75 0 005.75 18h8.5A2.75 2.75 0 0017 15.25v-4.417a2.75 2.75 0 00-2.75-2.75V6A4.25 4.25 0 0010 1.75zM7.25 6a2.75 2.75 0 115.5 0v2H7.25V6z"
+        clipRule="evenodd"
+      />
+    </svg>
+  )
+}
+
 interface ReplayPlayerHandle {
   togglePlayback: () => void
   playWindow: (start: number, end: number) => void
@@ -395,8 +413,26 @@ const MiniPlayerInner = forwardRef<
           const activeSequence = activeSequenceRef.current
           if (activeSequence.segments.length === 0) return
 
+          const activeSegment = activeSequence.segments[activeSegmentIndexRef.current]
           if (sequenceFinishedRef.current) {
             startSequenceFromIndex(player, activeSequence, 0)
+            return
+          }
+
+          if (
+            currentState === -1 ||
+            currentState === 5 ||
+            (activeSegment &&
+              (() => {
+                try {
+                  const currentTime = player.getCurrentTime()
+                  return currentTime < activeSegment.start - 0.05 || currentTime > activeSegment.end + 0.05
+                } catch {
+                  return true
+                }
+              })())
+          ) {
+            startSequenceFromIndex(player, activeSequence, activeSegmentIndexRef.current)
             return
           }
 
@@ -542,7 +578,10 @@ const MiniPlayerInner = forwardRef<
             } catch {
               // ignore
             }
-            startSequenceFromIndex(player, effectiveSequence, 0)
+            window.setTimeout(() => {
+              if (disposed) return
+              startSequenceFromIndex(player, effectiveSequence, 0)
+            }, 40)
           },
           onStateChange: (event) => {
             if (disposed) return
@@ -1119,9 +1158,17 @@ export function MiniReplayPlayer() {
                         </div>
                         <div className="flex shrink-0 items-center gap-1 rounded-full bg-white/5 p-1">
                           {([
-                            { id: 'en', label: 'EN' },
-                            { id: 'bilingual', label: 'EN/KO' },
-                            { id: 'locked', label: '잠금' },
+                            { id: 'en', label: 'EN', ariaLabel: 'English subtitles only' },
+                            {
+                              id: 'bilingual',
+                              label: 'EN/KO',
+                              ariaLabel: 'English and Korean subtitles',
+                            },
+                            {
+                              id: 'locked',
+                              label: <LockTabIcon />,
+                              ariaLabel: 'Locked Korean hints',
+                            },
                           ] as const).map((option) => {
                             const active = learnSubtitleMode === option.id
                             return (
@@ -1136,6 +1183,7 @@ export function MiniReplayPlayer() {
                                   }
                                 }}
                                 className="rounded-full px-2.5 py-1 text-[10px] font-semibold transition-colors"
+                                aria-label={option.ariaLabel}
                                 style={{
                                   backgroundColor: active ? 'var(--accent-primary)' : 'transparent',
                                   color: active ? '#fff' : 'rgba(255,255,255,0.72)',
