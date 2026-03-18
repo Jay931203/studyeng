@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from 'react'
 import { clearAccountScopedState, prepareAccountScopedStateForUser } from '@/lib/accountScope'
+import { isPrivilegedAdminEmail } from '@/lib/adminAccess'
 import { sanitizeAppPath } from '@/lib/navigation'
 import { isNative } from '@/lib/platform'
 import { syncBillingOnLogin } from '@/lib/supabase/billingSync'
@@ -9,6 +10,7 @@ import { createClient } from '@/lib/supabase/client'
 import { syncOnLogin, onLogout, setCachedUserEmail } from '@/lib/supabase/sync'
 import { syncOpsOnLogin, syncPublicOps } from '@/lib/supabase/opsSync'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 import type { AuthChangeEvent, Session, User } from '@supabase/supabase-js'
 
 const supabase = createClient()
@@ -79,6 +81,7 @@ function resetSignedOutState() {
 
 async function syncSignedInUser(user: User) {
   const userEmail = user.email ?? null
+  const privilegedAdmin = isPrivilegedAdminEmail(userEmail)
   setCachedUserEmail(userEmail)
 
   if (syncedUserId === user.id) {
@@ -86,7 +89,10 @@ async function syncSignedInUser(user: User) {
   }
 
   prepareAccountScopedStateForUser(user.id)
-  useAdminStore.setState({ isAdmin: false })
+  useAdminStore.setState({ isAdmin: privilegedAdmin })
+  if (privilegedAdmin) {
+    usePremiumStore.getState().setPremiumOverride('premium')
+  }
   syncedUserId = user.id
 
   try {

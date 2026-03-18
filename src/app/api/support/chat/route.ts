@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { isPrivilegedAdminEmail } from '@/lib/adminAccess'
 import { createAdminClient } from '@/lib/supabase/admin'
 import {
   getAutomatedSupportReply,
@@ -93,7 +94,12 @@ function toMessageRecord(row: SupportMessageRow): SupportMessageRecord {
 async function isAdminUser(
   supabase: NonNullable<Awaited<ReturnType<typeof createClient>>>,
   userId: string,
+  userEmail?: string | null,
 ) {
+  if (isPrivilegedAdminEmail(userEmail)) {
+    return true
+  }
+
   const { data, error } = await supabase
     .from('admin_accounts')
     .select('user_id')
@@ -221,7 +227,7 @@ export async function GET(request: Request) {
   const url = new URL(request.url)
   const scope = url.searchParams.get('scope')
   const threadId = url.searchParams.get('threadId')
-  const isAdmin = await isAdminUser(supabase, user.id)
+  const isAdmin = await isAdminUser(supabase, user.id, user.email)
 
   try {
     if (scope === 'inbox') {
@@ -285,7 +291,7 @@ export async function POST(request: Request) {
   }
 
   const body = (await request.json()) as SupportChatRequestBody
-  const isAdmin = await isAdminUser(supabase, user.id)
+  const isAdmin = await isAdminUser(supabase, user.id, user.email)
 
   try {
     if (body.mode === 'admin-reply') {
