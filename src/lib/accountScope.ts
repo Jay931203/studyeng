@@ -14,6 +14,7 @@ import { useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import { useLearnAccessStore } from '@/stores/useLearnAccessStore'
 
 const ACCOUNT_OWNER_STORAGE_KEY = 'studyeng-account-owner'
 
@@ -94,6 +95,7 @@ export function resetAccountScopedState() {
     monthlyStreakXP: 0,
     monthlyStreakXPMonth: '',
   })
+  useLearnAccessStore.getState().resetState()
   useLevelStore.setState({
     absorptionScore: 0,
     rawScore: 0,

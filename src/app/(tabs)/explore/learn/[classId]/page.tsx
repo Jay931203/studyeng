@@ -4,13 +4,16 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { PremiumModal } from '@/components/PremiumModal'
 import { AppPage } from '@/components/ui/AppPage'
+import { useLearnAccessStore } from '@/stores/useLearnAccessStore'
 import { useReplayStore } from '@/stores/useReplayStore'
 import type { ReplayClip } from '@/stores/useReplayStore'
 import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 import expressionClasses from '@/data/expression-classes.json'
 import {
   buildClassExpressionClips,
@@ -262,21 +265,25 @@ function ClipCard({
   videoTitle,
   sentenceEn,
   isPlaying,
+  disabled = false,
   onPlay,
 }: {
   youtubeId: string
   videoTitle: string
   sentenceEn: string
   isPlaying: boolean
+  disabled?: boolean
   onPlay: () => void
 }) {
   return (
     <button
       onClick={onPlay}
+      aria-disabled={disabled}
       className="group flex w-[172px] shrink-0 flex-col overflow-hidden rounded-xl border transition-all active:scale-[0.97]"
       style={{
         borderColor: isPlaying ? 'var(--accent-primary)' : 'var(--border-card)',
         backgroundColor: isPlaying ? 'var(--accent-glow)' : 'var(--bg-card)',
+        opacity: disabled ? 0.45 : 1,
       }}
     >
       <div className="relative aspect-video w-full overflow-hidden">
@@ -312,6 +319,13 @@ function ClipCard({
             style={{ backgroundColor: 'var(--accent-primary)' }}
           />
         )}
+        {disabled ? (
+          <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+            <span className="rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-semibold text-white">
+              Next
+            </span>
+          </div>
+        ) : null}
       </div>
       <div className="flex flex-1 flex-col px-2.5 py-1.5">
         <p className="mb-1 line-clamp-1 text-[10px] font-medium text-[var(--text-muted)]">
@@ -331,6 +345,8 @@ function ExpressionSection({
   total,
   replayQueue,
   queueIndexByKey,
+  isQueueIndexPlayable,
+  onLockedAttempt,
   tx,
 }: {
   data: ExpressionWithClips
@@ -338,6 +354,8 @@ function ExpressionSection({
   total: number
   replayQueue: ReplayClip[]
   queueIndexByKey: Map<string, number>
+  isQueueIndexPlayable: (index: number) => boolean
+  onLockedAttempt: (blockedByPremium: boolean) => void
   tx: Tx
 }) {
   const playQueue = useReplayStore((s) => s.playQueue)
@@ -355,9 +373,13 @@ function ExpressionSection({
     (clip: (typeof clips)[number]) => {
       const key = `${clip.youtubeId}:${clip.sentenceIdx}:${entry.canonical}`
       const queueIndex = queueIndexByKey.get(key) ?? 0
+      if (!isQueueIndexPlayable(queueIndex)) {
+        onLockedAttempt(false)
+        return
+      }
       playQueue(replayQueue, queueIndex)
     },
-    [entry.canonical, playQueue, queueIndexByKey, replayQueue],
+    [entry.canonical, isQueueIndexPlayable, onLockedAttempt, playQueue, queueIndexByKey, replayQueue],
   )
 
   return (
@@ -467,13 +489,22 @@ function ExpressionSection({
               key={`${clip.youtubeId}-${clip.sentenceIdx}-${clipIndex}`}
               style={{ scrollSnapAlign: 'start' }}
             >
+              {(() => {
+                const queueKey = `${clip.youtubeId}:${clip.sentenceIdx}:${entry.canonical}`
+                const queueIndex = queueIndexByKey.get(queueKey) ?? 0
+                const disabled = !isQueueIndexPlayable(queueIndex)
+
+                return (
               <ClipCard
                 youtubeId={clip.youtubeId}
                 videoTitle={clip.videoTitle}
                 sentenceEn={clip.sentenceEn}
                 isPlaying={isPlaying}
+                disabled={disabled}
                 onPlay={() => handlePlayClip(clip)}
               />
+                )
+              })()}
             </div>
           )
         })}
@@ -487,6 +518,10 @@ export default function ClassDetailPage() {
   const router = useRouter()
   const classId = params.classId as string
   const currentLevel = useOnboardingStore((s) => s.level)
+  const isPremium = usePremiumStore((s) => s.isPremium)
+  const canAccessClassToday = useLearnAccessStore((s) => s.canAccessClassToday)
+  const activateClassForToday = useLearnAccessStore((s) => s.activateClassForToday)
+  const hasFreeSessionRemaining = useLearnAccessStore((s) => s.hasFreeSessionRemaining)
   const playQueue = useReplayStore((s) => s.playQueue)
   const replayClip = useReplayStore((s) => s.clip)
   const replayQueueIndex = useReplayStore((s) => s.queueIndex)
@@ -494,6 +529,7 @@ export default function ClassDetailPage() {
   const saveClassProgress = useLearnProgressStore((s) => s.saveClassProgress)
   const clearClassProgress = useLearnProgressStore((s) => s.clearClassProgress)
   const locale = useLocaleStore((s) => s.locale)
+  const [showPremiumModal, setShowPremiumModal] = useState(false)
 
   const tx = TRANSLATIONS[locale]
 
@@ -531,6 +567,11 @@ export default function ClassDetailPage() {
     : 0
   const hasResume = Boolean(savedProgress && replayQueue.length > 0 && resumeIndex > 0)
   const isLevelMismatch = cls ? cls.level !== currentLevel : false
+  const canUseClassToday = canAccessClassToday(classId, isPremium)
+  const hasSessionRemaining = hasFreeSessionRemaining(isPremium)
+  const unlockedIndex = isPremium
+    ? Math.max(0, replayQueue.length - 1)
+    : Math.min((savedProgress?.lastIndex ?? -1) + 1, Math.max(0, replayQueue.length - 1))
 
   const queueIndexByKey = useMemo(() => {
     const map = new Map<string, number>()
@@ -543,6 +584,51 @@ export default function ClassDetailPage() {
   const [renderCount, setRenderCount] = useState(INITIAL_RENDER_COUNT)
   const visibleData = expressionData.slice(0, renderCount)
   const hasMore = renderCount < expressionData.length
+
+  const isQueueIndexPlayable = useCallback(
+    (index: number) => {
+      if (!canUseClassToday) return false
+      if (isPremium) return true
+      return index <= unlockedIndex
+    },
+    [canUseClassToday, isPremium, unlockedIndex],
+  )
+
+  const beginLearnPlayback = useCallback(
+    (startIndex: number) => {
+      if (replayQueue.length === 0) return
+
+      if (!canUseClassToday) {
+        setShowPremiumModal(true)
+        return
+      }
+
+      if (!isPremium) {
+        activateClassForToday(classId)
+      }
+
+      const safeStartIndex = isPremium ? startIndex : Math.min(startIndex, unlockedIndex)
+      playQueue(replayQueue, safeStartIndex)
+    },
+    [
+      activateClassForToday,
+      canUseClassToday,
+      classId,
+      isPremium,
+      playQueue,
+      replayQueue,
+      unlockedIndex,
+    ],
+  )
+
+  const handleLockedAttempt = useCallback(
+    (blockedByPremium: boolean) => {
+      if (blockedByPremium) {
+        setShowPremiumModal(true)
+      }
+    },
+    [],
+  )
 
   const handleLoadMore = useCallback(() => {
     setRenderCount((count) => Math.min(count + LOAD_MORE_COUNT, expressionData.length))
@@ -662,7 +748,7 @@ export default function ClassDetailPage() {
               {hasResume && (
                 <button
                   type="button"
-                  onClick={() => playQueue(replayQueue, resumeIndex)}
+                  onClick={() => beginLearnPlayback(resumeIndex)}
                   className="rounded-full bg-[var(--accent-primary)] px-3 py-1.5 text-[11px] font-semibold text-white"
                 >
                   {tx.resume}
@@ -672,7 +758,7 @@ export default function ClassDetailPage() {
                 type="button"
                 onClick={() => {
                   clearClassProgress(classId)
-                  playQueue(replayQueue, 0)
+                  beginLearnPlayback(0)
                 }}
                 className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-3 py-1.5 text-[11px] font-semibold text-[var(--text-primary)]"
               >
@@ -699,6 +785,15 @@ export default function ClassDetailPage() {
           )}
           <span>{tx.clipHint}</span>
         </div>
+        {!isPremium ? (
+          <div className="mt-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-3 py-2 text-[11px] leading-relaxed text-[var(--text-secondary)]">
+            {canUseClassToday
+              ? hasSessionRemaining
+                ? '\uC774 \uD074\uB798\uC2A4\uB97C \uC2DC\uC791\uD558\uBA74 \uC624\uB298\uC758 Learn \uC138\uC158\uC73C\uB85C \uACE0\uC815\uB429\uB2C8\uB2E4.'
+                : '\uC624\uB298 \uD65C\uC131\uD654\uD55C Learn \uD074\uB798\uC2A4\uC785\uB2C8\uB2E4. \uC21C\uC11C\uB300\uB85C \uC774\uC5B4\uBCF4\uC138\uC694.'
+              : '\uC624\uB298\uC740 \uB2E4\uB978 Learn \uD074\uB798\uC2A4\uB97C \uC774\uBBF8 \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4. Premium\uC73C\uB85C \uC804\uCCB4 Learn\uC744 \uC5F4 \uC218 \uC788\uC2B5\uB2C8\uB2E4.'}
+          </div>
+        ) : null}
       </div>
 
       {visibleData.map((data, index) => (
@@ -709,6 +804,8 @@ export default function ClassDetailPage() {
           total={expressionData.length}
           replayQueue={replayQueue}
           queueIndexByKey={queueIndexByKey}
+          isQueueIndexPlayable={isQueueIndexPlayable}
+          onLockedAttempt={() => handleLockedAttempt(!canUseClassToday)}
           tx={tx}
         />
       ))}
@@ -731,6 +828,12 @@ export default function ClassDetailPage() {
           </p>
         </div>
       )}
+
+      <PremiumModal
+        isOpen={showPremiumModal}
+        onClose={() => setShowPremiumModal(false)}
+        trigger="learn-limit"
+      />
     </AppPage>
   )
 }

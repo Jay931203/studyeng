@@ -4,9 +4,12 @@ import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { AppPage } from '@/components/ui/AppPage'
+import { PremiumModal } from '@/components/PremiumModal'
+import { useLearnAccessStore } from '@/stores/useLearnAccessStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
 import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 import expressionClasses from '@/data/expression-classes.json'
 
 type ExpressionClass = (typeof expressionClasses)[number]
@@ -110,10 +113,37 @@ export default function LearnPage() {
   const router = useRouter()
   const currentLevel = useOnboardingStore((s) => s.level)
   const classProgress = useLearnProgressStore((s) => s.classProgress)
+  const isPremium = usePremiumStore((s) => s.isPremium)
+  const canAccessClassToday = useLearnAccessStore((s) => s.canAccessClassToday)
+  const getActiveClassForToday = useLearnAccessStore((s) => s.getActiveClassForToday)
+  const hasFreeSessionRemaining = useLearnAccessStore((s) => s.hasFreeSessionRemaining)
   const locale = useLocaleStore((s) => s.locale)
   const [activeCategory, setActiveCategory] = useState<Category>('all')
+  const [showPremiumModal, setShowPremiumModal] = useState(false)
 
   const tx = TRANSLATIONS[locale]
+  const activeClassId = getActiveClassForToday()
+  const canStartNewSession = hasFreeSessionRemaining(isPremium)
+
+  const learnAccessMessage = useMemo(() => {
+    if (isPremium) {
+      return locale === 'ko'
+        ? 'Premium은 모든 Learn 클래스를 자유롭게 이어볼 수 있습니다.'
+        : 'Premium unlocks every Learn class without daily limits.'
+    }
+
+    if (activeClassId) {
+      const activeClass = expressionClasses.find((entry) => entry.id === activeClassId)
+      const activeTitle = activeClass?.titleKo ?? activeClass?.title ?? 'Learn'
+      return locale === 'ko'
+        ? `오늘은 ${activeTitle} 클래스만 이어볼 수 있습니다. Premium으로 전체 Learn을 열 수 있습니다.`
+        : `You can continue only ${activeTitle} today. Upgrade to Premium to unlock every Learn class.`
+    }
+
+    return locale === 'ko'
+      ? '무료 사용자는 하루 1개의 Learn 클래스를 활성화할 수 있습니다.'
+      : 'Free users can activate one Learn class per day.'
+  }, [activeClassId, isPremium, locale])
 
   const filtered = useMemo(() => {
     let result: ExpressionClass[] = expressionClasses.filter(
@@ -175,6 +205,28 @@ export default function LearnPage() {
         </p>
       </div>
 
+      <div className="mb-4 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3 shadow-[var(--card-shadow)]">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-sm font-medium text-[var(--text-primary)]">
+            {locale === 'ko' ? 'Learn 이용 방식' : 'Learn access'}
+          </p>
+          {!isPremium ? (
+            <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[11px] font-semibold text-[var(--accent-text)]">
+              {canStartNewSession
+                ? locale === 'ko'
+                  ? '오늘 1개 시작 가능'
+                  : '1 class available today'
+                : locale === 'ko'
+                  ? '오늘 세션 사용 완료'
+                  : 'Today complete'}
+            </span>
+          ) : null}
+        </div>
+        <p className="mt-2 text-xs leading-relaxed text-[var(--text-secondary)]">
+          {learnAccessMessage}
+        </p>
+      </div>
+
       <div className="mb-5 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
         {CATEGORY_IDS.map((id) => (
           <button
@@ -210,7 +262,14 @@ export default function LearnPage() {
               },
             }}
             whileTap={{ scale: 0.985 }}
-            onClick={() => router.push(`/explore/learn/${entry.id}`)}
+            onClick={() => {
+              if (!canAccessClassToday(entry.id, isPremium)) {
+                setShowPremiumModal(true)
+                return
+              }
+
+              router.push(`/explore/learn/${entry.id}`)
+            }}
             className="overflow-hidden rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)] transition-colors"
           >
             <div className="mb-3 flex items-center gap-2">
@@ -225,6 +284,11 @@ export default function LearnPage() {
               <span className="text-[10px] font-medium uppercase tracking-wider text-[var(--text-muted)]">
                 {getCategoryLabel(entry.category as Category, tx)}
               </span>
+              {!canAccessClassToday(entry.id, isPremium) ? (
+                <span className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-2 py-0.5 text-[10px] font-semibold text-[var(--text-muted)]">
+                  {locale === 'ko' ? '오늘 잠금' : 'Locked today'}
+                </span>
+              ) : null}
             </div>
 
             <p className="text-[15px] font-semibold text-[var(--text-primary)]">
@@ -262,6 +326,12 @@ export default function LearnPage() {
           </p>
         </div>
       )}
+
+      <PremiumModal
+        isOpen={showPremiumModal}
+        onClose={() => setShowPremiumModal(false)}
+        trigger="learn-limit"
+      />
     </AppPage>
   )
 }

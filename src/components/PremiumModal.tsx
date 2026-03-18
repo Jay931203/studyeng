@@ -47,6 +47,8 @@ const TRANSLATIONS = {
     base: '기본',
     additionalDiscount: '추가 할인',
     phraseLimitReached: '무료 문장 저장 한도를 모두 사용했습니다.',
+    learnLimitReached:
+      '오늘 Learn 세션은 이미 사용했습니다. Premium으로 업그레이드하면 모든 Learn 클래스를 제한 없이 이용할 수 있습니다.',
     trialRemaining: (days: number) =>
       `무료 체험 ${days}일 남았습니다. 이후 하루 ${FREE_DAILY_VIEW_LIMIT}개 제한이 적용됩니다.`,
     dailyLimitReached: `오늘 무료 영상 시청 한도(${FREE_DAILY_VIEW_LIMIT}개)를 모두 사용했습니다.`,
@@ -81,6 +83,8 @@ const TRANSLATIONS = {
     base: '基本',
     additionalDiscount: '追加割引',
     phraseLimitReached: '無料フレーズ保存の上限に達しました。',
+    learnLimitReached:
+      "Today's Learn session has already been used. Upgrade to Premium to unlock every Learn class.",
     trialRemaining: (days: number) =>
       `無料体験残り${days}日。その後は1日${FREE_DAILY_VIEW_LIMIT}件の制限が適用されます。`,
     dailyLimitReached: `本日の無料動画視聴上限(${FREE_DAILY_VIEW_LIMIT}件)に達しました。`,
@@ -115,6 +119,8 @@ const TRANSLATIONS = {
     base: '基本',
     additionalDiscount: '額外折扣',
     phraseLimitReached: '已達免費句子儲存上限。',
+    learnLimitReached:
+      "Today's Learn session has already been used. Upgrade to Premium to unlock every Learn class.",
     trialRemaining: (days: number) =>
       `免費試用剩餘 ${days} 天。之後每日限制 ${FREE_DAILY_VIEW_LIMIT} 部影片。`,
     dailyLimitReached: `今日免費影片觀看上限(${FREE_DAILY_VIEW_LIMIT}部)已用完。`,
@@ -149,6 +155,8 @@ const TRANSLATIONS = {
     base: 'C\u01a1 b\u1ea3n',
     additionalDiscount: 'Gi\u1ea3m th\u00eam',
     phraseLimitReached: 'B\u1ea1n \u0111\u00e3 d\u00f9ng h\u1ebft gi\u1edbi h\u1ea1n l\u01b0u c\u00e2u mi\u1ec5n ph\u00ed.',
+    learnLimitReached:
+      "Today's Learn session has already been used. Upgrade to Premium to unlock every Learn class.",
     trialRemaining: (days: number) =>
       `C\u00f2n ${days} ng\u00e0y d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed. Sau \u0111\u00f3 gi\u1edbi h\u1ea1n ${FREE_DAILY_VIEW_LIMIT} video/ng\u00e0y.`,
     dailyLimitReached: `B\u1ea1n \u0111\u00e3 d\u00f9ng h\u1ebft gi\u1edbi h\u1ea1n xem video mi\u1ec5n ph\u00ed h\u00f4m nay (${FREE_DAILY_VIEW_LIMIT} video).`,
@@ -177,16 +185,17 @@ type PremiumTranslations = typeof TRANSLATIONS[TranslationLocale]
 interface PremiumModalProps {
   isOpen: boolean
   onClose: () => void
-  trigger?: 'video-limit' | 'phrase-limit'
+  trigger?: 'video-limit' | 'phrase-limit' | 'learn-limit'
 }
 
 function getTriggerMessage(
-  trigger: 'video-limit' | 'phrase-limit',
+  trigger: 'video-limit' | 'phrase-limit' | 'learn-limit',
   trialDaysRemaining: number,
   inTrial: boolean,
   t: PremiumTranslations,
 ): string {
   if (trigger === 'phrase-limit') return t.phraseLimitReached
+  if (trigger === 'learn-limit') return t.learnLimitReached
   if (inTrial && trialDaysRemaining > 0) {
     return t.trialRemaining(trialDaysRemaining)
   }
