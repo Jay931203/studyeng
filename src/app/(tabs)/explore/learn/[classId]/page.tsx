@@ -312,6 +312,7 @@ function ExpressionSection({
 export default function ClassDetailPage() {
   const params = useParams()
   const router = useRouter()
+  const classId = params.classId as string
   const currentLevel = useOnboardingStore((s) => s.level)
   const playQueue = useReplayStore((s) => s.playQueue)
   const replayClip = useReplayStore((s) => s.clip)
@@ -319,7 +320,6 @@ export default function ClassDetailPage() {
   const savedProgress = useLearnProgressStore((s) => s.classProgress[classId])
   const saveClassProgress = useLearnProgressStore((s) => s.saveClassProgress)
   const clearClassProgress = useLearnProgressStore((s) => s.clearClassProgress)
-  const classId = params.classId as string
 
   const cls: ExpressionClass | undefined = useMemo(
     () => expressionClasses.find((entry) => entry.id === classId),
