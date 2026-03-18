@@ -482,7 +482,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                         />
                       </div>
                       <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                        추천과 표현 학습
+                        {getTabDesc(tab)}
                       </p>
                     </div>
                   </div>
@@ -546,7 +546,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                         />
                       </div>
                       <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                        시리즈와 쇼츠
+                        {getTabDesc(tab)}
                       </p>
                     </div>
                   </div>

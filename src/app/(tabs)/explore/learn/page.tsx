@@ -6,18 +6,96 @@ import { motion } from 'framer-motion'
 import { AppPage } from '@/components/ui/AppPage'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import expressionClasses from '@/data/expression-classes.json'
 
 type ExpressionClass = (typeof expressionClasses)[number]
 type Category = 'all' | 'function' | 'grammar' | 'situation' | 'level'
 
-const CATEGORIES: { id: Category; label: string }[] = [
-  { id: 'all', label: '전체' },
-  { id: 'function', label: '기능' },
-  { id: 'grammar', label: '문법' },
-  { id: 'situation', label: '상황' },
-  { id: 'level', label: '레벨' },
-]
+const TRANSLATIONS: Record<SupportedLocale, {
+  catAll: string
+  catFunction: string
+  catGrammar: string
+  catSituation: string
+  catLevel: string
+  levelDescription: string
+  levelClassCount: (level: string, count: number) => string
+  expressionCount: (n: number) => string
+  videoCount: (n: number) => string
+  resumeProgress: (current: number, total: number) => string
+  noClassTitle: string
+  noClassDescription: string
+}> = {
+  ko: {
+    catAll: '전체',
+    catFunction: '기능',
+    catGrammar: '문법',
+    catSituation: '상황',
+    catLevel: '레벨',
+    levelDescription: '설정된 레벨에 맞는 클래스만 이어서 학습합니다.',
+    levelClassCount: (level, count) => `${level} 레벨 클래스 ${count}개`,
+    expressionCount: (n) => `${n}개 표현`,
+    videoCount: (n) => `${n}개 영상`,
+    resumeProgress: (current, total) => `이어보기 ${current} / ${total}`,
+    noClassTitle: '현재 레벨에 맞는 클래스가 없습니다',
+    noClassDescription: '설정에서 레벨을 바꾸면 다른 클래스를 볼 수 있습니다.',
+  },
+  ja: {
+    catAll: '全て',
+    catFunction: '機能',
+    catGrammar: '文法',
+    catSituation: '場面',
+    catLevel: 'レベル',
+    levelDescription: '設定されたレベルに合ったクラスのみ学習します。',
+    levelClassCount: (level, count) => `${level}レベル クラス ${count}件`,
+    expressionCount: (n) => `${n}件の表現`,
+    videoCount: (n) => `${n}件の動画`,
+    resumeProgress: (current, total) => `続きから ${current} / ${total}`,
+    noClassTitle: '現在のレベルに合うクラスがありません',
+    noClassDescription: '設定でレベルを変更すると、他のクラスが表示されます。',
+  },
+  'zh-TW': {
+    catAll: '全部',
+    catFunction: '功能',
+    catGrammar: '文法',
+    catSituation: '情境',
+    catLevel: '等級',
+    levelDescription: '僅顯示符合目前等級的課程。',
+    levelClassCount: (level, count) => `${level} 等級課程 ${count} 個`,
+    expressionCount: (n) => `${n} 個表達`,
+    videoCount: (n) => `${n} 部影片`,
+    resumeProgress: (current, total) => `繼續學習 ${current} / ${total}`,
+    noClassTitle: '目前等級沒有對應的課程',
+    noClassDescription: '在設定中更改等級即可查看其他課程。',
+  },
+  vi: {
+    catAll: 'Tất cả',
+    catFunction: 'Chức năng',
+    catGrammar: 'Ngữ pháp',
+    catSituation: 'Tình huống',
+    catLevel: 'Cấp độ',
+    levelDescription: 'Chỉ hiển thị lớp học phù hợp với cấp độ đã chọn.',
+    levelClassCount: (level, count) => `Cấp ${level} - ${count} lớp`,
+    expressionCount: (n) => `${n} biểu đạt`,
+    videoCount: (n) => `${n} video`,
+    resumeProgress: (current, total) => `Tiếp tục ${current} / ${total}`,
+    noClassTitle: 'Không có lớp học phù hợp với cấp độ hiện tại',
+    noClassDescription: 'Thay đổi cấp độ trong cài đặt để xem các lớp khác.',
+  },
+}
+
+const CATEGORY_IDS: Category[] = ['all', 'function', 'grammar', 'situation', 'level']
+
+function getCategoryLabel(id: Category, tx: (typeof TRANSLATIONS)['ko']): string {
+  const map: Record<Category, string> = {
+    all: tx.catAll,
+    function: tx.catFunction,
+    grammar: tx.catGrammar,
+    situation: tx.catSituation,
+    level: tx.catLevel,
+  }
+  return map[id]
+}
 
 const LEVEL_COLORS: Record<string, string> = {
   A1: 'bg-emerald-500/15 text-emerald-600 border-emerald-500/20',
@@ -32,7 +110,10 @@ export default function LearnPage() {
   const router = useRouter()
   const currentLevel = useOnboardingStore((s) => s.level)
   const classProgress = useLearnProgressStore((s) => s.classProgress)
+  const locale = useLocaleStore((s) => s.locale)
   const [activeCategory, setActiveCategory] = useState<Category>('all')
+
+  const tx = TRANSLATIONS[locale]
 
   const filtered = useMemo(() => {
     let result: ExpressionClass[] = expressionClasses.filter(
@@ -90,28 +171,28 @@ export default function LearnPage() {
           {currentLevel}
         </span>
         <p className="text-sm text-[var(--text-secondary)]">
-          설정된 레벨에 맞는 클래스만 이어서 학습합니다.
+          {tx.levelDescription}
         </p>
       </div>
 
       <div className="mb-5 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-        {CATEGORIES.map((category) => (
+        {CATEGORY_IDS.map((id) => (
           <button
-            key={category.id}
-            onClick={() => setActiveCategory(category.id)}
+            key={id}
+            onClick={() => setActiveCategory(id)}
             className={`shrink-0 whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-medium transition-colors ${
-              activeCategory === category.id
+              activeCategory === id
                 ? 'border-[var(--accent-primary)]/30 bg-[var(--accent-glow)] text-[var(--accent-text)]'
                 : 'border-[var(--border-card)] bg-[var(--bg-card)] text-[var(--text-secondary)]'
             }`}
           >
-            {category.label}
+            {getCategoryLabel(id, tx)}
           </button>
         ))}
       </div>
 
       <p className="mb-4 text-xs text-[var(--text-muted)]">
-        {currentLevel} 레벨 클래스 {filtered.length}개
+        {tx.levelClassCount(currentLevel, filtered.length)}
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -142,8 +223,7 @@ export default function LearnPage() {
                 {entry.level}
               </span>
               <span className="text-[10px] font-medium uppercase tracking-wider text-[var(--text-muted)]">
-                {CATEGORIES.find((category) => category.id === entry.category)?.label ??
-                  entry.category}
+                {getCategoryLabel(entry.category as Category, tx)}
               </span>
             </div>
 
@@ -157,12 +237,15 @@ export default function LearnPage() {
             </p>
 
             <div className="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]">
-              <span>{entry.expressions.length}개 표현</span>
-              <span>{entry.videoIds.length}개 영상</span>
+              <span>{tx.expressionCount(entry.expressions.length)}</span>
+              <span>{tx.videoCount(entry.videoIds.length)}</span>
             </div>
             {classProgress[entry.id] && (
               <p className="mt-2 text-[11px] font-medium text-[var(--accent-text)]">
-                이어보기 {Math.min(classProgress[entry.id].lastIndex + 1, classProgress[entry.id].total)} / {classProgress[entry.id].total}
+                {tx.resumeProgress(
+                  Math.min(classProgress[entry.id].lastIndex + 1, classProgress[entry.id].total),
+                  classProgress[entry.id].total,
+                )}
               </p>
             )}
           </motion.button>
@@ -172,10 +255,10 @@ export default function LearnPage() {
       {filtered.length === 0 && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center shadow-[var(--card-shadow)]">
           <p className="text-sm font-medium text-[var(--text-primary)]">
-            현재 레벨에 맞는 클래스가 없습니다
+            {tx.noClassTitle}
           </p>
           <p className="mt-2 text-xs text-[var(--text-secondary)]">
-            설정에서 레벨을 바꾸면 다른 클래스를 볼 수 있습니다.
+            {tx.noClassDescription}
           </p>
         </div>
       )}

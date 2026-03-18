@@ -10,6 +10,7 @@ import type { ReplayClip } from '@/stores/useReplayStore'
 import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import expressionClasses from '@/data/expression-classes.json'
 import {
   buildClassExpressionClips,
@@ -18,6 +19,195 @@ import {
 
 type ExpressionClass = (typeof expressionClasses)[number]
 
+const TRANSLATIONS: Record<SupportedLocale, {
+  catFunction: string
+  catGrammar: string
+  catSituation: string
+  catLevel: string
+  exprPhrasalVerb: string
+  exprIdiom: string
+  exprCollocation: string
+  exprFixedExpression: string
+  exprDiscourseMarker: string
+  exprSlang: string
+  exprHedging: string
+  exprExclamation: string
+  exprFiller: string
+  clipCount: (n: number) => string
+  expressionCount: (n: number) => string
+  videoCount: (n: number) => string
+  classNotFound: string
+  currentLevel: string
+  levelLocked: string
+  levelMismatch: (classLevel: string) => string
+  goBack: string
+  goToSettings: string
+  resume: string
+  fromBeginning: string
+  startNow: string
+  resumeProgress: (current: number, total: number) => string
+  levelBadge: (current: string, classLevel: string) => string
+  clipHint: string
+  loadMore: (remaining: number) => string
+  noClips: string
+}> = {
+  ko: {
+    catFunction: '기능',
+    catGrammar: '문법',
+    catSituation: '상황',
+    catLevel: '레벨',
+    exprPhrasalVerb: '구동사',
+    exprIdiom: '관용구',
+    exprCollocation: '연어',
+    exprFixedExpression: '표현',
+    exprDiscourseMarker: '담화',
+    exprSlang: '속어',
+    exprHedging: '완곡',
+    exprExclamation: '감탄',
+    exprFiller: '필러',
+    clipCount: (n) => `${n}개 클립`,
+    expressionCount: (n) => `${n}개 표현`,
+    videoCount: (n) => `${n}개 영상`,
+    classNotFound: '클래스를 찾을 수 없습니다',
+    currentLevel: '현재 학습 레벨',
+    levelLocked: 'Learn은 설정된 레벨 클래스만 열 수 있습니다.',
+    levelMismatch: (classLevel) => `이 클래스는 ${classLevel} 레벨입니다. 설정에서 레벨을 바꾸면 다시 들어올 수 있습니다.`,
+    goBack: '뒤로가기',
+    goToSettings: '설정으로 이동',
+    resume: '이어보기',
+    fromBeginning: '처음부터',
+    startNow: '바로 시작',
+    resumeProgress: (current, total) => `이어보기 ${current} / ${total}`,
+    levelBadge: (current, classLevel) => `현재 설정 ${current} · 이 클래스 ${classLevel}`,
+    clipHint: '클립을 누르면 해당 구간이 바로 재생됩니다.',
+    loadMore: (remaining) => `더 보기 (${remaining}개)`,
+    noClips: '이 클래스에 연결된 클립이 아직 없습니다.',
+  },
+  ja: {
+    catFunction: '機能',
+    catGrammar: '文法',
+    catSituation: '場面',
+    catLevel: 'レベル',
+    exprPhrasalVerb: '句動詞',
+    exprIdiom: '慣用句',
+    exprCollocation: '連語',
+    exprFixedExpression: '表現',
+    exprDiscourseMarker: '談話',
+    exprSlang: 'スラング',
+    exprHedging: '婉曲',
+    exprExclamation: '感嘆',
+    exprFiller: 'フィラー',
+    clipCount: (n) => `${n}件のクリップ`,
+    expressionCount: (n) => `${n}件の表現`,
+    videoCount: (n) => `${n}件の動画`,
+    classNotFound: 'クラスが見つかりません',
+    currentLevel: '現在の学習レベル',
+    levelLocked: 'Learnは設定されたレベルのクラスのみ開けます。',
+    levelMismatch: (classLevel) => `このクラスは${classLevel}レベルです。設定でレベルを変更すると再度アクセスできます。`,
+    goBack: '戻る',
+    goToSettings: '設定へ移動',
+    resume: '続きから',
+    fromBeginning: '最初から',
+    startNow: '今すぐ開始',
+    resumeProgress: (current, total) => `続きから ${current} / ${total}`,
+    levelBadge: (current, classLevel) => `現在の設定 ${current} · このクラス ${classLevel}`,
+    clipHint: 'クリップをタップすると該当区間が再生されます。',
+    loadMore: (remaining) => `もっと見る (${remaining}件)`,
+    noClips: 'このクラスにはまだクリップがありません。',
+  },
+  'zh-TW': {
+    catFunction: '功能',
+    catGrammar: '文法',
+    catSituation: '情境',
+    catLevel: '等級',
+    exprPhrasalVerb: '片語動詞',
+    exprIdiom: '慣用語',
+    exprCollocation: '搭配詞',
+    exprFixedExpression: '表達',
+    exprDiscourseMarker: '話語',
+    exprSlang: '俚語',
+    exprHedging: '委婉',
+    exprExclamation: '感嘆',
+    exprFiller: '填詞',
+    clipCount: (n) => `${n} 個片段`,
+    expressionCount: (n) => `${n} 個表達`,
+    videoCount: (n) => `${n} 部影片`,
+    classNotFound: '找不到該課程',
+    currentLevel: '目前學習等級',
+    levelLocked: 'Learn 僅開放符合目前等級的課程。',
+    levelMismatch: (classLevel) => `此課程為 ${classLevel} 等級。請在設定中更改等級後再進入。`,
+    goBack: '返回',
+    goToSettings: '前往設定',
+    resume: '繼續學習',
+    fromBeginning: '從頭開始',
+    startNow: '立即開始',
+    resumeProgress: (current, total) => `繼續學習 ${current} / ${total}`,
+    levelBadge: (current, classLevel) => `目前設定 ${current} · 此課程 ${classLevel}`,
+    clipHint: '點擊片段即可播放對應段落。',
+    loadMore: (remaining) => `查看更多 (${remaining} 個)`,
+    noClips: '此課程尚無片段。',
+  },
+  vi: {
+    catFunction: 'Chức năng',
+    catGrammar: 'Ngữ pháp',
+    catSituation: 'Tình huống',
+    catLevel: 'Cấp độ',
+    exprPhrasalVerb: 'Cụm động từ',
+    exprIdiom: 'Thành ngữ',
+    exprCollocation: 'Kết hợp từ',
+    exprFixedExpression: 'Biểu đạt',
+    exprDiscourseMarker: 'Liên kết',
+    exprSlang: 'Tiếng lóng',
+    exprHedging: 'Uyển chuyển',
+    exprExclamation: 'Cảm thán',
+    exprFiller: 'Từ đệm',
+    clipCount: (n) => `${n} clip`,
+    expressionCount: (n) => `${n} biểu đạt`,
+    videoCount: (n) => `${n} video`,
+    classNotFound: 'Không tìm thấy lớp học',
+    currentLevel: 'Cấp độ học hiện tại',
+    levelLocked: 'Learn chỉ mở các lớp phù hợp với cấp độ đã chọn.',
+    levelMismatch: (classLevel) => `Lớp này ở cấp ${classLevel}. Thay đổi cấp độ trong cài đặt để truy cập lại.`,
+    goBack: 'Quay lại',
+    goToSettings: 'Đi tới cài đặt',
+    resume: 'Tiếp tục',
+    fromBeginning: 'Từ đầu',
+    startNow: 'Bắt đầu ngay',
+    resumeProgress: (current, total) => `Tiếp tục ${current} / ${total}`,
+    levelBadge: (current, classLevel) => `Cài đặt hiện tại ${current} · Lớp này ${classLevel}`,
+    clipHint: 'Nhấn clip để phát đoạn tương ứng.',
+    loadMore: (remaining) => `Xem thêm (${remaining})`,
+    noClips: 'Lớp này chưa có clip nào.',
+  },
+}
+
+type Tx = (typeof TRANSLATIONS)['ko']
+
+function getCategoryLabel(category: string, tx: Tx): string {
+  const map: Record<string, string> = {
+    function: tx.catFunction,
+    grammar: tx.catGrammar,
+    situation: tx.catSituation,
+    level: tx.catLevel,
+  }
+  return map[category] ?? category
+}
+
+function getExprCategoryLabel(category: string, tx: Tx): string {
+  const map: Record<string, string> = {
+    phrasal_verb: tx.exprPhrasalVerb,
+    idiom: tx.exprIdiom,
+    collocation: tx.exprCollocation,
+    fixed_expression: tx.exprFixedExpression,
+    discourse_marker: tx.exprDiscourseMarker,
+    slang: tx.exprSlang,
+    hedging: tx.exprHedging,
+    exclamation: tx.exprExclamation,
+    filler: tx.exprFiller,
+  }
+  return map[category] ?? category
+}
+
 const LEVEL_COLORS: Record<string, string> = {
   A1: 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/20',
   A2: 'bg-teal-500/15 text-teal-600 dark:text-teal-400 border-teal-500/20',
@@ -25,25 +215,6 @@ const LEVEL_COLORS: Record<string, string> = {
   B2: 'bg-violet-500/15 text-violet-600 dark:text-violet-400 border-violet-500/20',
   C1: 'bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/20',
   C2: 'bg-fuchsia-500/15 text-fuchsia-600 dark:text-fuchsia-400 border-fuchsia-500/20',
-}
-
-const CATEGORY_LABELS: Record<string, string> = {
-  function: '기능',
-  grammar: '문법',
-  situation: '상황',
-  level: '레벨',
-}
-
-const EXPR_CATEGORY_LABELS: Record<string, string> = {
-  phrasal_verb: '구동사',
-  idiom: '관용구',
-  collocation: '연어',
-  fixed_expression: '표현',
-  discourse_marker: '담화',
-  slang: '속어',
-  hedging: '완곡',
-  exclamation: '감탄',
-  filler: '필러',
 }
 
 const INITIAL_RENDER_COUNT = 4
@@ -160,12 +331,14 @@ function ExpressionSection({
   total,
   replayQueue,
   queueIndexByKey,
+  tx,
 }: {
   data: ExpressionWithClips
   index: number
   total: number
   replayQueue: ReplayClip[]
   queueIndexByKey: Map<string, number>
+  tx: Tx
 }) {
   const playQueue = useReplayStore((s) => s.playQueue)
   const currentClip = useReplayStore((s) => s.clip)
@@ -174,7 +347,7 @@ function ExpressionSection({
 
   const { entry, clips } = data
   const cefrStyle = getCefrBadgeStyle(entry.cefr)
-  const categoryLabel = EXPR_CATEGORY_LABELS[entry.category] ?? entry.category
+  const categoryLabel = getExprCategoryLabel(entry.category, tx)
   const familiar = isFamiliar(entry.id)
   const familiarCount = getFamiliarCount(entry.id)
 
@@ -274,7 +447,7 @@ function ExpressionSection({
             {categoryLabel}
           </span>
           <span className="text-[10px] text-[var(--text-muted)]">
-            {clips.length}개 클립
+            {tx.clipCount(clips.length)}
           </span>
         </div>
       </div>
@@ -320,6 +493,9 @@ export default function ClassDetailPage() {
   const savedProgress = useLearnProgressStore((s) => s.classProgress[classId])
   const saveClassProgress = useLearnProgressStore((s) => s.saveClassProgress)
   const clearClassProgress = useLearnProgressStore((s) => s.clearClassProgress)
+  const locale = useLocaleStore((s) => s.locale)
+
+  const tx = TRANSLATIONS[locale]
 
   const cls: ExpressionClass | undefined = useMemo(
     () => expressionClasses.find((entry) => entry.id === classId),
@@ -401,7 +577,7 @@ export default function ClassDetailPage() {
         </div>
         <div className="mt-10 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center shadow-[var(--card-shadow)]">
           <p className="text-sm font-medium text-[var(--text-primary)]">
-            클래스를 찾을 수 없습니다
+            {tx.classNotFound}
           </p>
         </div>
       </AppPage>
@@ -428,14 +604,14 @@ export default function ClassDetailPage() {
             >
               {currentLevel}
             </span>
-            <span className="text-xs text-[var(--text-muted)]">현재 학습 레벨</span>
+            <span className="text-xs text-[var(--text-muted)]">{tx.currentLevel}</span>
           </div>
 
           <p className="text-base font-semibold text-[var(--text-primary)]">
-            Learn은 설정된 레벨 클래스만 열 수 있습니다.
+            {tx.levelLocked}
           </p>
           <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-            이 클래스는 {cls?.level} 레벨입니다. 설정에서 레벨을 바꾸면 다시 들어올 수 있습니다.
+            {tx.levelMismatch(cls?.level ?? '')}
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -443,13 +619,13 @@ export default function ClassDetailPage() {
               onClick={handleBack}
               className="rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-2 text-sm font-medium text-[var(--text-primary)]"
             >
-              뒤로가기
+              {tx.goBack}
             </button>
             <button
               onClick={() => router.push('/profile')}
               className="rounded-xl bg-[var(--accent-primary)] px-4 py-2 text-sm font-semibold text-white"
             >
-              설정으로 이동
+              {tx.goToSettings}
             </button>
           </div>
         </div>
@@ -478,7 +654,7 @@ export default function ClassDetailPage() {
             {cls.level}
           </span>
           <span className="text-[10px] font-medium uppercase tracking-wider text-[var(--text-muted)]">
-            {CATEGORY_LABELS[cls.category] ?? cls.category}
+            {getCategoryLabel(cls.category, tx)}
           </span>
           </div>
           {replayQueue.length > 0 && (
@@ -489,7 +665,7 @@ export default function ClassDetailPage() {
                   onClick={() => playQueue(replayQueue, resumeIndex)}
                   className="rounded-full bg-[var(--accent-primary)] px-3 py-1.5 text-[11px] font-semibold text-white"
                 >
-                  이어보기
+                  {tx.resume}
                 </button>
               )}
               <button
@@ -500,7 +676,7 @@ export default function ClassDetailPage() {
                 }}
                 className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-3 py-1.5 text-[11px] font-semibold text-[var(--text-primary)]"
               >
-                {hasResume ? '처음부터' : '바로 시작'}
+                {hasResume ? tx.fromBeginning : tx.startNow}
               </button>
             </div>
           )}
@@ -509,19 +685,19 @@ export default function ClassDetailPage() {
         <h1 className="text-lg font-bold text-[var(--text-primary)]">{cls.titleKo}</h1>
         <p className="mt-1 text-xs text-[var(--text-muted)]">{cls.title}</p>
         <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
-          <span>{expressionData.length}개 표현</span>
-          <span>{cls.videoIds.length}개 영상</span>
+          <span>{tx.expressionCount(expressionData.length)}</span>
+          <span>{tx.videoCount(cls.videoIds.length)}</span>
           {isLevelMismatch && (
             <span className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-2 py-0.5 font-medium text-[var(--accent-text)]">
-              현재 설정 {currentLevel} · 이 클래스 {cls.level}
+              {tx.levelBadge(currentLevel, cls.level)}
             </span>
           )}
           {savedProgress && (
             <span>
-              이어보기 {Math.min(savedProgress.lastIndex + 1, replayQueue.length)} / {replayQueue.length}
+              {tx.resumeProgress(Math.min(savedProgress.lastIndex + 1, replayQueue.length), replayQueue.length)}
             </span>
           )}
-          <span>클립을 누르면 해당 구간이 바로 재생됩니다.</span>
+          <span>{tx.clipHint}</span>
         </div>
       </div>
 
@@ -533,6 +709,7 @@ export default function ClassDetailPage() {
           total={expressionData.length}
           replayQueue={replayQueue}
           queueIndexByKey={queueIndexByKey}
+          tx={tx}
         />
       ))}
 
@@ -542,7 +719,7 @@ export default function ClassDetailPage() {
             onClick={handleLoadMore}
             className="rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-3 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)]"
           >
-            더 보기 ({expressionData.length - renderCount}개)
+            {tx.loadMore(expressionData.length - renderCount)}
           </button>
         </div>
       )}
@@ -550,7 +727,7 @@ export default function ClassDetailPage() {
       {expressionData.length === 0 && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center">
           <p className="text-sm text-[var(--text-secondary)]">
-            이 클래스에 연결된 클립이 아직 없습니다.
+            {tx.noClips}
           </p>
         </div>
       )}
