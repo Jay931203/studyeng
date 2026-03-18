@@ -696,6 +696,8 @@ export function MiniReplayPlayer() {
   const next = useReplayStore((s) => s.next)
   const prev = useReplayStore((s) => s.prev)
   const playerApiRef = useRef<ReplayPlayerHandle | null>(null)
+  const overlayHistoryPushedRef = useRef(false)
+  const closingOverlayFromBackRef = useRef(false)
   const [coreRepeatCount, setCoreRepeatCount] = useState<1 | 2 | 3>(1)
   const [loadedContext, setLoadedContext] = useState<{
     key: string
@@ -726,6 +728,50 @@ export function MiniReplayPlayer() {
       document.body.style.overflow = previousOverflow
     }
   }, [isLearnPlayer])
+
+  useEffect(() => {
+    if (!isLearnPlayer || typeof window === 'undefined') return
+
+    const currentState =
+      window.history.state && typeof window.history.state === 'object'
+        ? window.history.state
+        : {}
+
+    window.history.pushState(
+      { ...currentState, __studyengLearnOverlay: true },
+      '',
+      window.location.href,
+    )
+    overlayHistoryPushedRef.current = true
+    closingOverlayFromBackRef.current = false
+
+    const handlePopState = () => {
+      closingOverlayFromBackRef.current = true
+      stop()
+    }
+
+    window.addEventListener('popstate', handlePopState)
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+    }
+  }, [isLearnPlayer, stop])
+
+  const handleCloseLearnOverlay = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const state =
+        window.history.state && typeof window.history.state === 'object'
+          ? window.history.state
+          : null
+      if (overlayHistoryPushedRef.current && state && '__studyengLearnOverlay' in state) {
+        overlayHistoryPushedRef.current = false
+        closingOverlayFromBackRef.current = true
+        window.history.back()
+        return
+      }
+    }
+
+    stop()
+  }, [stop])
 
   const clipKey = clip
     ? `${clip.videoId}:${clip.sentenceIdx ?? -1}:${clip.start}:${clip.end}`
@@ -926,7 +972,7 @@ export function MiniReplayPlayer() {
                 </div>
                 <button
                   type="button"
-                  onClick={stop}
+                  onClick={handleCloseLearnOverlay}
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 transition-colors active:scale-95"
                   aria-label="Close replay"
                 >
@@ -1006,12 +1052,56 @@ export function MiniReplayPlayer() {
                       ) : null}
                     </div>
 
+<<<<<<< Updated upstream
                     <LearnSubtitleContext
                       className="mt-3"
                       slots={displaySlots}
                       activeLineId={activeReplayLineId}
                       onReplayLine={handleReplayLine}
                     />
+=======
+                    <div className={`px-4 py-3 ${isLandscapeLearn ? 'flex w-[42%] flex-col border-l border-white/10' : 'border-t border-white/10'}`}>
+                      <ProgressBar />
+                      <div className="mt-3 flex items-start justify-between gap-3">
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-semibold text-white">
+                            {clip?.expressionText ?? 'Expression'}
+                          </p>
+                          {clip?.videoTitle ? (
+                            <p className="mt-0.5 truncate text-xs text-white/55">{clip.videoTitle}</p>
+                          ) : null}
+                        </div>
+                        <div className="flex shrink-0 items-center gap-1 rounded-full bg-white/5 p-1">
+                          {([
+                            { id: 'en', label: 'EN' },
+                            { id: 'bilingual', label: 'EN/KO' },
+                            { id: 'locked', label: '잠금' },
+                          ] as const).map((option) => {
+                            const active = learnSubtitleMode === option.id
+                            return (
+                              <button
+                                key={option.id}
+                                type="button"
+                                onClick={(event) => {
+                                  event.stopPropagation()
+                                  setLearnSubtitleMode(option.id)
+                                  if (option.id !== 'locked') {
+                                    setRevealedLineId(null)
+                                  }
+                                }}
+                                className="rounded-full px-2.5 py-1 text-[10px] font-semibold transition-colors"
+                                style={{
+                                  backgroundColor: active ? 'var(--accent-primary)' : 'transparent',
+                                  color: active ? '#fff' : 'rgba(255,255,255,0.72)',
+                                }}
+                              >
+                                {option.label}
+                              </button>
+                            )
+                          })}
+                        </div>
+                      </div>
+>>>>>>> Stashed changes
 
                     <div className="mt-3 flex items-center gap-2">
                       <button
