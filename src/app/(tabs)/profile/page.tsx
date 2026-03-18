@@ -500,26 +500,28 @@ export default function ProfilePage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-between px-1 py-3">
-                <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.smartSubtitles}</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.smartSubtitlesDesc}</p>
-                </div>
-                <button
-                  onClick={() => setSmartSubtitlesEnabled(!smartSubtitlesEnabled)}
-                  className={`relative h-6 w-11 rounded-full ${
-                    smartSubtitlesEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
-                  }`}
-                  role="switch"
-                  aria-checked={smartSubtitlesEnabled}
-                >
-                  <span
-                    className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
-                      smartSubtitlesEnabled ? 'translate-x-5' : ''
+              {isAdmin && (
+                <div className="flex items-center justify-between px-1 py-3">
+                  <div>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">{T.smartSubtitles}</p>
+                    <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.smartSubtitlesDesc}</p>
+                  </div>
+                  <button
+                    onClick={() => setSmartSubtitlesEnabled(!smartSubtitlesEnabled)}
+                    className={`relative h-6 w-11 rounded-full ${
+                      smartSubtitlesEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
                     }`}
-                  />
-                </button>
-              </div>
+                    role="switch"
+                    aria-checked={smartSubtitlesEnabled}
+                  >
+                    <span
+                      className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                        smartSubtitlesEnabled ? 'translate-x-5' : ''
+                      }`}
+                    />
+                  </button>
+                </div>
+              )}
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>

@@ -354,6 +354,7 @@ export default function ClassDetailPage() {
     ? Math.min(savedProgress.lastIndex, Math.max(0, replayQueue.length - 1))
     : 0
   const hasResume = Boolean(savedProgress && replayQueue.length > 0 && resumeIndex > 0)
+  const isLevelMismatch = cls ? cls.level !== currentLevel : false
 
   const queueIndexByKey = useMemo(() => {
     const map = new Map<string, number>()
@@ -407,7 +408,7 @@ export default function ClassDetailPage() {
     )
   }
 
-  if (cls.level !== currentLevel) {
+  if (false) {
     return (
       <AppPage>
         <div className="mb-6 flex items-center gap-3">
@@ -434,7 +435,7 @@ export default function ClassDetailPage() {
             Learn은 설정된 레벨 클래스만 열 수 있습니다.
           </p>
           <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-            이 클래스는 {cls.level} 레벨입니다. 설정에서 레벨을 바꾸면 다시 들어올 수 있습니다.
+            이 클래스는 {cls?.level} 레벨입니다. 설정에서 레벨을 바꾸면 다시 들어올 수 있습니다.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
@@ -510,6 +511,11 @@ export default function ClassDetailPage() {
         <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
           <span>{expressionData.length}개 표현</span>
           <span>{cls.videoIds.length}개 영상</span>
+          {isLevelMismatch && (
+            <span className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-2 py-0.5 font-medium text-[var(--accent-text)]">
+              현재 설정 {currentLevel} · 이 클래스 {cls.level}
+            </span>
+          )}
           {savedProgress && (
             <span>
               이어보기 {Math.min(savedProgress.lastIndex + 1, replayQueue.length)} / {replayQueue.length}

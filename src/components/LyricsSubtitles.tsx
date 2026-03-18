@@ -288,10 +288,21 @@ export function LyricsSubtitles({
     return index
   }, [phrases])
 
+  const [exprPopup, setExprPopup] = useState<{
+    match: ExpressionMatch
+    x: number
+    y: number
+  } | null>(null)
+  const exprPopupTimerRef = useRef<number | null>(null)
+
   // Dismiss expression popup on subtitle change
   useEffect(() => {
-    setExprPopup(null)
-  }, [activeSubIndex])
+    if (exprPopup === null) return
+    const timer = window.setTimeout(() => {
+      setExprPopup(null)
+    }, 0)
+    return () => window.clearTimeout(timer)
+  }, [activeSubIndex, exprPopup])
 
   // Similar-phrase vibration on subtitle change
   const lastSimilarVibrateRef = useRef<{ token: string; time: number }>({ token: '', time: 0 })
@@ -347,17 +358,9 @@ export function LyricsSubtitles({
   const [edgeSpacerHeight, setEdgeSpacerHeight] = useState(60)
 
   // Smart subtitle expression matching
-  const smartSubtitlesEnabled = useSettingsStore((state) => state.smartSubtitlesEnabled)
+  const smartSubtitlesEnabled = useSettingsStore((state) => state.smartSubtitlesEnabled) && adminActive
   const familiarityIsFamiliar = useFamiliarityStore((s) => s.isFamiliar)
   const userCefrLevel = useOnboardingStore((s) => s.level)
-
-  // Expression popup state
-  const [exprPopup, setExprPopup] = useState<{
-    match: ExpressionMatch
-    x: number
-    y: number
-  } | null>(null)
-  const exprPopupTimerRef = useRef<number | null>(null)
 
   const handleExpressionTap = useCallback((match: ExpressionMatch, rect: DOMRect) => {
     // Position popup above the tapped word
