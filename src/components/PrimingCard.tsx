@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { animate, AnimatePresence, motion, useMotionValue, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
@@ -124,13 +124,10 @@ function RelatedChips({ exprId }: { exprId: string | undefined }) {
   const locale = useLocaleStore((s) => s.locale)
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null)
   const expandTimerRef = useRef<number | null>(null)
-  const related = useRef<RelatedExpression[]>([])
-
-  if (related.current.length === 0 && exprId) {
-    related.current = getRelatedExpressions(exprId, 3)
-  }
-
-  const chips = related.current
+  const chips = useMemo<RelatedExpression[]>(
+    () => (exprId ? getRelatedExpressions(exprId, 3) : []),
+    [exprId],
+  )
   if (chips.length === 0) return null
 
   const handleChipTap = (idx: number, e: React.MouseEvent) => {

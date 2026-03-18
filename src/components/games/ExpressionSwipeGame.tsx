@@ -810,6 +810,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       }, ANSWER_REVEAL_MS)
     },
     [
+      T,
       advanceCard,
       checkLevelUp,
       currentCard,

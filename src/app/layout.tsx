@@ -4,6 +4,16 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import './globals.css'
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_APP_URL ??
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : 'https://studyeng-nine.vercel.app')
+
+const appTitle = 'Shortee - 보다 보면 귀가 먼저 영어를 익히게 됩니다'
+const appDescription = '짧은 장면과 반복 복습으로 영어가 자연스럽게 쌓이는 숏폼 학습 앱'
+
 const uiFont = Noto_Sans_KR({
   variable: '--font-ui',
   weight: ['400', '500', '600', '700', '800'],
@@ -16,8 +26,9 @@ const displayFont = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
-  description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
+  metadataBase: new URL(siteUrl),
+  title: appTitle,
+  description: appDescription,
   manifest: '/manifest.json',
   icons: {
     icon: [
@@ -33,8 +44,8 @@ export const metadata: Metadata = {
     title: 'Shortee',
   },
   openGraph: {
-    title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
-    description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
+    title: appTitle,
+    description: appDescription,
     type: 'website',
     locale: 'ko_KR',
     siteName: 'Shortee',
@@ -42,8 +53,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
-    description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
+    title: appTitle,
+    description: appDescription,
     images: ['/og-image.png'],
   },
 }
@@ -68,7 +79,9 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
           try {
             var stored = JSON.parse(localStorage.getItem('studyeng-theme') || '{}');
             var state = stored.state || {};
@@ -105,7 +118,9 @@ export default function RootLayout({
               document.documentElement.setAttribute('data-theme', themeId);
             }
           } catch(e) {}
-        ` }} />
+        `,
+          }}
+        />
       </head>
       <body>
         <GoogleAnalytics />

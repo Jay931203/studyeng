@@ -1,26 +1,40 @@
 import type { Series } from '@/data/seed-videos'
 
 const seriesAliasMap: Record<string, string[]> = {
-  'ted-talks': ['테드', '테드 강연', 'TED 강연'],
-  'ted-talks-2': ['테드', '테드 강연'],
-  'ted-ed': ['테드에드', 'TED 교육'],
-  'ted-business': ['테드 비즈니스'],
-  'daily-english': ['생활영어', '데일리 잉글리시'],
-  'english-lessons': ['영어 수업', '영어 레슨'],
-  'crash-course': ['크래시 코스'],
-  'kurzgesagt': ['쿠르츠게작트'],
-  'casey-neistat': ['케이시 나이스탯'],
-  'mkbhd': ['마크스 브라운리'],
-  'veritasium': ['베리타시움'],
-  'mark-rober': ['마크 로버'],
-  'smarter-every-day': ['스마터 에브리 데이'],
-  'numberphile': ['넘버파일'],
+  'ted-talks': ['\uD14C\uB4DC', '\uD14C\uB4DC \uAC15\uC5F0', 'ted \uAC15\uC5F0'],
+  'ted-talks-2': ['\uD14C\uB4DC', '\uD14C\uB4DC \uAC15\uC5F0'],
+  'ted-ed': ['\uD14C\uB4DC\uC5D0\uB4DC', 'ted \uAD50\uC721'],
+  'ted-business': ['\uD14C\uB4DC \uBE44\uC988\uB2C8\uC2A4'],
+  'daily-english': ['\uC0DD\uD65C\uC601\uC5B4', '\uB370\uC77C\uB9AC \uC601\uAE00\uB9AC\uC2DC'],
+  'english-lessons': ['\uC601\uC5B4 \uC218\uC5C5', '\uC601\uC5B4 \uB808\uC2A8'],
+  'crash-course': ['\uD06C\uB798\uC2DC \uCF54\uC2A4'],
+  kurzgesagt: ['\uCFE0\uB974\uCE20\uAC8C\uC791\uD2B8'],
+  'casey-neistat': ['\uCF00\uC774\uC2DC \uB098\uC774\uC2A4\uD0EF'],
+  mkbhd: ['\uB9C8\uD034\uC2A4 \uBE0C\uB77C\uC6B4\uB9AC', '\uB9C8\uB974\uD034\uC2A4 \uBE0C\uB77C\uC6B4\uB9AC'],
+  veritasium: ['\uBCA0\uB9AC\uD0C0\uC2DC\uC6C0'],
+  'mark-rober': ['\uB9C8\uD06C \uB85C\uBC84'],
+  'smarter-every-day': [
+    '\uC2A4\uB9C8\uD130 \uC5D0\uBE0C\uB9AC\uB370\uC774',
+    '\uC2A4\uB9C8\uD130 \uC5D0\uBE0C\uB9AC \uB370\uC774',
+  ],
+  numberphile: ['\uB118\uBC84\uD30C\uC77C'],
+  'big-bang-theory': ['\uBE45\uBC45\uC774\uB860', '\uBE45\uBC45 \uC774\uB860'],
+  'brooklyn-99': [
+    '\uBE0C\uB8E8\uD074\uB9B0 \uB098\uC778\uB098\uC778',
+    '\uBE0C\uB8E8\uD074\uB9B0 \uB098\uC778 \uB098\uC778',
+    '\uBE0C\uB8E8\uD074\uB9B0 99',
+  ],
+  friends: ['\uD504\uB80C\uC988'],
+  'modern-family': ['\uBAA8\uB358\uD328\uBC00\uB9AC'],
+  'parks-and-recreation': ['\uD30C\uD06C\uC2A4 \uC564 \uB808\uD06C\uB9AC\uC5D0\uC774\uC158'],
+  seinfeld: ['\uC0C8\uC778\uD384\uB4DC'],
+  'the-office': ['\uB354 \uC624\uD53C\uC2A4', '\uC624\uD53C\uC2A4'],
 }
 
 function normalizeSearchText(value: string) {
   return value
     .toLowerCase()
-    .replace(/['".,!?()[\]{}:;/_-]+/g, ' ')
+    .replace(/['".,!?()[\]{}:;/_&-]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim()
 }

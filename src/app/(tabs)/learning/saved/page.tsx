@@ -20,6 +20,13 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import expressionEntriesData from '@/data/expression-entries-v2.json'
 import wordEntriesData from '@/data/word-entries.json'
 
+type FamiliarExpressionEntry = {
+  canonical: string
+  meaning_ko: string
+  cefr: string
+  category: string
+}
+
 function formatDateLabel(timestamp: number): string {
   const date = new Date(timestamp)
   const now = new Date()
@@ -235,7 +242,7 @@ export default function SavedPhrasesPage() {
   }, [filteredPhrases])
 
   const familiarExpressions = useMemo(() => {
-    const entries = expressionEntriesData as Record<string, any>
+    const entries = expressionEntriesData as Record<string, FamiliarExpressionEntry>
     return Object.entries(familiarEntries)
       .filter(([key, data]) => !key.startsWith('word:') && data.count > 0)
       .map(([exprId, data]) => ({

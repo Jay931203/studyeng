@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require('fs');
 const results = JSON.parse(fs.readFileSync('C:/Users/hyunj/studyeng/src/data/match-results/batch-8.json'));
 

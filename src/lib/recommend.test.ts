@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { seedVideos } from '@/data/seed-videos'
+import recommendationManifestData from '@/data/recommendation-manifest.json'
 import { catalogVideos } from '@/lib/catalog'
 import { getLevelAwareCandidateVideos, recommendVideos } from './recommend'
 
@@ -86,14 +87,23 @@ describe('recommendVideos', () => {
     expect(second).toEqual(first)
   })
 
-  it('filters out blocked clips even when they are passed explicitly', () => {
-    const blocked = seedVideos.find((video) => !catalogVideos.some((catalogVideo) => catalogVideo.id === video.id))
-    const available = catalogVideos[0]
-
-    expect(blocked).toBeDefined()
+  it('filters out non-catalog clips even when they are passed explicitly', () => {
+    const manifestById = new Map(
+      (recommendationManifestData.videos ?? []).map((feature) => [feature.id, feature]),
+    )
+    const available = catalogVideos.find((video) => {
+      const feature = manifestById.get(video.id)
+      return feature?.recommendable !== false && feature?.externalPlaybackStatus !== 'blocked'
+    })
     expect(available).toBeDefined()
 
-    const ranked = recommendVideos([blocked!, available!])
+    const unavailable = {
+      ...available!,
+      id: 'synthetic-unready-clip',
+      youtubeId: 'synthetic-unready-clip',
+    }
+
+    const ranked = recommendVideos([unavailable, available!])
 
     expect(ranked.map((video) => video.id)).toEqual([available!.id])
   })

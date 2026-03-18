@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
@@ -42,50 +42,44 @@ export default function ExploreSeriesPage() {
   const locale = useLocaleStore((state) => state.locale)
   const categoryLabels = getCategoryLabels(locale)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
-  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
+  const hiddenVideoIdSet = createHiddenVideoIdSet(hiddenVideos)
 
-  const visibleCatalogSeries = useMemo(
-    () =>
-      catalogSeries
-        .map((seriesItem) => {
-          const visibleEpisodes = filterHiddenVideos(
-            getCatalogVideosBySeries(seriesItem.id),
-            hiddenVideoIdSet,
-          )
-
-          if (visibleEpisodes.length === 0) return null
-
-          return {
-            ...seriesItem,
-            episodeCount: visibleEpisodes.length,
-          }
-        })
-        .filter((seriesItem): seriesItem is SeriesType => seriesItem !== null),
-    [hiddenVideoIdSet],
-  )
-
-  const filteredSeries = useMemo(() => {
-    const byCategory =
-      activeCategory === 'all'
-        ? visibleCatalogSeries
-        : getCatalogSeriesByCategory(activeCategory).filter((seriesItem) =>
-            visibleCatalogSeries.some((visibleSeries) => visibleSeries.id === seriesItem.id),
-          )
-
-    const normalizedQuery = query.trim().toLowerCase()
-    if (!normalizedQuery) return byCategory
-
-    return byCategory.filter((seriesItem) => {
-      return matchesSearchText(
-        [categoryLabels[seriesItem.category], ...getSeriesSearchTerms(seriesItem)],
-        normalizedQuery,
+  const visibleCatalogSeries = catalogSeries
+    .map((seriesItem) => {
+      const visibleEpisodes = filterHiddenVideos(
+        getCatalogVideosBySeries(seriesItem.id),
+        hiddenVideoIdSet,
       )
-    })
-  }, [activeCategory, query, visibleCatalogSeries])
 
-  const visibleVideoCount = useMemo(
-    () => filteredSeries.reduce((total, seriesItem) => total + seriesItem.episodeCount, 0),
-    [filteredSeries],
+      if (visibleEpisodes.length === 0) return null
+
+      return {
+        ...seriesItem,
+        episodeCount: visibleEpisodes.length,
+      }
+    })
+    .filter((seriesItem): seriesItem is SeriesType => seriesItem !== null)
+
+  const byCategory =
+    activeCategory === 'all'
+      ? visibleCatalogSeries
+      : getCatalogSeriesByCategory(activeCategory).filter((seriesItem) =>
+          visibleCatalogSeries.some((visibleSeries) => visibleSeries.id === seriesItem.id),
+        )
+
+  const normalizedQuery = query.trim().toLowerCase()
+  const filteredSeries = !normalizedQuery
+    ? byCategory
+    : byCategory.filter((seriesItem) =>
+        matchesSearchText(
+          [categoryLabels[seriesItem.category], ...getSeriesSearchTerms(seriesItem)],
+          normalizedQuery,
+        ),
+      )
+
+  const visibleVideoCount = filteredSeries.reduce(
+    (total, seriesItem) => total + seriesItem.episodeCount,
+    0,
   )
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
