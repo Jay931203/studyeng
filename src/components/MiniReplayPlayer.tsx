@@ -11,10 +11,9 @@ import {
 } from 'react'
 import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
-import { useReplayStore } from '@/stores/useReplayStore'
+import { useReplayStore, type ReplayClip } from '@/stores/useReplayStore'
 
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
-const LEARN_CLIP_PREROLL_SEC = 0.6
 
 interface ReplayPlayerHandle {
   togglePlayback: () => void
@@ -33,12 +32,165 @@ interface SubtitleContextLine {
   end: number
 }
 
+interface PlaybackSegment {
+  start: number
+  end: number
+  lineId: string
+}
+
+interface PlaybackSequence {
+  segments: PlaybackSegment[]
+  totalDuration: number
+}
+
+interface SubtitleDisplaySlot {
+  slotId: string
+  line: SubtitleContextLine | null
+}
+
 function resolvePlaybackWindow(start: number, end: number) {
   const resolvedEnd = end > start ? end : start + 5
   return {
-    start: Math.max(0, start - LEARN_CLIP_PREROLL_SEC),
+    start: Math.max(0, start),
     end: resolvedEnd,
   }
+}
+
+async function loadContextLinesForClip(clip: ReplayClip): Promise<SubtitleContextLine[]> {
+  if (!clip.videoId) return []
+
+  if (typeof clip.sentenceIdx !== 'number') {
+    return clip.sentenceEn
+      ? [
+          {
+            id: `${clip.videoId}-current`,
+            en: clip.sentenceEn,
+            ko: clip.sentenceKo,
+            start: clip.start,
+            end: clip.end,
+          },
+        ]
+      : []
+  }
+
+  try {
+    const response = await fetch(`/transcripts/${clip.videoId}.json`)
+    if (!response.ok) throw new Error('Transcript missing')
+
+    const subtitles = await response.json()
+    if (!Array.isArray(subtitles)) return []
+
+    const windowLines = [clip.sentenceIdx - 1, clip.sentenceIdx, clip.sentenceIdx + 1]
+      .map((index) => {
+        const subtitle = subtitles[index]
+        if (!subtitle?.en) return null
+        return {
+          id: `${clip.videoId}:${index}`,
+          en: subtitle.en,
+          ko: subtitle.ko,
+          start: subtitle.start ?? clip.start,
+          end: subtitle.end ?? clip.end,
+        }
+      })
+      .filter(Boolean) as SubtitleContextLine[]
+
+    if (windowLines.length > 0) {
+      return windowLines
+    }
+  } catch {
+    // best effort only
+  }
+
+  return clip.sentenceEn
+    ? [
+        {
+          id: `${clip.videoId}-fallback`,
+          en: clip.sentenceEn,
+          ko: clip.sentenceKo,
+          start: clip.start,
+          end: clip.end,
+        },
+      ]
+    : []
+}
+
+function buildPlaybackSequence(
+  lines: SubtitleContextLine[],
+  focusLineId: string | null,
+  repeatCount: 1 | 2 | 3,
+): PlaybackSequence {
+  const segments: PlaybackSegment[] = []
+
+  for (const line of lines) {
+    const window = resolvePlaybackWindow(line.start, line.end)
+    const repetitions = line.id === focusLineId ? repeatCount : 1
+    for (let count = 0; count < repetitions; count += 1) {
+      segments.push({
+        start: window.start,
+        end: window.end,
+        lineId: line.id,
+      })
+    }
+  }
+
+  if (segments.length === 0) {
+    return { segments: [], totalDuration: 0 }
+  }
+
+  return {
+    segments,
+    totalDuration: segments.reduce((sum, segment) => sum + Math.max(0.01, segment.end - segment.start), 0),
+  }
+}
+
+function resolveFocusLineId(
+  clip: ReplayClip | null,
+  lines: SubtitleContextLine[],
+) {
+  if (!clip || lines.length === 0) return null
+
+  if (typeof clip.sentenceIdx === 'number') {
+    const preferredId = `${clip.videoId}:${clip.sentenceIdx}`
+    if (lines.some((line) => line.id === preferredId)) {
+      return preferredId
+    }
+  }
+
+  return lines[0]?.id ?? null
+}
+
+function buildDisplaySlots(
+  lines: SubtitleContextLine[],
+  focusLineId: string | null,
+): SubtitleDisplaySlot[] {
+  if (lines.length === 0) {
+    return [
+      { slotId: 'prev', line: null },
+      { slotId: 'current', line: null },
+      { slotId: 'next', line: null },
+    ]
+  }
+
+  const focusIndex = Math.max(
+    0,
+    lines.findIndex((line) => line.id === focusLineId),
+  )
+  const currentLine = lines[focusIndex] ?? lines[0] ?? null
+
+  return [
+    {
+      slotId: 'prev',
+      line: focusIndex > 0 ? lines[focusIndex - 1] : null,
+    },
+    {
+      slotId: 'current',
+      line: currentLine,
+    },
+    {
+      slotId: 'next',
+      line: focusIndex < lines.length - 1 ? lines[focusIndex + 1] : null,
+    },
+  ]
 }
 
 function ensureYouTubeAPI(): Promise<void> {
@@ -73,362 +225,383 @@ function ensureYouTubeAPI(): Promise<void> {
   })
 }
 
-const MiniPlayerInner = forwardRef<ReplayPlayerHandle, { visibleVideo?: boolean }>(
-  function MiniPlayerInner({ visibleVideo = false }, ref) {
-    const clip = useReplayStore((s) => s.clip)
-    const stop = useReplayStore((s) => s.stop)
-    const next = useReplayStore((s) => s.next)
-    const setProgress = useReplayStore((s) => s.setProgress)
-    const setIsPlaying = useReplayStore((s) => s.setIsPlaying)
-    const updateCurrentClip = useReplayStore((s) => s.updateCurrentClip)
+const MiniPlayerInner = forwardRef<
+  ReplayPlayerHandle,
+  {
+    visibleVideo?: boolean
+    playbackSequence: PlaybackSequence
+    coreRepeatCount: 1 | 2 | 3
+  }
+>(function MiniPlayerInner(
+  { visibleVideo = false, playbackSequence, coreRepeatCount },
+  ref,
+) {
+  const clip = useReplayStore((s) => s.clip)
+  const stop = useReplayStore((s) => s.stop)
+  const next = useReplayStore((s) => s.next)
+  const setProgress = useReplayStore((s) => s.setProgress)
+  const setIsPlaying = useReplayStore((s) => s.setIsPlaying)
 
-    const playerRef = useRef<YT.Player | null>(null)
-    const containerRef = useRef<HTMLDivElement>(null)
-    const intervalRef = useRef<number | null>(null)
-    const clipKeyRef = useRef<string | null>(null)
-    const activeVideoIdRef = useRef<string | null>(null)
-    const transitionLockRef = useRef<number | null>(null)
+  const playerRef = useRef<YT.Player | null>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const intervalRef = useRef<number | null>(null)
+  const clipKeyRef = useRef<string | null>(null)
+  const activeVideoIdRef = useRef<string | null>(null)
+  const transitionLockRef = useRef<number | null>(null)
+  const activeSequenceRef = useRef<PlaybackSequence>({ segments: [], totalDuration: 0 })
+  const activeSegmentIndexRef = useRef(0)
+  const sequenceFinishedRef = useRef(false)
 
-    const clearMonitor = useCallback(() => {
-      if (intervalRef.current !== null) {
-        window.clearInterval(intervalRef.current)
-        intervalRef.current = null
+  const clearMonitor = useCallback(() => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }, [])
+
+  const cleanup = useCallback(() => {
+    clearMonitor()
+    if (transitionLockRef.current !== null) {
+      window.clearTimeout(transitionLockRef.current)
+      transitionLockRef.current = null
+    }
+    if (playerRef.current) {
+      try {
+        playerRef.current.destroy()
+      } catch {
+        // ignore
       }
-    }, [])
+      playerRef.current = null
+    }
+    clipKeyRef.current = null
+    activeVideoIdRef.current = null
+    activeSequenceRef.current = { segments: [], totalDuration: 0 }
+    activeSegmentIndexRef.current = 0
+    sequenceFinishedRef.current = false
+  }, [clearMonitor])
 
-    const cleanup = useCallback(() => {
+  const advanceQueue = useCallback(() => {
+    if (transitionLockRef.current !== null) return
+
+    transitionLockRef.current = window.setTimeout(() => {
+      transitionLockRef.current = null
+    }, 180)
+
+    const { queue, queueIndex } = useReplayStore.getState()
+    if (queueIndex < queue.length - 1) {
+      next()
+      return
+    }
+    stop()
+  }, [next, stop])
+
+  const pauseAtSegmentEnd = useCallback(
+    (player: YT.Player, segment: PlaybackSegment) => {
+      try {
+        player.pauseVideo()
+        player.seekTo(Math.max(0, segment.end - 0.02), true)
+      } catch {
+        // ignore
+      }
       clearMonitor()
-      if (transitionLockRef.current !== null) {
-        window.clearTimeout(transitionLockRef.current)
-        transitionLockRef.current = null
+      setProgress(1)
+      setIsPlaying(false)
+      sequenceFinishedRef.current = true
+    },
+    [clearMonitor, setIsPlaying, setProgress],
+  )
+
+  const startSequenceFromIndex = useCallback(
+    (player: YT.Player, sequence: PlaybackSequence, segmentIndex: number) => {
+      const targetSegment = sequence.segments[segmentIndex]
+      if (!targetSegment) return
+
+      activeSequenceRef.current = sequence
+      activeSegmentIndexRef.current = segmentIndex
+      sequenceFinishedRef.current = false
+
+      clearMonitor()
+
+      try {
+        player.seekTo(targetSegment.start, true)
+        player.playVideo()
+        setIsPlaying(true)
+      } catch {
+        // ignore
       }
-      if (playerRef.current) {
+
+      intervalRef.current = window.setInterval(() => {
+        if (!playerRef.current) return
+
+        const activeSequence = activeSequenceRef.current
+        const currentSegment = activeSequence.segments[activeSegmentIndexRef.current]
+        if (!currentSegment) return
+
         try {
-          playerRef.current.destroy()
-        } catch {
-          // ignore
-        }
-        playerRef.current = null
-      }
-      clipKeyRef.current = null
-      activeVideoIdRef.current = null
-    }, [clearMonitor])
+          const currentTime = player.getCurrentTime()
+          const elapsedBefore = activeSequence.segments
+            .slice(0, activeSegmentIndexRef.current)
+            .reduce((sum, segment) => sum + Math.max(0.01, segment.end - segment.start), 0)
+          const elapsedCurrent = Math.max(0, currentTime - currentSegment.start)
+          const progress = Math.min(
+            1,
+            (elapsedBefore + elapsedCurrent) / Math.max(0.01, activeSequence.totalDuration),
+          )
+          setProgress(progress)
 
-    const advanceQueue = useCallback(() => {
-      if (transitionLockRef.current !== null) return
-
-      transitionLockRef.current = window.setTimeout(() => {
-        transitionLockRef.current = null
-      }, 180)
-
-      const { queue, queueIndex } = useReplayStore.getState()
-      if (queueIndex < queue.length - 1) {
-        next()
-        return
-      }
-      stop()
-    }, [next, stop])
-
-    const pausePlaybackWindow = useCallback(
-      (player: YT.Player, end: number) => {
-        try {
-          player.pauseVideo()
-          player.seekTo(Math.max(0, end - 0.02), true)
-        } catch {
-          // ignore
-        }
-        clearMonitor()
-        setProgress(1)
-        setIsPlaying(false)
-      },
-      [clearMonitor, setIsPlaying, setProgress],
-    )
-
-    const monitorPlaybackWindow = useCallback(
-      (player: YT.Player, start: number, end: number) => {
-        clearMonitor()
-        setProgress(0)
-
-        intervalRef.current = window.setInterval(() => {
-          if (!playerRef.current) return
-
-          try {
-            const currentTime = player.getCurrentTime()
-            const total = Math.max(0.01, end - start)
-            const elapsed = Math.max(0, currentTime - start)
-            const progress = Math.min(1, elapsed / total)
-            setProgress(progress)
-
-            if (player.getPlayerState() === 1 && currentTime >= end - 0.05) {
-              pausePlaybackWindow(player, end)
-            }
-          } catch {
-            // ignore transient iframe errors
-          }
-        }, 100)
-      },
-      [clearMonitor, pausePlaybackWindow, setProgress],
-    )
-
-    const startPlaybackWindow = useCallback(
-      (player: YT.Player, start: number, end: number) => {
-        try {
-          player.seekTo(start, true)
-          player.playVideo()
-          setIsPlaying(true)
-          monitorPlaybackWindow(player, start, end)
-        } catch {
-          // ignore
-        }
-      },
-      [monitorPlaybackWindow, setIsPlaying],
-    )
-
-    useImperativeHandle(
-      ref,
-      () => ({
-        togglePlayback() {
-          const player = playerRef.current
-          if (!player) return
-
-          try {
-            const currentState = player.getPlayerState()
-            if (currentState === 1) {
-              player.pauseVideo()
-              setIsPlaying(false)
+          if (player.getPlayerState() === 1 && currentTime >= currentSegment.end - 0.05) {
+            const nextIndex = activeSegmentIndexRef.current + 1
+            if (nextIndex < activeSequence.segments.length) {
+              const nextSegment = activeSequence.segments[nextIndex]
+              activeSegmentIndexRef.current = nextIndex
+              player.seekTo(nextSegment.start, true)
+              player.playVideo()
               return
             }
 
-            player.playVideo()
-            setIsPlaying(true)
-
-            const currentClip = useReplayStore.getState().clip
-            if (currentClip) {
-              const playbackWindow = resolvePlaybackWindow(currentClip.start, currentClip.end)
-              const currentTime = player.getCurrentTime()
-              if (currentTime >= playbackWindow.end - 0.08) {
-                player.seekTo(playbackWindow.start, true)
-              }
-              monitorPlaybackWindow(player, playbackWindow.start, playbackWindow.end)
-            }
-          } catch {
-            // ignore
+            pauseAtSegmentEnd(player, currentSegment)
           }
-        },
-        playWindow(start, end) {
-          const player = playerRef.current
-          if (!player) return
+        } catch {
+          // ignore transient iframe errors
+        }
+      }, 100)
+    },
+    [clearMonitor, pauseAtSegmentEnd, setIsPlaying, setProgress],
+  )
 
-          const playbackWindow = resolvePlaybackWindow(start, end)
+  useImperativeHandle(
+    ref,
+    () => ({
+      togglePlayback() {
+        const player = playerRef.current
+        if (!player) return
 
-          try {
-            player.seekTo(playbackWindow.start, true)
-            player.playVideo()
-            setIsPlaying(true)
-            monitorPlaybackWindow(player, playbackWindow.start, playbackWindow.end)
-          } catch {
-            // ignore
+        try {
+          const currentState = player.getPlayerState()
+          if (currentState === 1) {
+            player.pauseVideo()
+            setIsPlaying(false)
+            return
           }
-        },
-      }),
-      [monitorPlaybackWindow, setIsPlaying],
-    )
 
-    useEffect(() => {
-      if (!clip) {
-        cleanup()
+          const activeSequence = activeSequenceRef.current
+          if (activeSequence.segments.length === 0) return
+
+          if (sequenceFinishedRef.current) {
+            startSequenceFromIndex(player, activeSequence, 0)
+            return
+          }
+
+          player.playVideo()
+          setIsPlaying(true)
+        } catch {
+          // ignore
+        }
+      },
+      playWindow(start, end) {
+        const player = playerRef.current
+        if (!player) return
+
+        const playbackWindow = resolvePlaybackWindow(start, end)
+        startSequenceFromIndex(
+          player,
+          {
+            segments: [
+              {
+                start: playbackWindow.start,
+                end: playbackWindow.end,
+                lineId: 'manual-replay',
+              },
+            ],
+            totalDuration: Math.max(0.01, playbackWindow.end - playbackWindow.start),
+          },
+          0,
+        )
+      },
+    }),
+    [setIsPlaying, startSequenceFromIndex],
+  )
+
+  useEffect(() => {
+    if (!clip) {
+      cleanup()
+      return
+    }
+
+      const sequenceFingerprint = playbackSequence.segments
+        .map((segment) => `${segment.lineId}:${segment.start.toFixed(3)}:${segment.end.toFixed(3)}`)
+        .join('|')
+      const key = `${clip.videoId}:${clip.start}:${clip.end}:${clip.sentenceIdx ?? -1}:${coreRepeatCount}:${sequenceFingerprint}`
+    if (clipKeyRef.current === key) return
+    clipKeyRef.current = key
+
+    let disposed = false
+
+    const initPlayer = async () => {
+      try {
+        await ensureYouTubeAPI()
+      } catch {
+        if (!disposed) {
+          clearMonitor()
+          advanceQueue()
+        }
         return
       }
 
-      const key = `${clip.videoId}:${clip.start}:${clip.end}:${clip.sentenceIdx ?? -1}`
-      if (clipKeyRef.current === key) return
-      clipKeyRef.current = key
+      if (disposed || !containerRef.current) return
 
-      let disposed = false
+      const fallbackWindow = resolvePlaybackWindow(clip.start, clip.end)
+      const effectiveSequence =
+        playbackSequence.segments.length > 0
+          ? playbackSequence
+          : {
+              segments: [
+                {
+                  start: fallbackWindow.start,
+                  end: fallbackWindow.end,
+                  lineId: `${clip.videoId}-fallback`,
+                },
+              ],
+              totalDuration: Math.max(0.01, fallbackWindow.end - fallbackWindow.start),
+            }
+      const firstSegment = effectiveSequence.segments[0]
+      if (!firstSegment) return
 
-      const initPlayer = async () => {
-        try {
-          await ensureYouTubeAPI()
-        } catch {
-          if (!disposed) {
-            clearMonitor()
-            advanceQueue()
-          }
+      if (playerRef.current) {
+        if (activeVideoIdRef.current === clip.videoId) {
+          startSequenceFromIndex(playerRef.current, effectiveSequence, 0)
           return
         }
 
-        if (disposed || !containerRef.current) return
-
-        let resolvedClip = clip
-        if (
-          (resolvedClip.start <= 0 || resolvedClip.end <= resolvedClip.start) &&
-          typeof resolvedClip.sentenceIdx === 'number'
-        ) {
+        try {
+          const reusablePlayer = playerRef.current as LoadableYouTubePlayer
+          if (!reusablePlayer.loadVideoById) {
+            throw new Error('loadVideoById unavailable')
+          }
+          reusablePlayer.loadVideoById?.({
+            videoId: clip.videoId,
+            startSeconds: firstSegment.start,
+          })
+          activeVideoIdRef.current = clip.videoId
           try {
-            const response = await fetch(`/transcripts/${resolvedClip.videoId}.json`)
-            if (response.ok) {
-              const subtitles = await response.json()
-              const matchedSubtitle = subtitles[resolvedClip.sentenceIdx]
-              if (matchedSubtitle) {
-                resolvedClip = {
-                  ...resolvedClip,
-                  start: matchedSubtitle.start,
-                  end: matchedSubtitle.end,
-                }
-                updateCurrentClip({
-                  start: matchedSubtitle.start,
-                  end: matchedSubtitle.end,
-                })
-              }
-            }
+            reusablePlayer.unMute?.()
+            reusablePlayer.setVolume?.(100)
           } catch {
-            // best effort only
+            // ignore
           }
-        }
-
-        const playbackWindow = resolvePlaybackWindow(resolvedClip.start, resolvedClip.end)
-        const resolvedStart = playbackWindow.start
-        const resolvedEnd = playbackWindow.end
-
-        if (playerRef.current) {
-          if (activeVideoIdRef.current === resolvedClip.videoId) {
-            startPlaybackWindow(playerRef.current, resolvedStart, resolvedEnd)
-            return
-          }
-
+          startSequenceFromIndex(reusablePlayer, effectiveSequence, 0)
+          return
+        } catch {
           try {
-            const reusablePlayer = playerRef.current as LoadableYouTubePlayer
-            if (!reusablePlayer.loadVideoById) {
-              throw new Error('loadVideoById unavailable')
-            }
-            reusablePlayer.loadVideoById?.({
-              videoId: resolvedClip.videoId,
-              startSeconds: resolvedStart,
-            })
-            activeVideoIdRef.current = resolvedClip.videoId
+            playerRef.current.destroy()
+          } catch {
+            // ignore
+          }
+          playerRef.current = null
+        }
+      }
+
+      const element = document.createElement('div')
+      element.id = `mini-replay-yt-${Date.now()}`
+      containerRef.current.innerHTML = ''
+      containerRef.current.appendChild(element)
+
+      activeVideoIdRef.current = null
+      clearMonitor()
+
+      playerRef.current = new window.YT.Player(element.id, {
+        videoId: clip.videoId,
+        width: '100%',
+        height: visibleVideo ? '100%' : 1,
+        playerVars: {
+          autoplay: 0,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          iv_load_policy: 3,
+          modestbranding: 1,
+          playsinline: 1,
+          rel: 0,
+        },
+        events: {
+          onReady: (event) => {
+            if (disposed) return
+            const player = event.target as YT.Player
+            activeVideoIdRef.current = clip.videoId
             try {
-              reusablePlayer.unMute?.()
-              reusablePlayer.setVolume?.(100)
+              player.unMute?.()
+              player.setVolume?.(100)
             } catch {
               // ignore
             }
-            monitorPlaybackWindow(reusablePlayer, resolvedStart, resolvedEnd)
-            setIsPlaying(true)
-            return
-          } catch {
-            try {
-              playerRef.current.destroy()
-            } catch {
-              // ignore
-            }
-            playerRef.current = null
-          }
-        }
-
-        const element = document.createElement('div')
-        element.id = `mini-replay-yt-${Date.now()}`
-        containerRef.current.innerHTML = ''
-        containerRef.current.appendChild(element)
-
-        activeVideoIdRef.current = null
-        clearMonitor()
-
-        playerRef.current = new window.YT.Player(element.id, {
-          videoId: clip.videoId,
-          width: '100%',
-          height: visibleVideo ? '100%' : 1,
-          playerVars: {
-            autoplay: 1,
-            controls: 0,
-            disablekb: 1,
-            fs: 0,
-            iv_load_policy: 3,
-            modestbranding: 1,
-            playsinline: 1,
-            rel: 0,
-            start: Math.floor(resolvedStart),
+            startSequenceFromIndex(player, effectiveSequence, 0)
           },
-          events: {
-            onReady: (event) => {
-              if (disposed) return
-              const player = event.target as YT.Player
-              activeVideoIdRef.current = resolvedClip.videoId
-              try {
-                player.unMute?.()
-                player.setVolume?.(100)
-              } catch {
-                // ignore
-              }
-              startPlaybackWindow(player, resolvedStart, resolvedEnd)
-            },
-            onStateChange: (event) => {
-              if (disposed) return
+          onStateChange: (event) => {
+            if (disposed) return
 
-              if (event.data === 1) {
-                setIsPlaying(true)
-              } else if (event.data === 2 || event.data === 5) {
+            if (event.data === 1) {
+              setIsPlaying(true)
+            } else if (event.data === 2 || event.data === 5) {
+              setIsPlaying(false)
+            } else if (event.data === 0) {
+              const activeSequence = activeSequenceRef.current
+              const segment = activeSequence.segments[activeSegmentIndexRef.current]
+              if (segment) {
+                pauseAtSegmentEnd(event.target as YT.Player, segment)
+              } else {
                 setIsPlaying(false)
-              } else if (event.data === 0) {
-                const activeClip = useReplayStore.getState().clip
-                if (activeClip) {
-                  const playbackWindow = resolvePlaybackWindow(activeClip.start, activeClip.end)
-                  pausePlaybackWindow(event.target as YT.Player, playbackWindow.end)
-                } else {
-                  setIsPlaying(false)
-                }
               }
-            },
-            onError: () => {
-              if (!disposed) {
-                clearMonitor()
-                advanceQueue()
-              }
-            },
+            }
           },
-        })
+          onError: () => {
+            if (!disposed) {
+              clearMonitor()
+              advanceQueue()
+            }
+          },
+        },
+      })
+    }
+
+    void initPlayer()
+
+    return () => {
+      disposed = true
+    }
+  }, [
+    advanceQueue,
+    cleanup,
+    clearMonitor,
+    clip,
+    coreRepeatCount,
+    pauseAtSegmentEnd,
+    playbackSequence,
+    setIsPlaying,
+    startSequenceFromIndex,
+    visibleVideo,
+  ])
+
+  useEffect(() => cleanup, [cleanup])
+
+  return (
+    <div
+      ref={containerRef}
+      className={visibleVideo ? 'relative aspect-video w-full overflow-hidden bg-black' : ''}
+      style={
+        visibleVideo
+          ? undefined
+          : {
+              position: 'absolute',
+              width: 1,
+              height: 1,
+              overflow: 'hidden',
+              opacity: 0,
+              pointerEvents: 'none',
+            }
       }
-
-      void initPlayer()
-
-      return () => {
-        disposed = true
-      }
-    }, [
-      advanceQueue,
-      clearMonitor,
-      cleanup,
-      clip,
-      monitorPlaybackWindow,
-      pausePlaybackWindow,
-      setIsPlaying,
-      startPlaybackWindow,
-      stop,
-      updateCurrentClip,
-      visibleVideo,
-    ])
-
-    useEffect(() => cleanup, [cleanup])
-
-    return (
-      <div
-        ref={containerRef}
-        className={visibleVideo ? 'relative aspect-video w-full overflow-hidden bg-black' : ''}
-        style={
-          visibleVideo
-            ? undefined
-            : {
-                position: 'absolute',
-                width: 1,
-                height: 1,
-                overflow: 'hidden',
-                opacity: 0,
-                pointerEvents: 'none',
-              }
-        }
-      />
-    )
-  },
-)
+    />
+  )
+})
 
 function ProgressBar() {
   const progress = useReplayStore((s) => s.progress)
@@ -451,120 +624,62 @@ function ProgressBar() {
 
 function LearnSubtitleContext({
   className,
+  slots,
   activeLineId,
   onReplayLine,
 }: {
   className?: string
+  slots: SubtitleDisplaySlot[]
   activeLineId?: string | null
   onReplayLine: (line: SubtitleContextLine) => void
 }) {
-  const clip = useReplayStore((s) => s.clip)
-  const [lines, setLines] = useState<SubtitleContextLine[]>([])
+  if (!slots.some((slot) => slot.line)) return null
 
-  useEffect(() => {
-    let cancelled = false
-
-    if (!clip?.videoId) {
-      setLines([])
-      return
-    }
-
-    if (typeof clip.sentenceIdx !== 'number') {
-      setLines(
-        clip.sentenceEn
-          ? [
-              {
-                id: `${clip.videoId}-current`,
-                en: clip.sentenceEn,
-                ko: clip.sentenceKo,
-                start: clip.start,
-                end: clip.end,
-              },
-            ]
-          : [],
-      )
-      return
-    }
-
-    const loadTranscript = async () => {
-      try {
-        const response = await fetch(`/transcripts/${clip.videoId}.json`)
-        if (!response.ok) throw new Error('Transcript missing')
-
-        const subtitles = await response.json()
-        if (!Array.isArray(subtitles) || cancelled) return
-        const sentenceIndex = clip.sentenceIdx
-        if (typeof sentenceIndex !== 'number') return
-
-        const windowLines = [sentenceIndex - 1, sentenceIndex, sentenceIndex + 1]
-          .map((index) => {
-            const subtitle = subtitles[index]
-            if (!subtitle?.en) return null
-            return {
-              id: `${clip.videoId}:${index}`,
-              en: subtitle.en,
-              ko: subtitle.ko,
-              start: subtitle.start ?? clip.start,
-              end: subtitle.end ?? clip.end,
-            }
-          })
-          .filter(Boolean) as SubtitleContextLine[]
-
-        if (!cancelled) {
-          setLines(windowLines)
-        }
-      } catch {
-        if (!cancelled && clip.sentenceEn) {
-          setLines([
-            {
-              id: `${clip.videoId}-fallback`,
-              en: clip.sentenceEn,
-              ko: clip.sentenceKo,
-              start: clip.start,
-              end: clip.end,
-            },
-          ])
-        }
-      }
-    }
-
-    void loadTranscript()
-    return () => {
-      cancelled = true
-    }
-  }, [clip])
-
-  if (lines.length === 0) return null
-
-  const resolvedActiveLineId =
-    activeLineId ??
-    (typeof clip?.sentenceIdx === 'number' ? `${clip.videoId}:${clip.sentenceIdx}` : lines[0]?.id)
+  const resolvedActiveLineId = activeLineId ?? slots[1]?.line?.id ?? slots[0]?.line?.id
 
   return (
     <div className={className}>
       <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
         <div className="space-y-2">
-          {lines.map((line) => (
-            <button
-              type="button"
-              key={line.id}
-              onClick={() => onReplayLine(line)}
-              className={`rounded-xl px-3 py-2 transition-colors ${
-                resolvedActiveLineId === line.id ? 'bg-white/10' : 'bg-transparent'
-              }`}
-            >
-              <p
-                className={`text-sm leading-relaxed ${
-                  resolvedActiveLineId === line.id ? 'font-semibold text-white' : 'text-white/58'
+          {slots.map((slot, slotIndex) => {
+            if (!slot.line) {
+              return (
+                <div
+                  key={slot.slotId}
+                  className="min-h-[52px] rounded-xl border border-transparent px-3 py-2 opacity-0"
+                  aria-hidden="true"
+                >
+                  <p className="text-sm leading-relaxed">placeholder</p>
+                </div>
+              )
+            }
+
+            const line = slot.line
+            const isActive = resolvedActiveLineId === line.id
+            const isCoreSlot = slotIndex === 1
+
+            return (
+              <button
+                type="button"
+                key={line.id}
+                onClick={() => onReplayLine(line)}
+                className={`w-full rounded-xl px-3 py-2 text-left transition-colors ${
+                  isActive ? 'bg-white/10' : 'bg-transparent'
                 }`}
               >
-                {line.en}
-              </p>
-              {resolvedActiveLineId === line.id && line.ko ? (
-                <p className="mt-1 text-xs leading-relaxed text-white/72">{line.ko}</p>
-              ) : null}
-            </button>
-          ))}
+                <p
+                  className={`text-sm leading-relaxed ${
+                    isCoreSlot ? 'font-semibold text-white' : 'text-white/62'
+                  } ${isActive ? 'text-white' : ''}`}
+                >
+                  {line.en}
+                </p>
+                {isCoreSlot && line.ko ? (
+                  <p className="mt-1 text-xs leading-relaxed text-white/72">{line.ko}</p>
+                ) : null}
+              </button>
+            )
+          })}
         </div>
       </div>
     </div>
@@ -581,6 +696,11 @@ export function MiniReplayPlayer() {
   const next = useReplayStore((s) => s.next)
   const prev = useReplayStore((s) => s.prev)
   const playerApiRef = useRef<ReplayPlayerHandle | null>(null)
+  const [coreRepeatCount, setCoreRepeatCount] = useState<1 | 2 | 3>(1)
+  const [loadedContext, setLoadedContext] = useState<{
+    key: string
+    lines: SubtitleContextLine[]
+  } | null>(null)
   const [replayLineOverride, setReplayLineOverride] = useState<{
     clipKey: string
     lineId: string
@@ -611,16 +731,63 @@ export function MiniReplayPlayer() {
     ? `${clip.videoId}:${clip.sentenceIdx ?? -1}:${clip.start}:${clip.end}`
     : null
 
+  useEffect(() => {
+    let cancelled = false
+
+    if (!clip) {
+      return
+    }
+
+    const nextClipKey = `${clip.videoId}:${clip.sentenceIdx ?? -1}:${clip.start}:${clip.end}`
+    void loadContextLinesForClip(clip).then((lines) => {
+      if (cancelled) return
+      setLoadedContext({
+        key: nextClipKey,
+        lines,
+      })
+    })
+
+    return () => {
+      cancelled = true
+    }
+  }, [clip])
+
+  const contextLines = useMemo(
+    () => (loadedContext?.key === clipKey ? loadedContext.lines : []),
+    [clipKey, loadedContext],
+  )
+
+  const focusLineId = useMemo(
+    () => resolveFocusLineId(clip, contextLines),
+    [clip, contextLines],
+  )
+
+  const displaySlots = useMemo(
+    () => buildDisplaySlots(contextLines, focusLineId),
+    [contextLines, focusLineId],
+  )
+
+  const playbackSequence = useMemo(
+    () =>
+      buildPlaybackSequence(
+        displaySlots
+          .map((slot) => slot.line)
+          .filter((line): line is SubtitleContextLine => Boolean(line)),
+        focusLineId,
+        coreRepeatCount,
+      ),
+    [coreRepeatCount, displaySlots, focusLineId],
+  )
+
+  const isContextReady = !clip || loadedContext?.key === clipKey
+
   const activeReplayLineId = useMemo(() => {
     if (!clip?.videoId) return null
     if (replayLineOverride && replayLineOverride.clipKey === clipKey) {
       return replayLineOverride.lineId
     }
-    if (typeof clip.sentenceIdx === 'number') {
-      return `${clip.videoId}:${clip.sentenceIdx}`
-    }
-    return `${clip.videoId}-current`
-  }, [clip, clipKey, replayLineOverride])
+    return focusLineId
+  }, [clip, clipKey, focusLineId, replayLineOverride])
 
   const handleReplayLine = useCallback((line: SubtitleContextLine) => {
     if (clipKey) {
@@ -629,9 +796,21 @@ export function MiniReplayPlayer() {
     playerApiRef.current?.playWindow(line.start, line.end)
   }, [clipKey])
 
+  const handleTogglePlayback = useCallback(() => {
+    setReplayLineOverride(null)
+    playerApiRef.current?.togglePlayback()
+  }, [])
+
   return (
     <>
-      {visible && !isLearnPlayer ? <MiniPlayerInner ref={playerApiRef} visibleVideo={false} /> : null}
+      {visible && !isLearnPlayer && isContextReady ? (
+        <MiniPlayerInner
+          ref={playerApiRef}
+          visibleVideo={false}
+          playbackSequence={playbackSequence}
+          coreRepeatCount={coreRepeatCount}
+        />
+      ) : null}
 
       <AnimatePresence>
         {visible && !isLearnPlayer && (
@@ -765,15 +944,54 @@ export function MiniReplayPlayer() {
               <div className="flex flex-1 items-center justify-center px-3 pb-[max(16px,env(safe-area-inset-bottom,0px)+12px)]">
                 <div className="w-full max-w-md overflow-hidden rounded-[28px] border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
                   <div className="relative">
-                    <MiniPlayerInner ref={playerApiRef} visibleVideo />
+                    {isContextReady ? (
+                      <MiniPlayerInner
+                        ref={playerApiRef}
+                        visibleVideo
+                        playbackSequence={playbackSequence}
+                        coreRepeatCount={coreRepeatCount}
+                      />
+                    ) : (
+                      <div className="relative aspect-video w-full bg-black">
+                        <div className="absolute inset-0 flex items-center justify-center text-sm text-white/55">
+                          Loading clip...
+                        </div>
+                      </div>
+                    )}
                     <button
                       type="button"
-                      onClick={() => playerApiRef.current?.togglePlayback()}
+                      onClick={handleTogglePlayback}
                       className="absolute inset-0 z-10"
+                      disabled={!isContextReady}
                       aria-label={isPlaying ? 'Pause learn clip' : 'Play learn clip'}
                     />
                     <div className="pointer-events-none absolute right-3 top-3 z-20 rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-medium text-white/85">
                       {isPlaying ? 'Pause' : 'Play'}
+                    </div>
+                    <div className="absolute bottom-3 right-3 z-20 flex items-center gap-1 rounded-full bg-black/60 p-1">
+                      {[1, 2, 3].map((count) => {
+                        const active = coreRepeatCount === count
+                        return (
+                          <button
+                            key={count}
+                            type="button"
+                            onClick={(event) => {
+                              event.stopPropagation()
+                              setCoreRepeatCount(count as 1 | 2 | 3)
+                            }}
+                            disabled={!isContextReady}
+                            className="rounded-full px-2 py-1 text-[11px] font-semibold transition-colors"
+                            style={{
+                              backgroundColor: active
+                                ? 'var(--accent-primary)'
+                                : 'transparent',
+                              color: active ? '#fff' : 'rgba(255,255,255,0.74)',
+                            }}
+                          >
+                            x{count}
+                          </button>
+                        )
+                      })}
                     </div>
                   </div>
 
@@ -790,6 +1008,7 @@ export function MiniReplayPlayer() {
 
                     <LearnSubtitleContext
                       className="mt-3"
+                      slots={displaySlots}
                       activeLineId={activeReplayLineId}
                       onReplayLine={handleReplayLine}
                     />
@@ -805,7 +1024,7 @@ export function MiniReplayPlayer() {
                       </button>
                       <button
                         type="button"
-                        onClick={() => playerApiRef.current?.togglePlayback()}
+                        onClick={handleTogglePlayback}
                         className="rounded-full bg-[var(--accent-primary)] px-3 py-2 text-xs font-semibold text-white"
                       >
                         {isPlaying ? 'Pause' : 'Play'}
