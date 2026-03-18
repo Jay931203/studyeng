@@ -32,18 +32,9 @@ const specificId = args.find(a => a.startsWith('--id='))?.split('=')[1]
 const dryRun = args.includes('--dry')
 
 async function main() {
-  // Build set of reseg-protected files (manually segmented in bad95bf1)
+  // Reseg protection disabled — all files now rechunked with Whisper word-level timestamps
   const resegProtected = new Set()
-  try {
-    const resegFiles = execSync('git ls-tree --name-only bad95bf1 public/transcripts/', { encoding: 'utf-8' })
-    for (const line of resegFiles.trim().split('\n')) {
-      if (line) resegProtected.add(basename(line).replace('.json', ''))
-    }
-    console.log(`Loaded ${resegProtected.size} reseg-protected files from bad95bf1\n`)
-  } catch (err) {
-    console.warn(`WARNING: Could not load reseg file list from bad95bf1: ${err.message}`)
-    console.warn('Proceeding without reseg protection\n')
-  }
+  console.log('Reseg protection DISABLED — processing all files\n')
 
   // Load seed data for clipStart/clipEnd
   const { seedVideos } = await loadSeedData(SEED_VIDEOS_PATH)
