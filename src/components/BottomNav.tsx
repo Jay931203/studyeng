@@ -157,7 +157,7 @@ function useFeedNavigation() {
 
   const getTabHref = (tab: NavTab) => {
     if (tab.href !== '/shorts') return tab.href
-    return '/shorts?feed=shorts'
+    return '/shorts'
   }
 
   return {
