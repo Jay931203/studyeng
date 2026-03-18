@@ -51,7 +51,7 @@ const TRANSLATIONS: Record<SupportedLocale, {
   resumeProgress: (current: number, total: number) => string
   levelBadge: (current: string, classLevel: string) => string
   clipHint: string
-  loadMore: (remaining: number) => string
+  shownClipCount: (shown: number, total: number) => string
   noClips: string
 }> = {
   ko: {
@@ -83,7 +83,7 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `이어보기 ${current} / ${total}`,
     levelBadge: (current, classLevel) => `현재 설정 ${current} · 이 클래스 ${classLevel}`,
     clipHint: '클립을 누르면 해당 구간이 바로 재생됩니다.',
-    loadMore: (remaining) => `더 보기 (${remaining}개)`,
+    shownClipCount: (shown, total) => `${shown} / ${total}개 클립`,
     noClips: '이 클래스에 연결된 클립이 아직 없습니다.',
   },
   ja: {
@@ -115,7 +115,7 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `続きから ${current} / ${total}`,
     levelBadge: (current, classLevel) => `現在の設定 ${current} · このクラス ${classLevel}`,
     clipHint: 'クリップをタップすると該当区間が再生されます。',
-    loadMore: (remaining) => `もっと見る (${remaining}件)`,
+    shownClipCount: (shown, total) => `${shown} / ${total} 件のクリップ`,
     noClips: 'このクラスにはまだクリップがありません。',
   },
   'zh-TW': {
@@ -147,7 +147,7 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `繼續學習 ${current} / ${total}`,
     levelBadge: (current, classLevel) => `目前設定 ${current} · 此課程 ${classLevel}`,
     clipHint: '點擊片段即可播放對應段落。',
-    loadMore: (remaining) => `查看更多 (${remaining} 個)`,
+    shownClipCount: (shown, total) => `${shown} / ${total} 個片段`,
     noClips: '此課程尚無片段。',
   },
   vi: {
@@ -179,7 +179,7 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `Tiếp tục ${current} / ${total}`,
     levelBadge: (current, classLevel) => `Cài đặt hiện tại ${current} · Lớp này ${classLevel}`,
     clipHint: 'Nhấn clip để phát đoạn tương ứng.',
-    loadMore: (remaining) => `Xem thêm (${remaining})`,
+    shownClipCount: (shown, total) => `${shown} / ${total} clip`,
     noClips: 'Lớp này chưa có clip nào.',
   },
 }
@@ -220,8 +220,33 @@ const LEVEL_COLORS: Record<string, string> = {
   C2: 'bg-fuchsia-500/15 text-fuchsia-600 dark:text-fuchsia-400 border-fuchsia-500/20',
 }
 
-const INITIAL_RENDER_COUNT = 4
-const LOAD_MORE_COUNT = 4
+const MAX_CLIPS_PER_EXPRESSION = 20
+
+function pickRepresentativeClips<T>(clips: T[], limit: number): T[] {
+  if (clips.length <= limit) return clips
+  if (limit <= 1) return clips.slice(0, 1)
+
+  const picked = new Set<number>()
+  const sampled: T[] = []
+
+  for (let slot = 0; slot < limit; slot += 1) {
+    let index = Math.round((slot * (clips.length - 1)) / (limit - 1))
+
+    while (picked.has(index) && index < clips.length - 1) {
+      index += 1
+    }
+
+    while (picked.has(index) && index > 0) {
+      index -= 1
+    }
+
+    if (picked.has(index)) continue
+    picked.add(index)
+    sampled.push(clips[index])
+  }
+
+  return sampled
+}
 
 function getCefrBadgeStyle(cefr: string): { bg: string; text: string } {
   const level = cefr.toUpperCase()
@@ -349,7 +374,7 @@ function ExpressionSection({
   onLockedAttempt,
   tx,
 }: {
-  data: ExpressionWithClips
+  data: ExpressionWithClips & { totalClipCount: number }
   index: number
   total: number
   replayQueue: ReplayClip[]
@@ -469,7 +494,9 @@ function ExpressionSection({
             {categoryLabel}
           </span>
           <span className="text-[10px] text-[var(--text-muted)]">
-            {tx.clipCount(clips.length)}
+            {data.totalClipCount > clips.length
+              ? tx.shownClipCount(clips.length, data.totalClipCount)
+              : tx.clipCount(data.totalClipCount)}
           </span>
         </div>
       </div>
@@ -538,9 +565,13 @@ export default function ClassDetailPage() {
     [classId],
   )
 
-  const expressionData = useMemo<ExpressionWithClips[]>(() => {
+  const expressionData = useMemo<(ExpressionWithClips & { totalClipCount: number })[]>(() => {
     if (!cls) return []
-    return buildClassExpressionClips(cls.expressions, cls.videoIds)
+    return buildClassExpressionClips(cls.expressions, cls.videoIds).map((section) => ({
+      ...section,
+      totalClipCount: section.clips.length,
+      clips: pickRepresentativeClips(section.clips, MAX_CLIPS_PER_EXPRESSION),
+    }))
   }, [cls])
 
   const replayQueue = useMemo<ReplayClip[]>(
@@ -580,10 +611,6 @@ export default function ClassDetailPage() {
     })
     return map
   }, [replayQueue])
-
-  const [renderCount, setRenderCount] = useState(INITIAL_RENDER_COUNT)
-  const visibleData = expressionData.slice(0, renderCount)
-  const hasMore = renderCount < expressionData.length
 
   const isQueueIndexPlayable = useCallback(
     (index: number) => {
@@ -629,10 +656,6 @@ export default function ClassDetailPage() {
     },
     [],
   )
-
-  const handleLoadMore = useCallback(() => {
-    setRenderCount((count) => Math.min(count + LOAD_MORE_COUNT, expressionData.length))
-  }, [expressionData.length])
 
   const handleBack = useCallback(() => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -796,7 +819,7 @@ export default function ClassDetailPage() {
         ) : null}
       </div>
 
-      {visibleData.map((data, index) => (
+      {expressionData.map((data, index) => (
         <ExpressionSection
           key={data.entry.id}
           data={data}
@@ -809,17 +832,6 @@ export default function ClassDetailPage() {
           tx={tx}
         />
       ))}
-
-      {hasMore && (
-        <div className="mb-8 flex justify-center">
-          <button
-            onClick={handleLoadMore}
-            className="rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-3 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-secondary)]"
-          >
-            {tx.loadMore(expressionData.length - renderCount)}
-          </button>
-        </div>
-      )}
 
       {expressionData.length === 0 && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center">
