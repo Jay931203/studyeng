@@ -12,7 +12,6 @@ import {
 import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useReplayStore, type ReplayClip } from '@/stores/useReplayStore'
-import { useSettingsStore } from '@/stores/useSettingsStore'
 
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
 
@@ -232,10 +231,9 @@ const MiniPlayerInner = forwardRef<
     visibleVideo?: boolean
     playbackSequence: PlaybackSequence
     coreRepeatCount: 1 | 2 | 3
-    onActiveLineChange?: (lineId: string | null) => void
   }
 >(function MiniPlayerInner(
-  { visibleVideo = false, playbackSequence, coreRepeatCount, onActiveLineChange },
+  { visibleVideo = false, playbackSequence, coreRepeatCount },
   ref,
 ) {
   const clip = useReplayStore((s) => s.clip)
@@ -280,8 +278,7 @@ const MiniPlayerInner = forwardRef<
     activeSequenceRef.current = { segments: [], totalDuration: 0 }
     activeSegmentIndexRef.current = 0
     sequenceFinishedRef.current = false
-    onActiveLineChange?.(null)
-  }, [clearMonitor, onActiveLineChange])
+  }, [clearMonitor])
 
   const advanceQueue = useCallback(() => {
     if (transitionLockRef.current !== null) return
@@ -322,7 +319,6 @@ const MiniPlayerInner = forwardRef<
       activeSequenceRef.current = sequence
       activeSegmentIndexRef.current = segmentIndex
       sequenceFinishedRef.current = false
-      onActiveLineChange?.(targetSegment.lineId)
 
       clearMonitor()
 
@@ -358,12 +354,8 @@ const MiniPlayerInner = forwardRef<
             if (nextIndex < activeSequence.segments.length) {
               const nextSegment = activeSequence.segments[nextIndex]
               activeSegmentIndexRef.current = nextIndex
-              onActiveLineChange?.(nextSegment.lineId)
-              const gapToNext = nextSegment.start - currentSegment.end
-              if (gapToNext < -0.02 || gapToNext > 0.35) {
-                player.seekTo(nextSegment.start, true)
-                player.playVideo()
-              }
+              player.seekTo(nextSegment.start, true)
+              player.playVideo()
               return
             }
 
@@ -374,7 +366,7 @@ const MiniPlayerInner = forwardRef<
         }
       }, 100)
     },
-    [clearMonitor, onActiveLineChange, pauseAtSegmentEnd, setIsPlaying, setProgress],
+    [clearMonitor, pauseAtSegmentEnd, setIsPlaying, setProgress],
   )
 
   useImperativeHandle(
@@ -634,15 +626,11 @@ function LearnSubtitleContext({
   className,
   slots,
   activeLineId,
-  subtitleMode,
-  revealedLineId,
   onReplayLine,
 }: {
   className?: string
   slots: SubtitleDisplaySlot[]
   activeLineId?: string | null
-  subtitleMode: 'en' | 'bilingual' | 'locked'
-  revealedLineId?: string | null
   onReplayLine: (line: SubtitleContextLine) => void
 }) {
   if (!slots.some((slot) => slot.line)) return null
@@ -669,12 +657,6 @@ function LearnSubtitleContext({
             const line = slot.line
             const isActive = resolvedActiveLineId === line.id
             const isCoreSlot = slotIndex === 1
-            const showMeaning =
-              subtitleMode === 'bilingual'
-                ? Boolean(line.ko)
-                : subtitleMode === 'locked'
-                  ? revealedLineId === line.id && Boolean(line.ko)
-                  : false
 
             return (
               <button
@@ -692,7 +674,7 @@ function LearnSubtitleContext({
                 >
                   {line.en}
                 </p>
-                {showMeaning ? (
+                {isCoreSlot && line.ko ? (
                   <p className="mt-1 text-xs leading-relaxed text-white/72">{line.ko}</p>
                 ) : null}
               </button>
@@ -713,20 +695,12 @@ export function MiniReplayPlayer() {
   const stop = useReplayStore((s) => s.stop)
   const next = useReplayStore((s) => s.next)
   const prev = useReplayStore((s) => s.prev)
-  const learnSubtitleMode = useSettingsStore((s) => s.learnSubtitleMode)
-  const setLearnSubtitleMode = useSettingsStore((s) => s.setLearnSubtitleMode)
   const playerApiRef = useRef<ReplayPlayerHandle | null>(null)
   const [coreRepeatCount, setCoreRepeatCount] = useState<1 | 2 | 3>(1)
   const [loadedContext, setLoadedContext] = useState<{
     key: string
     lines: SubtitleContextLine[]
   } | null>(null)
-  const [activePlaybackState, setActivePlaybackState] = useState<{
-    clipKey: string
-    lineId: string | null
-  } | null>(null)
-  const [revealedLineId, setRevealedLineId] = useState<string | null>(null)
-  const [isLandscapeLearn, setIsLandscapeLearn] = useState(false)
   const [replayLineOverride, setReplayLineOverride] = useState<{
     clipKey: string
     lineId: string
@@ -736,6 +710,11 @@ export function MiniReplayPlayer() {
   const isLearnPlayer = visible && pathname?.startsWith('/explore/learn')
   const hasPrev = queueIndex > 0
   const hasNext = queueIndex < queue.length - 1
+  const uniqueVideoIds = useMemo(
+    () => [...new Set(queue.map((queueClip) => queueClip.videoId))],
+    [queue],
+  )
+  const currentVideoIndex = clip ? uniqueVideoIds.indexOf(clip.videoId) : -1
 
   useEffect(() => {
     if (!isLearnPlayer) return
@@ -773,22 +752,6 @@ export function MiniReplayPlayer() {
     }
   }, [clip])
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const updateLandscape = () => {
-      setIsLandscapeLearn(window.innerWidth > window.innerHeight)
-    }
-
-    updateLandscape()
-    window.addEventListener('resize', updateLandscape)
-    window.addEventListener('orientationchange', updateLandscape)
-    return () => {
-      window.removeEventListener('resize', updateLandscape)
-      window.removeEventListener('orientationchange', updateLandscape)
-    }
-  }, [])
-
   const contextLines = useMemo(
     () => (loadedContext?.key === clipKey ? loadedContext.lines : []),
     [clipKey, loadedContext],
@@ -823,30 +786,20 @@ export function MiniReplayPlayer() {
     if (replayLineOverride && replayLineOverride.clipKey === clipKey) {
       return replayLineOverride.lineId
     }
-    if (activePlaybackState?.clipKey === clipKey && activePlaybackState.lineId) {
-      return activePlaybackState.lineId
-    }
     return focusLineId
-  }, [activePlaybackState, clip, clipKey, focusLineId, replayLineOverride])
+  }, [clip, clipKey, focusLineId, replayLineOverride])
 
   const handleReplayLine = useCallback((line: SubtitleContextLine) => {
     if (clipKey) {
       setReplayLineOverride({ clipKey, lineId: line.id })
-      setActivePlaybackState({ clipKey, lineId: line.id })
-    }
-    if (learnSubtitleMode === 'locked') {
-      setRevealedLineId(line.id)
     }
     playerApiRef.current?.playWindow(line.start, line.end)
-  }, [clipKey, learnSubtitleMode])
+  }, [clipKey])
 
   const handleTogglePlayback = useCallback(() => {
     setReplayLineOverride(null)
-    if (learnSubtitleMode !== 'locked') {
-      setRevealedLineId(null)
-    }
     playerApiRef.current?.togglePlayback()
-  }, [learnSubtitleMode])
+  }, [])
 
   return (
     <>
@@ -856,10 +809,6 @@ export function MiniReplayPlayer() {
           visibleVideo={false}
           playbackSequence={playbackSequence}
           coreRepeatCount={coreRepeatCount}
-          onActiveLineChange={(lineId) => {
-            if (!clipKey) return
-            setActivePlaybackState({ clipKey, lineId })
-          }}
         />
       ) : null}
 
@@ -971,7 +920,8 @@ export function MiniReplayPlayer() {
                     Learn
                   </p>
                   <p className="mt-1 text-sm font-medium text-white/90">
-                    클립 {queueIndex + 1} / {queue.length}
+                    영상 {Math.max(1, currentVideoIndex + 1)} / {Math.max(1, uniqueVideoIds.length)} · 클립{' '}
+                    {queueIndex + 1} / {queue.length}
                   </p>
                 </div>
                 <button
@@ -992,23 +942,14 @@ export function MiniReplayPlayer() {
               </div>
 
               <div className="flex flex-1 items-center justify-center px-3 pb-[max(16px,env(safe-area-inset-bottom,0px)+12px)]">
-                <div
-                  className={`w-full overflow-hidden rounded-[28px] border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.45)] ${
-                    isLandscapeLearn ? 'max-w-5xl' : 'max-w-md'
-                  }`}
-                >
-                  <div className={isLandscapeLearn ? 'flex min-h-[320px]' : ''}>
-                    <div className={`relative ${isLandscapeLearn ? 'w-[58%] shrink-0' : ''}`}>
+                <div className="w-full max-w-md overflow-hidden rounded-[28px] border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+                  <div className="relative">
                     {isContextReady ? (
                       <MiniPlayerInner
                         ref={playerApiRef}
                         visibleVideo
                         playbackSequence={playbackSequence}
                         coreRepeatCount={coreRepeatCount}
-                        onActiveLineChange={(lineId) => {
-                          if (!clipKey) return
-                          setActivePlaybackState({ clipKey, lineId })
-                        }}
                       />
                     ) : (
                       <div className="relative aspect-video w-full bg-black">
@@ -1052,62 +993,30 @@ export function MiniReplayPlayer() {
                         )
                       })}
                     </div>
+                  </div>
+
+                  <div className="border-t border-white/10 px-4 py-3">
+                    <ProgressBar />
+                    <div className="mt-3">
+                      <p className="truncate text-sm font-semibold text-white">
+                        {clip?.expressionText ?? 'Expression'}
+                      </p>
+                      {clip?.videoTitle ? (
+                        <p className="mt-0.5 truncate text-xs text-white/55">{clip.videoTitle}</p>
+                      ) : null}
                     </div>
 
-                    <div className={`px-4 py-3 ${isLandscapeLearn ? 'flex w-[42%] flex-col border-l border-white/10' : 'border-t border-white/10'}`}>
-                      <ProgressBar />
-                      <div className="mt-3 flex items-start justify-between gap-3">
-                        <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-semibold text-white">
-                            {clip?.expressionText ?? 'Expression'}
-                          </p>
-                          {clip?.videoTitle ? (
-                            <p className="mt-0.5 truncate text-xs text-white/55">{clip.videoTitle}</p>
-                          ) : null}
-                        </div>
-                        <div className="flex shrink-0 items-center gap-1 rounded-full bg-white/5 p-1">
-                          {([
-                            { id: 'en', label: 'EN' },
-                            { id: 'bilingual', label: 'EN/KO' },
-                            { id: 'locked', label: '🔒' },
-                          ] as const).map((option) => {
-                            const active = learnSubtitleMode === option.id
-                            return (
-                              <button
-                                key={option.id}
-                                type="button"
-                                onClick={() => {
-                                  setLearnSubtitleMode(option.id)
-                                  if (option.id !== 'locked') {
-                                    setRevealedLineId(null)
-                                  }
-                                }}
-                                className="rounded-full px-2.5 py-1 text-[10px] font-semibold transition-colors"
-                                style={{
-                                  backgroundColor: active ? 'var(--accent-primary)' : 'transparent',
-                                  color: active ? '#fff' : 'rgba(255,255,255,0.72)',
-                                }}
-                              >
-                                {option.label}
-                              </button>
-                            )
-                          })}
-                        </div>
-                      </div>
+                    <LearnSubtitleContext
+                      className="mt-3"
+                      slots={displaySlots}
+                      activeLineId={activeReplayLineId}
+                      onReplayLine={handleReplayLine}
+                    />
 
-                      <LearnSubtitleContext
-                        className="mt-3 flex-1"
-                        slots={displaySlots}
-                        activeLineId={activeReplayLineId}
-                        subtitleMode={learnSubtitleMode}
-                        revealedLineId={revealedLineId}
-                        onReplayLine={handleReplayLine}
-                      />
-
-                      <div className="mt-3 flex items-center justify-center gap-2">
-                        <button
-                          type="button"
-                          onClick={prev}
+                    <div className="mt-3 flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={prev}
                         disabled={!hasPrev}
                         className="rounded-full bg-white/10 px-3 py-2 text-xs font-medium text-white transition disabled:opacity-35"
                       >
@@ -1129,7 +1038,6 @@ export function MiniReplayPlayer() {
                         Next
                       </button>
                     </div>
-                  </div>
                   </div>
                 </div>
               </div>
