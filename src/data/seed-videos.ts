@@ -79,7 +79,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '90년대 뉴욕 친구들의 일상 영어',
     thumbnailEmoji: '',
-    episodeCount: 10,
+    episodeCount: 6,
   },
   {
     id: 'modern-family',
@@ -95,7 +95,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '공원관리국 공무원들의 좌충우돌',
     thumbnailEmoji: '',
-    episodeCount: 11,
+    episodeCount: 10,
   },
   {
     id: 'seinfeld',
@@ -111,7 +111,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '미국 직장 생활 영어의 정석',
     thumbnailEmoji: '',
-    episodeCount: 11,
+    episodeCount: 10,
   },
 
   // === Movie Series ===
@@ -121,7 +121,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '패션 업계 비즈니스 영어',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 15,
   },
   {
     id: 'forrest-gump',
@@ -129,7 +129,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '감동적인 미국 영화 명대사',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 14,
   },
   {
     id: 'harry-potter',
@@ -145,7 +145,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '마블 히어로들의 명장면',
     thumbnailEmoji: '',
-    episodeCount: 18,
+    episodeCount: 17,
   },
   {
     id: 'mean-girls',
@@ -153,7 +153,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '퀸카로 살아남는 법 명장면',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 14,
   },
   {
     id: 'notting-hill',
@@ -179,7 +179,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '제임스 코든과 스타의 차 안 노래',
     thumbnailEmoji: '',
-    episodeCount: 7,
+    episodeCount: 5,
   },
   {
     id: 'conan',
@@ -203,7 +203,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '지미 팰런의 투나잇 쇼',
     thumbnailEmoji: '',
-    episodeCount: 18,
+    episodeCount: 15,
   },
   {
     id: 'mean-tweets',
@@ -221,7 +221,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '세계 최고의 강연으로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 17,
+    episodeCount: 14,
   },
   {
     id: 'daily-english',
@@ -239,7 +239,7 @@ export const series: Series[] = [
     category: 'music',
     description: '인기 팝송으로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 51,
+    episodeCount: 45,
   },
   {
     id: 'rock-classics',
@@ -257,7 +257,7 @@ export const series: Series[] = [
     category: 'animation',
     description: '픽사 애니메이션 베스트',
     thumbnailEmoji: '',
-    episodeCount: 17,
+    episodeCount: 14,
   },
   {
     id: 'breaking-bad',
@@ -265,7 +265,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '화학 선생님의 이중생활',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 15,
   },
 
   // === New Entertainment Series ===
@@ -275,7 +275,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '매운 소스 먹으며 인터뷰하는 레전드 쇼',
     thumbnailEmoji: '',
-    episodeCount: 10,
+    episodeCount: 9,
   },
 
   // === New Movie Series ===
@@ -285,7 +285,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '반지의 제왕 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 11,
   },
 
   // === New Daily Series ===
@@ -304,7 +304,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'R&B 명곡으로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 8,
+    episodeCount: 7,
   },
 
   // === New Drama Series (from curation) ===
@@ -330,7 +330,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '프렌즈 시즌2 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 23,
+    episodeCount: 22,
   },
 
   // === New Movie Series (from curation) ===
@@ -340,7 +340,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '70세 인턴의 따뜻한 직장 이야기',
     thumbnailEmoji: '',
-    episodeCount: 20,
+    episodeCount: 19,
   },
   {
     id: 'shawshank',
@@ -348,7 +348,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '희망은 결코 죽지 않는다',
     thumbnailEmoji: '',
-    episodeCount: 19,
+    episodeCount: 16,
   },
   {
     id: 'legally-blonde',
@@ -384,7 +384,7 @@ export const series: Series[] = [
     category: 'animation',
     description: '오우거 슈렉의 유쾌한 모험',
     thumbnailEmoji: '',
-    episodeCount: 21,
+    episodeCount: 20,
   },
   {
     id: 'ratatouille',
@@ -426,7 +426,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '미국인 축구 코치의 영국 적응기',
     thumbnailEmoji: '',
-    episodeCount: 18,
+    episodeCount: 17,
   },
   {
     id: 'community',
@@ -434,7 +434,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '커뮤니티 칼리지 스터디 그룹의 모험',
     thumbnailEmoji: '',
-    episodeCount: 7,
+    episodeCount: 5,
   },
   {
     id: '30-rock',
@@ -450,7 +450,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '몰락한 부자 가족의 기묘한 일상',
     thumbnailEmoji: '',
-    episodeCount: 14,
+    episodeCount: 9,
   },
   {
     id: 'curb',
@@ -482,7 +482,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '윌 스미스의 벨에어 적응기',
     thumbnailEmoji: '',
-    episodeCount: 12,
+    episodeCount: 11,
   },
   {
     id: 'will-grace',
@@ -522,7 +522,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '4차원 벽을 깨는 영국 코미디',
     thumbnailEmoji: '',
-    episodeCount: 9,
+    episodeCount: 8,
   },
   {
     id: 'sherlock',
@@ -538,7 +538,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '영국 왕실의 역사 드라마',
     thumbnailEmoji: '',
-    episodeCount: 24,
+    episodeCount: 22,
   },
   {
     id: 'downton-abbey',
@@ -554,7 +554,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '80년대 미국 소도시의 초자연 미스터리',
     thumbnailEmoji: '',
-    episodeCount: 19,
+    episodeCount: 17,
   },
   {
     id: 'better-call-saul',
@@ -570,7 +570,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '미디어 재벌 가족의 권력 다툼',
     thumbnailEmoji: '',
-    episodeCount: 19,
+    episodeCount: 18,
   },
   {
     id: 'game-of-thrones',
@@ -578,7 +578,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '왕좌를 둘러싼 판타지 전쟁',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 11,
   },
   {
     id: 'greys-anatomy',
@@ -594,7 +594,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '천재 의사의 독설과 진단',
     thumbnailEmoji: '',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'good-wife',
@@ -602,7 +602,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '정치 스캔들 뒤 변호사로 복귀하는 여성',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 13,
   },
 
   // === New Movie Series (expansion) ===
@@ -628,7 +628,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '꿈 속의 꿈, 크리스토퍼 놀란의 걸작',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 13,
   },
   {
     id: 'dark-knight',
@@ -636,7 +636,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '조커와 배트맨의 전설적 대결',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 15,
   },
   {
     id: 'good-will-hunting',
@@ -652,7 +652,7 @@ export const series: Series[] = [
     category: 'movie',
     description: 'Carpe Diem! 오늘을 살아라',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 14,
   },
   {
     id: 'pursuit-happyness',
@@ -660,7 +660,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '포기하지 않는 아버지의 감동 실화',
     thumbnailEmoji: '',
-    episodeCount: 18,
+    episodeCount: 15,
   },
   {
     id: 'pulp-fiction',
@@ -684,7 +684,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '빨간약 파란약, 현실을 선택하라',
     thumbnailEmoji: '',
-    episodeCount: 18,
+    episodeCount: 16,
   },
   {
     id: 'interstellar',
@@ -708,7 +708,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '다섯 고등학생의 솔직한 토요일',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 14,
   },
   {
     id: 'when-harry-met-sally',
@@ -724,7 +724,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '셰익스피어를 현대로 옮긴 로맨스',
     thumbnailEmoji: '',
-    episodeCount: 14,
+    episodeCount: 13,
   },
   {
     id: 'juno',
@@ -740,7 +740,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '네 자매의 꿈과 사랑 이야기',
     thumbnailEmoji: '',
-    episodeCount: 17,
+    episodeCount: 16,
   },
   {
     id: 'princess-bride',
@@ -780,7 +780,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '가짜 세계에서 진짜를 찾아서',
     thumbnailEmoji: '',
-    episodeCount: 13,
+    episodeCount: 11,
   },
   {
     id: 'groundhog-day',
@@ -788,7 +788,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '같은 하루를 반복하는 남자',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 14,
   },
   {
     id: 'the-notebook',
@@ -796,7 +796,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '시간을 초월한 순수한 사랑',
     thumbnailEmoji: '',
-    episodeCount: 13,
+    episodeCount: 11,
   },
   {
     id: 'about-time',
@@ -812,7 +812,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '90년대 비벌리힐스 틴의 영어',
     thumbnailEmoji: '',
-    episodeCount: 14,
+    episodeCount: 13,
   },
   {
     id: 'jerry-maguire',
@@ -820,7 +820,7 @@ export const series: Series[] = [
     category: 'movie',
     description: 'Show me the money! 비즈니스 영어',
     thumbnailEmoji: '',
-    episodeCount: 13,
+    episodeCount: 12,
   },
   {
     id: 'few-good-men',
@@ -868,7 +868,7 @@ export const series: Series[] = [
     category: 'movie',
     description: 'NASA 흑인 여성 수학자들의 실화',
     thumbnailEmoji: '',
-    episodeCount: 14,
+    episodeCount: 12,
   },
   {
     id: 'wolf-wall-street',
@@ -876,7 +876,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '월스트리트의 광란과 명대사',
     thumbnailEmoji: '',
-    episodeCount: 14,
+    episodeCount: 12,
   },
   {
     id: 'catch-me',
@@ -934,7 +934,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '세스 마이어스의 레이트 나이트',
     thumbnailEmoji: '',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'craig-ferguson',
@@ -1014,7 +1014,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '즉흥 코미디 쇼의 레전드',
     thumbnailEmoji: '',
-    episodeCount: 7,
+    episodeCount: 6,
   },
   {
     id: 'standup-comedy',
@@ -1022,7 +1022,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '미국 스탠드업 코미디 베스트',
     thumbnailEmoji: '',
-    episodeCount: 5,
+    episodeCount: 3,
   },
   {
     id: 'celebrity-interviews',
@@ -1030,7 +1030,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '셀럽 인터뷰 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 10,
+    episodeCount: 8,
   },
   {
     id: 'award-shows',
@@ -1038,7 +1038,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '오스카/그래미 시상식 명장면',
     thumbnailEmoji: '',
-    episodeCount: 30,
+    episodeCount: 29,
   },
 
   // === New Daily Series (expansion) ===
@@ -1048,7 +1048,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '최신 TED 강연 모음',
     thumbnailEmoji: '',
-    episodeCount: 6,
+    episodeCount: 5,
   },
   {
     id: 'crash-course',
@@ -1080,7 +1080,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '최고의 테크 리뷰어 마키스 브라운리',
     thumbnailEmoji: '',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'casey-neistat',
@@ -1088,7 +1088,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '케이시 나이스탯의 브이로그',
     thumbnailEmoji: '',
-    episodeCount: 12,
+    episodeCount: 11,
   },
   {
     id: 'nat-geo',
@@ -1104,7 +1104,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '여행 브이로그로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 3,
+    episodeCount: 1,
   },
 
   // === New Music Series (expansion) ===
@@ -1114,7 +1114,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Pop Hits 2020s 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 33,
+    episodeCount: 32,
   },
   {
     id: 'pop-classics',
@@ -1122,7 +1122,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Pop Classics 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 36,
+    episodeCount: 35,
   },
   {
     id: 'rock-anthems',
@@ -1130,7 +1130,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Rock Anthems 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 31,
+    episodeCount: 30,
   },
   {
     id: 'rb-soul',
@@ -1154,7 +1154,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Hip-Hop Classics 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 23,
+    episodeCount: 22,
   },
   {
     id: 'movie-soundtracks',
@@ -1162,7 +1162,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Movie Soundtracks 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 27,
+    episodeCount: 24,
   },
   {
     id: 'disney-songs',
@@ -1170,7 +1170,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Disney Songs 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 15,
   },
   {
     id: 'acousticindie',
@@ -1178,7 +1178,7 @@ export const series: Series[] = [
     category: 'music',
     description: 'Acoustic/Indie 명곡 모음',
     thumbnailEmoji: '',
-    episodeCount: 35,
+    episodeCount: 34,
   },
 
   // === New Animation Series (expansion) ===
@@ -1196,7 +1196,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'The Incredibles 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 17,
+    episodeCount: 14,
   },
   {
     id: 'toy-story',
@@ -1204,7 +1204,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Toy Story 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 17,
+    episodeCount: 16,
   },
   {
     id: 'inside-out',
@@ -1212,7 +1212,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Inside Out 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 18,
+    episodeCount: 17,
   },
   {
     id: 'up',
@@ -1220,7 +1220,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Up 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 20,
+    episodeCount: 18,
   },
   {
     id: 'moana',
@@ -1228,7 +1228,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Moana 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 12,
+    episodeCount: 11,
   },
   {
     id: 'coco',
@@ -1244,7 +1244,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Encanto 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 14,
   },
   {
     id: 'how-to-train-your-dragon',
@@ -1252,7 +1252,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'How to Train Your Dragon 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 15,
   },
   {
     id: 'kung-fu-panda',
@@ -1260,7 +1260,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Kung Fu Panda 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 13,
+    episodeCount: 10,
   },
   {
     id: 'despicable-me-minions',
@@ -1268,7 +1268,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Despicable Me / Minions 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 17,
+    episodeCount: 15,
   },
   {
     id: 'madagascar',
@@ -1284,7 +1284,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'The Lion King 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 8,
+    episodeCount: 7,
   },
   {
     id: 'aladdin',
@@ -1348,7 +1348,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Spider-Verse 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 15,
+    episodeCount: 10,
   },
   {
     id: 'puss-in-boots-2',
@@ -1356,7 +1356,7 @@ export const series: Series[] = [
     category: 'animation',
     description: 'Puss in Boots 2 명장면 모음',
     thumbnailEmoji: '',
-    episodeCount: 16,
+    episodeCount: 14,
   },
 
   // === Additional Drama Series ===
@@ -1770,7 +1770,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '법률 드라마의 치열한 논쟁과 설득',
     thumbnailEmoji: '⚖️',
-    episodeCount: 9,
+    episodeCount: 4,
   },
   {
     id: 'breaking-bad-clips',
@@ -1778,7 +1778,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '긴장감 넘치는 범죄 드라마 명장면',
     thumbnailEmoji: '🧪',
-    episodeCount: 8,
+    episodeCount: 6,
   },
   {
     id: 'better-call-saul-clips',
@@ -1794,7 +1794,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '천재 의사 하우스의 독설과 진단',
     thumbnailEmoji: '🏥',
-    episodeCount: 10,
+    episodeCount: 6,
   },
   {
     id: 'shark-tank-clips',
@@ -1810,7 +1810,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '영국 귀족 저택의 격식 있는 영어',
     thumbnailEmoji: '🏰',
-    episodeCount: 9,
+    episodeCount: 1,
   },
   {
     id: 'ted-talks-b2-extra',
@@ -1834,7 +1834,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '미국 심야 토크쇼 하이라이트',
     thumbnailEmoji: '🌙',
-    episodeCount: 18,
+    episodeCount: 10,
   },
   {
     id: 'last-week-tonight',
@@ -1842,7 +1842,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '존 올리버의 시사 풍자 코미디',
     thumbnailEmoji: '📰',
-    episodeCount: 8,
+    episodeCount: 6,
   },
   {
     id: 'jordan-peterson-lectures',
@@ -1858,7 +1858,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '과학, 기술, 철학 심층 팟캐스트',
     thumbnailEmoji: '🎧',
-    episodeCount: 42,
+    episodeCount: 14,
   },
   {
     id: 'noam-chomsky-interviews',
@@ -1874,7 +1874,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '옥스포드 대학 토론 클럽의 격식 있는 토론',
     thumbnailEmoji: '🎓',
-    episodeCount: 8,
+    episodeCount: 3,
   },
   {
     id: 'intelligence-squared',
@@ -1906,7 +1906,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '예일 대학 공개 강의',
     thumbnailEmoji: '🏫',
-    episodeCount: 5,
+    episodeCount: 4,
   },
   {
     id: 'ken-burns-docs',
@@ -1914,7 +1914,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '켄 번스 감독의 역사 다큐멘터리',
     thumbnailEmoji: '🎬',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'aaron-sorkin-scenes',
@@ -1930,7 +1930,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '전설적인 스탠드업 코미디언의 사회 풍자',
     thumbnailEmoji: '🎤',
-    episodeCount: 5,
+    episodeCount: 3,
   },
   {
     id: 'monty-python',
@@ -1946,7 +1946,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '에디 이자드의 위트 넘치는 스탠드업',
     thumbnailEmoji: '💄',
-    episodeCount: 4,
+    episodeCount: 3,
   },
   {
     id: 'qi-panel-show',
@@ -2004,7 +2004,7 @@ export const series: Series[] = [
     category: 'daily',
     description: 'MIT 공개 강의',
     thumbnailEmoji: '🏫',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'taskmaster',
@@ -2012,7 +2012,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '영국 코미디 미션 예능',
     thumbnailEmoji: '⏱️',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'peep-show',
@@ -2060,7 +2060,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '리키 저베이스의 독설 코미디',
     thumbnailEmoji: '😏',
-    episodeCount: 3,
+    episodeCount: 1,
   },
   {
     id: 'jimmy-carr',
@@ -2174,7 +2174,7 @@ export const series: Series[] = [
     category: 'drama',
     description: 'BBC 셜록의 추리와 대화',
     thumbnailEmoji: '',
-    episodeCount: 8,
+    episodeCount: 7,
   },
   {
     id: 'crown-b2',
@@ -2190,7 +2190,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '영국 귀족 저택의 우아한 영어',
     thumbnailEmoji: '',
-    episodeCount: 6,
+    episodeCount: 5,
   },
   {
     id: 'peaky-blinders-b2',
@@ -2225,18 +2225,6 @@ export const seedVideos = defineSeedVideos([
     clipStart: 10,
     clipEnd: 70,
     seriesId: 'the-office',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'friends-s1-ep7',
-    youtubeId: 'wi5Q3rlQaMI',
-    title: 'Rachel Helps Chandler Find His Wedding Tuxedo',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 30,
-    clipEnd: 90,
-    seriesId: 'friends-s1',
     episodeNumber: 3,
     subtitles: [],
   },
@@ -22134,30 +22122,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'ted-how-to-speak',
-    youtubeId: 'eIho2S0ZahI',
-    title: 'How to Speak So People Listen',
-    category: 'daily',
-    difficulty: 6,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'ted-talks',
-    episodeNumber: 12,
-    subtitles: [],
-  },
-  {
-    id: 'ted-steve-jobs',
-    youtubeId: 'UF8uR6Z6KLc',
-    title: 'Steve Jobs Stanford Commencement Speech',
-    category: 'daily',
-    difficulty: 3,
-    clipStart: 20,
-    clipEnd: 70,
-    seriesId: 'ted-talks',
-    episodeNumber: 13,
-    subtitles: [],
-  },
-  {
     id: 'ted-body-language',
     youtubeId: 'Ks-_Mh1QhMc',
     title: 'Your Body Language Shapes Who You Are',
@@ -24134,18 +24098,6 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 4,
     subtitles: [],
   },
-  {
-    id: 'ted-talks-2-08',
-    youtubeId: 'YX_OxBfsvbk',
-    title: 'Why is X the Unknown - Terry Moore',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'ted-talks-2',
-    episodeNumber: 5,
-    subtitles: [],
-  },
   
   {
     id: 'ted-talks-2-12',
@@ -25073,17 +25025,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-wXsNIFK8z7I',
-    youtubeId: 'wXsNIFK8z7I',
-    title: 'When Gamers Join The Real Army',
-    category: 'entertainment',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-CtAFtLaIN1k',
     youtubeId: 'CtAFtLaIN1k',
     title: 'British Explorers in the 1800s',
@@ -25183,39 +25124,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-ZfaK6ncKynE',
-    youtubeId: 'ZfaK6ncKynE',
-    title: 'School Cafeterias',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-sNrBSslS5RE',
-    youtubeId: 'sNrBSslS5RE',
-    title: 'Diary of Walmart Employee Karen Rules',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-HwW0RdDjqks',
-    youtubeId: 'HwW0RdDjqks',
-    title: 'Six Flags',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-LZNr8XGqByw',
     youtubeId: 'LZNr8XGqByw',
     title: 'Same backpack',
@@ -25243,17 +25151,6 @@ export const seedVideos = defineSeedVideos([
     title: 'He can suck my blood anytime',
     category: 'entertainment',
     difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-21Ki96Lsxhc',
-    youtubeId: '21Ki96Lsxhc',
-    title: 'Three Sad Virgins ft Taylor Swift SNL',
-    category: 'entertainment',
-    difficulty: 5,
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
@@ -25337,17 +25234,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-qCzWL9OPpwE',
-    youtubeId: 'qCzWL9OPpwE',
-    title: 'First Class ft Bad Bunny SNL',
-    category: 'entertainment',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-4hX9o6ghEGI',
     youtubeId: '4hX9o6ghEGI',
     title: 'Inflight EMBARRASSING skincare routine',
@@ -25419,17 +25305,6 @@ export const seedVideos = defineSeedVideos([
     title: 'Turning A Spine Into A Weapon',
     category: 'daily',
     difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-0A20vfx-sO0',
-    youtubeId: '0A20vfx-sO0',
-    title: 'Good Variant SNL',
-    category: 'entertainment',
-    difficulty: 3,
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
@@ -26053,18 +25928,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'suits-clips-ep2',
-    youtubeId: 'adRHR75CrrI',
-    title: 'Ava Hessington Proves Her Innocence | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 2,
-    subtitles: [],
-  },
   
   {
     id: 'suits-clips-ep5',
@@ -26076,18 +25939,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'suits-clips',
     episodeNumber: 5,
-    subtitles: [],
-  },
-  {
-    id: 'suits-clips-ep6',
-    youtubeId: 'LdYtPAo--fA',
-    title: 'Mike Takes Control of the Narrative | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 6,
     subtitles: [],
   },
   {
@@ -26115,31 +25966,7 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 9,
     subtitles: [],
   },
-  {
-    id: 'suits-clips-ep10',
-    youtubeId: 'WXCcmJubEYE',
-    title: 'Getting TORN APART on the Stand | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 10,
-    subtitles: [],
-  },
   
-  {
-    id: 'suits-clips-ep12',
-    youtubeId: 'CLjMTb19oTE',
-    title: 'The Entire Firm Walks Out | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 12,
-    subtitles: [],
-  },
   {
     id: 'suits-clips-ep13',
     youtubeId: '4k3_1ZQbCHM',
@@ -26226,18 +26053,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'breaking-bad-clips-ep9',
-    youtubeId: 'CZSWDdmxmus',
-    title: 'Breaking Bad\'s 5 Funniest Scenes | Breaking Bad',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'breaking-bad-clips',
-    episodeNumber: 9,
-    subtitles: [],
-  },
   
   {
     id: 'better-call-saul-clips-ep1',
@@ -26288,18 +26103,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'house-md-clips-ep2',
-    youtubeId: 'PmlDisCuWM8',
-    title: 'Thirteen Isn\'t Returning to the Team | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 2,
-    subtitles: [],
-  },
-  {
     id: 'house-md-clips-ep3',
     youtubeId: 'rhjQ-yTcXLk',
     title: 'Chase\'s Big Mistake | House M.D.',
@@ -26326,30 +26129,6 @@ export const seedVideos = defineSeedVideos([
   },
   
   {
-    id: 'house-md-clips-ep7',
-    youtubeId: 'ybBf_rR_7a0',
-    title: 'The Opening to House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 7,
-    subtitles: [],
-  },
-  {
-    id: 'house-md-clips-ep8',
-    youtubeId: 'wKSgMEnZ0tU',
-    title: 'Chase and Cameron Call it Quits on Their Marriage | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 8,
-    subtitles: [],
-  },
-  {
     id: 'house-md-clips-ep9',
     youtubeId: 'kLDK4q6WJvQ',
     title: 'Girlfriend Fakes Asexuality | House M.D.',
@@ -26359,18 +26138,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'house-md-clips',
     episodeNumber: 9,
-    subtitles: [],
-  },
-  {
-    id: 'house-md-clips-ep10',
-    youtubeId: 'wX8KaOHYCKk',
-    title: '18 Year Old is Miserable Daddy of the Year | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 10,
     subtitles: [],
   },
   {
@@ -26397,137 +26164,17 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 12,
     subtitles: [],
   },
-  {
-    id: 'house-md-clips-ep13',
-    youtubeId: 'CL1IlSd0R7g',
-    title: 'Saving a Life While Detoxing from Vicodin | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 13,
-    subtitles: [],
-  },
-  
-  
-  {
-    id: 'shark-tank-clips-ep2',
-    youtubeId: 'nOny2wfqKs8',
-    title: 'This Young Entrepreneur\'s Pitch Was Never Aired | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 2,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep3',
-    youtubeId: 'lU_g78CPvSo',
-    title: 'Sharks Mesmerized By Fried Pickle Batter | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 3,
-    subtitles: [],
-  },
   
   
   
   
   
-  {
-    id: 'shark-tank-clips-ep12',
-    youtubeId: 'EjfKk8_6YX0',
-    title: 'How Did They Manage To Get Lori To Jump Back In | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 12,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep13',
-    youtubeId: '1EAIwWhSRQ0',
-    title: 'Investing Would Make Them Hypocrites | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 13,
-    subtitles: [],
-  },
-  
-  {
-    id: 'downton-abbey-clips-ep2',
-    youtubeId: 'jGTBTlXIoWs',
-    title: 'The Best Roses in the Village | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 2,
-    subtitles: [],
-  },
   
   
-  {
-    id: 'downton-abbey-clips-ep5',
-    youtubeId: '5VRSfMts4mo',
-    title: 'Daisy Makes Peace With Her Guilt | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 5,
-    subtitles: [],
-  },
-  {
-    id: 'downton-abbey-clips-ep7',
-    youtubeId: 'asdBnvCdSoc',
-    title: 'Thomas Barrow Stands Up To Nanny West | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 7,
-    subtitles: [],
-  },
   
-  {
-    id: 'downton-abbey-clips-ep9',
-    youtubeId: 'CNZE3O0UgtQ',
-    title: 'The Dowager Gives a Second Chance | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 9,
-    subtitles: [],
-  },
-  {
-    id: 'downton-abbey-clips-ep10',
-    youtubeId: 'cRwr1hutSkA',
-    title: 'A Party with the Crawleys | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 10,
-    subtitles: [],
-  },
+  
+  
+  
   {
     id: 'downton-abbey-clips-ep11',
     youtubeId: 'HqZB4C6l0Bo',
@@ -26540,71 +26187,11 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 11,
     subtitles: [],
   },
-  {
-    id: 'downton-abbey-clips-ep12',
-    youtubeId: 'j3zIjX6vh2g',
-    title: 'Left at the Altar | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 12,
-    subtitles: [],
-  },
-  
-  {
-    id: 'downton-abbey-clips-ep14',
-    youtubeId: 'EqFbNeQ9F4A',
-    title: 'A Christmas Feast | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 14,
-    subtitles: [],
-  },
   
   
-  {
-    id: 'ted-talks-b2-extra-ep2',
-    youtubeId: '6xIEpiISflw',
-    title: 'The Brilliance of Bridges and Roads That Repair Themselves | TED',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ted-talks-b2-extra',
-    episodeNumber: 2,
-    subtitles: [],
-  },
   
   
-  {
-    id: 'ted-talks-b2-extra-ep6',
-    youtubeId: 'KW0kDxU7LEg',
-    title: 'What Ancestral Intelligence Can Teach Us About AI | TED',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ted-talks-b2-extra',
-    episodeNumber: 6,
-    subtitles: [],
-  },
-  {
-    id: 'veep-clips-ep1',
-    youtubeId: 'HAItaBPQHAs',
-    title: 'Best of Minna Hakkinen | Veep',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'veep-clips',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
   {
     id: 'veep-clips-ep2',
     youtubeId: '8gB_X2qgo5c',
@@ -26618,18 +26205,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'late-night-clips-ep2',
-    youtubeId: 'qLPiXCRcORU',
-    title: 'Wanda Sykes Shows Some Love For The TSA Agents | Late Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 2,
-    subtitles: [],
-  },
   {
     id: 'late-night-clips-ep3',
     youtubeId: 'ROv4J9uFF_Y',
@@ -26652,18 +26227,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'late-night-clips',
     episodeNumber: 4,
-    subtitles: [],
-  },
-  {
-    id: 'late-night-clips-ep5',
-    youtubeId: '_uBZVJ-iNUQ',
-    title: 'Clarissa Ward On Reporting Amid A Communications Blackout | Late Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 5,
     subtitles: [],
   },
   
@@ -26706,42 +26269,6 @@ export const seedVideos = defineSeedVideos([
   },
   
   {
-    id: 'late-night-clips-ep12',
-    youtubeId: '4EgvyNLMZ18',
-    title: 'Minnie Driver Got Help from Arnold Schwarzenegger at the Oscars | Tonight Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 12,
-    subtitles: [],
-  },
-  {
-    id: 'late-night-clips-ep13',
-    youtubeId: 'aN-xmkzJfTk',
-    title: 'Ruthie Rogers Played the Piano with Paul McCartney | Tonight Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 13,
-    subtitles: [],
-  },
-  {
-    id: 'late-night-clips-ep14',
-    youtubeId: 'XFVKqXM_mzk',
-    title: 'Trump Sends Mixed Messages About Iran War | Tonight Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 14,
-    subtitles: [],
-  },
-  {
     id: 'late-night-clips-ep15',
     youtubeId: 'rYsYKD7Xejg',
     title: 'Erika Alexander on The Fall and Rise of Reggie Dinkins | Daily Show',
@@ -26776,18 +26303,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'late-night-clips',
     episodeNumber: 19,
-    subtitles: [],
-  },
-  {
-    id: 'late-night-clips-ep20',
-    youtubeId: '5SnG53wJxP8',
-    title: 'Why Robert Smigel\'s Podcast Is Different | Late Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 20,
     subtitles: [],
   },
   {
@@ -26890,18 +26405,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'last-week-tonight-ep12',
-    youtubeId: 'ETR9qrVS17g',
-    title: 'John Oliver on Warehouses',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 12,
-    subtitles: [],
-  },
   
   
   {
@@ -26989,18 +26492,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'lex-fridman-clips-ep1',
-    youtubeId: 'SARmbOtChGg',
-    title: 'Lex Clips - Terence Tao on a Theory of Everything',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
     id: 'lex-fridman-clips-ep2',
     youtubeId: 'orMtwOz6Db0',
     title: 'Lex Fridman x Roger Penrose - Physics of Consciousness',
@@ -27063,18 +26554,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'lex-fridman-clips-ep5',
-    youtubeId: '0SsgNHDsLcM',
-    title: 'Lex Clips - Demis Hassabis on John von Neumann',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 5,
-    subtitles: [],
-  },
-  {
     id: 'lex-fridman-clips-ep6',
     youtubeId: 'MzkgWDCucNY',
     title: 'Lex Fridman x Bernie Sanders - Politics Interview',
@@ -27101,61 +26580,13 @@ export const seedVideos = defineSeedVideos([
   },
   
 
-  {
-    id: 'lex-fridman-clips-ep9',
-    youtubeId: 'FzkCLR378fE',
-    title: 'Lex Clips - Dario Amodei on Why He Left OpenAI',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 9,
-    subtitles: [],
-  },
-  
-  {
-    id: 'lex-fridman-clips-ep11',
-    youtubeId: '79CVn9MP-BE',
-    title: 'Lex Clips - Hitler\'s Ideology Explained by WW2 Historian',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 11,
-    subtitles: [],
-  },
   
   
   
-  {
-    id: 'lex-fridman-clips-ep15',
-    youtubeId: 'Tc28vDtkB6o',
-    title: 'Lex Clips - Next Big Breakthrough in Physics (Janna Levin)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 15,
-    subtitles: [],
-  },
   
   
   
-  {
-    id: 'lex-fridman-clips-ep19',
-    youtubeId: 'wR_VDIj7bM8',
-    title: 'Lex Clips - Gods and Religions in the Ancient World',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 19,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep20',
     youtubeId: 'lvjq4saqfWQ',
@@ -27166,30 +26597,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'lex-fridman-clips',
     episodeNumber: 20,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep21',
-    youtubeId: 'CuDs6tkKluw',
-    title: 'Lex Clips - Controversial Theory About Ancient Human History',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 21,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep22',
-    youtubeId: 'TBssn62HcKw',
-    title: 'Lex Clips - Did Noah\'s Ark Really Exist?',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 22,
     subtitles: [],
   },
   {
@@ -27207,18 +26614,6 @@ export const seedVideos = defineSeedVideos([
   
   
   {
-    id: 'lex-fridman-clips-ep25',
-    youtubeId: 'bpMHBPdBySQ',
-    title: 'Lex Clips - The Most Powerful Secret Society in the World',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 25,
-    subtitles: [],
-  },
-  {
     id: 'lex-fridman-clips-ep26',
     youtubeId: 'd50-oe-_Vto',
     title: 'Lex Clips - Pizzagate Conspiracy Theory',
@@ -27235,30 +26630,6 @@ export const seedVideos = defineSeedVideos([
   
   
   {
-    id: 'lex-fridman-clips-ep31',
-    youtubeId: '9kB14zbtLOk',
-    title: 'Lex Clips - Hitler\'s First Big Mistake in WWII',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 31,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep32',
-    youtubeId: 'OFLvAjGo-r8',
-    title: 'Lex Clips - Hitler\'s Cocaine Addiction After Assassination Attempt',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 32,
-    subtitles: [],
-  },
-  {
     id: 'lex-fridman-clips-ep33',
     youtubeId: 'UQjm2salMag',
     title: 'Lex Clips - Could Hitler Have Won World War II?',
@@ -27271,30 +26642,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'lex-fridman-clips-ep37',
-    youtubeId: '7B3uhnzSfhE',
-    title: 'Lex Clips - World War II: The Deadliest War in Human History',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 37,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep38',
-    youtubeId: '4NeSzpwDZcA',
-    title: 'Lex Clips - Historian Explains Auschwitz Gas Chambers',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 38,
-    subtitles: [],
-  },
   
   {
     id: 'lex-fridman-clips-ep40',
@@ -27308,105 +26655,9 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 40,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep42',
-    youtubeId: 'g4OxNyNhVSM',
-    title: 'Lex Clips - How Genghis Khan\'s Army Conquered the World',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 42,
-    subtitles: [],
-  },
   
-  {
-    id: 'lex-fridman-clips-ep45',
-    youtubeId: 'CKCizquUQXE',
-    title: 'Lex Clips - Where Are the Aliens? Against the Fermi Paradox',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 45,
-    subtitles: [],
-  },
   
-  {
-    id: 'lex-fridman-clips-ep47',
-    youtubeId: 'u-k8faOgT1I',
-    title: 'Lex Clips - The Universe Is Likely Full of Alien Life',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 47,
-    subtitles: [],
-  },
   
-  {
-    id: 'lex-fridman-clips-ep49',
-    youtubeId: 'lkccA2VPjRc',
-    title: 'Lex Clips - Is Faster Than Light Travel Possible?',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 49,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep50',
-    youtubeId: '4-H-qleoCBA',
-    title: 'Lex Clips - How Many Alien Civilizations Are Out There?',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 50,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep51',
-    youtubeId: 'iBF34fWBPUI',
-    title: 'Lex Clips - When Will the American Empire Collapse?',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 51,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep52',
-    youtubeId: 'WGEvZ6BF1Z8',
-    title: 'Lex Clips - Most Politicians Are Narcissists or Psychopaths',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 52,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep53',
-    youtubeId: 'emVPLLZosFE',
-    title: 'Lex Clips - Fighting Spirit of the Scots-Irish',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 53,
-    subtitles: [],
-  },
   
   
   {
@@ -27518,42 +26769,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'oxford-union-debates-ep3',
-    youtubeId: 'zJdqJu-6ZPo',
-    title: 'Konstantin Kisin - Woke Culture Has Gone Too Far (Oxford Union)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'oxford-union-debates-ep4',
-    youtubeId: 'vzEa2eLtS5A',
-    title: 'Oxford Union - AGI Will be Humanity\'s Last Great Invention (Opposition)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 4,
-    subtitles: [],
-  },
-  {
-    id: 'oxford-union-debates-ep5',
-    youtubeId: 'pk4tE78LtKc',
-    title: 'Oxford Union - Roman Yampolskiy on AGI (Proposition)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 5,
-    subtitles: [],
-  },
-  {
     id: 'oxford-union-debates-ep6',
     youtubeId: '3N_W6P_K434',
     title: 'Oxford Union - AGI Full Debate',
@@ -27567,18 +26782,6 @@ export const seedVideos = defineSeedVideos([
   },
   
   
-  {
-    id: 'oxford-union-debates-ep10',
-    youtubeId: 'VOmEEcbgQk4',
-    title: 'Oxford Union - Anthony Gardner on European Army (Opposition)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 10,
-    subtitles: [],
-  },
   {
     id: 'intelligence-squared-ep1',
     youtubeId: 'xt2FvzDiNEo',
@@ -27920,18 +27123,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'eddie-izzard-ep5',
-    youtubeId: 'cXxsxmaobxs',
-    title: 'Eddie Izzard - Great Expectations Stage Show',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'eddie-izzard',
-    episodeNumber: 5,
-    subtitles: [],
-  },
-  {
     id: 'qi-panel-show-ep2',
     youtubeId: 's0JQcV3nGow',
     title: 'QI - David Tennant Christmas Special',
@@ -28097,68 +27288,8 @@ export const seedVideos = defineSeedVideos([
   },
   
   
-  {
-    id: 'peep-show-ep3',
-    youtubeId: 'qJiKUzHhZVw',
-    title: 'Peep Show - When a Joke Gets Too Real',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'peep-show-ep4',
-    youtubeId: 'yYPX5Chh9WA',
-    title: 'Peep Show - This Is the Worst Betrayal Ever',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 4,
-    subtitles: [],
-  },
   
-  {
-    id: 'peep-show-ep6',
-    youtubeId: 'kSi5B9gRcaQ',
-    title: 'Peep Show - This Workout Is Destroying Mark',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 6,
-    subtitles: [],
-  },
-  {
-    id: 'peep-show-ep7',
-    youtubeId: 'OxQNrv2_bVo',
-    title: 'Peep Show - Celebrating Way Too Early',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 7,
-    subtitles: [],
-  },
   
-  {
-    id: 'peep-show-ep9',
-    youtubeId: '35sZP2p2o58',
-    title: 'Peep Show - Judo Class Turns Into Chaos',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 9,
-    subtitles: [],
-  },
   
   
   {
@@ -28226,18 +27357,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'ricky-gervais',
     episodeNumber: 2,
-    subtitles: [],
-  },
-  {
-    id: 'ricky-gervais-ep3',
-    youtubeId: 'fgson2Q3nog',
-    title: 'Ricky Gervais - Golden Globes 2020 Monologue Uncensored',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ricky-gervais',
-    episodeNumber: 3,
     subtitles: [],
   },
   {
