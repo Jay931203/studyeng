@@ -14,6 +14,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useReplayStore } from '@/stores/useReplayStore'
 
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
+const LEARN_CLIP_PREROLL_SEC = 0.6
 
 interface ReplayPlayerHandle {
   togglePlayback: () => void
@@ -30,6 +31,14 @@ interface SubtitleContextLine {
   ko?: string
   start: number
   end: number
+}
+
+function resolvePlaybackWindow(start: number, end: number) {
+  const resolvedEnd = end > start ? end : start + 5
+  return {
+    start: Math.max(0, start - LEARN_CLIP_PREROLL_SEC),
+    end: resolvedEnd,
+  }
 }
 
 function ensureYouTubeAPI(): Promise<void> {
@@ -195,11 +204,12 @@ const MiniPlayerInner = forwardRef<ReplayPlayerHandle, { visibleVideo?: boolean 
 
             const currentClip = useReplayStore.getState().clip
             if (currentClip) {
-              const end =
-                currentClip.end > currentClip.start
-                  ? currentClip.end
-                  : currentClip.start + 5
-              monitorPlaybackWindow(player, currentClip.start, end)
+              const playbackWindow = resolvePlaybackWindow(currentClip.start, currentClip.end)
+              const currentTime = player.getCurrentTime()
+              if (currentTime >= playbackWindow.end - 0.08) {
+                player.seekTo(playbackWindow.start, true)
+              }
+              monitorPlaybackWindow(player, playbackWindow.start, playbackWindow.end)
             }
           } catch {
             // ignore
@@ -209,13 +219,13 @@ const MiniPlayerInner = forwardRef<ReplayPlayerHandle, { visibleVideo?: boolean 
           const player = playerRef.current
           if (!player) return
 
-          const resolvedEnd = end > start ? end : start + 5
+          const playbackWindow = resolvePlaybackWindow(start, end)
 
           try {
-            player.seekTo(start, true)
+            player.seekTo(playbackWindow.start, true)
             player.playVideo()
             setIsPlaying(true)
-            monitorPlaybackWindow(player, start, resolvedEnd)
+            monitorPlaybackWindow(player, playbackWindow.start, playbackWindow.end)
           } catch {
             // ignore
           }
@@ -276,9 +286,9 @@ const MiniPlayerInner = forwardRef<ReplayPlayerHandle, { visibleVideo?: boolean 
           }
         }
 
-        const resolvedStart = resolvedClip.start
-        const resolvedEnd =
-          resolvedClip.end > resolvedClip.start ? resolvedClip.end : resolvedClip.start + 5
+        const playbackWindow = resolvePlaybackWindow(resolvedClip.start, resolvedClip.end)
+        const resolvedStart = playbackWindow.start
+        const resolvedEnd = playbackWindow.end
 
         if (playerRef.current) {
           if (activeVideoIdRef.current === resolvedClip.videoId) {
@@ -361,9 +371,8 @@ const MiniPlayerInner = forwardRef<ReplayPlayerHandle, { visibleVideo?: boolean 
               } else if (event.data === 0) {
                 const activeClip = useReplayStore.getState().clip
                 if (activeClip) {
-                  const activeEnd =
-                    activeClip.end > activeClip.start ? activeClip.end : activeClip.start + 5
-                  pausePlaybackWindow(event.target as YT.Player, activeEnd)
+                  const playbackWindow = resolvePlaybackWindow(activeClip.start, activeClip.end)
+                  pausePlaybackWindow(event.target as YT.Player, playbackWindow.end)
                 } else {
                   setIsPlaying(false)
                 }
