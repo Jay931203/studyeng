@@ -271,6 +271,8 @@ const MiniPlayerInner = forwardRef<
   const activeSequenceRef = useRef<PlaybackSequence>({ segments: [], totalDuration: 0 })
   const activeSegmentIndexRef = useRef(0)
   const sequenceFinishedRef = useRef(false)
+  const onActiveLineChangeRef = useRef(onActiveLineChange)
+  onActiveLineChangeRef.current = onActiveLineChange
 
   const clearMonitor = useCallback(() => {
     if (intervalRef.current !== null) {
@@ -298,8 +300,8 @@ const MiniPlayerInner = forwardRef<
     activeSequenceRef.current = { segments: [], totalDuration: 0 }
     activeSegmentIndexRef.current = 0
     sequenceFinishedRef.current = false
-    onActiveLineChange?.(null)
-  }, [clearMonitor, onActiveLineChange])
+    onActiveLineChangeRef.current?.(null)
+  }, [clearMonitor])
 
   const advanceQueue = useCallback(() => {
     if (transitionLockRef.current !== null) return
@@ -340,7 +342,7 @@ const MiniPlayerInner = forwardRef<
       activeSequenceRef.current = sequence
       activeSegmentIndexRef.current = segmentIndex
       sequenceFinishedRef.current = false
-      onActiveLineChange?.(targetSegment.lineId)
+      onActiveLineChangeRef.current?.(targetSegment.lineId)
 
       clearMonitor()
 
@@ -376,7 +378,7 @@ const MiniPlayerInner = forwardRef<
             if (nextIndex < activeSequence.segments.length) {
               const nextSegment = activeSequence.segments[nextIndex]
               activeSegmentIndexRef.current = nextIndex
-              onActiveLineChange?.(nextSegment.lineId)
+              onActiveLineChangeRef.current?.(nextSegment.lineId)
               const gapToNext = nextSegment.start - currentSegment.end
               if (gapToNext < -0.02 || gapToNext > 0.35) {
                 player.seekTo(nextSegment.start, true)
@@ -392,7 +394,7 @@ const MiniPlayerInner = forwardRef<
         }
       }, 100)
     },
-    [clearMonitor, onActiveLineChange, pauseAtSegmentEnd, setIsPlaying, setProgress],
+    [clearMonitor, pauseAtSegmentEnd, setIsPlaying, setProgress],
   )
 
   useImperativeHandle(
@@ -533,7 +535,10 @@ const MiniPlayerInner = forwardRef<
           } catch {
             // ignore
           }
-          startSequenceFromIndex(reusablePlayer, effectiveSequence, 0)
+          window.setTimeout(() => {
+            if (disposed || playerRef.current !== reusablePlayer) return
+            startSequenceFromIndex(reusablePlayer, effectiveSequence, 0)
+          }, 140)
           return
         } catch {
           try {
@@ -578,10 +583,18 @@ const MiniPlayerInner = forwardRef<
             } catch {
               // ignore
             }
+            try {
+              ;(player as LoadableYouTubePlayer).loadVideoById?.({
+                videoId: clip.videoId,
+                startSeconds: firstSegment.start,
+              })
+            } catch {
+              // ignore
+            }
             window.setTimeout(() => {
               if (disposed) return
               startSequenceFromIndex(player, effectiveSequence, 0)
-            }, 40)
+            }, 180)
           },
           onStateChange: (event) => {
             if (disposed) return

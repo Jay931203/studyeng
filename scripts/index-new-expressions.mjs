@@ -24,95 +24,6 @@ const TRANSCRIPTS_DIR = path.join(ROOT, 'public/transcripts')
 const MAX_MATCHES_PER_VIDEO = 20
 
 // ---------------------------------------------------------------------------
-// Standalone-phrase validation for multi-word expressions
-// ---------------------------------------------------------------------------
-// Words that, when appearing immediately BEFORE an expression, indicate it's
-// embedded in a larger grammatical construction rather than used as the
-// standalone expression.  E.g. "a kind of person" vs "kind of cool".
-// Only determiners/articles — these reliably turn expressions into noun phrases.
-const DISQUALIFYING_PREFIX_WORDS = new Set([
-  // articles / determiners / possessives
-  'a', 'an', 'the', 'this', 'that', 'these', 'those', 'every', 'each',
-  'some', 'any', 'another', 'my', 'your', 'his', 'her', 'its',
-  'our', 'their',
-])
-
-// Words that, when appearing immediately AFTER an expression, indicate it's
-// being used as a modifier/part of a larger phrase rather than standalone.
-// E.g. "kind of guy" vs "kind of cool"
-const DISQUALIFYING_SUFFIX_WORDS = new Set([
-  // nouns often following false-positive matches
-  // (left mostly empty — suffix is less reliable for filtering)
-])
-
-// Categories where the expression should typically appear at sentence/clause
-// boundaries (start, after comma, etc.) to count as genuine usage
-const BOUNDARY_CATEGORIES = new Set([
-  'exclamation',
-  'discourse_marker',
-])
-
-/**
- * Check if a multi-word expression match is a genuine standalone usage
- * rather than being embedded in a longer construction.
- *
- * @param {string} sentence  The full sentence text
- * @param {number} matchStart  Start index of the matched expression
- * @param {number} matchEnd  End index (exclusive) of the matched expression
- * @param {string} category  The expression category
- * @param {string} canonical  The canonical form of the expression
- * @returns {boolean}  true if the match appears to be genuine standalone usage
- */
-function isStandaloneUsage(sentence, matchStart, matchEnd, category, canonical) {
-  const before = sentence.slice(0, matchStart)
-  const after = sentence.slice(matchEnd)
-
-  // --- Boundary check for exclamations / discourse markers ---
-  // These should appear at clause boundaries: start of sentence, after
-  // comma/semicolon/dash, or at end of sentence.
-  if (BOUNDARY_CATEGORIES.has(category)) {
-    const trimmedBefore = before.trimEnd()
-    const atStart = trimmedBefore.length === 0
-    const afterPunctuation = /[,;.!?\-\u2014\u2013]$/.test(trimmedBefore)
-    const afterQuote = /['"\u2018\u2019\u201C\u201D]$/.test(trimmedBefore)
-
-    const trimmedAfter = after.trimStart()
-    const atEnd = trimmedAfter.length === 0
-    const beforePunctuation = /^[,;.!?\-\u2014\u2013]/.test(trimmedAfter)
-
-    if (!atStart && !afterPunctuation && !afterQuote && !atEnd && !beforePunctuation) {
-      return false
-    }
-  }
-
-  // --- Prefix disqualification for ALL multi-word expressions ---
-  // Extract the word immediately before the match
-  const prefixMatch = before.match(/([a-z']+)\s*$/i)
-  if (prefixMatch) {
-    const prevWord = prefixMatch[1].toLowerCase()
-    if (DISQUALIFYING_PREFIX_WORDS.has(prevWord)) {
-      // Exception: allow if the expression's canonical form itself starts
-      // with one of these words (e.g. "the thing is" starting with "the")
-      const exprFirstWord = canonical.split(/\s+/)[0].toLowerCase()
-      if (prevWord !== exprFirstWord) {
-        return false
-      }
-    }
-  }
-
-  // --- Suffix disqualification ---
-  const suffixMatch = after.match(/^\s*([a-z']+)/i)
-  if (suffixMatch) {
-    const nextWord = suffixMatch[1].toLowerCase()
-    if (DISQUALIFYING_SUFFIX_WORDS.has(nextWord)) {
-      return false
-    }
-  }
-
-  return true
-}
-
-// ---------------------------------------------------------------------------
 // Common words to reject as single-word expression matches
 // ---------------------------------------------------------------------------
 const REJECT_SINGLE_WORDS = new Set([
@@ -331,17 +242,11 @@ function shouldMatchSingleWord(exprId) {
 // Main
 // ---------------------------------------------------------------------------
 async function main() {
-  const reindex = process.argv.includes('--reindex')
-  console.log('Loading data...' + (reindex ? ' (FULL RE-INDEX MODE)' : ''))
+  console.log('Loading data...')
 
   const entries = JSON.parse(fs.readFileSync(ENTRIES_PATH, 'utf-8'))
-  let index = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf-8'))
+  const index = JSON.parse(fs.readFileSync(INDEX_PATH, 'utf-8'))
   const newIds = JSON.parse(fs.readFileSync(NEW_IDS_PATH, 'utf-8'))
-
-  // In reindex mode, clear existing entries for the target videos so they get reprocessed
-  if (reindex) {
-    for (const vid of newIds) delete index[vid]
-  }
 
   const exprList = Object.values(entries)
   console.log(`Expressions: ${exprList.length}`)
@@ -374,15 +279,7 @@ async function main() {
       if (fw.length >= 2) firstWords.add(fw)
     }
 
-    exprData.push({
-      id,
-      canonical,
-      category: expr.category || '',
-      inflections,
-      patterns,
-      firstWords,
-      isSingleWord,
-    })
+    exprData.push({ id, inflections, patterns, firstWords, isSingleWord })
   }
 
   console.log(`Expressions after filtering: ${exprData.length}`)
@@ -425,19 +322,9 @@ async function main() {
         const en = sub.en || ''
         if (en.length === 0) continue
 
-        let foundInSubtitle = false
         for (let pi = 0; pi < expr.patterns.length; pi++) {
           const match = en.match(expr.patterns[pi])
           if (match) {
-            // For multi-word expressions, validate standalone usage
-            if (!expr.isSingleWord) {
-              const matchStart = match.index
-              const matchEnd = matchStart + match[0].length
-              if (!isStandaloneUsage(en, matchStart, matchEnd, expr.category, expr.canonical)) {
-                continue // rejected — try next inflection or next subtitle
-              }
-            }
-
             matches.push({
               exprId: expr.id,
               sentenceIdx: si,
@@ -445,13 +332,12 @@ async function main() {
               ko: sub.ko || '',
               surfaceForm: match[0],
             })
-            foundInSubtitle = true
-            break // found a valid match for this expression in this subtitle
+            break // found a match for this expression in this subtitle, move on
           }
         }
 
         // Only keep first match per expression per video
-        if (foundInSubtitle) {
+        if (matches.length > 0 && matches[matches.length - 1].exprId === expr.id) {
           break
         }
       }
