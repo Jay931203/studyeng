@@ -1,6 +1,6 @@
 'use client'
 
-import type { ReactNode } from 'react'
+import { memo, type ReactNode } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
@@ -262,7 +262,7 @@ export function LandscapeFeedSwitcher() {
   )
 }
 
-export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
+function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
   const { t } = useTranslation()
   const {
     pathname,
@@ -753,3 +753,5 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     </nav>
   )
 }
+
+export const BottomNav = memo(BottomNavInner)

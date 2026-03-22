@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useDragControls, type PanInfo } from 'framer-motion'
 import {
+  memo,
   useCallback,
   useEffect,
   useMemo,
@@ -54,14 +55,37 @@ interface SequenceNavigationTarget {
   video: VideoData
 }
 
-export function VideoFeed({
+function canPreviewVideoWithoutIncrement(video: VideoData | undefined) {
+  if (!video) return false
+
+  const alreadyWatched = useWatchHistoryStore.getState().getViewCount(video.id) > 0
+  if (alreadyWatched) return true
+
+  return usePremiumStore.getState().canViewMore()
+}
+
+function resolveInitialVideoIndex(videos: VideoData[], initialVideoId?: string) {
+  if (videos.length === 0) return 0
+
+  const requestedIndex = initialVideoId
+    ? videos.findIndex((video) => video.id === initialVideoId)
+    : 0
+  const safeIndex = requestedIndex >= 0 ? requestedIndex : 0
+  if (canPreviewVideoWithoutIncrement(videos[safeIndex])) {
+    return safeIndex
+  }
+
+  const fallbackIndex = videos.findIndex((video) => canPreviewVideoWithoutIncrement(video))
+  return fallbackIndex >= 0 ? fallbackIndex : safeIndex
+}
+
+function VideoFeedInner({
   videos,
   initialVideoId,
   initialSeekTime,
   initialReviewPhraseId,
   feedMode,
 }: VideoFeedProps) {
-  void feedMode
   const router = useRouter()
   const locale = useLocaleStore((s) => s.locale)
   const {
@@ -98,13 +122,7 @@ export function VideoFeed({
     return readEmbedBlockedVideoIds()
   })
   const embedBlockedIdSet = useMemo(() => new Set(embedBlockedVideoIds), [embedBlockedVideoIds])
-  const [currentIndex, setCurrentIndex] = useState(() => {
-    if (videos.length === 0) return 0
-    const targetIndex = initialVideoId
-      ? videos.findIndex((video) => video.id === initialVideoId)
-      : 0
-    return targetIndex >= 0 ? targetIndex : 0
-  })
+  const [currentIndex, setCurrentIndex] = useState(() => resolveInitialVideoIndex(videos, initialVideoId))
   const [direction, setDirection] = useState(0)
   const [showPremiumModal, setShowPremiumModal] = useState(false)
   const [showSeriesEpisodes, setShowSeriesEpisodes] = useState(false)
@@ -143,6 +161,7 @@ export function VideoFeed({
   const recordBehaviorCompletion = useRecommendationStore((state) => state.recordCompletion)
   const recordSkip = useRecommendationStore((state) => state.recordSkip)
   const incrementDailyView = usePremiumStore((state) => state.incrementDailyView)
+  const canViewMore = usePremiumStore((state) => state.canViewMore)
   const canSaveMorePhrases = usePremiumStore((state) => state.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((state) => state.incrementSavedPhrases)
   const initTrial = usePremiumStore((state) => state.initTrial)
@@ -247,12 +266,53 @@ export function VideoFeed({
     [activeShuffleNavigation.history, embedBlockedIdSet, videos],
   )
 
-  const canOpenVideo = useCallback(
+  const buildFeedUrl = useCallback(
+    (
+      videoId?: string | null,
+      seriesId?: string | null,
+      options: { seriesPlayback?: boolean; phraseId?: string; seekTime?: number } = {},
+    ) => {
+      const base = buildShortsUrl(videoId, seriesId, { seriesPlayback: options.seriesPlayback })
+      const [pathname, queryString = ''] = base.split('?')
+      const params = new URLSearchParams(queryString)
+
+      if (feedMode === 'shorts') {
+        params.set('feed', 'shorts')
+      }
+
+      if (options.phraseId) {
+        params.set('phraseId', options.phraseId)
+      }
+
+      if (typeof options.seekTime === 'number' && Number.isFinite(options.seekTime)) {
+        params.set('t', String(options.seekTime))
+      }
+
+      const query = params.toString()
+      return query ? `${pathname}?${query}` : pathname
+    },
+    [feedMode],
+  )
+
+  const canPreviewVideo = useCallback(
     (nextVideo: VideoData | undefined) => {
       if (!nextVideo) return false
 
       const alreadyWatched = getViewCount(nextVideo.id) > 0
       if (alreadyWatched) return true
+
+      return canViewMore()
+    },
+    [canViewMore, getViewCount],
+  )
+
+  const canOpenVideo = useCallback(
+    (nextVideo: VideoData | undefined) => {
+      if (!nextVideo) return false
+
+      if (canPreviewVideo(nextVideo)) {
+        if (getViewCount(nextVideo.id) > 0) return true
+      }
 
       const allowed = incrementDailyView()
       if (!allowed) {
@@ -263,7 +323,7 @@ export function VideoFeed({
 
       return true
     },
-    [getViewCount, incrementDailyView],
+    [canPreviewVideo, getViewCount, incrementDailyView],
   )
 
   const findSeriesNavigationTarget = useCallback(
@@ -375,6 +435,7 @@ export function VideoFeed({
 
   useEffect(() => {
     if (!currentVideo) return
+    if (!canPreviewVideo(currentVideo)) return
 
     engagementRef.current = {
       finalized: false,
@@ -395,10 +456,33 @@ export function VideoFeed({
     currentVideo,
     currentVideo?.id,
     currentVideo?.seriesId,
+    canPreviewVideo,
     finalizeVideoSession,
     incrementViewCount,
     markWatched,
     registerImpression,
+  ])
+
+  useEffect(() => {
+    if (!initialVideoId || !currentVideo || currentVideo.id === initialVideoId) return
+
+    const requestedVideo = videos.find((video) => video.id === initialVideoId)
+    if (!requestedVideo || canPreviewVideo(requestedVideo)) return
+
+    router.replace(
+      buildFeedUrl(currentVideo.id, currentVideo.seriesId, {
+        seriesPlayback: playbackOrderMode === 'sequence' && Boolean(currentVideo.seriesId),
+      }),
+      { scroll: false },
+    )
+  }, [
+    buildFeedUrl,
+    canPreviewVideo,
+    currentVideo,
+    initialVideoId,
+    playbackOrderMode,
+    router,
+    videos,
   ])
 
   useEffect(() => {
@@ -482,7 +566,7 @@ export function VideoFeed({
 
     if (nextRouteVideo) {
       router.push(
-        buildShortsUrl(nextRouteVideo.id, nextRouteVideo.seriesId, { seriesPlayback: true }),
+        buildFeedUrl(nextRouteVideo.id, nextRouteVideo.seriesId, { seriesPlayback: true }),
         { scroll: false },
       )
       return true
@@ -495,6 +579,7 @@ export function VideoFeed({
     activeShuffleNavigation.history,
     activeShuffleNavigation.pointer,
     canOpenVideo,
+    buildFeedUrl,
     currentIndex,
     currentVideo,
     findPlayableHistoryEntry,
@@ -582,6 +667,10 @@ export function VideoFeed({
       }
     }
 
+    if (!canOpenVideo(previousRouteVideo ?? videos[previousPlayableIndex])) {
+      return
+    }
+
     if (currentVideo) {
       finalizeVideoSession(currentVideo.id, false)
     }
@@ -597,7 +686,7 @@ export function VideoFeed({
 
     if (previousRouteVideo) {
       router.push(
-        buildShortsUrl(previousRouteVideo.id, previousRouteVideo.seriesId, {
+        buildFeedUrl(previousRouteVideo.id, previousRouteVideo.seriesId, {
           seriesPlayback: true,
         }),
         {
@@ -612,15 +701,18 @@ export function VideoFeed({
   }, [
     activeShuffleNavigation.history,
     activeShuffleNavigation.pointer,
+    buildFeedUrl,
     currentIndex,
     currentVideo,
     findPlayableHistoryEntry,
+    canOpenVideo,
     finalizeVideoSession,
     findPlayableIndex,
     findSeriesNavigationTarget,
     playbackOrderMode,
     resetRepeatCount,
     router,
+    videos,
   ])
 
   const onToggleFreeze = useCallback(() => {
@@ -932,6 +1024,15 @@ export function VideoFeed({
                       key={episode.id}
                       onClick={() => {
                         setShowSeriesEpisodes(false)
+                        if (!canOpenVideo(episode)) {
+                          return
+                        }
+
+                        if (currentVideo) {
+                          finalizeVideoSession(currentVideo.id, false)
+                        }
+
+                        resetRepeatCount()
                         const nextIndex = videos.findIndex((video) => video.id === episode.id)
                         if (nextIndex >= 0) {
                           if (playbackOrderMode === 'shuffle') {
@@ -949,7 +1050,7 @@ export function VideoFeed({
                           setCurrentIndex(nextIndex)
                         } else {
                           router.push(
-                            buildShortsUrl(episode.id, seriesInfo.id, {
+                            buildFeedUrl(episode.id, seriesInfo.id, {
                               seriesPlayback: true,
                             }),
                             { scroll: false },
@@ -1058,3 +1159,5 @@ export function VideoFeed({
     </div>
   )
 }
+
+export const VideoFeed = memo(VideoFeedInner)

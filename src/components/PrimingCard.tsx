@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { animate, AnimatePresence, motion, useMotionValue, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
@@ -779,7 +779,7 @@ function buildMixedItems(expressions: Expression[], words: WordItem[], max: numb
   return items
 }
 
-export function PrimingCard({
+function PrimingCardInner({
   expressions,
   words,
   onDismiss,
@@ -1087,3 +1087,5 @@ export function PrimingCard({
     </AnimatePresence>
   )
 }
+
+export const PrimingCard = memo(PrimingCardInner)

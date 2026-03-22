@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { type VideoData } from '@/data/seed-videos'
@@ -13,7 +14,7 @@ interface VideoCardProps {
   onClick: () => void
 }
 
-export function VideoCard({ video, onClick }: VideoCardProps) {
+function VideoCardInner({ video, onClick }: VideoCardProps) {
   const locale = useLocaleStore((state) => state.locale)
   const categoryLabelsMap = getCategoryLabels(locale)
   const categoryLabel = categoryLabelsMap[video.category] ?? video.category
@@ -63,3 +64,5 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
     </motion.button>
   )
 }
+
+export const VideoCard = memo(VideoCardInner)
