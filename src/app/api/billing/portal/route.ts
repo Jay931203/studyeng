@@ -1,10 +1,15 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createPortalSession, getBillingServerConfig } from '@/lib/billingServer'
+import { rateLimit, getClientIp } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 
 export async function POST(request: Request) {
+  const ip = getClientIp(request)
+  if (!rateLimit(ip, 5, 60_000)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
   const config = getBillingServerConfig()
   if (!config.enabled) {
     return NextResponse.json({ error: 'billing-disabled' }, { status: 503 })

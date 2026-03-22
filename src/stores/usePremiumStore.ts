@@ -138,15 +138,15 @@ export const usePremiumStore = create<PremiumState>()(
       resetDailyCount: () => set({ dailyViewCount: 0, lastViewDate: null }),
 
       resetState: () =>
-        set({
+        set((state) => ({
           isPremium: false,
           entitlementPremium: false,
           premiumOverride: 'inherit',
           dailyViewCount: 0,
           lastViewDate: null,
           savedPhrasesUsed: 0,
-          trialEndsAt: null,
-        }),
+          trialEndsAt: state.trialEndsAt,
+        })),
 
       incrementSavedPhrases: () => {
         set((state) => ({
@@ -167,7 +167,14 @@ export const usePremiumStore = create<PremiumState>()(
         return Math.max(0, FREE_DAILY_VIEW_LIMIT - state.dailyViewCount)
       },
     }),
-    { name: 'studyeng-premium' }
+    {
+      name: 'studyeng-premium',
+      partialize: (state) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const { premiumOverride, ...rest } = state
+        return rest
+      },
+    }
   )
 )
 

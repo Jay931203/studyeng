@@ -5,10 +5,15 @@ import {
   getPaymentMethodSummary,
 } from '@/lib/billingServer'
 import { createClient } from '@/lib/supabase/server'
+import { rateLimit, getClientIp } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 
-export async function GET() {
+export async function GET(request: Request) {
+  const ip = getClientIp(request)
+  if (!rateLimit(ip, 20, 60_000)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
   const billingConfig = getBillingServerConfig()
   const supabase = await createClient()
 

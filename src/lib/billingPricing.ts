@@ -19,15 +19,15 @@ export const YEARLY_BASE_SAVINGS_PERCENT = Math.round(
 export function formatPrice(value: number, locale: SupportedLocale = 'ko'): string {
   if (locale === 'ja') {
     const jpy = Math.max(0, Math.round(value * 0.11))
-    return `¥${new Intl.NumberFormat('ja-JP').format(jpy)}`
+    return `≈¥${new Intl.NumberFormat('ja-JP').format(jpy)}`
   }
   if (locale === 'zh-TW') {
     const twd = Math.max(0, Math.round(value * 0.024))
-    return `NT$${new Intl.NumberFormat('zh-TW').format(twd)}`
+    return `≈NT$${new Intl.NumberFormat('zh-TW').format(twd)}`
   }
   if (locale === 'vi') {
     const vnd = Math.max(0, Math.round(value * 18.5))
-    return `${new Intl.NumberFormat('vi-VN').format(vnd)}\u20AB`
+    return `≈${new Intl.NumberFormat('vi-VN').format(vnd)}\u20AB`
   }
   return `${new Intl.NumberFormat('ko-KR').format(Math.max(0, Math.round(value)))}원`
 }

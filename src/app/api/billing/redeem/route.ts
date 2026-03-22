@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
+import { rateLimit, getClientIp } from '@/lib/rateLimit'
 
 interface PremiumCodeRow {
   id: string
@@ -16,6 +17,11 @@ interface PremiumCodeRow {
 export const runtime = 'nodejs'
 
 export async function POST(request: Request) {
+  const ip = getClientIp(request)
+  if (!rateLimit(ip, 3, 60_000)) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
   const supabase = await createClient()
   if (!supabase) {
     return NextResponse.json({ error: 'auth-unavailable' }, { status: 503 })
