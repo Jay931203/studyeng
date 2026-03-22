@@ -1,5 +1,3 @@
-import expressionEntriesData from '@/data/expression-entries-v2.json'
-import expressionIndexData from '@/data/expression-index-v2.json'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { getLocalizedMeaning } from '@/lib/localeUtils'
@@ -40,8 +38,31 @@ export interface ChallengeCard {
 // Data
 // ---------------------------------------------------------------------------
 
-const entries = expressionEntriesData as Record<string, ExpressionEntry>
-const index = expressionIndexData as Record<string, IndexMatch[]>
+// Lazily-populated data references
+let entries: Record<string, ExpressionEntry> = {}
+let index: Record<string, IndexMatch[]> = {}
+let _challengeDataLoaded = false
+let _challengeDataPromise: Promise<void> | null = null
+
+function loadChallengeData(): Promise<void> {
+  if (_challengeDataLoaded) return Promise.resolve()
+  if (_challengeDataPromise) return _challengeDataPromise
+  _challengeDataPromise = Promise.all([
+    import('@/data/expression-entries-v2.json'),
+    import('@/data/expression-index-v2.json'),
+  ]).then(([ent, idx]) => {
+    entries = ent.default as Record<string, ExpressionEntry>
+    index = idx.default as Record<string, IndexMatch[]>
+    _challengeDataLoaded = true
+    _contextCache = null // Reset cache
+  })
+  return _challengeDataPromise
+}
+
+// Kick off loading immediately
+if (typeof window !== 'undefined') {
+  loadChallengeData()
+}
 
 const CHALLENGE_CARD_COUNT = 20
 const MAX_CATEGORY_RATIO = 0.3

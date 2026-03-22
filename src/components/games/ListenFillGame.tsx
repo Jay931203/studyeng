@@ -2,10 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import expressionEntries from '@/data/expression-entries-v2.json'
-import expressionIndex from '@/data/expression-index-v2.json'
-import wordEntriesData from '@/data/word-entries.json'
-import wordIndexData from '@/data/word-index.json'
+// Large JSON data loaded lazily to avoid bloating the initial bundle
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore } from '@/stores/useLevelStore'
@@ -150,10 +147,31 @@ function getLfT(locale: SupportedLocale) {
 
 const QUESTIONS_PER_ROUND = 8
 
-const entries = expressionEntries as Record<string, ExpressionEntry>
-const index = expressionIndex as Record<string, IndexMatch[]>
-const wordEntries = wordEntriesData as Record<string, WordEntry>
-const wordIndex = wordIndexData as Record<string, WordIndexMatch[]>
+// Lazily-populated data references (set via loadGameData())
+let entries: Record<string, ExpressionEntry> = {}
+let index: Record<string, IndexMatch[]> = {}
+let wordEntries: Record<string, WordEntry> = {}
+let wordIndex: Record<string, WordIndexMatch[]> = {}
+let _gameDataLoaded = false
+let _gameDataPromise: Promise<void> | null = null
+
+function loadGameData(): Promise<void> {
+  if (_gameDataLoaded) return Promise.resolve()
+  if (_gameDataPromise) return _gameDataPromise
+  _gameDataPromise = Promise.all([
+    import('@/data/expression-entries-v2.json'),
+    import('@/data/expression-index-v2.json'),
+    import('@/data/word-entries.json'),
+    import('@/data/word-index.json'),
+  ]).then(([ee, ei, we, wi]) => {
+    entries = ee.default as Record<string, ExpressionEntry>
+    index = ei.default as Record<string, IndexMatch[]>
+    wordEntries = we.default as Record<string, WordEntry>
+    wordIndex = wi.default as Record<string, WordIndexMatch[]>
+    _gameDataLoaded = true
+  })
+  return _gameDataPromise
+}
 
 const CATEGORY_LABELS: Record<string, string> = {
   idiom: 'idiom',
@@ -755,12 +773,25 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   const recalculateScore = useLevelStore((s) => s.recalculateScore)
   const checkLevelUp = useLevelStore((s) => s.checkLevelUp)
 
+  // Lazy-load game data
+  const [dataLoaded, setDataLoaded] = useState(_gameDataLoaded)
+  const [questions, setQuestions] = useState<QuestionData[]>(() => _gameDataLoaded ? selectQuestions(level, locale) : [])
+  const questionsInitialized = useRef(_gameDataLoaded)
+  useEffect(() => {
+    if (!questionsInitialized.current) {
+      loadGameData().then(() => {
+        setDataLoaded(true)
+        setQuestions(selectQuestions(level, locale))
+        questionsInitialized.current = true
+      })
+    }
+  }, [level, locale])
+
   // YouTube player
   const playerContainerRef = useRef<HTMLDivElement | null>(null)
   const { ready: ytReady, failed: ytFailed, playSegment } = useYouTubePlayer(playerContainerRef)
 
   // Game state
-  const [questions] = useState<QuestionData[]>(() => selectQuestions(level, locale))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
   const [sessionXPAwarded, setSessionXPAwarded] = useState(0)
@@ -1075,6 +1106,14 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   // ---------------------------------------------------------------------------
   // No questions available
   // ---------------------------------------------------------------------------
+
+  if (!dataLoaded) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent" style={{ color: 'var(--text-muted)' }} />
+      </div>
+    )
+  }
 
   if (!currentQ) {
     return (

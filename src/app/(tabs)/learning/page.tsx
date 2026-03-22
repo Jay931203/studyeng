@@ -19,7 +19,7 @@ import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
-import { CEFR_ORDER, LEVEL_LABELS } from '@/types/level'
+import { CEFR_ORDER, getLevelLabel } from '@/types/level'
 
 const TRANSLATIONS = {
   ko: {
@@ -91,7 +91,7 @@ export default function LearningPage() {
 
   const levelIdx = CEFR_ORDER.indexOf(level)
   const nextLevel = levelIdx < CEFR_ORDER.length - 1 ? CEFR_ORDER[levelIdx + 1] : null
-  const nextLevelLabel = nextLevel ? LEVEL_LABELS[nextLevel] : null
+  const nextLevelLabel = nextLevel ? getLevelLabel(nextLevel, locale) : null
   const likedVideos = useMemo(
     () =>
       Object.keys(likes)
@@ -121,7 +121,7 @@ export default function LearningPage() {
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
             <OverviewStatCard
               label={T.level}
-              value={LEVEL_LABELS[level]}
+              value={getLevelLabel(level, locale)}
               detail={nextLevelLabel ? T.nextLevel(nextLevelLabel) : T.maxLevel}
               accent
             />

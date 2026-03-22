@@ -1,11 +1,9 @@
 'use client'
 
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import expressionEntries from '@/data/expression-entries-v2.json'
-import expressionIndex from '@/data/expression-index-v2.json'
-import wordEntriesData from '@/data/word-entries.json'
-import wordIndexData from '@/data/word-index.json'
+// Large JSON data loaded lazily to avoid bloating the initial bundle
+// (expression-entries-v2: ~1MB, expression-index-v2: ~1MB, word-entries: ~1.8MB, word-index: ~16MB)
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore } from '@/stores/useLevelStore'
@@ -130,10 +128,35 @@ type GamePhase = 'playing' | 'result'
 const CARDS_PER_ROUND = 10
 const ANSWER_REVEAL_MS = 700
 
-const entries = expressionEntries as Record<string, ExpressionEntry>
-const index = expressionIndex as Record<string, IndexMatch[]>
-const wordEntries = wordEntriesData as Record<string, WordEntry>
-const wordIndex = wordIndexData as Record<string, WordIndexMatch[]>
+// Lazily-populated data references (set via loadGameData())
+let entries: Record<string, ExpressionEntry> = {}
+let index: Record<string, IndexMatch[]> = {}
+let wordEntries: Record<string, WordEntry> = {}
+let wordIndex: Record<string, WordIndexMatch[]> = {}
+let _gameDataLoaded = false
+let _gameDataPromise: Promise<void> | null = null
+
+function loadGameData(): Promise<void> {
+  if (_gameDataLoaded) return Promise.resolve()
+  if (_gameDataPromise) return _gameDataPromise
+  _gameDataPromise = Promise.all([
+    import('@/data/expression-entries-v2.json'),
+    import('@/data/expression-index-v2.json'),
+    import('@/data/word-entries.json'),
+    import('@/data/word-index.json'),
+  ]).then(([ee, ei, we, wi]) => {
+    entries = ee.default as Record<string, ExpressionEntry>
+    index = ei.default as Record<string, IndexMatch[]>
+    wordEntries = we.default as Record<string, WordEntry>
+    wordIndex = wi.default as Record<string, WordIndexMatch[]>
+    _gameDataLoaded = true
+    // Reset caches since data just loaded
+    expressionContextCache = null
+    wordContextCache = null
+    Object.keys(meaningCandidateCache).forEach(k => delete meaningCandidateCache[k])
+  })
+  return _gameDataPromise
+}
 
 // CEFR pools: user level +/- 1
 const CEFR_POOLS: Record<string, { primary: string[]; secondary: string[] }> = {
@@ -656,7 +679,19 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const recalculateScore = useLevelStore((state) => state.recalculateScore)
   const checkLevelUp = useLevelStore((state) => state.checkLevelUp)
 
-  const [cards] = useState<CardData[]>(() => selectCards(level, locale))
+  // Lazy-load game data
+  const [dataLoaded, setDataLoaded] = useState(_gameDataLoaded)
+  const [cards, setCards] = useState<CardData[]>(() => _gameDataLoaded ? selectCards(level, locale) : [])
+  const cardsInitialized = useRef(_gameDataLoaded)
+  useEffect(() => {
+    if (!cardsInitialized.current) {
+      loadGameData().then(() => {
+        setDataLoaded(true)
+        setCards(selectCards(level, locale))
+        cardsInitialized.current = true
+      })
+    }
+  }, [level, locale])
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
   const [streak, setStreak] = useState(0)
@@ -948,6 +983,14 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
           </button>
         </div>
       </motion.div>
+    )
+  }
+
+  if (!dataLoaded) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-current border-t-transparent" style={{ color: 'var(--text-muted)' }} />
+      </div>
     )
   }
 

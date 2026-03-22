@@ -10,6 +10,7 @@ import {
   type SupportThreadRecord,
   type SupportThreadStatus,
 } from '@/lib/supportChat'
+import { rateLimit, getRateLimitHeaders, getClientIp } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 export const maxDuration = 30
@@ -210,6 +211,15 @@ async function loadThreadById(
 }
 
 export async function GET(request: Request) {
+  // Rate limit: 20 requests per minute per IP (reads are lighter)
+  const getIp = getClientIp(request)
+  if (!rateLimit(getIp, 20, 60_000)) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429, headers: getRateLimitHeaders(getIp, 20) }
+    )
+  }
+
   const supabase = await createClient()
   if (!supabase) {
     return NextResponse.json({ error: 'Support chat is unavailable' }, { status: 503 })
@@ -276,6 +286,15 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  // Rate limit: 5 requests per minute per IP (writes are heavier)
+  const postIp = getClientIp(request)
+  if (!rateLimit(postIp, 5, 60_000)) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429, headers: getRateLimitHeaders(postIp, 5) }
+    )
+  }
+
   const supabase = await createClient()
   if (!supabase) {
     return NextResponse.json({ error: 'Support chat is unavailable' }, { status: 503 })

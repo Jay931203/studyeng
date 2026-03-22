@@ -19,6 +19,7 @@ import {
   buildClassExpressionClips,
   type ExpressionWithClips,
 } from '@/lib/classExpressionClips'
+import { getLocalizedMeaning, getLocalizedClassTitle } from '@/lib/localeUtils'
 
 type ExpressionClass = (typeof expressionClasses)[number]
 
@@ -53,6 +54,9 @@ const TRANSLATIONS: Record<SupportedLocale, {
   clipHint: string
   shownClipCount: (shown: number, total: number) => string
   noClips: string
+  freeStartHint: string
+  freeActiveHint: string
+  freeLockedHint: string
 }> = {
   ko: {
     catFunction: '기능',
@@ -85,6 +89,9 @@ const TRANSLATIONS: Record<SupportedLocale, {
     clipHint: '클립을 누르면 해당 구간이 바로 재생됩니다.',
     shownClipCount: (shown, total) => `${shown} / ${total}개 클립`,
     noClips: '이 클래스에 연결된 클립이 아직 없습니다.',
+    freeStartHint: '이 클래스를 시작하면 오늘의 Learn 세션으로 고정됩니다.',
+    freeActiveHint: '오늘 활성화한 Learn 클래스입니다. 순서대로 이어보세요.',
+    freeLockedHint: '오늘은 다른 Learn 클래스를 이미 시작했습니다. Premium으로 전체 Learn을 열 수 있습니다.',
   },
   ja: {
     catFunction: '機能',
@@ -117,6 +124,9 @@ const TRANSLATIONS: Record<SupportedLocale, {
     clipHint: 'クリップをタップすると該当区間が再生されます。',
     shownClipCount: (shown, total) => `${shown} / ${total} 件のクリップ`,
     noClips: 'このクラスにはまだクリップがありません。',
+    freeStartHint: 'このクラスを開始すると、本日のLearnセッションとして固定されます。',
+    freeActiveHint: '本日有効化したLearnクラスです。順番に学習しましょう。',
+    freeLockedHint: '本日は別のLearnクラスを既に開始しています。Premiumで全てのLearnを開放できます。',
   },
   'zh-TW': {
     catFunction: '功能',
@@ -149,6 +159,9 @@ const TRANSLATIONS: Record<SupportedLocale, {
     clipHint: '點擊片段即可播放對應段落。',
     shownClipCount: (shown, total) => `${shown} / ${total} 個片段`,
     noClips: '此課程尚無片段。',
+    freeStartHint: '開始此課程後，將成為今天的 Learn 課程。',
+    freeActiveHint: '今天已啟用的 Learn 課程，請按順序繼續學習。',
+    freeLockedHint: '今天已開始其他 Learn 課程。升級 Premium 可開放所有課程。',
   },
   vi: {
     catFunction: 'Chức năng',
@@ -181,6 +194,9 @@ const TRANSLATIONS: Record<SupportedLocale, {
     clipHint: 'Nhấn clip để phát đoạn tương ứng.',
     shownClipCount: (shown, total) => `${shown} / ${total} clip`,
     noClips: 'Lớp này chưa có clip nào.',
+    freeStartHint: 'Bat dau lop nay se co dinh thanh phien Learn hom nay.',
+    freeActiveHint: 'Lop Learn da kich hoat hom nay. Hay hoc theo thu tu.',
+    freeLockedHint: 'Hom nay ban da bat dau lop Learn khac. Nang cap Premium de mo khoa tat ca.',
   },
 }
 
@@ -387,6 +403,7 @@ function ExpressionSection({
   const currentClip = useReplayStore((s) => s.clip)
   const isFamiliar = useFamiliarityStore((s) => s.isFamiliar)
   const getFamiliarCount = useFamiliarityStore((s) => s.getFamiliarCount)
+  const locale = useLocaleStore((s) => s.locale)
 
   const { entry, clips } = data
   const cefrStyle = getCefrBadgeStyle(entry.cefr)
@@ -397,8 +414,8 @@ function ExpressionSection({
   const handlePlayClip = useCallback(
     (clip: (typeof clips)[number]) => {
       const key = `${clip.youtubeId}:${clip.sentenceIdx}:${entry.canonical}`
-      const queueIndex = queueIndexByKey.get(key) ?? 0
-      if (!isQueueIndexPlayable(queueIndex)) {
+      const queueIndex = queueIndexByKey.get(key)
+      if (queueIndex === undefined || !isQueueIndexPlayable(queueIndex)) {
         onLockedAttempt(false)
         return
       }
@@ -474,7 +491,7 @@ function ExpressionSection({
           {entry.canonical}
         </h3>
         <p className="mt-1 text-xs text-[var(--text-secondary)]">
-          {entry.meaning_ko}
+          {getLocalizedMeaning(entry as { meaning_ko?: string; meaning_ja?: string; meaning_zhTW?: string; meaning_vi?: string }, locale)}
         </p>
 
         <div className="mt-3 flex flex-wrap items-center gap-1.5">
@@ -518,8 +535,8 @@ function ExpressionSection({
             >
               {(() => {
                 const queueKey = `${clip.youtubeId}:${clip.sentenceIdx}:${entry.canonical}`
-                const queueIndex = queueIndexByKey.get(queueKey) ?? 0
-                const disabled = !isQueueIndexPlayable(queueIndex)
+                const queueIndex = queueIndexByKey.get(queueKey)
+                const disabled = queueIndex === undefined || !isQueueIndexPlayable(queueIndex)
 
                 return (
               <ClipCard
@@ -565,13 +582,19 @@ export default function ClassDetailPage() {
     [classId],
   )
 
-  const expressionData = useMemo<(ExpressionWithClips & { totalClipCount: number })[]>(() => {
-    if (!cls) return []
-    return buildClassExpressionClips(cls.expressions, cls.videoIds).map((section) => ({
-      ...section,
-      totalClipCount: section.clips.length,
-      clips: pickRepresentativeClips(section.clips, MAX_CLIPS_PER_EXPRESSION),
-    }))
+  const [expressionData, setExpressionData] = useState<(ExpressionWithClips & { totalClipCount: number })[]>([])
+  useEffect(() => {
+    if (!cls) return
+    let cancelled = false
+    buildClassExpressionClips(cls.expressions, cls.videoIds).then((sections) => {
+      if (cancelled) return
+      setExpressionData(sections.map((section) => ({
+        ...section,
+        totalClipCount: section.clips.length,
+        clips: pickRepresentativeClips(section.clips, MAX_CLIPS_PER_EXPRESSION),
+      })))
+    })
+    return () => { cancelled = true }
   }, [cls])
 
   const replayQueue = useMemo<ReplayClip[]>(
@@ -603,14 +626,18 @@ export default function ClassDetailPage() {
   const unlockedIndex = isPremium
     ? Math.max(0, replayQueue.length - 1)
     : Math.min((savedProgress?.lastIndex ?? -1) + 1, Math.max(0, replayQueue.length - 1))
+  const playableReplayQueue = useMemo(
+    () => (isPremium ? replayQueue : replayQueue.slice(0, unlockedIndex + 1)),
+    [isPremium, replayQueue, unlockedIndex],
+  )
 
   const queueIndexByKey = useMemo(() => {
     const map = new Map<string, number>()
-    replayQueue.forEach((clip, index) => {
+    playableReplayQueue.forEach((clip, index) => {
       map.set(`${clip.videoId}:${clip.sentenceIdx ?? -1}:${clip.expressionText ?? ''}`, index)
     })
     return map
-  }, [replayQueue])
+  }, [playableReplayQueue])
 
   const isQueueIndexPlayable = useCallback(
     (index: number) => {
@@ -623,7 +650,7 @@ export default function ClassDetailPage() {
 
   const beginLearnPlayback = useCallback(
     (startIndex: number) => {
-      if (replayQueue.length === 0) return
+      if (playableReplayQueue.length === 0) return
 
       if (!canUseClassToday) {
         setShowPremiumModal(true)
@@ -634,8 +661,8 @@ export default function ClassDetailPage() {
         activateClassForToday(classId)
       }
 
-      const safeStartIndex = isPremium ? startIndex : Math.min(startIndex, unlockedIndex)
-      playQueue(replayQueue, safeStartIndex)
+      const safeStartIndex = Math.max(0, Math.min(startIndex, playableReplayQueue.length - 1))
+      playQueue(playableReplayQueue, safeStartIndex)
     },
     [
       activateClassForToday,
@@ -643,8 +670,7 @@ export default function ClassDetailPage() {
       classId,
       isPremium,
       playQueue,
-      replayQueue,
-      unlockedIndex,
+      playableReplayQueue,
     ],
   )
 
@@ -693,7 +719,7 @@ export default function ClassDetailPage() {
     )
   }
 
-  if (false) {
+  if (isLevelMismatch) {
     return (
       <AppPage>
         <div className="mb-6 flex items-center gap-3">
@@ -791,7 +817,7 @@ export default function ClassDetailPage() {
           )}
         </div>
 
-        <h1 className="text-lg font-bold text-[var(--text-primary)]">{cls.titleKo}</h1>
+        <h1 className="text-lg font-bold text-[var(--text-primary)]">{getLocalizedClassTitle(cls as Parameters<typeof getLocalizedClassTitle>[0], locale)}</h1>
         <p className="mt-1 text-xs text-[var(--text-muted)]">{cls.title}</p>
         <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px] text-[var(--text-muted)]">
           <span>{tx.expressionCount(expressionData.length)}</span>
@@ -812,9 +838,9 @@ export default function ClassDetailPage() {
           <div className="mt-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-3 py-2 text-[11px] leading-relaxed text-[var(--text-secondary)]">
             {canUseClassToday
               ? hasSessionRemaining
-                ? '\uC774 \uD074\uB798\uC2A4\uB97C \uC2DC\uC791\uD558\uBA74 \uC624\uB298\uC758 Learn \uC138\uC158\uC73C\uB85C \uACE0\uC815\uB429\uB2C8\uB2E4.'
-                : '\uC624\uB298 \uD65C\uC131\uD654\uD55C Learn \uD074\uB798\uC2A4\uC785\uB2C8\uB2E4. \uC21C\uC11C\uB300\uB85C \uC774\uC5B4\uBCF4\uC138\uC694.'
-              : '\uC624\uB298\uC740 \uB2E4\uB978 Learn \uD074\uB798\uC2A4\uB97C \uC774\uBBF8 \uC2DC\uC791\uD588\uC2B5\uB2C8\uB2E4. Premium\uC73C\uB85C \uC804\uCCB4 Learn\uC744 \uC5F4 \uC218 \uC788\uC2B5\uB2C8\uB2E4.'}
+                ? tx.freeStartHint
+                : tx.freeActiveHint
+              : tx.freeLockedHint}
           </div>
         ) : null}
       </div>
@@ -825,7 +851,7 @@ export default function ClassDetailPage() {
           data={data}
           index={index}
           total={expressionData.length}
-          replayQueue={replayQueue}
+          replayQueue={playableReplayQueue}
           queueIndexByKey={queueIndexByKey}
           isQueueIndexPlayable={isQueueIndexPlayable}
           onLockedAttempt={() => handleLockedAttempt(!canUseClassToday)}

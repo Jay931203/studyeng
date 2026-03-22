@@ -5,10 +5,20 @@ import {
   createCheckoutSession,
   getBillingServerConfig,
 } from '@/lib/billingServer'
+import { rateLimit, getRateLimitHeaders, getClientIp } from '@/lib/rateLimit'
 
 export const runtime = 'nodejs'
 
 export async function POST(request: Request) {
+  // Rate limit: 5 requests per minute per IP
+  const ip = getClientIp(request)
+  if (!rateLimit(ip, 5, 60_000)) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429, headers: getRateLimitHeaders(ip, 5) }
+    )
+  }
+
   const config = getBillingServerConfig()
   if (!config.enabled) {
     return NextResponse.json({ error: 'billing-disabled' }, { status: 503 })

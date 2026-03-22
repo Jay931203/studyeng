@@ -12,26 +12,36 @@ import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { getLocalizedSubtitle, getLocalizedMeaning } from '@/lib/localeUtils'
 import { SaveToast } from './SaveToast'
 import type { SubtitleEntry } from '@/data/seed-videos'
-import expressionIndexData from '@/data/expression-index-v3.json'
-import expressionEntriesData from '@/data/expression-entries-v2.json'
 import { CEFR_ORDER } from '@/types/level'
 import type { CefrLevel } from '@/types/level'
 
-const expressionIndex = expressionIndexData as Record<string, Array<{
-  exprId: string
-  sentenceIdx: number
-  en: string
-  ko: string
-  surfaceForm: string
-}>>
+// Lazy-loaded expression data
+type ExprIndexRow = { exprId: string; sentenceIdx: number; en: string; ko: string; surfaceForm: string }
+type ExprEntryRow = { canonical: string; meaning_ko: string; category: string; cefr: string; [key: string]: unknown }
 
-const expressionEntries = expressionEntriesData as Record<string, {
-  canonical: string
-  meaning_ko: string
-  category: string
-  cefr: string
-  [key: string]: unknown
-}>
+let expressionIndex: Record<string, ExprIndexRow[]> = {}
+let expressionEntries: Record<string, ExprEntryRow> = {}
+let _lyricsDataLoaded = false
+let _lyricsDataPromise: Promise<void> | null = null
+
+function loadLyricsExpressionData(): Promise<void> {
+  if (_lyricsDataLoaded) return Promise.resolve()
+  if (_lyricsDataPromise) return _lyricsDataPromise
+  _lyricsDataPromise = Promise.all([
+    import('@/data/expression-index-v3.json'),
+    import('@/data/expression-entries-v2.json'),
+  ]).then(([idx, ent]) => {
+    expressionIndex = idx.default as Record<string, ExprIndexRow[]>
+    expressionEntries = ent.default as Record<string, ExprEntryRow>
+    _lyricsDataLoaded = true
+  })
+  return _lyricsDataPromise
+}
+
+// Kick off loading immediately (non-blocking)
+if (typeof window !== 'undefined') {
+  loadLyricsExpressionData()
+}
 
 /** Check if an expression's CEFR level matches the user's level (within 1 step) */
 function isAtUserLevel(exprCefr: string, userLevel: CefrLevel): boolean {

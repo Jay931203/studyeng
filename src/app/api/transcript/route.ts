@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { YoutubeTranscript } from 'youtube-transcript'
 import Anthropic from '@anthropic-ai/sdk'
+import { rateLimit, getRateLimitHeaders, getClientIp } from '@/lib/rateLimit'
 
 const YOUTUBE_ID_PATTERN = /^[A-Za-z0-9_-]{11}$/
 const TRANSCRIPT_FETCH_TIMEOUT_MS = 8000
@@ -247,6 +248,15 @@ async function translateSubtitles(
 }
 
 export async function GET(request: NextRequest) {
+  // Rate limit: 10 requests per minute per IP
+  const ip = getClientIp(request)
+  if (!rateLimit(ip, 10, 60_000)) {
+    return NextResponse.json(
+      { error: 'Too many requests. Please try again later.' },
+      { status: 429, headers: getRateLimitHeaders(ip, 10) }
+    )
+  }
+
   const videoId = request.nextUrl.searchParams.get('v')
 
   if (!videoId) {

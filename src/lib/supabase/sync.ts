@@ -6,6 +6,7 @@ import { useUserStore } from '@/stores/useUserStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { seedVideos } from '@/data/seed-videos'
+import { mergeStreakStateSnapshots } from '@/lib/gamification'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 
 const supabase = createClient()
@@ -286,13 +287,22 @@ async function pullProfile(userId: string) {
   const userState = useUserStore.getState()
   const serverLevel = data.level ?? 1
   const serverXp = data.xp ?? 0
-  const serverStreak = data.streak_days ?? 0
+  const mergedStreakState = mergeStreakStateSnapshots(
+    {
+      streakDays: userState.streakDays,
+      lastActivityDate: userState.lastActivityDate,
+    },
+    {
+      streakDays: data.streak_days ?? 0,
+      lastActivityDate: data.last_activity_date || null,
+    }
+  )
 
   useUserStore.setState({
     level: Math.max(userState.level, serverLevel),
     xp: Math.max(userState.xp, serverXp),
-    streakDays: Math.max(userState.streakDays, serverStreak),
-    lastActivityDate: data.last_activity_date || userState.lastActivityDate,
+    streakDays: mergedStreakState.streakDays,
+    lastActivityDate: mergedStreakState.lastActivityDate,
   })
 
   // Onboarding: server wins if completed

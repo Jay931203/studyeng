@@ -11,8 +11,8 @@ const siteUrl =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : 'https://studyeng-nine.vercel.app')
 
-const appTitle = 'Shortee - 보다 보면 귀가 먼저 영어를 익히게 됩니다'
-const appDescription = '짧은 장면과 반복 복습으로 영어가 자연스럽게 쌓이는 숏폼 학습 앱'
+const appTitle = 'Shortee - Learn English with Shorts'
+const appDescription = 'Pick up English naturally through short clips and review games'
 
 const uiFont = Noto_Sans_KR({
   variable: '--font-ui',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: appTitle,
     description: appDescription,
     type: 'website',
-    locale: 'ko_KR',
+    locale: 'en_US',
     siteName: 'Shortee',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Shortee - Learn English with Shorts' }],
   },
@@ -73,7 +73,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="ko"
+      lang="en"
       className={`${uiFont.variable} ${displayFont.variable} dark`}
       data-theme="teal-dark"
       suppressHydrationWarning

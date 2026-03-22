@@ -2,14 +2,13 @@
  * expressionLookup.ts
  *
  * Efficient lookup of expressions from the pre-built expression index.
+ * Uses lazy loading to avoid bundling large JSON files into the initial bundle.
  *
  * Data files (v2):
  *   - expression-entries-v2.json  (~1MB) – expression metadata keyed by id
- *   - expression-index-v2.json   (~14MB) – videoId -> [{exprId, sentenceIdx, en, ko}]
+ *   - expression-index-v2.json   (~1MB) – videoId -> [{exprId, sentenceIdx, en, ko}]
  */
 
-import expressionEntriesData from "../data/expression-entries-v2.json";
-import expressionIndexData from "../data/expression-index-v2.json";
 import type { CefrLevel } from "@/types/level";
 import { CEFR_ORDER } from "@/types/level";
 
@@ -43,11 +42,40 @@ interface IndexRow {
 }
 
 // ---------------------------------------------------------------------------
-// Internal data (typed once at module level)
+// Lazy-loaded data
 // ---------------------------------------------------------------------------
 
-const entries = expressionEntriesData as Record<string, ExpressionEntry>;
-const videoIndex = expressionIndexData as Record<string, IndexRow[]>;
+let _entries: Record<string, ExpressionEntry> | null = null;
+let _videoIndex: Record<string, IndexRow[]> | null = null;
+let _entriesPromise: Promise<Record<string, ExpressionEntry>> | null = null;
+let _videoIndexPromise: Promise<Record<string, IndexRow[]>> | null = null;
+
+async function loadEntries(): Promise<Record<string, ExpressionEntry>> {
+  if (_entries) return _entries;
+  if (!_entriesPromise) {
+    _entriesPromise = import("../data/expression-entries-v2.json").then((m) => {
+      _entries = m.default as Record<string, ExpressionEntry>;
+      return _entries;
+    });
+  }
+  return _entriesPromise;
+}
+
+async function loadVideoIndex(): Promise<Record<string, IndexRow[]>> {
+  if (_videoIndex) return _videoIndex;
+  if (!_videoIndexPromise) {
+    _videoIndexPromise = import("../data/expression-index-v2.json").then((m) => {
+      _videoIndex = m.default as Record<string, IndexRow[]>;
+      return _videoIndex;
+    });
+  }
+  return _videoIndexPromise;
+}
+
+/** Preload both data files. */
+export async function preloadExpressionData(): Promise<void> {
+  await Promise.all([loadEntries(), loadVideoIndex()]);
+}
 
 // ---------------------------------------------------------------------------
 // CEFR helpers
@@ -108,16 +136,14 @@ function sortKey(entry: ExpressionEntry): number {
 }
 
 // ---------------------------------------------------------------------------
-// Public API
+// Internal sync helpers
 // ---------------------------------------------------------------------------
 
-/**
- * Get all expressions that appear in a specific video.
- *
- * Results are sorted by learner_value (essential first), then by category
- * priority, then by sentenceIdx for stable ordering.
- */
-export function getExpressionsForVideo(videoId: string): VideoExpression[] {
+function _getExpressionsForVideoSync(
+  entries: Record<string, ExpressionEntry>,
+  videoIndex: Record<string, IndexRow[]>,
+  videoId: string,
+): VideoExpression[] {
   const rows = videoIndex[videoId];
   if (!rows || rows.length === 0) return [];
 
@@ -146,19 +172,35 @@ export function getExpressionsForVideo(videoId: string): VideoExpression[] {
   return results;
 }
 
+// ---------------------------------------------------------------------------
+// Public API (async)
+// ---------------------------------------------------------------------------
+
+/**
+ * Get all expressions that appear in a specific video.
+ */
+export async function getExpressionsForVideo(videoId: string): Promise<VideoExpression[]> {
+  const [entries, videoIndex] = await Promise.all([loadEntries(), loadVideoIndex()]);
+  return _getExpressionsForVideoSync(entries, videoIndex, videoId);
+}
+
+/**
+ * Synchronous version — returns [] if data not loaded yet.
+ */
+export function getExpressionsForVideoSync(videoId: string): VideoExpression[] {
+  if (!_entries || !_videoIndex) return [];
+  return _getExpressionsForVideoSync(_entries, _videoIndex, videoId);
+}
+
 /**
  * Get all expressions for a video filtered by CEFR level range.
- *
- * @param videoId   YouTube video ID
- * @param minLevel  Minimum CEFR level (inclusive), e.g. "A1"
- * @param maxLevel  Maximum CEFR level (inclusive), e.g. "B2"
  */
-export function getExpressionsByLevel(
+export async function getExpressionsByLevel(
   videoId: string,
   minLevel: string = "A1",
   maxLevel: string = "C2",
-): VideoExpression[] {
-  const all = getExpressionsForVideo(videoId);
+): Promise<VideoExpression[]> {
+  const all = await getExpressionsForVideo(videoId);
   const minOrder = CEFR_ORDER_MAP[minLevel.toUpperCase()] ?? 0;
   const maxOrder = CEFR_ORDER_MAP[maxLevel.toUpperCase()] ?? 5;
 
@@ -169,27 +211,15 @@ export function getExpressionsByLevel(
 }
 
 /**
- * Get the top N "priming" expressions for a video — the best ones for a
- * preview card or pre-lesson primer.
- *
- * Priority:
- *   1. essential > useful > enrichment
- *   2. idiom > phrasal_verb > collocation > fixed_expression > rest
- *
- * Deduplication: when multiple expressions share the same sentence (same
- * sentenceIdx), only the highest-priority expression is kept.
- *
- * @param videoId  YouTube video ID
- * @param count    Maximum number of expressions to return (default 3)
+ * Get the top N "priming" expressions for a video.
  */
-export function getPrimingExpressions(
+export async function getPrimingExpressions(
   videoId: string,
   count: number = 3,
-): VideoExpression[] {
-  const all = getExpressionsForVideo(videoId);
+): Promise<VideoExpression[]> {
+  const all = await getExpressionsForVideo(videoId);
   if (all.length === 0) return [];
 
-  // Deduplicate by sentenceIdx: keep the best expression per sentence
   const bestBySentence = new Map<number, VideoExpression>();
 
   for (const ve of all) {
@@ -207,7 +237,6 @@ export function getPrimingExpressions(
     return a.sentence.sentenceIdx - b.sentence.sentenceIdx;
   });
 
-  // Deduplicate by expression id: same expression in different sentences → keep first
   const seenExprIds = new Set<string>();
   const unique: VideoExpression[] = [];
   for (const ve of deduped) {
@@ -225,29 +254,14 @@ export function getPrimingExpressions(
 
 /**
  * Smart priming that considers user level and familiarity.
- *
- * Expressions are scored (lower = higher priority):
- *   - Level match bonus:   -200 if expression CEFR falls within user's range (level +/- 1)
- *   - learner_value:       essential=0, useful=100, enrichment=200
- *   - category:            idiom=0 ... filler=8
- *   - Familiarity penalty: count >= 3 -> +1000, count 1-2 -> +300
- *   - Hard floor penalty:  CEFR distance >= 2 -> +500
- *
- * Deduplication: one expression per sentence (best score wins), then one
- * occurrence per expression id (first wins).
- *
- * @param videoId        YouTube video ID
- * @param userLevel      CefrLevel (A1-C2)
- * @param familiarExprs  Record<exprId, { count: number }> from familiarity store
- * @param count          Max expressions to return (default 3)
  */
-export function getSmartPrimingExpressions(
+export async function getSmartPrimingExpressions(
   videoId: string,
   userLevel: CefrLevel,
   familiarExprs: Record<string, { count: number }>,
   count: number = 3,
-): VideoExpression[] {
-  const all = getExpressionsForVideo(videoId);
+): Promise<VideoExpression[]> {
+  const all = await getExpressionsForVideo(videoId);
   if (all.length === 0) return [];
 
   const allowedCefr = getCefrRangeForLevel(userLevel);
@@ -256,24 +270,20 @@ export function getSmartPrimingExpressions(
   function smartScore(ve: VideoExpression): number {
     const entry = ve.expression;
 
-    // Base: learner_value + category
     const valueRank = LEARNER_VALUE_ORDER[entry.learner_value] ?? 9;
     const categoryRank = CATEGORY_ORDER[entry.category] ?? 9;
     let score = valueRank * 100 + categoryRank;
 
-    // Level match bonus
     if (allowedCefr.has(entry.cefr.toUpperCase())) {
       score -= 200;
     }
 
-    // Hard floor penalty: CEFR distance >= 2
     const exprIdx = CEFR_ORDER_MAP[entry.cefr.toUpperCase()] ?? 0;
     const distance = Math.abs(exprIdx - userIdx);
     if (distance >= 2) {
       score += 500;
     }
 
-    // Familiarity penalty
     const familiar = familiarExprs[entry.id];
     if (familiar) {
       if (familiar.count >= 3) {
@@ -286,7 +296,6 @@ export function getSmartPrimingExpressions(
     return score;
   }
 
-  // Deduplicate by sentenceIdx: keep the best-scored expression per sentence
   const bestBySentence = new Map<number, { ve: VideoExpression; score: number }>();
 
   for (const ve of all) {
@@ -304,7 +313,66 @@ export function getSmartPrimingExpressions(
     return a.ve.sentence.sentenceIdx - b.ve.sentence.sentenceIdx;
   });
 
-  // Deduplicate by expression id: same expression in different sentences → keep first
+  const seenExprIds = new Set<string>();
+  const unique: VideoExpression[] = [];
+  for (const { ve } of deduped) {
+    if (seenExprIds.has(ve.expression.id)) continue;
+    seenExprIds.add(ve.expression.id);
+    unique.push(ve);
+  }
+
+  return unique.slice(0, count);
+}
+
+/**
+ * Synchronous smart priming — returns [] if data not loaded yet.
+ */
+export function getSmartPrimingExpressionsSync(
+  videoId: string,
+  userLevel: CefrLevel,
+  familiarExprs: Record<string, { count: number }>,
+  count: number = 3,
+): VideoExpression[] {
+  if (!_entries || !_videoIndex) return [];
+
+  const all = _getExpressionsForVideoSync(_entries, _videoIndex, videoId);
+  if (all.length === 0) return [];
+
+  const allowedCefr = getCefrRangeForLevel(userLevel);
+  const userIdx = CEFR_ORDER.indexOf(userLevel);
+
+  function smartScore(ve: VideoExpression): number {
+    const entry = ve.expression;
+    const valueRank = LEARNER_VALUE_ORDER[entry.learner_value] ?? 9;
+    const categoryRank = CATEGORY_ORDER[entry.category] ?? 9;
+    let score = valueRank * 100 + categoryRank;
+    if (allowedCefr.has(entry.cefr.toUpperCase())) score -= 200;
+    const exprIdx = CEFR_ORDER_MAP[entry.cefr.toUpperCase()] ?? 0;
+    if (Math.abs(exprIdx - userIdx) >= 2) score += 500;
+    const familiar = familiarExprs[entry.id];
+    if (familiar) {
+      if (familiar.count >= 3) score += 1000;
+      else if (familiar.count >= 1) score += 300;
+    }
+    return score;
+  }
+
+  const bestBySentence = new Map<number, { ve: VideoExpression; score: number }>();
+  for (const ve of all) {
+    const idx = ve.sentence.sentenceIdx;
+    const score = smartScore(ve);
+    const existing = bestBySentence.get(idx);
+    if (!existing || score < existing.score) {
+      bestBySentence.set(idx, { ve, score });
+    }
+  }
+
+  const deduped = Array.from(bestBySentence.values());
+  deduped.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    return a.ve.sentence.sentenceIdx - b.ve.sentence.sentenceIdx;
+  });
+
   const seenExprIds = new Set<string>();
   const unique: VideoExpression[] = [];
   for (const { ve } of deduped) {

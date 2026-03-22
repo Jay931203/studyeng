@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { shouldUpdateStreak } from '@/lib/gamification'
+import { reconcileStreakState, shouldUpdateStreak } from '@/lib/gamification'
 import { getLocaleStrings } from '@/locales/index'
 import { debouncedSyncProfile } from '@/lib/supabase/sync'
 import { useLocaleStore } from './useLocaleStore'
@@ -26,6 +26,7 @@ interface UserState {
   setUser: (data: { level: number; xp: number; streakDays: number }) => void
   gainXp: (amount: number, reason?: string) => void
   checkAndUpdateStreak: () => void
+  reconcileStreak: () => void
   dismissLevelUp: () => void
   getTotalXP: () => number
   getStreakMultiplier: () => number
@@ -114,6 +115,24 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
     // result === false means same day, no update needed
   },
 
+  reconcileStreak: () => {
+    const state = get()
+    const reconciled = reconcileStreakState({
+      streakDays: state.streakDays,
+      lastActivityDate: state.lastActivityDate,
+    })
+
+    if (
+      reconciled.streakDays === state.streakDays &&
+      reconciled.lastActivityDate === state.lastActivityDate
+    ) {
+      return
+    }
+
+    set(reconciled)
+    debouncedSyncProfile()
+  },
+
   dismissLevelUp: () => set({ showLevelUp: false }),
 
   /**
@@ -141,4 +160,9 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
     }
     return totalXpEarned
   },
-}), { name: 'studyeng-user' }))
+}), {
+  name: 'studyeng-user',
+  onRehydrateStorage: () => (state) => {
+    state?.reconcileStreak()
+  },
+}))

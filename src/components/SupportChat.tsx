@@ -79,7 +79,7 @@ const STRINGS: Record<
   'zh-TW': {
     chatTitle: '客服對話',
     chatSubtitle: 'Shortee 支援',
-    welcomeMessage: '送出問題後會先收到自動 안내，必要時客服會接著回覆。',
+    welcomeMessage: '送出問題後會先收到自動引導，必要時客服會接著回覆。',
     inputPlaceholder: '請輸入問題內容',
     send: '送出',
     thinking: '正在準備回覆...',
@@ -88,11 +88,11 @@ const STRINGS: Record<
     loginAction: '登入',
     emailFallback: '電子郵件',
     humanBadge: '需要人工確認',
-    autoBadge: '自動 안내',
+    autoBadge: '自動引導',
     adminBadge: '客服回覆',
     officeHours: '客服回覆時間',
     waitingAdmin: '等待回覆',
-    waitingUser: '已 안내',
+    waitingUser: '已引導',
     resolved: '已解決',
     open: '已受理',
   },
@@ -147,7 +147,13 @@ export function SupportChat() {
   const [isOpen, setIsOpen] = useState(false)
   const [thread, setThread] = useState<SupportThreadRecord | null>(null)
   const [messages, setMessages] = useState<SupportMessageRecord[]>([])
-  const [workingHours, setWorkingHours] = useState('평일 10:00-18:00 (KST)')
+  const workingHoursDefaults: Record<SupportLocale, string> = {
+    ko: '평일 10:00-18:00 (KST)',
+    ja: '平日 10:00-18:00 (KST)',
+    'zh-TW': '週一至週五 10:00-18:00 (KST)',
+    vi: 'T2-T6 10:00-18:00 (KST)',
+  }
+  const [workingHours, setWorkingHours] = useState(workingHoursDefaults[safeLocale])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isHydrated, setIsHydrated] = useState(false)

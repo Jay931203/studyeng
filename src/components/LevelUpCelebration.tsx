@@ -6,7 +6,7 @@ import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLocaleStore, SupportedLocale } from '@/stores/useLocaleStore'
-import { displayLevelName } from '@/types/level'
+import { getLevelLabel } from '@/types/level'
 
 const t = {
   somethingsChanging: {
@@ -78,8 +78,8 @@ export function LevelUpCelebration() {
 
   if (!pendingLevelUp) return null
 
-  const fromLabel = displayLevelName(pendingLevelUp.from)
-  const toLabel = displayLevelName(pendingLevelUp.to)
+  const fromLabel = getLevelLabel(pendingLevelUp.from, locale)
+  const toLabel = getLevelLabel(pendingLevelUp.to, locale)
 
   return (
     <AnimatePresence>

@@ -443,7 +443,7 @@ export default function ExplorePage() {
                       {selectedSeries.title}
                     </h2>
                     <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                      {selectedSeries.description}
+                      {locale === 'ko' ? selectedSeries.description : selectedSeries.title}
                     </p>
                     <p className="mt-3 text-xs text-[var(--text-muted)]">
                       {selectedSeries.episodeCount} EPISODES

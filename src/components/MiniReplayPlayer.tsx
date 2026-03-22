@@ -13,6 +13,14 @@ import { usePathname } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useReplayStore, type ReplayClip } from '@/stores/useReplayStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const CLIP_LABEL: Record<string, string> = {
+  ko: '클립',
+  ja: 'クリップ',
+  'zh-TW': '片段',
+  vi: 'Clip',
+}
 
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
 
@@ -571,6 +579,7 @@ const MiniPlayerInner = forwardRef<
           modestbranding: 1,
           playsinline: 1,
           rel: 0,
+          start: Math.floor(firstSegment.start),
         },
         events: {
           onReady: (event) => {
@@ -583,18 +592,7 @@ const MiniPlayerInner = forwardRef<
             } catch {
               // ignore
             }
-            try {
-              ;(player as LoadableYouTubePlayer).loadVideoById?.({
-                videoId: clip.videoId,
-                startSeconds: firstSegment.start,
-              })
-            } catch {
-              // ignore
-            }
-            window.setTimeout(() => {
-              if (disposed) return
-              startSequenceFromIndex(player, effectiveSequence, 0)
-            }, 180)
+            startSequenceFromIndex(player, effectiveSequence, 0)
           },
           onStateChange: (event) => {
             if (disposed) return
@@ -758,6 +756,8 @@ function LearnSubtitleContext({
 
 export function MiniReplayPlayer() {
   const pathname = usePathname()
+  const locale = useLocaleStore((s) => s.locale)
+  const clipLabel = CLIP_LABEL[locale] ?? CLIP_LABEL.ko
   const clip = useReplayStore((s) => s.clip)
   const queue = useReplayStore((s) => s.queue)
   const queueIndex = useReplayStore((s) => s.queueIndex)
@@ -787,7 +787,7 @@ export function MiniReplayPlayer() {
   } | null>(null)
 
   const visible = clip !== null
-  const isLearnPlayer = visible && pathname?.startsWith('/explore/learn')
+  const isLearnPlayer = visible && clip?.source === 'learn' && pathname?.startsWith('/explore/learn')
   const hasPrev = queueIndex > 0
   const hasNext = queueIndex < queue.length - 1
 
@@ -1069,7 +1069,7 @@ export function MiniReplayPlayer() {
                     Learn
                   </p>
                   <p className="mt-1 text-sm font-medium text-white/90">
-                    클립 {queueIndex + 1} / {queue.length}
+                    {clipLabel} {queueIndex + 1} / {queue.length}
                   </p>
                 </div>
                 <button

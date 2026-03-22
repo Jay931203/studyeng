@@ -55,14 +55,15 @@ function capitalize(s: string): string {
 }
 
 /** Collect unique video IDs for a set of expression IDs, capped at maxVideos */
-function collectVideos(exprIds: string[], maxVideos: number): string[] {
+async function collectVideos(exprIds: string[], maxVideos: number): Promise<string[]> {
   const videoSet = new Set<string>()
   // Prioritize expressions that appear in fewer videos (more specific)
-  const exprsByVideoCount = exprIds
-    .map((id) => ({ id, videos: getVideosForExpression(id) }))
-    .sort((a, b) => a.videos.length - b.videos.length)
+  const exprWithVideos = await Promise.all(
+    exprIds.map(async (id) => ({ id, videos: await getVideosForExpression(id) }))
+  )
+  exprWithVideos.sort((a, b) => a.videos.length - b.videos.length)
 
-  for (const { videos } of exprsByVideoCount) {
+  for (const { videos } of exprWithVideos) {
     for (const vid of videos) {
       videoSet.add(vid)
       if (videoSet.size >= maxVideos) return Array.from(videoSet)
@@ -153,7 +154,7 @@ const MIN_EXPRESSIONS = 3
 const MIN_VIDEOS = 3
 const MAX_VIDEOS = 10
 
-function generateRootVerbPaths(entries: Record<string, ExpressionEntry>): LearningPath[] {
+async function generateRootVerbPaths(entries: Record<string, ExpressionEntry>): Promise<LearningPath[]> {
   const rootGroups = new Map<string, ExpressionEntry[]>()
 
   for (const entry of Object.values(entries)) {
@@ -176,12 +177,14 @@ function generateRootVerbPaths(entries: Record<string, ExpressionEntry>): Learni
   for (const [root, exprs] of rootGroups) {
     if (exprs.length < MIN_EXPRESSIONS) continue
 
-    // Only include expressions that actually appear in videos
-    const withVideos = exprs.filter((e) => getVideosForExpression(e.id).length > 0)
+    const withVideosChecks = await Promise.all(
+      exprs.map(async (e) => ({ expr: e, count: (await getVideosForExpression(e.id)).length }))
+    )
+    const withVideos = withVideosChecks.filter((c) => c.count > 0).map((c) => c.expr)
     if (withVideos.length < MIN_EXPRESSIONS) continue
 
     const exprIds = withVideos.map((e) => e.id)
-    const videoIds = collectVideos(exprIds, MAX_VIDEOS)
+    const videoIds = await collectVideos(exprIds, MAX_VIDEOS)
     if (videoIds.length < MIN_VIDEOS) continue
 
     const level = medianCefr(withVideos)
@@ -200,12 +203,11 @@ function generateRootVerbPaths(entries: Record<string, ExpressionEntry>): Learni
     })
   }
 
-  // Sort by number of expressions (richer paths first)
   paths.sort((a, b) => b.expressions.length - a.expressions.length)
   return paths
 }
 
-function generateThemePaths(entries: Record<string, ExpressionEntry>): LearningPath[] {
+async function generateThemePaths(entries: Record<string, ExpressionEntry>): Promise<LearningPath[]> {
   const themeGroups = new Map<string, ExpressionEntry[]>()
 
   for (const entry of Object.values(entries)) {
@@ -222,11 +224,9 @@ function generateThemePaths(entries: Record<string, ExpressionEntry>): LearningP
   const paths: LearningPath[] = []
 
   for (const [theme, allExprs] of themeGroups) {
-    // Group by CEFR to create level-appropriate paths
     const byLevel = new Map<string, ExpressionEntry[]>()
     for (const expr of allExprs) {
       const cefr = expr.cefr.toUpperCase()
-      // Bucket into broader ranges: A (A1+A2), B (B1+B2), C (C1+C2)
       const bucket = cefr.startsWith('A') ? 'A' : cefr.startsWith('B') ? 'B' : 'C'
       const group = byLevel.get(bucket)
       if (group) {
@@ -237,13 +237,15 @@ function generateThemePaths(entries: Record<string, ExpressionEntry>): LearningP
     }
 
     for (const [bucket, exprs] of byLevel) {
-      const withVideos = exprs.filter((e) => getVideosForExpression(e.id).length > 0)
+      const withVideosChecks = await Promise.all(
+        exprs.map(async (e) => ({ expr: e, count: (await getVideosForExpression(e.id)).length }))
+      )
+      const withVideos = withVideosChecks.filter((c) => c.count > 0).map((c) => c.expr)
       if (withVideos.length < MIN_EXPRESSIONS) continue
 
-      // Limit expressions to keep paths focused
       const selected = withVideos.slice(0, 12)
       const exprIds = selected.map((e) => e.id)
-      const videoIds = collectVideos(exprIds, MAX_VIDEOS)
+      const videoIds = await collectVideos(exprIds, MAX_VIDEOS)
       if (videoIds.length < MIN_VIDEOS) continue
 
       const level = medianCefr(selected)
@@ -268,11 +270,10 @@ function generateThemePaths(entries: Record<string, ExpressionEntry>): LearningP
   return paths
 }
 
-function generateCategoryPaths(entries: Record<string, ExpressionEntry>): LearningPath[] {
+async function generateCategoryPaths(entries: Record<string, ExpressionEntry>): Promise<LearningPath[]> {
   const groups = new Map<string, ExpressionEntry[]>()
 
   for (const entry of Object.values(entries)) {
-    // Skip fillers — not interesting enough for paths
     if (entry.category === 'filler') continue
 
     const key = `${entry.category}-${entry.cefr.toUpperCase()}`
@@ -287,17 +288,19 @@ function generateCategoryPaths(entries: Record<string, ExpressionEntry>): Learni
   const paths: LearningPath[] = []
 
   for (const [key, exprs] of groups) {
-    const withVideos = exprs.filter((e) => getVideosForExpression(e.id).length > 0)
+    const withVideosChecks = await Promise.all(
+      exprs.map(async (e) => ({ expr: e, count: (await getVideosForExpression(e.id)).length }))
+    )
+    const withVideos = withVideosChecks.filter((c) => c.count > 0).map((c) => c.expr)
     if (withVideos.length < MIN_EXPRESSIONS) continue
 
-    // Pick the most useful ones (essential > useful > enrichment)
     const sorted = [...withVideos].sort((a, b) => {
       const valOrder: Record<string, number> = { essential: 0, useful: 1, enrichment: 2 }
       return (valOrder[a.learner_value] ?? 9) - (valOrder[b.learner_value] ?? 9)
     })
     const selected = sorted.slice(0, 10)
     const exprIds = selected.map((e) => e.id)
-    const videoIds = collectVideos(exprIds, MAX_VIDEOS)
+    const videoIds = await collectVideos(exprIds, MAX_VIDEOS)
     if (videoIds.length < MIN_VIDEOS) continue
 
     const [category, cefr] = key.split('-')
@@ -330,24 +333,22 @@ function generateCategoryPaths(entries: Record<string, ExpressionEntry>): Learni
 let _cachedPaths: LearningPath[] | null = null
 
 // ---------------------------------------------------------------------------
-// Public API
+// Public API (async)
 // ---------------------------------------------------------------------------
 
 /**
  * Generate all learning paths from expression clusters.
  * Results are cached after first call.
  */
-export function generatePaths(): LearningPath[] {
+export async function generatePaths(): Promise<LearningPath[]> {
   if (_cachedPaths) return _cachedPaths
 
-  const entries = getAllExpressionEntries()
+  const entries = await getAllExpressionEntries()
 
-  const rootPaths = generateRootVerbPaths(entries)
-  const themePaths = generateThemePaths(entries)
-  const categoryPaths = generateCategoryPaths(entries)
+  const rootPaths = await generateRootVerbPaths(entries)
+  const themePaths = await generateThemePaths(entries)
+  const categoryPaths = await generateCategoryPaths(entries)
 
-  // Merge and sort: root verb paths first (strongest learning signal),
-  // then category, then theme
   const typeOrder: Record<string, number> = { root_verb: 0, category: 1, theme: 2 }
   const all = [...rootPaths, ...categoryPaths, ...themePaths]
   all.sort((a, b) => {
@@ -362,12 +363,10 @@ export function generatePaths(): LearningPath[] {
 
 /**
  * Find the best learning path that includes a given expression.
- * Prefers root_verb paths, then category, then theme.
  */
-export function getPathForExpression(exprId: string): LearningPath | null {
-  const paths = generatePaths()
+export async function getPathForExpression(exprId: string): Promise<LearningPath | null> {
+  const paths = await generatePaths()
 
-  // Priority: root_verb > category > theme
   let best: LearningPath | null = null
   let bestTypeScore = Infinity
 
@@ -388,13 +387,13 @@ export function getPathForExpression(exprId: string): LearningPath | null {
 /**
  * Get paths filtered by CEFR level.
  */
-export function getPathsByLevel(level: CefrLevel): LearningPath[] {
-  return generatePaths().filter((p) => p.level === level)
+export async function getPathsByLevel(level: CefrLevel): Promise<LearningPath[]> {
+  return (await generatePaths()).filter((p) => p.level === level)
 }
 
 /**
  * Get paths filtered by type.
  */
-export function getPathsByType(type: LearningPath['type']): LearningPath[] {
-  return generatePaths().filter((p) => p.type === type)
+export async function getPathsByType(type: LearningPath['type']): Promise<LearningPath[]> {
+  return (await generatePaths()).filter((p) => p.type === type)
 }

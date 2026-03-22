@@ -251,7 +251,7 @@ export default function ExploreSeriesPage() {
                             {seriesItem.title}
                           </p>
                           <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-[var(--text-secondary)]">
-                            {seriesItem.description}
+                            {locale === 'ko' ? seriesItem.description : seriesItem.title}
                           </p>
                         </div>
                       </motion.button>

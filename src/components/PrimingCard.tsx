@@ -124,10 +124,13 @@ function RelatedChips({ exprId }: { exprId: string | undefined }) {
   const locale = useLocaleStore((s) => s.locale)
   const [expandedIdx, setExpandedIdx] = useState<number | null>(null)
   const expandTimerRef = useRef<number | null>(null)
-  const chips = useMemo<RelatedExpression[]>(
-    () => (exprId ? getRelatedExpressions(exprId, 3) : []),
-    [exprId],
-  )
+  const [chips, setChips] = useState<RelatedExpression[]>([])
+  useEffect(() => {
+    if (!exprId) { setChips([]); return }
+    let cancelled = false
+    getRelatedExpressions(exprId, 3).then((r) => { if (!cancelled) setChips(r) })
+    return () => { cancelled = true }
+  }, [exprId])
   if (chips.length === 0) return null
 
   const handleChipTap = (idx: number, e: React.MouseEvent) => {

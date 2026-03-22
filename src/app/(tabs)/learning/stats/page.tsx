@@ -12,7 +12,7 @@ import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
-import { LEVEL_LABELS, CEFR_ORDER } from '@/types/level'
+import { getLevelLabel, CEFR_ORDER } from '@/types/level'
 import type { CefrLevel, ChallengeTransition } from '@/types/level'
 
 const TRANSLATIONS = {
@@ -160,7 +160,7 @@ export default function StatsPage() {
             onClick={openLevelPicker}
             className="flex items-center gap-2 rounded-xl px-0 py-0 text-left transition-opacity active:opacity-70"
           >
-            <span className="text-2xl font-bold text-[var(--text-primary)]">{LEVEL_LABELS[level]}</span>
+            <span className="text-2xl font-bold text-[var(--text-primary)]">{getLevelLabel(level, locale)}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -247,7 +247,7 @@ export default function StatsPage() {
                         className="text-sm font-medium"
                         style={{ color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)' }}
                       >
-                        {LEVEL_LABELS[cefrLevel]}
+                        {getLevelLabel(cefrLevel, locale)}
                       </span>
                       <span className="text-xs text-[var(--text-muted)]">
                         {isCurrent ? 'Current' : isHigher ? 'Challenge' : 'Switch'}

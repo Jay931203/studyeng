@@ -59,12 +59,10 @@ function CategoryBar({
 function SeriesRow({
   rank,
   title,
-  count,
   countTimesLabel,
 }: {
   rank: number
   title: string
-  count: number
   countTimesLabel: string
 }) {
   return (
@@ -160,10 +158,6 @@ export function ViewingStats() {
   const [statsNow] = useState(() => Date.now())
 
   const totalWatched = watchedVideoIds.length
-  const totalViews = useMemo(
-    () => Object.values(viewCounts).reduce((sum, c) => sum + c, 0),
-    [viewCounts],
-  )
 
   // ── Build a lookup map for videos ──
   const videoMap = useMemo(() => {
@@ -298,7 +292,7 @@ export function ViewingStats() {
             <MetricCard label={T.savedExpressions} value={T.countItems(phrases.length)} className="text-center" />
             <MetricCard
               label={T.streakLoop}
-              value={T.countDays(Math.max(streakDays, totalViews > 0 ? 1 : 0))}
+              value={T.countDays(streakDays)}
               className="text-center"
             />
           </div>
@@ -333,7 +327,6 @@ export function ViewingStats() {
                   key={s.seriesId}
                   rank={i + 1}
                   title={s.title}
-                  count={s.count}
                   countTimesLabel={T.countTimes(s.count)}
                 />
               ))}

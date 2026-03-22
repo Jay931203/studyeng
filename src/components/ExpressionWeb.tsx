@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useMemo } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { getLocalizedMeaning } from '@/lib/localeUtils'
@@ -224,7 +224,12 @@ export function ExpressionWeb({ exprId, limit = 8, onSelectExpression }: Express
   const locale = useLocaleStore((s) => s.locale)
   const langKey = locale === 'zh-TW' || locale === 'vi' || locale === 'ja' ? locale : 'ko'
 
-  const related = useMemo(() => getRelatedExpressions(exprId, limit), [exprId, limit])
+  const [related, setRelated] = useState<RelatedExpression[]>([])
+  useEffect(() => {
+    let cancelled = false
+    getRelatedExpressions(exprId, limit).then((r) => { if (!cancelled) setRelated(r) })
+    return () => { cancelled = true }
+  }, [exprId, limit])
 
   if (related.length === 0) return null
 

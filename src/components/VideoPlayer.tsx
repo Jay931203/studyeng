@@ -20,8 +20,8 @@ import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { getSmartPrimingExpressions } from '@/lib/expressionLookup'
-import { getSmartPrimingWords } from '@/lib/wordLookup'
+import { getSmartPrimingExpressionsSync, preloadExpressionData } from '@/lib/expressionLookup'
+import { getSmartPrimingWordsSync, preloadWordData } from '@/lib/wordLookup'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
@@ -226,15 +226,21 @@ export function VideoPlayer({
   const userLevel = useOnboardingStore((state) => state.level)
   const familiarExprs = useFamiliarityStore((state) => state.entries)
   const markFamiliar = useFamiliarityStore((state) => state.markFamiliar)
+  // Preload large data files on mount (non-blocking)
+  const [dataReady, setDataReady] = useState(false)
+  useEffect(() => {
+    Promise.all([preloadExpressionData(), preloadWordData()]).then(() => setDataReady(true))
+  }, [])
+
   const primingExpressions = useMemo(() => {
-    if (!primingEnabled || !youtubeId) return []
-    return getSmartPrimingExpressions(youtubeId, userLevel, familiarExprs, 3)
-  }, [primingEnabled, youtubeId, userLevel, familiarExprs])
+    if (!primingEnabled || !youtubeId || !dataReady) return []
+    return getSmartPrimingExpressionsSync(youtubeId, userLevel, familiarExprs, 3)
+  }, [primingEnabled, youtubeId, userLevel, familiarExprs, dataReady])
 
   const primingWords = useMemo(() => {
-    if (!primingEnabled || !youtubeId) return []
-    return getSmartPrimingWords(youtubeId, userLevel, familiarExprs, 3)
-  }, [primingEnabled, youtubeId, userLevel, familiarExprs])
+    if (!primingEnabled || !youtubeId || !dataReady) return []
+    return getSmartPrimingWordsSync(youtubeId, userLevel, familiarExprs, 3)
+  }, [primingEnabled, youtubeId, userLevel, familiarExprs, dataReady])
 
   const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
   const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)

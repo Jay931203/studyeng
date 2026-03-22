@@ -17,12 +17,17 @@ import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocalizedMeaning, getExprCategoryLabel, getPosLabel } from '@/lib/localeUtils'
 import expressionEntriesData from '@/data/expression-entries-v2.json'
 import wordEntriesData from '@/data/word-entries.json'
 
 type FamiliarExpressionEntry = {
   canonical: string
   meaning_ko: string
+  meaning_ja?: string
+  meaning_zhTW?: string
+  meaning_vi?: string
   cefr: string
   category: string
 }
@@ -55,15 +60,11 @@ function FamiliarExpressionCard({
   onReset,
 }: {
   exprId: string
-  entry: { canonical: string; meaning_ko: string; cefr: string; category: string }
+  entry: { canonical: string; meaning_ko: string; meaning_ja?: string; meaning_zhTW?: string; meaning_vi?: string; cefr: string; category: string }
   count: number
   onReset: () => void
 }) {
-  const categoryLabels: Record<string, string> = {
-    phrasal_verb: '구동사', idiom: '관용구', collocation: '연어',
-    fixed_expression: '표현', discourse_marker: '담화', slang: '슬랭',
-    hedging: '완곡', exclamation: '감탄', filler: '필러',
-  }
+  const locale = useLocaleStore((s) => s.locale)
 
   function getCefrColor(cefr: string) {
     const level = cefr?.toUpperCase()
@@ -74,13 +75,13 @@ function FamiliarExpressionCard({
   }
 
   const cefrColor = getCefrColor(entry.cefr)
-  const categoryLabel = categoryLabels[entry.category] ?? entry.category
+  const categoryLabel = getExprCategoryLabel(entry.category, locale)
 
   return (
     <div className="flex items-center justify-between rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3">
       <div className="min-w-0 flex-1">
         <p className="text-sm font-semibold text-[var(--text-primary)]">{entry.canonical}</p>
-        <p className="mt-0.5 text-xs text-[var(--text-secondary)]">{entry.meaning_ko}</p>
+        <p className="mt-0.5 text-xs text-[var(--text-secondary)]">{getLocalizedMeaning(entry, locale)}</p>
         <div className="mt-1.5 flex items-center gap-1.5">
           <span className="rounded-full bg-[var(--bg-elevated)] px-2 py-[2px] text-[10px] font-medium text-[var(--text-muted)]">
             {categoryLabel}
@@ -128,15 +129,11 @@ function FamiliarWordCard({
   onReset,
 }: {
   wordId: string
-  entry: { canonical: string; pos: string; meaning_ko: string; cefr: string }
+  entry: { canonical: string; pos: string; meaning_ko: string; meaning_ja?: string; meaning_zhTW?: string; meaning_vi?: string; cefr: string }
   count: number
   onReset: () => void
 }) {
-  const posLabels: Record<string, string> = {
-    noun: '명사', verb: '동사', adjective: '형용사', adverb: '부사',
-    preposition: '전치사', conjunction: 'conj.', pronoun: '대명사',
-    interjection: 'int.', determiner: 'det.',
-  }
+  const locale = useLocaleStore((s) => s.locale)
 
   function getCefrColor(cefr: string) {
     const level = cefr?.toUpperCase()
@@ -147,13 +144,13 @@ function FamiliarWordCard({
   }
 
   const cefrColor = getCefrColor(entry.cefr)
-  const posLabel = posLabels[entry.pos] ?? entry.pos
+  const posLabel = getPosLabel(entry.pos, locale)
 
   return (
     <div className="flex items-center justify-between rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3">
       <div className="min-w-0 flex-1">
         <p className="text-sm font-semibold text-[var(--text-primary)]">{entry.canonical}</p>
-        <p className="mt-0.5 text-xs text-[var(--text-secondary)]">{entry.meaning_ko}</p>
+        <p className="mt-0.5 text-xs text-[var(--text-secondary)]">{getLocalizedMeaning(entry, locale)}</p>
         <div className="mt-1.5 flex items-center gap-1.5">
           <span className="rounded-full bg-[var(--bg-elevated)] px-2 py-[2px] text-[10px] font-medium text-[var(--text-muted)]">
             {posLabel}
@@ -256,7 +253,7 @@ export default function SavedPhrasesPage() {
   }, [familiarEntries])
 
   const familiarWords = useMemo(() => {
-    const entries = wordEntriesData as Record<string, { canonical: string; pos: string; meaning_ko: string; cefr: string; theme: string[] }>
+    const entries = wordEntriesData as Record<string, { canonical: string; pos: string; meaning_ko: string; meaning_ja?: string; meaning_zhTW?: string; meaning_vi?: string; cefr: string; theme: string[] }>
     return Object.entries(familiarEntries)
       .filter(([key, data]) => key.startsWith('word:') && data.count > 0)
       .map(([key, data]) => {

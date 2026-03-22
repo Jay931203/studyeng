@@ -3,10 +3,9 @@
  *
  * Builds expression-first clip data for the class detail (expression browser) page.
  * For each expression in a class, finds all video clips where it appears.
+ * Uses lazy loading to avoid bundling large JSON files into the initial bundle.
  */
 
-import expressionEntriesData from '@/data/expression-entries-v2.json'
-import expressionIndexData from '@/data/expression-index-v3.json'
 import { getCatalogVideoByYoutubeId } from '@/lib/catalog'
 
 // ---------------------------------------------------------------------------
@@ -53,17 +52,31 @@ export interface ExpressionWithClips {
 }
 
 // ---------------------------------------------------------------------------
-// Internal data
+// Lazy-loaded data
 // ---------------------------------------------------------------------------
 
-const entries = expressionEntriesData as Record<string, ExpressionEntryV2>
-const videoIndex = expressionIndexData as Record<string, IndexRowV3[]>
+let _entries: Record<string, ExpressionEntryV2> | null = null
+let _videoIndex: Record<string, IndexRowV3[]> | null = null
+let _dataPromise: Promise<void> | null = null
+
+async function ensureData() {
+  if (_entries && _videoIndex) return
+  if (!_dataPromise) {
+    _dataPromise = Promise.all([
+      import('@/data/expression-entries-v2.json'),
+      import('@/data/expression-index-v3.json'),
+    ]).then(([ent, idx]) => {
+      _entries = ent.default as Record<string, ExpressionEntryV2>
+      _videoIndex = idx.default as Record<string, IndexRowV3[]>
+    })
+  }
+  await _dataPromise
+}
 
 // Build a reverse index: exprId -> [{youtubeId, row}]
-// Lazy-initialized to avoid blocking module load
 let reverseIndex: Map<string, { youtubeId: string; row: IndexRowV3 }[]> | null = null
 
-function getReverseIndex(): Map<string, { youtubeId: string; row: IndexRowV3 }[]> {
+function getReverseIndex(videoIndex: Record<string, IndexRowV3[]>): Map<string, { youtubeId: string; row: IndexRowV3 }[]> {
   if (reverseIndex) return reverseIndex
   reverseIndex = new Map()
   for (const [youtubeId, rows] of Object.entries(videoIndex)) {
@@ -80,22 +93,23 @@ function getReverseIndex(): Map<string, { youtubeId: string; row: IndexRowV3 }[]
 }
 
 // ---------------------------------------------------------------------------
-// Public API
+// Public API (async)
 // ---------------------------------------------------------------------------
 
-export function getExpressionEntry(exprId: string): ExpressionEntryV2 | undefined {
-  return entries[exprId]
+export async function getExpressionEntry(exprId: string): Promise<ExpressionEntryV2 | undefined> {
+  await ensureData()
+  return _entries![exprId]
 }
 
 /**
  * For a given expression and a set of allowed videoIds, find all clips.
- * Returns clips with timing info from seed-videos subtitles.
  */
-export function getClipsForExpression(
+export async function getClipsForExpression(
   exprId: string,
   allowedVideoIds?: Set<string>,
-): ClipInfo[] {
-  const ri = getReverseIndex()
+): Promise<ClipInfo[]> {
+  await ensureData()
+  const ri = getReverseIndex(_videoIndex!)
   const matches = ri.get(exprId)
   if (!matches) return []
 
@@ -104,13 +118,9 @@ export function getClipsForExpression(
   for (const { youtubeId, row } of matches) {
     if (allowedVideoIds && !allowedVideoIds.has(youtubeId)) continue
 
-    // Get video title from catalog if available
     const video = getCatalogVideoByYoutubeId(youtubeId)
     const videoTitle = video?.title ?? ''
 
-    // Timing will be resolved at runtime when clip is tapped
-    // (transcript loaded dynamically via useTranscript hook)
-    // For now store sentenceIdx — the page component fetches exact timing on tap
     clips.push({
       youtubeId,
       videoTitle,
@@ -128,20 +138,20 @@ export function getClipsForExpression(
 
 /**
  * Build expression-with-clips data for all expressions in a class.
- * Only includes expressions that have at least one clip.
  */
-export function buildClassExpressionClips(
+export async function buildClassExpressionClips(
   expressions: string[],
   videoIds: string[],
-): ExpressionWithClips[] {
+): Promise<ExpressionWithClips[]> {
+  await ensureData()
   const allowedVideoIds = new Set(videoIds)
   const result: ExpressionWithClips[] = []
 
   for (const exprId of expressions) {
-    const entry = entries[exprId]
+    const entry = _entries![exprId]
     if (!entry) continue
 
-    const clips = getClipsForExpression(exprId, allowedVideoIds)
+    const clips = await getClipsForExpression(exprId, allowedVideoIds)
     if (clips.length === 0) continue
 
     result.push({ entry, clips })

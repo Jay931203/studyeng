@@ -1,5 +1,11 @@
-import { describe, it, expect } from 'vitest'
-import { calculateXpForLevel, shouldUpdateStreak, addXp } from './gamification'
+import { describe, expect, it } from 'vitest'
+import {
+  addXp,
+  calculateXpForLevel,
+  mergeStreakStateSnapshots,
+  reconcileStreakState,
+  shouldUpdateStreak,
+} from './gamification'
 
 describe('gamification', () => {
   describe('calculateXpForLevel', () => {
@@ -53,6 +59,78 @@ describe('gamification', () => {
     it('can level up multiple times', () => {
       const result = addXp({ level: 1, xp: 0 }, 350)
       expect(result).toEqual({ level: 3, xp: 50, leveledUp: true })
+    })
+  })
+
+  describe('reconcileStreakState', () => {
+    it('keeps an active streak if the last activity was yesterday', () => {
+      expect(
+        reconcileStreakState(
+          {
+            streakDays: 5,
+            lastActivityDate: '2026-03-21T09:00:00.000Z',
+          },
+          new Date('2026-03-22T10:00:00.000Z')
+        )
+      ).toEqual({
+        streakDays: 5,
+        lastActivityDate: '2026-03-21T09:00:00.000Z',
+      })
+    })
+
+    it('clears a broken streak before the next activity', () => {
+      expect(
+        reconcileStreakState(
+          {
+            streakDays: 5,
+            lastActivityDate: '2026-03-19T09:00:00.000Z',
+          },
+          new Date('2026-03-22T10:00:00.000Z')
+        )
+      ).toEqual({
+        streakDays: 0,
+        lastActivityDate: '2026-03-19T09:00:00.000Z',
+      })
+    })
+  })
+
+  describe('mergeStreakStateSnapshots', () => {
+    it('prefers the more recent streak snapshot', () => {
+      expect(
+        mergeStreakStateSnapshots(
+          {
+            streakDays: 8,
+            lastActivityDate: '2026-03-20T08:00:00.000Z',
+          },
+          {
+            streakDays: 3,
+            lastActivityDate: '2026-03-22T08:00:00.000Z',
+          },
+          new Date('2026-03-22T10:00:00.000Z')
+        )
+      ).toEqual({
+        streakDays: 3,
+        lastActivityDate: '2026-03-22T08:00:00.000Z',
+      })
+    })
+
+    it('drops stale streak values during merge', () => {
+      expect(
+        mergeStreakStateSnapshots(
+          {
+            streakDays: 12,
+            lastActivityDate: '2026-03-18T08:00:00.000Z',
+          },
+          {
+            streakDays: 9,
+            lastActivityDate: '2026-03-17T08:00:00.000Z',
+          },
+          new Date('2026-03-22T10:00:00.000Z')
+        )
+      ).toEqual({
+        streakDays: 0,
+        lastActivityDate: '2026-03-18T08:00:00.000Z',
+      })
     })
   })
 })

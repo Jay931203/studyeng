@@ -10,6 +10,7 @@ import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
 import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
+import { getLocalizedClassTitle, getLocalizedClassDescription } from '@/lib/localeUtils'
 import expressionClasses from '@/data/expression-classes.json'
 
 type ExpressionClass = (typeof expressionClasses)[number]
@@ -28,6 +29,13 @@ const TRANSLATIONS: Record<SupportedLocale, {
   resumeProgress: (current: number, total: number) => string
   noClassTitle: string
   noClassDescription: string
+  learnAccess: string
+  premiumUnlocked: string
+  activeClassOnly: (title: string) => string
+  freeUserLimit: string
+  canStartOne: string
+  todayComplete: string
+  lockedToday: string
 }> = {
   ko: {
     catAll: '전체',
@@ -42,6 +50,13 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `이어보기 ${current} / ${total}`,
     noClassTitle: '현재 레벨에 맞는 클래스가 없습니다',
     noClassDescription: '설정에서 레벨을 바꾸면 다른 클래스를 볼 수 있습니다.',
+    learnAccess: 'Learn 이용 방식',
+    premiumUnlocked: 'Premium은 모든 Learn 클래스를 자유롭게 이어볼 수 있습니다.',
+    activeClassOnly: (title) => `오늘은 ${title} 클래스만 이어볼 수 있습니다. Premium으로 전체 Learn을 열 수 있습니다.`,
+    freeUserLimit: '무료 사용자는 하루 1개의 Learn 클래스를 활성화할 수 있습니다.',
+    canStartOne: '오늘 1개 시작 가능',
+    todayComplete: '오늘 세션 사용 완료',
+    lockedToday: '오늘 잠금',
   },
   ja: {
     catAll: '全て',
@@ -56,6 +71,13 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `続きから ${current} / ${total}`,
     noClassTitle: '現在のレベルに合うクラスがありません',
     noClassDescription: '設定でレベルを変更すると、他のクラスが表示されます。',
+    learnAccess: 'Learn利用方法',
+    premiumUnlocked: 'Premiumは全てのLearnクラスを自由に学習できます。',
+    activeClassOnly: (title) => `今日は${title}クラスのみ学習可能です。Premiumで全てのLearnを開放できます。`,
+    freeUserLimit: '無料ユーザーは1日1つのLearnクラスを開始できます。',
+    canStartOne: '今日1つ開始可能',
+    todayComplete: '本日のセッション完了',
+    lockedToday: '本日ロック',
   },
   'zh-TW': {
     catAll: '全部',
@@ -70,6 +92,13 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `繼續學習 ${current} / ${total}`,
     noClassTitle: '目前等級沒有對應的課程',
     noClassDescription: '在設定中更改等級即可查看其他課程。',
+    learnAccess: 'Learn 使用方式',
+    premiumUnlocked: 'Premium 可自由學習所有 Learn 課程。',
+    activeClassOnly: (title) => `今天只能繼續學習 ${title} 課程。升級 Premium 可開放所有課程。`,
+    freeUserLimit: '免費用戶每天可開啟 1 個 Learn 課程。',
+    canStartOne: '今天可開始 1 個',
+    todayComplete: '今日已完成',
+    lockedToday: '今日鎖定',
   },
   vi: {
     catAll: 'Tất cả',
@@ -84,6 +113,13 @@ const TRANSLATIONS: Record<SupportedLocale, {
     resumeProgress: (current, total) => `Tiếp tục ${current} / ${total}`,
     noClassTitle: 'Không có lớp học phù hợp với cấp độ hiện tại',
     noClassDescription: 'Thay đổi cấp độ trong cài đặt để xem các lớp khác.',
+    learnAccess: 'Cach dung Learn',
+    premiumUnlocked: 'Premium mo khoa tat ca cac lop Learn khong gioi han.',
+    activeClassOnly: (title) => `Hom nay chi co the tiep tuc lop ${title}. Nang cap Premium de mo khoa tat ca.`,
+    freeUserLimit: 'Nguoi dung mien phi co the bat dau 1 lop Learn moi ngay.',
+    canStartOne: 'Hom nay co the bat dau 1 lop',
+    todayComplete: 'Phien hom nay da xong',
+    lockedToday: 'Khoa hom nay',
   },
 }
 
@@ -127,23 +163,17 @@ export default function LearnPage() {
 
   const learnAccessMessage = useMemo(() => {
     if (isPremium) {
-      return locale === 'ko'
-        ? 'Premium은 모든 Learn 클래스를 자유롭게 이어볼 수 있습니다.'
-        : 'Premium unlocks every Learn class without daily limits.'
+      return tx.premiumUnlocked
     }
 
     if (activeClassId) {
       const activeClass = expressionClasses.find((entry) => entry.id === activeClassId)
-      const activeTitle = activeClass?.titleKo ?? activeClass?.title ?? 'Learn'
-      return locale === 'ko'
-        ? `오늘은 ${activeTitle} 클래스만 이어볼 수 있습니다. Premium으로 전체 Learn을 열 수 있습니다.`
-        : `You can continue only ${activeTitle} today. Upgrade to Premium to unlock every Learn class.`
+      const activeTitle = activeClass ? getLocalizedClassTitle(activeClass as Parameters<typeof getLocalizedClassTitle>[0], locale) : 'Learn'
+      return tx.activeClassOnly(activeTitle)
     }
 
-    return locale === 'ko'
-      ? '무료 사용자는 하루 1개의 Learn 클래스를 활성화할 수 있습니다.'
-      : 'Free users can activate one Learn class per day.'
-  }, [activeClassId, isPremium, locale])
+    return tx.freeUserLimit
+  }, [activeClassId, isPremium, locale, tx])
 
   const filtered = useMemo(() => {
     let result: ExpressionClass[] = expressionClasses.filter(
@@ -208,17 +238,11 @@ export default function LearnPage() {
       <div className="mb-4 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3 shadow-[var(--card-shadow)]">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-sm font-medium text-[var(--text-primary)]">
-            {locale === 'ko' ? 'Learn 이용 방식' : 'Learn access'}
+            {tx.learnAccess}
           </p>
           {!isPremium ? (
             <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[11px] font-semibold text-[var(--accent-text)]">
-              {canStartNewSession
-                ? locale === 'ko'
-                  ? '오늘 1개 시작 가능'
-                  : '1 class available today'
-                : locale === 'ko'
-                  ? '오늘 세션 사용 완료'
-                  : 'Today complete'}
+              {canStartNewSession ? tx.canStartOne : tx.todayComplete}
             </span>
           ) : null}
         </div>
@@ -286,18 +310,18 @@ export default function LearnPage() {
               </span>
               {!canAccessClassToday(entry.id, isPremium) ? (
                 <span className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)] px-2 py-0.5 text-[10px] font-semibold text-[var(--text-muted)]">
-                  {locale === 'ko' ? '오늘 잠금' : 'Locked today'}
+                  {tx.lockedToday}
                 </span>
               ) : null}
             </div>
 
             <p className="text-[15px] font-semibold text-[var(--text-primary)]">
-              {entry.titleKo}
+              {getLocalizedClassTitle(entry as Parameters<typeof getLocalizedClassTitle>[0], locale)}
             </p>
             <p className="mt-0.5 text-xs text-[var(--text-muted)]">{entry.title}</p>
 
             <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-[var(--text-secondary)]">
-              {entry.descriptionKo}
+              {getLocalizedClassDescription(entry as Parameters<typeof getLocalizedClassDescription>[0], locale)}
             </p>
 
             <div className="mt-3 flex items-center gap-3 text-[11px] text-[var(--text-muted)]">

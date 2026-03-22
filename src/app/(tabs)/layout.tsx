@@ -31,6 +31,7 @@ export default function TabsLayout({
   const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
   const phraseCount = usePhraseStore((state) => state.phrases.length)
   const streakDays = useUserStore((state) => state.streakDays)
+  const reconcileStreak = useUserStore((state) => state.reconcileStreak)
   const { user, loading: authLoading, authAvailable } = useAuth()
   const { isLandscapeViewport } = useViewportLayout()
 
@@ -46,6 +47,28 @@ export default function TabsLayout({
   const guestGateVersion = authAvailable && !authLoading && !user ? watchedVideoIds.length : 0
   const showLoginGate =
     guestGateVersion > GUEST_VIEW_LIMIT && dismissedGuestGateVersion !== guestGateVersion
+
+  useEffect(() => {
+    reconcileStreak()
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        reconcileStreak()
+      }
+    }
+
+    const handleFocus = () => {
+      reconcileStreak()
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    window.addEventListener('focus', handleFocus)
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+      window.removeEventListener('focus', handleFocus)
+    }
+  }, [reconcileStreak])
 
   useEffect(() => {
     if (authLoading || !onboardingHydrated || !user) return

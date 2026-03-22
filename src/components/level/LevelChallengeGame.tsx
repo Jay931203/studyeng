@@ -11,7 +11,7 @@ import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { triggerHaptic } from '@/lib/haptic'
 import type { CefrLevel, ChallengeTransition } from '@/types/level'
-import { displayLevelName } from '@/types/level'
+import { getLevelLabel } from '@/types/level'
 
 const TRANSLATIONS = {
   ko: {
@@ -161,8 +161,8 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   const [levelBeforeChallenge] = useState<CefrLevel>(() => currentLevel)
 
   const currentCard = cards[currentIdx] ?? null
-  const fromLabel = displayLevelName(levelBeforeChallenge)
-  const toLabel = displayLevelName(targetLevel)
+  const fromLabel = getLevelLabel(levelBeforeChallenge, locale)
+  const toLabel = getLevelLabel(targetLevel, locale)
 
   // ---------------------------------------------------------------------------
   // Start game

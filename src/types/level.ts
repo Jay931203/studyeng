@@ -51,10 +51,12 @@ export const LEGACY_LEVEL_MIGRATION: Record<string, CefrLevel> = {
 
 /**
  * Display a level name with backward compatibility for legacy 3-level history entries.
+ * Accepts an optional locale for i18n-aware labels.
  */
-export function displayLevelName(level: string): string {
-  if (level in LEVEL_LABELS) return LEVEL_LABELS[level as CefrLevel]
-  if (level in LEGACY_LEVEL_MIGRATION) return LEVEL_LABELS[LEGACY_LEVEL_MIGRATION[level]]
+export function displayLevelName(level: string, locale?: SupportedLocale): string {
+  const loc = locale ?? 'ko'
+  if (level in LEVEL_LABELS_I18N) return getLevelLabel(level, loc)
+  if (level in LEGACY_LEVEL_MIGRATION) return getLevelLabel(LEGACY_LEVEL_MIGRATION[level], loc)
   return level
 }
 

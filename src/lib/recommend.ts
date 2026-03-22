@@ -1,4 +1,3 @@
-import recommendationManifestData from '@/data/recommendation-manifest.json'
 import type { VideoData, CategoryId } from '@/data/seed-videos'
 import { seedVideos } from '@/data/seed-videos'
 
@@ -160,13 +159,29 @@ const STOPWORDS = new Set([
   'your',
 ])
 
-const recommendationManifest = recommendationManifestData as unknown as {
-  videos?: Array<Partial<RecommendationFeature> & Pick<RecommendationFeature, 'id'>>
+// Lazy-loaded recommendation manifest (3.4MB)
+let _manifestFeatureById: Map<string, Partial<RecommendationFeature> & Pick<RecommendationFeature, 'id'>> | null = null
+let _manifestPromise: Promise<void> | null = null
+
+function ensureManifest(): void {
+  if (_manifestFeatureById || _manifestPromise) return
+  _manifestPromise = import('@/data/recommendation-manifest.json').then((m) => {
+    const manifest = m.default as { videos?: Array<Partial<RecommendationFeature> & Pick<RecommendationFeature, 'id'>> }
+    _manifestFeatureById = new Map(
+      (manifest.videos ?? []).map((feature) => [feature.id, feature]),
+    )
+  })
 }
 
-const manifestFeatureById = new Map(
-  (recommendationManifest.videos ?? []).map((feature) => [feature.id, feature]),
-)
+// Kick off loading immediately (non-blocking)
+if (typeof window !== 'undefined') {
+  ensureManifest()
+}
+
+function getManifestFeature(id: string): (Partial<RecommendationFeature> & Pick<RecommendationFeature, 'id'>) | undefined {
+  return _manifestFeatureById?.get(id)
+}
+
 const catalogIndexById = new Map(seedVideos.map((video, index) => [video.id, index]))
 const catalogById = new Map(seedVideos.map((video) => [video.id, video]))
 
@@ -228,7 +243,7 @@ function getFeature(video: VideoData) {
   const fallback = buildFallbackFeature(video)
   return {
     ...fallback,
-    ...(manifestFeatureById.get(video.id) ?? {}),
+    ...(getManifestFeature(video.id) ?? {}),
   }
 }
 
