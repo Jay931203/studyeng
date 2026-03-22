@@ -2,7 +2,7 @@ import type { VideoData, CategoryId } from '@/data/seed-videos'
 import { seedVideos } from '@/data/seed-videos'
 
 function getVideosBySeries(seriesId: string): import('@/data/seed-videos').VideoData[] {
-  return seedVideos.filter((video) => video.seriesId === seriesId)
+  return seedVideos.filter((video) => video.seriesId === seriesId && !video.inactive)
 }
 
 interface WatchRecord {
@@ -713,7 +713,7 @@ export function seriesPlaylist(
     startIdx > 0 ? [...episodes.slice(startIdx), ...episodes.slice(0, startIdx)] : episodes
   const seriesIds = new Set(episodes.map((video) => video.id))
   const others = seedVideos.filter(
-    (video) => !seriesIds.has(video.id) && isRecommendableFeature(getFeature(video)),
+    (video) => !video.inactive && !seriesIds.has(video.id) && isRecommendableFeature(getFeature(video)),
   )
 
   return [

@@ -46,8 +46,8 @@ export interface Category {
   icon: string
 }
 
-function defineSeedVideos(videos: VideoData[]) {
-  return videos
+function defineSeedVideos(videos: VideoData[]): VideoData[] {
+  return videos.filter(v => !v.inactive)
 }
 
 export const categories: Category[] = [

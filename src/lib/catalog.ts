@@ -56,7 +56,7 @@ async function ensureCatalog() {
   if (_catalogVideos) return
   const readyIds = await loadReadyVideoIds()
 
-  _catalogVideos = seedVideos.filter((video) => readyIds.has(video.id))
+  _catalogVideos = seedVideos.filter((video) => readyIds.has(video.id) && !video.inactive)
   _catalogShorts = _catalogVideos.filter((video) => video.format === 'shorts')
 
   _videosBySeriesId = new Map<string, VideoData[]>()
@@ -94,11 +94,11 @@ if (typeof window !== 'undefined') {
 }
 
 export function getCatalogVideos(): VideoData[] {
-  return _catalogVideos ?? seedVideos
+  return _catalogVideos ?? seedVideos.filter((v) => !v.inactive)
 }
 
 export function getCatalogShorts(): VideoData[] {
-  return _catalogShorts ?? seedVideos.filter((v) => v.format === 'shorts')
+  return _catalogShorts ?? seedVideos.filter((v) => v.format === 'shorts' && !v.inactive)
 }
 
 export function getCatalogSeries(): Series[] {
@@ -106,8 +106,8 @@ export function getCatalogSeries(): Series[] {
 }
 
 // Keep backward-compatible named exports
-export const catalogVideos = seedVideos // initial value; consumers should prefer getCatalogVideos()
-export const catalogShorts = seedVideos.filter((v) => v.format === 'shorts')
+export const catalogVideos = seedVideos.filter((v) => !v.inactive) // initial value; consumers should prefer getCatalogVideos()
+export const catalogShorts = seedVideos.filter((v) => v.format === 'shorts' && !v.inactive)
 export const catalogSeries = series
 
 export function getCatalogVideoById(videoId: string) {
@@ -124,7 +124,7 @@ export function getCatalogSeriesById(seriesId: string) {
 
 export function getCatalogVideosBySeries(seriesId: string) {
   if (_videosBySeriesId) return [...(_videosBySeriesId.get(seriesId) ?? [])]
-  return seedVideos.filter((v) => v.seriesId === seriesId)
+  return seedVideos.filter((v) => v.seriesId === seriesId && !v.inactive)
 }
 
 export function getCatalogVideosByCategory(categoryId: CategoryId) {
