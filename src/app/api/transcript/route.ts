@@ -14,8 +14,12 @@ export interface TranscriptSubtitle {
 }
 
 export const runtime = 'nodejs'
+export const maxDuration = 30
 
-// In-memory cache to avoid re-fetching transcripts
+// In-memory cache to avoid re-fetching transcripts.
+// NOTE: In serverless (Vercel), each cold start creates a new Map instance,
+// so this cache only helps within the same warm instance. CDN/browser caching
+// via Cache-Control headers handles cross-instance caching.
 const transcriptCache = new Map<string, TranscriptSubtitle[]>()
 
 /**
@@ -273,15 +277,15 @@ export async function GET(request: NextRequest) {
     )
   }
 
+  const cacheHeaders = {
+    'Cache-Control': 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800',
+  }
+
   // Check cache first
   if (transcriptCache.has(videoId)) {
     return NextResponse.json(
       { subtitles: transcriptCache.get(videoId)! },
-      {
-        headers: {
-          'Cache-Control': 'public, max-age=86400, s-maxage=86400',
-        },
-      }
+      { headers: cacheHeaders }
     )
   }
 
@@ -297,7 +301,7 @@ export async function GET(request: NextRequest) {
     if (!rawTranscript || rawTranscript.length === 0) {
       return NextResponse.json(
         { subtitles: [], error: 'No transcript available for this video' },
-        { status: 200 }
+        { status: 200, headers: cacheHeaders }
       )
     }
 
@@ -317,17 +321,19 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(
       { subtitles },
-      {
-        headers: {
-          'Cache-Control': 'public, max-age=86400, s-maxage=86400',
-        },
-      }
+      { headers: cacheHeaders }
     )
   } catch (error) {
     console.error(`[transcript] Failed to fetch transcript for ${videoId}:`, error)
     return NextResponse.json(
       { subtitles: [], error: 'Failed to fetch transcript' },
-      { status: 200 } // Return 200 with empty subtitles so the video still plays
+      {
+        status: 200, // Return 200 with empty subtitles so the video still plays
+        headers: {
+          // Short cache for errors so they can be retried sooner
+          'Cache-Control': 'public, max-age=300, s-maxage=300, stale-while-revalidate=60',
+        },
+      }
     )
   }
 }
