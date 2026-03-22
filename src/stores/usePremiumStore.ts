@@ -11,7 +11,9 @@ export type PremiumOverride = 'inherit' | 'premium' | 'free'
 
 function getTodayString(): string {
   const now = new Date()
-  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(
+    now.getDate(),
+  ).padStart(2, '0')}`
 }
 
 function getSavedPhraseCount() {
@@ -27,7 +29,7 @@ interface PremiumState {
   savedPhrasesUsed: number
   trialEndsAt: number | null
 
-  /** Server-signed view count token (prevents localStorage tampering) */
+  /** Legacy persisted field kept for compatibility with older clients. */
   viewCountToken: string | null
 
   incrementDailyView: () => boolean
@@ -45,22 +47,18 @@ interface PremiumState {
 
   /**
    * Server-enforced view increment for authenticated users.
-   * Falls back to client-side if server is unreachable.
-   * Returns true if the view is allowed.
+   * Returns true only when the server allows the view.
    */
   serverIncrementView: () => Promise<boolean>
 
   /**
    * Server-enforced trial initialization for authenticated users.
-   * Prevents trial reset by checking/creating server-side trial record.
+   * Returns without mutating local state when the server cannot enforce it.
    */
   serverInitTrial: () => Promise<void>
 }
 
-function resolvePremiumAccess(
-  entitlementPremium: boolean,
-  premiumOverride: PremiumOverride,
-) {
+function resolvePremiumAccess(entitlementPremium: boolean, premiumOverride: PremiumOverride) {
   if (premiumOverride === 'premium') return true
   if (premiumOverride === 'free') return false
   return entitlementPremium
@@ -102,36 +100,26 @@ export const usePremiumStore = create<PremiumState>()(
         try {
           const res = await fetch('/api/billing/init-trial', { method: 'POST' })
           if (!res.ok) {
-            // Server unavailable — fall back to client-only
-            get().initTrial()
             return
           }
 
           const data = await res.json()
-
           if (!data.serverEnforced) {
-            // Server not configured — fall back to client-only
-            get().initTrial()
             return
           }
 
           if (data.trialEndsAt) {
             set({ trialEndsAt: data.trialEndsAt })
 
-            // If trial is still active, mark as premium via entitlement
             if (data.status === 'trialing' && data.trialEndsAt > Date.now()) {
               set((state) => ({
                 entitlementPremium: true,
                 isPremium: resolvePremiumAccess(true, state.premiumOverride),
               }))
             }
-          } else {
-            // Server said no trial — don't allow local-only trial
-            // (trialEndsAt stays null or whatever it was)
           }
         } catch {
-          // Network error — fall back to client-only trial
-          get().initTrial()
+          // Do not create a local-only trial when the server is unavailable.
         }
       },
 
@@ -139,12 +127,9 @@ export const usePremiumStore = create<PremiumState>()(
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return true
 
-        // Trial users pass
         if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return true
 
         const today = getTodayString()
-
-        // Reset count if it's a new day
         if (state.lastViewDate !== today) {
           set({ dailyViewCount: 1, lastViewDate: today })
           return true
@@ -162,36 +147,24 @@ export const usePremiumStore = create<PremiumState>()(
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return true
 
-        // Trial users pass
         if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return true
 
         try {
-          const res = await fetch('/api/billing/view-count', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ token: state.viewCountToken }),
-          })
+          const res = await fetch('/api/billing/view-count', { method: 'POST' })
 
           if (!res.ok) {
-            // Server error — fall back to client-side
-            return get().incrementDailyView()
+            return false
           }
 
           const data = await res.json()
-
           if (!data.serverEnforced) {
-            // Server not configured (anonymous or no Supabase) — client-side fallback
-            return get().incrementDailyView()
+            return false
           }
 
           if (data.premium) {
             return true
           }
 
-          // Update local state to match server
-          if (data.token) {
-            set({ viewCountToken: data.token })
-          }
           set({
             dailyViewCount: data.count,
             lastViewDate: getTodayString(),
@@ -199,8 +172,7 @@ export const usePremiumStore = create<PremiumState>()(
 
           return data.canView
         } catch {
-          // Network error — fall back to client-side
-          return get().incrementDailyView()
+          return false
         }
       },
 
@@ -208,7 +180,6 @@ export const usePremiumStore = create<PremiumState>()(
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return true
 
-        // Trial users can always watch
         if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return true
 
         const today = getTodayString()
@@ -259,7 +230,6 @@ export const usePremiumStore = create<PremiumState>()(
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return Infinity
 
-        // Trial users have unlimited views
         if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return Infinity
 
         const today = getTodayString()
@@ -275,8 +245,8 @@ export const usePremiumStore = create<PremiumState>()(
         const { premiumOverride, ...rest } = state
         return rest
       },
-    }
-  )
+    },
+  ),
 )
 
 export { FREE_DAILY_VIEW_LIMIT, FREE_SAVED_PHRASES_LIMIT }

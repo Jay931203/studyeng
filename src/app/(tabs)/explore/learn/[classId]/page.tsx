@@ -308,6 +308,7 @@ function ClipCard({
   isPlaying,
   disabled = false,
   onPlay,
+  onLockedAttempt,
 }: {
   youtubeId: string
   videoTitle: string
@@ -315,12 +316,22 @@ function ClipCard({
   isPlaying: boolean
   disabled?: boolean
   onPlay: () => void
+  onLockedAttempt?: () => void
 }) {
   return (
     <button
-      onClick={onPlay}
+      type="button"
+      onClick={() => {
+        if (disabled) {
+          onLockedAttempt?.()
+          return
+        }
+        onPlay()
+      }}
       aria-disabled={disabled}
-      className="group flex w-[172px] shrink-0 flex-col overflow-hidden rounded-xl border transition-all active:scale-[0.97]"
+      className={`group flex w-[172px] shrink-0 flex-col overflow-hidden rounded-xl border transition-all ${
+        disabled ? 'cursor-not-allowed' : 'active:scale-[0.97]'
+      }`}
       style={{
         borderColor: isPlaying ? 'var(--accent-primary)' : 'var(--border-card)',
         backgroundColor: isPlaying ? 'var(--accent-glow)' : 'var(--bg-card)',
@@ -546,6 +557,7 @@ function ExpressionSection({
                 isPlaying={isPlaying}
                 disabled={disabled}
                 onPlay={() => handlePlayClip(clip)}
+                onLockedAttempt={() => onLockedAttempt(true)}
               />
                 )
               })()}
@@ -582,20 +594,35 @@ export default function ClassDetailPage() {
     [classId],
   )
 
-  const [expressionData, setExpressionData] = useState<(ExpressionWithClips & { totalClipCount: number })[]>([])
+  const [expressionDataState, setExpressionDataState] = useState<{
+    classId: string | null
+    data: (ExpressionWithClips & { totalClipCount: number })[]
+  }>({ classId: null, data: [] })
   useEffect(() => {
     if (!cls) return
     let cancelled = false
     buildClassExpressionClips(cls.expressions, cls.videoIds).then((sections) => {
       if (cancelled) return
-      setExpressionData(sections.map((section) => ({
-        ...section,
-        totalClipCount: section.clips.length,
-        clips: pickRepresentativeClips(section.clips, MAX_CLIPS_PER_EXPRESSION),
-      })))
+      setExpressionDataState({
+        classId,
+        data: sections.map((section) => ({
+          ...section,
+          totalClipCount: section.clips.length,
+          clips: pickRepresentativeClips(section.clips, MAX_CLIPS_PER_EXPRESSION),
+        })),
+      })
+    }).catch(() => {
+      if (cancelled) return
+      setExpressionDataState({ classId, data: [] })
     })
     return () => { cancelled = true }
-  }, [cls])
+  }, [classId, cls])
+
+  const expressionData = useMemo(
+    () => (expressionDataState.classId === classId ? expressionDataState.data : []),
+    [classId, expressionDataState.classId, expressionDataState.data],
+  )
+  const clipsLoading = Boolean(cls) && expressionDataState.classId !== classId
 
   const replayQueue = useMemo<ReplayClip[]>(
     () =>
@@ -859,7 +886,13 @@ export default function ClassDetailPage() {
         />
       ))}
 
-      {expressionData.length === 0 && (
+      {clipsLoading && (
+        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center">
+          <div className="mx-auto h-3 w-28 animate-pulse rounded-full bg-[var(--bg-secondary)]" />
+        </div>
+      )}
+
+      {!clipsLoading && expressionData.length === 0 && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center">
           <p className="text-sm text-[var(--text-secondary)]">
             {tx.noClips}

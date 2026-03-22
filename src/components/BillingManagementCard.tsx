@@ -7,11 +7,8 @@ import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal
 import { getBillingConfig, type BillingPlan } from '@/lib/billing'
 import {
   formatPrice,
-  getMonthlyDiscountedPrice,
-  getSavingsPercent,
-  getYearlyRenewalPrice,
-  MONTHLY_REFERENCE_PRICE,
-  YEARLY_REFERENCE_PRICE,
+  MONTHLY_BASE_PRICE,
+  YEARLY_BASE_PRICE,
 } from '@/lib/billingPricing'
 import { getBenefitStatusLine } from '@/lib/learningDashboard'
 import { getPlatform, isNative } from '@/lib/platform'
@@ -19,6 +16,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { MONTHLY_ACTIVE_THRESHOLD, TIER_NAMES, useTierStore } from '@/stores/useTierStore'
+import { syncBillingOnLogin } from '@/lib/supabase/billingSync'
 import { SurfaceCard } from '@/components/ui/AppPage'
 import { RedeemCodeSection } from './RedeemCodeCard'
 
@@ -232,9 +230,9 @@ interface PlanOption {
   id: BillingPlan
   label: string
   detail: string
-  comparePrice: string
   price: string
-  savingsText: string
+  comparePrice?: string | null
+  savingsText?: string | null
   highlight?: string
 }
 
@@ -334,7 +332,9 @@ function PlanTile({
           <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
             {option.detail}
           </p>
-          <p className="mt-1 text-[11px] text-[var(--text-muted)]">{option.savingsText}</p>
+          {option.savingsText ? (
+            <p className="mt-1 text-[11px] text-[var(--text-muted)]">{option.savingsText}</p>
+          ) : null}
         </div>
         {(current || option.highlight) && (
           <span
@@ -349,7 +349,9 @@ function PlanTile({
         )}
       </div>
       <div className="mt-3 flex items-baseline gap-2">
-        <span className="text-xs text-[var(--text-muted)] line-through">{option.comparePrice}</span>
+        {option.comparePrice ? (
+          <span className="text-xs text-[var(--text-muted)] line-through">{option.comparePrice}</span>
+        ) : null}
         <p className="text-base font-bold text-[var(--text-primary)]">{option.price}</p>
       </div>
     </button>
@@ -410,24 +412,25 @@ export function BillingManagementCard({
 
     const loadNativeStatus = async () => {
       try {
-        const { getCustomerInfo, getOfferings, isPremiumFromCustomerInfo } = await import(
-          '@/lib/nativeBilling'
-        )
-        const [customerInfo, offerings] = await Promise.all([getCustomerInfo(), getOfferings()])
+        const { getOfferings } = await import('@/lib/nativeBilling')
+        const offeringsPromise = getOfferings()
+        if (user?.id) {
+          await syncBillingOnLogin(user.id)
+        }
+        const offerings = await offeringsPromise
 
         if (cancelled) return
 
-        const nextPremium = isPremiumFromCustomerInfo(customerInfo)
         const packages = offerings?.current?.availablePackages ?? []
+        const nextPremium = usePremiumStore.getState().entitlementPremium
 
-        setPremiumEntitlement(nextPremium)
         setNativePackages(packages)
         updateNativeStatus(nextPremium, packages.length)
       } catch (error) {
         console.warn('[billing] failed to load native billing state:', error)
         if (!cancelled) {
           setNativePackages([])
-          updateNativeStatus(false, 0)
+          updateNativeStatus(usePremiumStore.getState().entitlementPremium, 0)
         }
       } finally {
         if (!cancelled) {
@@ -441,7 +444,7 @@ export function BillingManagementCard({
     return () => {
       cancelled = true
     }
-  }, [native, refreshKey, setPremiumEntitlement, updateNativeStatus])
+  }, [native, refreshKey, user?.id, updateNativeStatus])
 
   useEffect(() => {
     if (native) return
@@ -490,7 +493,7 @@ export function BillingManagementCard({
     return () => {
       cancelled = true
     }
-  }, [billingEnabled, native, refreshKey, user])
+  }, [billingEnabled, native, refreshKey, user, t.errorStatusFetch])
 
   useEffect(() => {
     const planKey = status?.entitlement?.planKey
@@ -532,34 +535,27 @@ export function BillingManagementCard({
       ? `${t.expiry} ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
       : null
 
-  const monthlyPrice = getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)
-  const yearlyPrice = getYearlyRenewalPrice(
-    benefitSnapshot.yearlyRenewalDiscount,
-    benefitSnapshot.monthlyDiscount,
-  )
   const planOptions = useMemo<PlanOption[]>(() => {
     const tierName = TIER_NAMES[benefitSnapshot.benefitTier]
-    const monthlySavings = getSavingsPercent(MONTHLY_REFERENCE_PRICE, monthlyPrice)
-    const yearlySavings = getSavingsPercent(YEARLY_REFERENCE_PRICE, yearlyPrice)
     const webPlanOptions = getWebPlanOptions(t)
 
     return [
       {
         ...webPlanOptions.yearly,
         detail: `${tierName} ${t.benefitApplied}`,
-        comparePrice: formatPrice(YEARLY_REFERENCE_PRICE, locale),
-        price: `${formatPrice(yearlyPrice, locale)} ${t.perYear}`,
-        savingsText: `${t.totalDiscount} ${yearlySavings}${t.discountSuffix}`,
+        comparePrice: null,
+        price: `${formatPrice(YEARLY_BASE_PRICE, locale)} ${t.perYear}`,
+        savingsText: null,
       },
       {
         ...webPlanOptions.monthly,
         detail: `${tierName} ${t.benefitApplied}`,
-        comparePrice: formatPrice(MONTHLY_REFERENCE_PRICE, locale),
-        price: `${formatPrice(monthlyPrice, locale)} ${t.perMonth}`,
-        savingsText: `${t.totalDiscount} ${monthlySavings}${t.discountSuffix}`,
+        comparePrice: null,
+        price: `${formatPrice(MONTHLY_BASE_PRICE, locale)} ${t.perMonth}`,
+        savingsText: null,
       },
     ]
-  }, [benefitSnapshot.benefitTier, monthlyPrice, yearlyPrice, t, locale])
+  }, [benefitSnapshot.benefitTier, t, locale])
 
   const handlePortal = async () => {
     setManaging(true)
@@ -590,9 +586,13 @@ export function BillingManagementCard({
       const customerInfo = await restorePurchases()
       const restored = isPremiumFromCustomerInfo(customerInfo)
       setPremiumEntitlement(restored)
-      updateNativeStatus(restored)
+      if (user?.id) {
+        await syncBillingOnLogin(user.id)
+      }
+      const mergedPremium = usePremiumStore.getState().entitlementPremium
+      updateNativeStatus(mergedPremium)
 
-      if (!restored) {
+      if (!mergedPremium) {
         setErrorMessage(t.errorRestoreNotFound)
       }
     } catch (error) {
@@ -622,7 +622,11 @@ export function BillingManagementCard({
       const customerInfo = await purchasePackage(pkg.identifier)
       const nextPremium = isPremiumFromCustomerInfo(customerInfo)
       setPremiumEntitlement(nextPremium)
-      updateNativeStatus(nextPremium)
+      if (user?.id) {
+        await syncBillingOnLogin(user.id)
+      }
+      const mergedPremium = usePremiumStore.getState().entitlementPremium
+      updateNativeStatus(mergedPremium)
     } catch (error: unknown) {
       const purchaseError = error as { code?: string; userCancelled?: boolean }
       if (!purchaseError.userCancelled && purchaseError.code !== 'PURCHASE_CANCELLED') {
@@ -764,10 +768,18 @@ export function BillingManagementCard({
                 >
                   <p className="text-[11px] text-[var(--text-secondary)]">{option.label}</p>
                   <div className="mt-1 flex items-center gap-2">
-                    <span className="text-[11px] text-[var(--text-muted)] line-through">{option.comparePrice}</span>
-                    <span className="text-sm font-semibold text-[var(--text-primary)]">{option.price}</span>
+                    {option.comparePrice ? (
+                      <span className="text-[11px] text-[var(--text-muted)] line-through">
+                        {option.comparePrice}
+                      </span>
+                    ) : null}
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">
+                      {option.price}
+                    </span>
                   </div>
-                  <p className="mt-1 text-[10px] text-[var(--text-muted)]">{option.savingsText}</p>
+                  {option.savingsText ? (
+                    <p className="mt-1 text-[10px] text-[var(--text-muted)]">{option.savingsText}</p>
+                  ) : null}
                 </div>
               ))}
             </div>

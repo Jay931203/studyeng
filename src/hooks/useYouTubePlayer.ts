@@ -214,11 +214,13 @@ export function useYouTubePlayer(
     const effectiveClipEnd = effectiveClipEndRef.current
     const effectiveClipStart = effectiveClipStartRef.current
     const earlyTrigger = effectiveClipEnd - 1.5
+    const repeatMode = usePlayerStore.getState().repeatMode
 
     if (
       effectiveClipEnd > effectiveClipStart &&
       time >= earlyTrigger &&
-      !clipBoundaryCooldownRef.current
+      !clipBoundaryCooldownRef.current &&
+      repeatMode !== 'off'
     ) {
       clipBoundaryCooldownRef.current = true
       window.setTimeout(() => {
@@ -385,6 +387,12 @@ export function useYouTubePlayer(
             if (disposed) return
 
             if (event.data === 0) {
+              setIsPlaying(false)
+              if (usePlayerStore.getState().repeatMode === 'off') {
+                handleClipComplete()
+                return
+              }
+
               const effectiveClipStart = effectiveClipStartRef.current
               event.target.seekTo(effectiveClipStart, true)
               event.target.playVideo()

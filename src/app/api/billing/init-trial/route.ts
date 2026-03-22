@@ -25,16 +25,15 @@ function normalizeTrialEntitlement(row: unknown): TrialEntitlementRow | null {
   }
 }
 
+function unavailable(error: string, status = 503) {
+  return NextResponse.json({ error }, { status })
+}
+
 /**
  * POST /api/billing/init-trial
  *
  * Server-side trial initialization for authenticated users.
  * Prevents trial reset by storing the trial start in subscription_entitlements.
- *
- * If user already has an entitlement row (trial or paid), returns existing data.
- * If no row exists, creates a trial entitlement with 7-day expiry.
- *
- * Returns: { trialEndsAt: number | null, alreadyExists: boolean }
  */
 export async function POST(request: Request) {
   const ip = getClientIp(request)
@@ -44,23 +43,27 @@ export async function POST(request: Request) {
 
   const supabase = await createClient()
   if (!supabase) {
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+    return unavailable('billing-unavailable')
   }
 
   const {
     data: { user },
+    error: userError,
   } = await supabase.auth.getUser()
 
+  if (userError) {
+    return unavailable('auth-unavailable')
+  }
+
   if (!user) {
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+    return unavailable('unauthorized', 401)
   }
 
   const admin = createAdminClient()
   if (!admin) {
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+    return unavailable('billing-unavailable')
   }
 
-  // Check if user already has an entitlement row
   const { data: existingRaw, error: lookupError } = await admin
     .from('subscription_entitlements')
     .select('status, source, current_period_end')
@@ -69,15 +72,12 @@ export async function POST(request: Request) {
 
   if (lookupError) {
     console.warn('[billing] init-trial lookup failed:', lookupError.message)
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+    return unavailable('billing-unavailable')
   }
 
   const existing = normalizeTrialEntitlement(existingRaw)
 
   if (existing) {
-    // User already has an entitlement row.
-    // If it's a trial, return its end date.
-    // If it's a paid subscription or expired trial, don't allow re-trial.
     const periodEnd = existing.current_period_end
       ? new Date(existing.current_period_end).getTime()
       : null
@@ -91,7 +91,6 @@ export async function POST(request: Request) {
     })
   }
 
-  // No existing entitlement — create a trial
   const trialEnd = new Date(Date.now() + TRIAL_DURATION_MS)
 
   const { error: upsertError } = await admin
@@ -113,7 +112,7 @@ export async function POST(request: Request) {
 
   if (upsertError) {
     console.warn('[billing] init-trial upsert failed:', upsertError.message)
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+    return unavailable('billing-unavailable')
   }
 
   return NextResponse.json({
@@ -138,22 +137,31 @@ export async function GET(request: Request) {
 
   const supabase = await createClient()
   if (!supabase) {
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+    return unavailable('billing-unavailable')
   }
 
   const {
     data: { user },
+    error: userError,
   } = await supabase.auth.getUser()
 
-  if (!user) {
-    return NextResponse.json({ trialEndsAt: null, serverEnforced: false })
+  if (userError) {
+    return unavailable('auth-unavailable')
   }
 
-  const { data: existingRaw } = await supabase
+  if (!user) {
+    return unavailable('unauthorized', 401)
+  }
+
+  const { data: existingRaw, error: lookupError } = await supabase
     .from('subscription_entitlements')
     .select('status, source, current_period_end')
     .eq('user_id', user.id)
     .maybeSingle()
+
+  if (lookupError) {
+    return unavailable('billing-unavailable')
+  }
 
   const existing = normalizeTrialEntitlement(existingRaw)
 

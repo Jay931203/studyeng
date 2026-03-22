@@ -140,6 +140,8 @@ function VideoFeedInner({
   const initialReviewMarkedRef = useRef(false)
   const awardedRef = useRef<Set<string>>(new Set())
   const playbackMetricsRef = useRef({ currentTime: 0, clipStart: 0, clipEnd: 0 })
+  const playbackStartCommittedVideoIdRef = useRef<string | null>(null)
+  const playbackStartPendingVideoIdRef = useRef<string | null>(null)
   const engagementRef = useRef<{ finalized: boolean; videoId: string | null }>({
     finalized: false,
     videoId: null,
@@ -160,11 +162,10 @@ function VideoFeedInner({
   const registerImpression = useRecommendationStore((state) => state.registerImpression)
   const recordBehaviorCompletion = useRecommendationStore((state) => state.recordCompletion)
   const recordSkip = useRecommendationStore((state) => state.recordSkip)
-  const incrementDailyView = usePremiumStore((state) => state.incrementDailyView)
-  const serverIncrementView = usePremiumStore((state) => state.serverIncrementView)
   const canViewMore = usePremiumStore((state) => state.canViewMore)
   const canSaveMorePhrases = usePremiumStore((state) => state.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((state) => state.incrementSavedPhrases)
+  const serverIncrementView = usePremiumStore((state) => state.serverIncrementView)
   const serverInitTrial = usePremiumStore((state) => state.serverInitTrial)
   const checkAndUpdateStreak = useUserStore((state) => state.checkAndUpdateStreak)
   const incrementMission = useDailyMissionStore((state) => state.incrementMission)
@@ -190,6 +191,11 @@ function VideoFeedInner({
   useEffect(() => {
     writeEmbedBlockedVideoIds(embedBlockedVideoIds)
   }, [embedBlockedVideoIds])
+
+  useEffect(() => {
+    playbackStartCommittedVideoIdRef.current = null
+    playbackStartPendingVideoIdRef.current = null
+  }, [currentVideo?.id])
 
   // Initialize 7-day free trial on first app use (server-enforced for authenticated users)
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -312,24 +318,18 @@ function VideoFeedInner({
       if (!nextVideo) return false
 
       if (canPreviewVideo(nextVideo)) {
-        if (getViewCount(nextVideo.id) > 0) return true
+        return true
       }
 
-      const allowed = incrementDailyView()
-      if (!allowed) {
+      if (!canViewMore()) {
         setPremiumTrigger('video-limit')
         setShowPremiumModal(true)
         return false
       }
 
-      // Fire server-side verification in background.
-      // If server says the view is not allowed (e.g. localStorage was tampered),
-      // the server response updates the local count for the next check.
-      void serverIncrementView()
-
       return true
     },
-    [canPreviewVideo, getViewCount, incrementDailyView, serverIncrementView],
+    [canPreviewVideo, canViewMore],
   )
 
   const findSeriesNavigationTarget = useCallback(
@@ -449,10 +449,6 @@ function VideoFeedInner({
     }
 
     registerImpression(currentVideo.id)
-    incrementViewCount(currentVideo.id)
-    if (currentVideo.seriesId) {
-      markWatched(currentVideo.seriesId, currentVideo.id)
-    }
 
     return () => {
       finalizeVideoSession(currentVideo.id, false)
@@ -464,10 +460,37 @@ function VideoFeedInner({
     currentVideo?.seriesId,
     canPreviewVideo,
     finalizeVideoSession,
-    incrementViewCount,
-    markWatched,
     registerImpression,
   ])
+
+  const handlePlaybackStarted = useCallback(async () => {
+    if (!currentVideo) return
+    if (playbackStartCommittedVideoIdRef.current === currentVideo.id) return
+    if (playbackStartPendingVideoIdRef.current === currentVideo.id) return
+
+    const alreadyWatched = getViewCount(currentVideo.id) > 0
+    playbackStartPendingVideoIdRef.current = currentVideo.id
+
+    if (!alreadyWatched) {
+      const allowed = await serverIncrementView()
+      if (playbackStartPendingVideoIdRef.current !== currentVideo.id) return
+
+      if (!allowed) {
+        playbackStartPendingVideoIdRef.current = null
+        setPremiumTrigger('video-limit')
+        setShowPremiumModal(true)
+        return
+      }
+    }
+
+    playbackStartCommittedVideoIdRef.current = currentVideo.id
+    playbackStartPendingVideoIdRef.current = null
+    incrementViewCount(currentVideo.id)
+
+    if (currentVideo.seriesId) {
+      markWatched(currentVideo.seriesId, currentVideo.id)
+    }
+  }, [currentVideo, getViewCount, incrementViewCount, markWatched, serverIncrementView])
 
   useEffect(() => {
     if (!initialVideoId || !currentVideo || currentVideo.id === initialVideoId) return
@@ -865,6 +888,7 @@ function VideoFeedInner({
             onNextVideo={canGoNext ? handleNextVideo : undefined}
             onToggleFreeze={onToggleFreeze}
             onPlaybackStarted={() => {
+              void handlePlaybackStarted()
               if (
                 initialReviewMarkedRef.current ||
                 !initialReviewPhraseId ||

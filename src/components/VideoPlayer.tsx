@@ -227,8 +227,32 @@ export function VideoPlayer({
   const markFamiliar = useFamiliarityStore((state) => state.markFamiliar)
   // Preload large data files on mount (non-blocking)
   const [dataReady, setDataReady] = useState(false)
+  const [primingSuppressedSessionKey, setPrimingSuppressedSessionKey] = useState<string | null>(null)
+  const playbackStartedRef = useRef(false)
+  const videoSessionKeyRef = useRef<string | null>(null)
+  const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
   useEffect(() => {
-    Promise.all([preloadExpressionData(), preloadWordData()]).then(() => setDataReady(true))
+    videoSessionKeyRef.current = videoSessionKey
+  }, [videoSessionKey])
+
+  useEffect(() => {
+    playbackStartedRef.current = playbackStarted
+  }, [playbackStarted])
+
+  useEffect(() => {
+    let cancelled = false
+
+    Promise.all([preloadExpressionData(), preloadWordData()]).then(() => {
+      if (cancelled) return
+      setDataReady(true)
+      if (playbackStartedRef.current) {
+        setPrimingSuppressedSessionKey(videoSessionKeyRef.current)
+      }
+    })
+
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   const primingExpressions = useMemo(() => {
@@ -241,9 +265,12 @@ export function VideoPlayer({
     return getSmartPrimingWordsSync(youtubeId, userLevel, familiarExprs, 3)
   }, [primingEnabled, youtubeId, userLevel, familiarExprs, dataReady])
 
-  const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
   const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
-  const showPriming = (primingExpressions.length > 0 || primingWords.length > 0) && dismissedPrimingKey !== videoSessionKey
+  const primingAvailable = primingExpressions.length > 0 || primingWords.length > 0
+  const showPriming =
+    primingAvailable &&
+    dismissedPrimingKey !== videoSessionKey &&
+    primingSuppressedSessionKey !== videoSessionKey
   const primingResetTime = initialSeekTime ?? clipStart
   const primingPreviewTimerRef = useRef<number | null>(null)
   const autoSkipTimerRef = useRef<number | null>(null)
@@ -1013,9 +1040,6 @@ export function VideoPlayer({
             showTranslation={subtitleMode === 'en-ko'}
             onSavePhrase={onSavePhrase}
             onSeek={(time) => seekTo(time)}
-            onPrevVideo={onPrevVideo}
-            onNextVideo={onNextVideo}
-            onToggleFreeze={onToggleFreeze}
           />
         )}
 
@@ -1055,9 +1079,6 @@ export function VideoPlayer({
               onSavePhrase={onSavePhrase}
               onSeek={(time) => seekTo(time)}
               bottomOffset={isLandscapeViewport ? '24px' : '56px'}
-              onPrevVideo={onPrevVideo}
-              onNextVideo={onNextVideo}
-              onToggleFreeze={onToggleFreeze}
             />
           )}
 
@@ -1377,9 +1398,6 @@ function ShortsSubtitleOverlay({
   onSavePhrase,
   onSeek,
   bottomOffset = '48px',
-  onPrevVideo,
-  onNextVideo,
-  onToggleFreeze,
 }: {
   subtitles: SubtitleEntry[]
   videoId: string
@@ -1387,9 +1405,6 @@ function ShortsSubtitleOverlay({
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onSeek?: (time: number) => void
   bottomOffset?: string
-  onPrevVideo?: () => void
-  onNextVideo?: () => void
-  onToggleFreeze?: () => void
 }) {
   const locale = useLocaleStore((s) => s.locale)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)

@@ -24,12 +24,11 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    expect(screen.getByRole('button', { name: 'Toggle browse' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Home' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Learn' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Toggle feed' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Series' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Shorts' })).toBeInTheDocument()
+    expect(screen.getAllByRole('button', { name: 'Home' })).toHaveLength(2)
+    expect(screen.getByRole('button', { name: 'Learn', pressed: false })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Series & Shorts' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Series', pressed: false })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Shorts', pressed: false })).toBeInTheDocument()
     expect(screen.getByLabelText('My')).toBeInTheDocument()
     expect(screen.getByLabelText('Settings')).toBeInTheDocument()
   })
@@ -70,7 +69,7 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    fireEvent.click(screen.getByRole('button', { name: 'Toggle feed' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Series & Shorts' }))
 
     expect(mockPush).toHaveBeenCalledWith('/shorts', { scroll: false })
   })
@@ -80,8 +79,8 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    expect(screen.getByRole('button', { name: 'Home' })).toHaveAttribute('aria-pressed', 'false')
-    expect(screen.getByRole('button', { name: 'Learn' })).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByRole('button', { name: 'Home', pressed: false })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Learn', pressed: true })).toBeInTheDocument()
   })
 
   it('toggles browse when the home button is pressed', () => {
@@ -89,7 +88,7 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    fireEvent.click(screen.getByRole('button', { name: 'Toggle browse' }))
+    fireEvent.click(screen.getAllByRole('button', { name: 'Home' })[0]!)
 
     expect(mockPush).toHaveBeenCalledWith('/explore/learn', { scroll: false })
   })

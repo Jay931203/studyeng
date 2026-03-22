@@ -12,7 +12,8 @@ interface EntitlementRow {
 }
 
 export async function syncBillingOnLogin(userId: string) {
-  // On native platforms, check RevenueCat first
+  let nativePremium: boolean | null = null
+
   if (isNative()) {
     try {
       const { initRevenueCat, loginRevenueCat, checkNativePremiumStatus } = await import(
@@ -20,51 +21,45 @@ export async function syncBillingOnLogin(userId: string) {
       )
       await initRevenueCat(userId)
       await loginRevenueCat(userId)
-      const isPremium = await checkNativePremiumStatus()
-      usePremiumStore.getState().setPremiumEntitlement(isPremium)
-      return
+      nativePremium = await checkNativePremiumStatus()
     } catch (error) {
-      console.warn('[billing-sync] native billing check failed, falling back to DB:', error)
+      console.warn('[billing-sync] native billing check failed, continuing with DB:', error)
     }
   }
 
-  // Web fallback: check Supabase entitlement table
-  if (!supabase) return
+  let entitlement: EntitlementRow | null = null
 
-  const { data, error } = await supabase
-    .from('subscription_entitlements')
-    .select('status, current_period_end, source')
-    .eq('user_id', userId)
-    .maybeSingle()
+  if (supabase) {
+    const { data, error } = await supabase
+      .from('subscription_entitlements')
+      .select('status, current_period_end, source')
+      .eq('user_id', userId)
+      .maybeSingle()
 
-  if (error) {
-    console.warn('[billing-sync] entitlement pull failed:', error.message)
-    usePremiumStore.getState().setPremiumEntitlement(false)
-    return
+    if (error) {
+      console.warn('[billing-sync] entitlement pull failed:', error.message)
+    } else {
+      entitlement = (data as EntitlementRow | null) ?? null
+    }
   }
 
-  const entitlement = (data as EntitlementRow | null) ?? null
   const isActive =
     Boolean(entitlement) &&
     isEntitlementActive(entitlement?.status ?? null, entitlement?.current_period_end ?? null)
+  const mergedPremium = Boolean(nativePremium) || isActive
 
-  usePremiumStore.getState().setPremiumEntitlement(isActive)
+  usePremiumStore.getState().setPremiumEntitlement(mergedPremium)
 
-  // Restore server-side trial state to prevent trial reset via localStorage clear.
-  // If the server has a trial record, use its end date instead of allowing a new local trial.
-  if (entitlement?.current_period_end) {
+  const localTrialEnd = usePremiumStore.getState().trialEndsAt
+  if (
+    entitlement?.current_period_end &&
+    (entitlement.source === 'trial' || entitlement.status === 'trialing')
+  ) {
     const serverTrialEnd = new Date(entitlement.current_period_end).getTime()
-    const localTrialEnd = usePremiumStore.getState().trialEndsAt
-
-    if (entitlement.source === 'trial' || entitlement.status === 'trialing') {
-      // Server has a trial record — always use server truth
-      if (localTrialEnd === null || Math.abs(serverTrialEnd - localTrialEnd) > 60_000) {
-        usePremiumStore.setState({ trialEndsAt: serverTrialEnd })
-      }
-    } else if (!localTrialEnd) {
-      // User had a paid subscription that expired — they already used their trial
-      // Set trialEndsAt to a past date to prevent re-trial
-      usePremiumStore.setState({ trialEndsAt: 1 })
+    if (localTrialEnd === null || Math.abs(serverTrialEnd - localTrialEnd) > 60_000) {
+      usePremiumStore.setState({ trialEndsAt: serverTrialEnd })
     }
+  } else if (localTrialEnd !== 1) {
+    usePremiumStore.setState({ trialEndsAt: 1 })
   }
 }

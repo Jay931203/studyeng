@@ -8,8 +8,7 @@
  *
  * This prevents localStorage manipulation because:
  * - The token is cryptographically signed; changing the count invalidates it
- * - A missing/invalid token resets count to 0, so the user gets at most
- *   VIEW_LIMIT additional views per tamper attempt (not unlimited)
+ * - A missing/invalid token resets count to 0.
  * - The date is embedded, so yesterday's token won't work today
  */
 
@@ -17,14 +16,27 @@ import { createHmac } from 'crypto'
 
 export const VIEW_LIMIT = 10
 
-const SECRET = process.env.VIEW_COUNT_SECRET || 'shortee-vc-guard-2026'
+const VIEW_COUNT_SECRET = process.env.VIEW_COUNT_SECRET?.trim() ?? ''
+
+export function hasViewCountSecret() {
+  return VIEW_COUNT_SECRET.length > 0
+}
+
+function getViewCountSecret() {
+  return hasViewCountSecret() ? VIEW_COUNT_SECRET : null
+}
 
 /**
  * Create a signed token encoding (userId, date, count).
  */
 export function createViewToken(userId: string, date: string, count: number): string {
+  const secret = getViewCountSecret()
+  if (!secret) {
+    throw new Error('VIEW_COUNT_SECRET is not configured')
+  }
+
   const payload = `${userId}:${date}:${count}`
-  const signature = createHmac('sha256', SECRET).update(payload).digest('base64url')
+  const signature = createHmac('sha256', secret).update(payload).digest('base64url')
   // Token format: base64url(payload):signature
   const encodedPayload = Buffer.from(payload).toString('base64url')
   return `${encodedPayload}.${signature}`
@@ -35,6 +47,9 @@ export function createViewToken(userId: string, date: string, count: number): st
  * Returns the count if valid, null if tampered or invalid.
  */
 export function verifyViewToken(token: string, userId: string, date: string): number | null {
+  const secret = getViewCountSecret()
+  if (!secret) return null
+
   const dotIndex = token.indexOf('.')
   if (dotIndex === -1) return null
 
@@ -59,7 +74,7 @@ export function verifyViewToken(token: string, userId: string, date: string): nu
   if (isNaN(count) || count < 0) return null
 
   // Verify signature
-  const expectedSignature = createHmac('sha256', SECRET).update(payload).digest('base64url')
+  const expectedSignature = createHmac('sha256', secret).update(payload).digest('base64url')
   if (signature !== expectedSignature) return null
 
   return count

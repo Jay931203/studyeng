@@ -71,18 +71,24 @@ export async function POST(request: Request) {
   const now = new Date()
   const periodEnd = new Date(now.getTime() + codeRow.duration_days * 24 * 60 * 60 * 1000)
 
-  // Mark code as redeemed
-  const { error: redeemError } = await admin
+  // Claim the code atomically so concurrent redeems cannot both succeed.
+  const { data: redeemedRows, error: redeemError } = await admin
     .from('premium_codes')
     .update({
       redeemed_by: user.id,
       redeemed_at: now.toISOString(),
     } as never)
     .eq('id', codeRow.id)
+    .is('redeemed_by', null)
+    .select('id')
 
   if (redeemError) {
     console.warn('[billing] code redeem update failed:', redeemError.message)
     return NextResponse.json({ error: 'redeem-failed' }, { status: 500 })
+  }
+
+  if (!redeemedRows || redeemedRows.length === 0) {
+    return NextResponse.json({ error: 'already-redeemed' }, { status: 409 })
   }
 
   // Upsert entitlement
