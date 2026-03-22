@@ -13,6 +13,7 @@ interface LearnProgressState {
   classProgress: Record<string, LearnClassProgress>
   saveClassProgress: (classId: string, lastIndex: number, total: number) => void
   clearClassProgress: (classId: string) => void
+  resetState: () => void
 }
 
 export const useLearnProgressStore = create<LearnProgressState>()(
@@ -36,6 +37,7 @@ export const useLearnProgressStore = create<LearnProgressState>()(
           delete next[classId]
           return { classProgress: next }
         }),
+      resetState: () => set({ classProgress: {} }),
     }),
     {
       name: 'studyeng-learn-progress',

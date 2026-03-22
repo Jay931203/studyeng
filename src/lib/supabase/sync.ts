@@ -305,9 +305,9 @@ async function pullProfile(userId: string) {
     lastActivityDate: mergedStreakState.lastActivityDate,
   })
 
-  // Onboarding: server wins if completed
+  // Onboarding: once the server profile is completed, keep local metadata aligned.
   const onboardingState = useOnboardingStore.getState()
-  if (data.onboarding_completed && !onboardingState.hasOnboarded) {
+  if (data.onboarding_completed) {
     useOnboardingStore.setState({
       hasOnboarded: true,
       hasSeenWelcome: true,

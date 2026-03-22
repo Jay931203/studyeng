@@ -15,6 +15,8 @@ import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useLearnAccessStore } from '@/stores/useLearnAccessStore'
+import { useLearnProgressStore } from '@/stores/useLearnProgressStore'
+import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 
 const ACCOUNT_OWNER_STORAGE_KEY = 'studyeng-account-owner'
 
@@ -57,6 +59,8 @@ export function resetAccountScopedState() {
   useDailyMissionStore.getState().resetState()
   useDiscountStore.getState().resetState()
   usePremiumStore.getState().resetState()
+  useLearnProgressStore.getState().resetState()
+  useFamiliarityStore.getState().resetState()
   useUserStore.setState({
     level: 1,
     xp: 0,

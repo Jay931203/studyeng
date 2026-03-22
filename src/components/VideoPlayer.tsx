@@ -175,13 +175,12 @@ export function VideoPlayer({
   const { subtitles: fetchedSubtitles, loading: transcriptLoading } = useTranscript(youtubeId)
 
   const subtitles = useMemo(() => {
-    const raw =
-      transcriptLoading && fetchedSubtitles.length === 0 ? propSubtitles : fetchedSubtitles
+    const raw = fetchedSubtitles.length > 0 ? fetchedSubtitles : propSubtitles
     if (clipEnd > clipStart) {
       return raw.filter((subtitle) => subtitle.end > clipStart && subtitle.start < clipEnd)
     }
     return raw
-  }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles, transcriptLoading])
+  }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles])
 
   const { ready, playbackStarted, play, pause, seekTo, player, videoError, clearVideoError } =
     useYouTubePlayer(
@@ -1172,11 +1171,7 @@ function InlineSubtitleControls({
 
   const savedPhraseId = useMemo(() => {
     if (!activeSub) return null
-    return (
-      phrases.find((phrase) => phrase.videoId === videoId && phrase.en === activeSub.en)?.id ??
-      phrases.find((phrase) => phrase.en === activeSub.en)?.id ??
-      null
-    )
+    return phrases.find((phrase) => phrase.videoId === videoId && phrase.en === activeSub.en)?.id ?? null
   }, [activeSub, phrases, videoId])
 
   const isSaved = savedPhraseId !== null
@@ -1417,11 +1412,7 @@ function ShortsSubtitleOverlay({
 
   const savedPhraseId = useMemo(() => {
     if (!activeSub) return null
-    return (
-      phrases.find((phrase) => phrase.videoId === videoId && phrase.en === activeSub.en)?.id ??
-      phrases.find((phrase) => phrase.en === activeSub.en)?.id ??
-      null
-    )
+    return phrases.find((phrase) => phrase.videoId === videoId && phrase.en === activeSub.en)?.id ?? null
   }, [activeSub, phrases, videoId])
 
   const showNotice = useCallback(

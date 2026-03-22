@@ -14,6 +14,7 @@ interface FamiliarityState {
   getFamiliarCount: (exprId: string) => number
   isFamiliar: (exprId: string) => boolean
   resetFamiliarity: (exprId: string) => void
+  resetState: () => void
 }
 
 export const useFamiliarityStore = create<FamiliarityState>()(
@@ -41,9 +42,15 @@ export const useFamiliarityStore = create<FamiliarityState>()(
         return (get().entries[exprId]?.count ?? 0) >= 3
       },
       resetFamiliarity: (exprId) => {
-        const { [exprId]: _, ...rest } = get().entries
-        set({ entries: rest })
+        const nextEntries = { ...get().entries }
+        delete nextEntries[exprId]
+        set({ entries: nextEntries })
       },
+      resetState: () =>
+        set((state) => ({
+          entries: {},
+          hydrated: state.hydrated,
+        })),
     }),
     {
       name: 'studyeng-familiarity',

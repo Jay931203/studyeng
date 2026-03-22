@@ -27,6 +27,9 @@ interface PremiumState {
   savedPhrasesUsed: number
   trialEndsAt: number | null
 
+  /** Server-signed view count token (prevents localStorage tampering) */
+  viewCountToken: string | null
+
   incrementDailyView: () => boolean
   canViewMore: () => boolean
   canSaveMorePhrases: () => boolean
@@ -39,6 +42,19 @@ interface PremiumState {
   isInTrial: () => boolean
   getTrialDaysRemaining: () => number
   initTrial: () => void
+
+  /**
+   * Server-enforced view increment for authenticated users.
+   * Falls back to client-side if server is unreachable.
+   * Returns true if the view is allowed.
+   */
+  serverIncrementView: () => Promise<boolean>
+
+  /**
+   * Server-enforced trial initialization for authenticated users.
+   * Prevents trial reset by checking/creating server-side trial record.
+   */
+  serverInitTrial: () => Promise<void>
 }
 
 function resolvePremiumAccess(
@@ -60,6 +76,7 @@ export const usePremiumStore = create<PremiumState>()(
       lastViewDate: null,
       savedPhrasesUsed: 0,
       trialEndsAt: null,
+      viewCountToken: null,
 
       isInTrial: () => {
         const state = get()
@@ -78,6 +95,43 @@ export const usePremiumStore = create<PremiumState>()(
         const state = get()
         if (state.trialEndsAt === null) {
           set({ trialEndsAt: Date.now() + TRIAL_DURATION_MS })
+        }
+      },
+
+      serverInitTrial: async () => {
+        try {
+          const res = await fetch('/api/billing/init-trial', { method: 'POST' })
+          if (!res.ok) {
+            // Server unavailable — fall back to client-only
+            get().initTrial()
+            return
+          }
+
+          const data = await res.json()
+
+          if (!data.serverEnforced) {
+            // Server not configured — fall back to client-only
+            get().initTrial()
+            return
+          }
+
+          if (data.trialEndsAt) {
+            set({ trialEndsAt: data.trialEndsAt })
+
+            // If trial is still active, mark as premium via entitlement
+            if (data.status === 'trialing' && data.trialEndsAt > Date.now()) {
+              set((state) => ({
+                entitlementPremium: true,
+                isPremium: resolvePremiumAccess(true, state.premiumOverride),
+              }))
+            }
+          } else {
+            // Server said no trial — don't allow local-only trial
+            // (trialEndsAt stays null or whatever it was)
+          }
+        } catch {
+          // Network error — fall back to client-only trial
+          get().initTrial()
         }
       },
 
@@ -102,6 +156,52 @@ export const usePremiumStore = create<PremiumState>()(
 
         set({ dailyViewCount: state.dailyViewCount + 1 })
         return true
+      },
+
+      serverIncrementView: async () => {
+        const state = get()
+        if (!isPremiumEnforcementEnabled() || state.isPremium) return true
+
+        // Trial users pass
+        if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return true
+
+        try {
+          const res = await fetch('/api/billing/view-count', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: state.viewCountToken }),
+          })
+
+          if (!res.ok) {
+            // Server error — fall back to client-side
+            return get().incrementDailyView()
+          }
+
+          const data = await res.json()
+
+          if (!data.serverEnforced) {
+            // Server not configured (anonymous or no Supabase) — client-side fallback
+            return get().incrementDailyView()
+          }
+
+          if (data.premium) {
+            return true
+          }
+
+          // Update local state to match server
+          if (data.token) {
+            set({ viewCountToken: data.token })
+          }
+          set({
+            dailyViewCount: data.count,
+            lastViewDate: getTodayString(),
+          })
+
+          return data.canView
+        } catch {
+          // Network error — fall back to client-side
+          return get().incrementDailyView()
+        }
       },
 
       canViewMore: () => {
@@ -135,7 +235,7 @@ export const usePremiumStore = create<PremiumState>()(
           isPremium: resolvePremiumAccess(state.entitlementPremium, value),
         })),
 
-      resetDailyCount: () => set({ dailyViewCount: 0, lastViewDate: null }),
+      resetDailyCount: () => set({ dailyViewCount: 0, lastViewDate: null, viewCountToken: null }),
 
       resetState: () =>
         set((state) => ({
@@ -146,6 +246,7 @@ export const usePremiumStore = create<PremiumState>()(
           lastViewDate: null,
           savedPhrasesUsed: 0,
           trialEndsAt: state.trialEndsAt,
+          viewCountToken: null,
         })),
 
       incrementSavedPhrases: () => {

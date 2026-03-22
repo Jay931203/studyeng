@@ -161,10 +161,11 @@ function VideoFeedInner({
   const recordBehaviorCompletion = useRecommendationStore((state) => state.recordCompletion)
   const recordSkip = useRecommendationStore((state) => state.recordSkip)
   const incrementDailyView = usePremiumStore((state) => state.incrementDailyView)
+  const serverIncrementView = usePremiumStore((state) => state.serverIncrementView)
   const canViewMore = usePremiumStore((state) => state.canViewMore)
   const canSaveMorePhrases = usePremiumStore((state) => state.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((state) => state.incrementSavedPhrases)
-  const initTrial = usePremiumStore((state) => state.initTrial)
+  const serverInitTrial = usePremiumStore((state) => state.serverInitTrial)
   const checkAndUpdateStreak = useUserStore((state) => state.checkAndUpdateStreak)
   const incrementMission = useDailyMissionStore((state) => state.incrementMission)
   const repeatMode = usePlayerStore((state) => state.repeatMode)
@@ -190,9 +191,9 @@ function VideoFeedInner({
     writeEmbedBlockedVideoIds(embedBlockedVideoIds)
   }, [embedBlockedVideoIds])
 
-  // Initialize 7-day free trial on first app use
+  // Initialize 7-day free trial on first app use (server-enforced for authenticated users)
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => { initTrial() }, [])
+  useEffect(() => { void serverInitTrial() }, [])
 
   const findPlayableIndex = useCallback(
     (startIndex: number, step: 1 | -1) => {
@@ -321,9 +322,14 @@ function VideoFeedInner({
         return false
       }
 
+      // Fire server-side verification in background.
+      // If server says the view is not allowed (e.g. localStorage was tampered),
+      // the server response updates the local count for the next check.
+      void serverIncrementView()
+
       return true
     },
-    [canPreviewVideo, getViewCount, incrementDailyView],
+    [canPreviewVideo, getViewCount, incrementDailyView, serverIncrementView],
   )
 
   const findSeriesNavigationTarget = useCallback(

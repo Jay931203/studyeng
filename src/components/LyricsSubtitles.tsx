@@ -468,9 +468,9 @@ export function LyricsSubtitles({
         if (exactMatch) return exactMatch
       }
 
-      return phrases.find((phrase) => phrase.en === sub.en)?.id ?? null
+      return null
     },
-    [phrases, savedPhraseMap, videoId],
+    [savedPhraseMap, videoId],
   )
 
   // Auto-scroll to keep the active subtitle centered ??smoothed with rAF

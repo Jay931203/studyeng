@@ -207,6 +207,7 @@ function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolea
 }
 
 export function LandscapeFeedSwitcher() {
+  const { t } = useTranslation()
   const { activeFeed, feedAnimationKey, navigateToFeed } = useFeedNavigation()
 
   if (!activeFeed) return null
@@ -226,7 +227,7 @@ export function LandscapeFeedSwitcher() {
         onClick={() => {
           navigateToFeed(activeFeed === 'shorts' ? 'series' : 'shorts')
         }}
-        aria-label="Toggle feed"
+        aria-label={t('nav.seriesAndShorts') as string}
         animate={{ scale: 1, y: -1 }}
         transition={{ type: 'spring', stiffness: 420, damping: 28 }}
         className="relative z-10 rounded-full transition-opacity active:scale-95"
@@ -306,7 +307,7 @@ function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
                       }
                       navigateToBrowse(activeBrowse === 'home' ? 'learn' : 'home')
                     }}
-                    aria-label="Toggle browse"
+                    aria-label={getTabLabel(tab)}
                     animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                     transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                     className="relative z-10 rounded-full transition-opacity active:scale-95"
@@ -360,7 +361,7 @@ function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
                       }
                       navigateToFeed(activeFeed === 'shorts' ? 'series' : 'shorts')
                     }}
-                    aria-label="Toggle feed"
+                    aria-label={getTabLabel(tab)}
                     animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                     transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                     className="relative z-10 rounded-full transition-opacity active:scale-95"
@@ -446,7 +447,7 @@ function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
                         }
                         navigateToBrowse(activeBrowse === 'home' ? 'learn' : 'home')
                       }}
-                      aria-label="Toggle browse"
+                      aria-label={getTabLabel(tab)}
                       animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                       transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                       className={`flex h-10 w-10 items-center justify-center rounded-2xl ${
@@ -510,7 +511,7 @@ function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
                         }
                         navigateToFeed(activeFeed === 'shorts' ? 'series' : 'shorts')
                       }}
-                      aria-label="Toggle feed"
+                      aria-label={getTabLabel(tab)}
                       animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                       transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                       className={`flex h-10 w-10 items-center justify-center rounded-2xl ${
@@ -617,7 +618,7 @@ function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
                     }
                     navigateToBrowse(activeBrowse === 'home' ? 'learn' : 'home')
                   }}
-                  aria-label="Toggle browse"
+                  aria-label={getTabLabel(tab)}
                   animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                   className="relative z-10 rounded-full transition-opacity active:scale-95"
@@ -670,7 +671,7 @@ function BottomNavInner({ mode = 'bottom' }: BottomNavProps) {
 
                     navigateToFeed(activeFeed === 'shorts' ? 'series' : 'shorts')
                   }}
-                  aria-label="Toggle feed"
+                  aria-label={getTabLabel(tab)}
                   animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                   transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                   className="relative z-10 rounded-full transition-opacity active:scale-95"

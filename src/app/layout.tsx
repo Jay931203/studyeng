@@ -9,7 +9,11 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : 'https://studyeng-nine.vercel.app')
+    : process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.CF_PAGES_URL
+        ? `https://${process.env.CF_PAGES_URL}`
+        : 'http://localhost:3000')
 
 const appTitle = 'Shortee - Learn English with Shorts'
 const appDescription = 'Pick up English naturally through short clips and review games'
@@ -117,6 +121,16 @@ export default function RootLayout({
               }
               document.documentElement.setAttribute('data-theme', themeId);
             }
+          } catch(e) {}
+        `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          try {
+            var l = JSON.parse(localStorage.getItem('studyeng-locale') || '{}');
+            if (l.state && l.state.locale) document.documentElement.lang = l.state.locale === 'zh-TW' ? 'zh-Hant' : l.state.locale;
           } catch(e) {}
         `,
           }}
