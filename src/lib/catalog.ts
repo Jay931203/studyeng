@@ -11,6 +11,28 @@ interface CatalogFeature {
   qualityTier?: string
 }
 
+const EDUCATIONAL_SHORT_TITLE_PATTERNS = [
+  /\blearn english\b/i,
+  /\benglish is crazy\b/i,
+  /\b(?:understand|speak)\s+fast english\b/i,
+  /\benglish (?:at|for |phrases?|conversation|expressions?|mistakes?|test|quiz|accent|articles|antonyms?|slang|skills|learning)\b/i,
+  /\b(?:easy|spoken|business|real|academic|british|american|daily use)\s+english\b/i,
+  /\b(?:\d+\s+)?(?:important\s+)?(?:phrases|expressions)\b/i,
+  /\b(?:advanced phrase|tricky words?\s+in\s+english|short schwa sound|tongue twister)\b/i,
+  /\b(?:how to say|can you say|if you can finish these phrases)\b/i,
+  /\b(?:linkers for conversations|phrases you need for video calls|shortening your words)\b/i,
+  /\b(?:what'?s the difference|you are fluent|english in a snap|@instantenglishuk)\b/i,
+]
+
+const SUPPRESSED_CATALOG_VIDEO_IDS = new Set(['shorts-fumc4cvm3Wg'])
+
+function isSuppressedCatalogVideo(video: VideoData) {
+  if (SUPPRESSED_CATALOG_VIDEO_IDS.has(video.id)) return true
+  if (video.inactive) return true
+  if (video.format !== 'shorts' || video.category !== 'daily') return false
+  return EDUCATIONAL_SHORT_TITLE_PATTERNS.some((pattern) => pattern.test(video.title))
+}
+
 // ---------------------------------------------------------------------------
 // Lazy-loaded recommendation manifest (3.4MB)
 // ---------------------------------------------------------------------------
@@ -40,8 +62,9 @@ async function loadReadyVideoIds(): Promise<Set<string>> {
 
 // For initial render before manifest loads, use all videos.
 // Once getFilteredCatalog() is called (async), it filters properly.
-const allVideoById = new Map(seedVideos.map((video) => [video.id, video]))
-const allVideoByYoutubeId = new Map(seedVideos.map((video) => [video.youtubeId, video]))
+const activeSeedVideos = seedVideos.filter((video) => !isSuppressedCatalogVideo(video))
+const allVideoById = new Map(activeSeedVideos.map((video) => [video.id, video]))
+const allVideoByYoutubeId = new Map(activeSeedVideos.map((video) => [video.youtubeId, video]))
 
 // Lazy catalog (filtered by manifest)
 let _catalogVideos: VideoData[] | null = null
@@ -56,7 +79,7 @@ async function ensureCatalog() {
   if (_catalogVideos) return
   const readyIds = await loadReadyVideoIds()
 
-  _catalogVideos = seedVideos.filter((video) => readyIds.has(video.id) && !video.inactive)
+  _catalogVideos = activeSeedVideos.filter((video) => readyIds.has(video.id))
   _catalogShorts = _catalogVideos.filter((video) => video.format === 'shorts')
 
   _videosBySeriesId = new Map<string, VideoData[]>()
@@ -94,11 +117,11 @@ if (typeof window !== 'undefined') {
 }
 
 export function getCatalogVideos(): VideoData[] {
-  return _catalogVideos ?? seedVideos.filter((v) => !v.inactive)
+  return _catalogVideos ?? activeSeedVideos
 }
 
 export function getCatalogShorts(): VideoData[] {
-  return _catalogShorts ?? seedVideos.filter((v) => v.format === 'shorts' && !v.inactive)
+  return _catalogShorts ?? activeSeedVideos.filter((video) => video.format === 'shorts')
 }
 
 export function getCatalogSeries(): Series[] {
@@ -106,8 +129,8 @@ export function getCatalogSeries(): Series[] {
 }
 
 // Keep backward-compatible named exports
-export const catalogVideos = seedVideos.filter((v) => !v.inactive) // initial value; consumers should prefer getCatalogVideos()
-export const catalogShorts = seedVideos.filter((v) => v.format === 'shorts' && !v.inactive)
+export const catalogVideos = activeSeedVideos // initial value; consumers should prefer getCatalogVideos()
+export const catalogShorts = activeSeedVideos.filter((video) => video.format === 'shorts')
 export const catalogSeries = series
 
 export function getCatalogVideoById(videoId: string) {
@@ -124,7 +147,7 @@ export function getCatalogSeriesById(seriesId: string) {
 
 export function getCatalogVideosBySeries(seriesId: string) {
   if (_videosBySeriesId) return [...(_videosBySeriesId.get(seriesId) ?? [])]
-  return seedVideos.filter((v) => v.seriesId === seriesId && !v.inactive)
+  return activeSeedVideos.filter((video) => video.seriesId === seriesId)
 }
 
 export function getCatalogVideosByCategory(categoryId: CategoryId) {

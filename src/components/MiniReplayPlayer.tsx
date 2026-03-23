@@ -685,16 +685,15 @@ function LearnSubtitleContext({
   slots,
   activeLineId,
   subtitleMode,
-  revealedLineId,
   onReplayLine,
 }: {
   className?: string
   slots: SubtitleDisplaySlot[]
   activeLineId?: string | null
   subtitleMode: 'en' | 'bilingual' | 'locked'
-  revealedLineId?: string | null
   onReplayLine: (line: SubtitleContextLine) => void
 }) {
+  if (subtitleMode === 'locked') return null
   if (!slots.some((slot) => slot.line)) return null
 
   const resolvedActiveLineId = activeLineId ?? slots[1]?.line?.id ?? slots[0]?.line?.id
@@ -719,12 +718,7 @@ function LearnSubtitleContext({
             const line = slot.line
             const isActive = resolvedActiveLineId === line.id
             const isCoreSlot = slotIndex === 1
-            const showMeaning =
-              subtitleMode === 'bilingual'
-                ? Boolean(line.ko)
-                : subtitleMode === 'locked'
-                  ? revealedLineId === line.id && Boolean(line.ko)
-                  : false
+            const showMeaning = subtitleMode === 'bilingual' && Boolean(line.ko)
 
             return (
               <button
@@ -779,7 +773,6 @@ export function MiniReplayPlayer() {
     clipKey: string
     lineId: string | null
   } | null>(null)
-  const [revealedLineId, setRevealedLineId] = useState<string | null>(null)
   const [isLandscapeLearn, setIsLandscapeLearn] = useState(false)
   const [replayLineOverride, setReplayLineOverride] = useState<{
     clipKey: string
@@ -932,19 +925,13 @@ export function MiniReplayPlayer() {
       setReplayLineOverride({ clipKey, lineId: line.id })
       setActivePlaybackState({ clipKey, lineId: line.id })
     }
-    if (learnSubtitleMode === 'locked') {
-      setRevealedLineId(line.id)
-    }
     playerApiRef.current?.playWindow(line.start, line.end)
-  }, [clipKey, learnSubtitleMode])
+  }, [clipKey])
 
   const handleTogglePlayback = useCallback(() => {
     setReplayLineOverride(null)
-    if (learnSubtitleMode !== 'locked') {
-      setRevealedLineId(null)
-    }
     playerApiRef.current?.togglePlayback()
-  }, [learnSubtitleMode])
+  }, [])
 
   return (
     <>
@@ -1180,7 +1167,7 @@ export function MiniReplayPlayer() {
                             {
                               id: 'locked',
                               label: <LockTabIcon />,
-                              ariaLabel: 'Locked Korean hints',
+                              ariaLabel: 'Hide subtitles',
                             },
                           ] as const).map((option) => {
                             const active = learnSubtitleMode === option.id
@@ -1191,9 +1178,6 @@ export function MiniReplayPlayer() {
                                 onClick={(event) => {
                                   event.stopPropagation()
                                   setLearnSubtitleMode(option.id)
-                                  if (option.id !== 'locked') {
-                                    setRevealedLineId(null)
-                                  }
                                 }}
                                 className="rounded-full px-2.5 py-1 text-[10px] font-semibold transition-colors"
                                 aria-label={option.ariaLabel}
@@ -1214,7 +1198,6 @@ export function MiniReplayPlayer() {
                         slots={displaySlots}
                         activeLineId={activeReplayLineId}
                         subtitleMode={learnSubtitleMode}
-                        revealedLineId={revealedLineId}
                         onReplayLine={handleReplayLine}
                       />
 
