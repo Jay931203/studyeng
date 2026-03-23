@@ -1,8 +1,7 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useAdminStore } from '@/stores/useAdminStore'
@@ -82,13 +81,21 @@ function FaqAccordionItem({
   )
 }
 
-export default function HelpCenterPage() {
+export default function HelpCenterPageWrapper() {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="text-zinc-500">Loading...</div></div>}>
+      <HelpCenterPage />
+    </Suspense>
+  )
+}
+
+function HelpCenterPage() {
   const locale = useLocaleStore((s) => s.locale)
   const isAdminActive = useAdminStore((state) => state.isAdmin && state.adminEnabled)
-  const searchParams = useSearchParams()
   const [activeCategory, setActiveCategory] = useState<FaqCategory | 'all'>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [openItemId, setOpenItemId] = useState<string | null>(null)
+  const [openInboxFromQuery, setOpenInboxFromQuery] = useState(false)
   const adminInboxRef = useRef<HTMLDivElement>(null)
 
   const filteredItems = useMemo(() => {
@@ -127,12 +134,24 @@ export default function HelpCenterPage() {
   }, [activeCategory, filteredItems])
 
   useEffect(() => {
-    if (!isAdminActive || searchParams.get('view') !== 'inbox') return
+    if (typeof window === 'undefined') return
+    const syncQueryState = () => {
+      const params = new URLSearchParams(window.location.search)
+      setOpenInboxFromQuery(params.get('view') === 'inbox')
+    }
+
+    syncQueryState()
+    window.addEventListener('popstate', syncQueryState)
+    return () => window.removeEventListener('popstate', syncQueryState)
+  }, [])
+
+  useEffect(() => {
+    if (!isAdminActive || !openInboxFromQuery) return
     const timer = window.setTimeout(() => {
       adminInboxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }, 120)
     return () => window.clearTimeout(timer)
-  }, [isAdminActive, searchParams])
+  }, [isAdminActive, openInboxFromQuery])
 
   return (
     <div className="min-h-dvh bg-[var(--bg-primary)] text-[var(--text-primary)]">
@@ -311,7 +330,9 @@ export default function HelpCenterPage() {
         </div>
 
         <div ref={adminInboxRef}>
-          <SupportInbox />
+          <Suspense fallback={null}>
+            <SupportInbox />
+          </Suspense>
         </div>
       </div>
 
