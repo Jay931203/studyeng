@@ -6128,6 +6128,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 71,
     seriesId: 'marvel-mcu',
     episodeNumber: 16,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -6730,6 +6731,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 90,
     seriesId: 'the-matrix',
     episodeNumber: 14,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -7318,6 +7320,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 73,
     seriesId: 'social-network',
     episodeNumber: 5,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -8014,6 +8017,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 90,
     seriesId: 'la-la-land',
     episodeNumber: 10,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -8134,6 +8138,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 90,
     seriesId: 'whiplash',
     episodeNumber: 4,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -11391,6 +11396,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 80,
     seriesId: 'back-to-future',
     episodeNumber: 4,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -17874,6 +17880,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 90,
     seriesId: 'acousticindie',
     episodeNumber: 30,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -24966,6 +24973,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 60,
     seriesId: 'inside-out',
     episodeNumber: 18,
+    inactive: true,
     subtitles: [],
   },
 
@@ -27318,6 +27326,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'mit-ocw-lectures',
     episodeNumber: 4,
+    inactive: true,
     subtitles: [],
   },
   
@@ -27331,6 +27340,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'taskmaster',
     episodeNumber: 3,
+    inactive: true,
     subtitles: [],
   },
   
@@ -27419,6 +27429,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     seriesId: 'ricky-gervais',
     episodeNumber: 2,
+    inactive: true,
     subtitles: [],
   },
   {
@@ -34485,6 +34496,7 @@ export const seedVideos = defineSeedVideos([
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
+    inactive: true,
     subtitles: [],
   },
   {
@@ -36573,6 +36585,7 @@ export const seedVideos = defineSeedVideos([
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
+    inactive: true,
     subtitles: [],
   },
   {
@@ -36731,6 +36744,7 @@ export const seedVideos = defineSeedVideos([
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
+    inactive: true,
     subtitles: [],
   },
   {
@@ -36764,6 +36778,7 @@ export const seedVideos = defineSeedVideos([
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
+    inactive: true,
     subtitles: [],
   },
   {
