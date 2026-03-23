@@ -1,7 +1,6 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { useSearchParams } from 'next/navigation'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import type {
@@ -117,7 +116,6 @@ function formatThreadTime(timestamp: string, locale: SupportLocale) {
 
 export function SupportInbox() {
   const locale = useLocaleStore((state) => state.locale)
-  const searchParams = useSearchParams()
   const safeLocale = (locale === 'ja' || locale === 'zh-TW' || locale === 'vi' || locale === 'ko'
     ? locale
     : 'ko') as SupportLocale
@@ -131,7 +129,7 @@ export function SupportInbox() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [filter, setFilter] = useState<InboxFilter>('needs_reply')
   const activeThreadId = activeThread?.id ?? null
-  const requestedThreadId = searchParams.get('threadId')
+  const requestedThreadId = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('threadId') : null
 
   const loadInbox = useCallback(async () => {
     if (!isAdminActive) return
