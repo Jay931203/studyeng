@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import {
   getCollectionById,
   getCollectionDetail,
@@ -205,8 +205,8 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
               {/* Video header */}
               <div className="flex items-center gap-3 border-b border-[var(--border-card)] p-3">
                 <div className="relative h-[48px] w-[86px] shrink-0 overflow-hidden rounded-lg">
-                  <Image
-                    src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                  <YouTubeThumbnail
+                    youtubeId={video.youtubeId}
                     alt={video.title}
                     fill
                     sizes="86px"

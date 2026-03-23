@@ -53,7 +53,10 @@ export function resetAccountScopedState() {
   useRecommendationStore.setState({ recentVideoIds: [], videoSignals: {} })
   useAdminStore.setState({
     isAdmin: false,
+    adminEnabled: true,
+    adminSyncError: null,
     flaggedSubtitles: [],
+    hiddenVideos: [],
     issues: [],
   })
   useDailyMissionStore.getState().resetState()

@@ -18,6 +18,7 @@ type SyncedAdminIssue = AdminIssue & {
 
 interface IssueReportRow {
   id: string
+  user_id: string
   video_id: string
   youtube_id: string
   type: string
@@ -328,6 +329,7 @@ async function pullAdminState(userId: string, email?: string | null) {
 
   const remoteIssues: SyncedAdminIssue[] = ((issueResponse.data ?? []) as IssueReportRow[]).map((row) => ({
     id: row.id,
+    reporterUserId: row.user_id,
     videoId: row.video_id,
     youtubeId: row.youtube_id,
     type: row.type as SyncedAdminIssue['type'],

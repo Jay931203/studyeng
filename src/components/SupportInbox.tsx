@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import type {
@@ -96,6 +97,8 @@ interface ThreadResponse {
   messages: SupportMessageRecord[]
 }
 
+type InboxFilter = 'needs_reply' | 'needs_human' | 'all' | 'resolved'
+
 function formatStatusLabel(status: SupportThreadStatus, t: (typeof STRINGS)[SupportLocale]) {
   if (status === 'waiting_admin') return t.waitingAdmin
   if (status === 'waiting_user') return t.waitingUser
@@ -103,8 +106,18 @@ function formatStatusLabel(status: SupportThreadStatus, t: (typeof STRINGS)[Supp
   return t.open
 }
 
+function formatThreadTime(timestamp: string, locale: SupportLocale) {
+  return new Intl.DateTimeFormat(locale === 'zh-TW' ? 'zh-Hant-TW' : locale, {
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(new Date(timestamp))
+}
+
 export function SupportInbox() {
   const locale = useLocaleStore((state) => state.locale)
+  const searchParams = useSearchParams()
   const safeLocale = (locale === 'ja' || locale === 'zh-TW' || locale === 'vi' || locale === 'ko'
     ? locale
     : 'ko') as SupportLocale
@@ -115,29 +128,44 @@ export function SupportInbox() {
   const [messages, setMessages] = useState<SupportMessageRecord[]>([])
   const [reply, setReply] = useState('')
   const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [filter, setFilter] = useState<InboxFilter>('needs_reply')
   const activeThreadId = activeThread?.id ?? null
+  const requestedThreadId = searchParams.get('threadId')
 
   const loadInbox = useCallback(async () => {
     if (!isAdminActive) return
-    const response = await fetch('/api/support/chat?scope=inbox', { cache: 'no-store' })
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`)
-    }
-    const data = (await response.json()) as InboxResponse
-    setThreads(data.threads)
-    if (!activeThread && data.threads[0]) {
-      setActiveThread(data.threads[0])
+    try {
+      const response = await fetch('/api/support/chat?scope=inbox', { cache: 'no-store' })
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+      const data = (await response.json()) as InboxResponse
+      setThreads(data.threads)
+      if (!activeThread && data.threads[0]) {
+        setActiveThread(data.threads[0])
+      }
+      setErrorMessage(null)
+    } catch (error) {
+      console.error('[support-inbox] load inbox failed:', error)
+      setErrorMessage('Failed to load support inbox.')
     }
   }, [activeThread, isAdminActive])
 
   const loadThread = useCallback(async (threadId: string) => {
-    const response = await fetch(`/api/support/chat?threadId=${threadId}`, { cache: 'no-store' })
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`)
+    try {
+      const response = await fetch(`/api/support/chat?threadId=${threadId}`, { cache: 'no-store' })
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+      const data = (await response.json()) as ThreadResponse
+      setActiveThread(data.thread)
+      setMessages(data.messages)
+      setErrorMessage(null)
+    } catch (error) {
+      console.error('[support-inbox] load thread failed:', error)
+      setErrorMessage('Failed to load this conversation.')
     }
-    const data = (await response.json()) as ThreadResponse
-    setActiveThread(data.thread)
-    setMessages(data.messages)
   }, [])
 
   useEffect(() => {
@@ -161,10 +189,40 @@ export function SupportInbox() {
     void loadThread(activeThreadId)
   }, [activeThreadId, loadThread])
 
+  useEffect(() => {
+    if (!isAdminActive || !requestedThreadId || requestedThreadId === activeThreadId) return
+    setFilter('all')
+    void loadThread(requestedThreadId)
+  }, [activeThreadId, isAdminActive, loadThread, requestedThreadId])
+
   const activeStatus = useMemo(
     () => (activeThread ? formatStatusLabel(activeThread.status, t) : t.open),
     [activeThread, t],
   )
+  const waitingAdminCount = useMemo(
+    () => threads.filter((thread) => thread.status === 'waiting_admin').length,
+    [threads],
+  )
+  const needsHumanCount = useMemo(
+    () => threads.filter((thread) => thread.needsHuman).length,
+    [threads],
+  )
+  const resolvedCount = useMemo(
+    () => threads.filter((thread) => thread.status === 'resolved').length,
+    [threads],
+  )
+  const filteredThreads = useMemo(() => {
+    if (filter === 'needs_reply') {
+      return threads.filter((thread) => thread.status === 'waiting_admin')
+    }
+    if (filter === 'needs_human') {
+      return threads.filter((thread) => thread.needsHuman)
+    }
+    if (filter === 'resolved') {
+      return threads.filter((thread) => thread.status === 'resolved')
+    }
+    return threads
+  }, [filter, threads])
 
   const sendReply = useCallback(async () => {
     const trimmed = reply.trim()
@@ -186,7 +244,11 @@ export function SupportInbox() {
       setReply('')
       setActiveThread(data.thread)
       setMessages(data.messages)
+      setErrorMessage(null)
       await loadInbox()
+    } catch (error) {
+      console.error('[support-inbox] send reply failed:', error)
+      setErrorMessage('Failed to send reply.')
     } finally {
       setLoading(false)
     }
@@ -195,21 +257,27 @@ export function SupportInbox() {
   const updateStatus = useCallback(
     async (status: SupportThreadStatus) => {
       if (!activeThread) return
-      const response = await fetch('/api/support/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          mode: 'update-status',
-          threadId: activeThread.id,
-          status,
-        }),
-      })
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`)
+      try {
+        const response = await fetch('/api/support/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            mode: 'update-status',
+            threadId: activeThread.id,
+            status,
+          }),
+        })
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`)
+        }
+        const data = (await response.json()) as { thread: SupportThreadRecord }
+        setActiveThread(data.thread)
+        setErrorMessage(null)
+        await loadInbox()
+      } catch (error) {
+        console.error('[support-inbox] update status failed:', error)
+        setErrorMessage('Failed to update status.')
       }
-      const data = (await response.json()) as { thread: SupportThreadRecord }
-      setActiveThread(data.thread)
-      await loadInbox()
     },
     [activeThread, loadInbox],
   )
@@ -218,7 +286,8 @@ export function SupportInbox() {
 
   return (
     <div
-      className="mt-8 overflow-hidden rounded-2xl border"
+      id="admin-support-inbox"
+      className="mt-8 scroll-mt-24 overflow-hidden rounded-2xl border"
       style={{
         borderColor: 'var(--border-card)',
         backgroundColor: 'var(--bg-primary)',
@@ -230,17 +299,53 @@ export function SupportInbox() {
           {t.subtitle}
         </p>
         <h2 className="mt-1 text-xl font-bold text-[var(--text-primary)]">{t.title}</h2>
+        <div className="mt-3 flex flex-wrap gap-2 text-[11px]">
+          <span className="rounded-full px-2.5 py-1 font-semibold text-white" style={{ backgroundColor: 'var(--accent-primary)' }}>
+            Needs Reply {waitingAdminCount}
+          </span>
+          <span className="rounded-full px-2.5 py-1 font-semibold text-[var(--text-primary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+            Human Review {needsHumanCount}
+          </span>
+          <span className="rounded-full px-2.5 py-1 font-semibold text-[var(--text-primary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+            Resolved {resolvedCount}
+          </span>
+        </div>
       </div>
 
       <div className="grid min-h-[520px] lg:grid-cols-[280px_minmax(0,1fr)]">
         <div className="border-b p-3 lg:border-r lg:border-b-0" style={{ borderColor: 'var(--border-card)' }}>
-          {threads.length === 0 ? (
+          <div className="mb-3 flex flex-wrap gap-2">
+            {([
+              { value: 'needs_reply' as InboxFilter, label: `Needs Reply ${waitingAdminCount}` },
+              { value: 'needs_human' as InboxFilter, label: `Human ${needsHumanCount}` },
+              { value: 'all' as InboxFilter, label: `All ${threads.length}` },
+              { value: 'resolved' as InboxFilter, label: `Resolved ${resolvedCount}` },
+            ]).map((option) => {
+              const active = filter === option.value
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setFilter(option.value)}
+                  className="rounded-full px-3 py-1.5 text-[11px] font-semibold transition-colors"
+                  style={{
+                    backgroundColor: active ? 'rgba(var(--accent-primary-rgb), 0.16)' : 'var(--bg-secondary)',
+                    color: active ? 'var(--accent-text)' : 'var(--text-secondary)',
+                  }}
+                >
+                  {option.label}
+                </button>
+              )
+            })}
+          </div>
+
+          {filteredThreads.length === 0 ? (
             <div className="rounded-xl px-4 py-8 text-sm text-[var(--text-secondary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
-              {t.empty}
+              {threads.length === 0 ? t.empty : 'No conversations in this filter.'}
             </div>
           ) : (
             <div className="space-y-2">
-              {threads.map((thread) => (
+              {filteredThreads.map((thread) => (
                 <button
                   key={thread.id}
                   type="button"
@@ -269,6 +374,9 @@ export function SupportInbox() {
                   </div>
                   <p className="mt-1 text-xs text-[var(--text-secondary)]">{formatStatusLabel(thread.status, t)}</p>
                   <p className="mt-2 line-clamp-2 text-xs text-[var(--text-muted)]">{thread.lastMessagePreview}</p>
+                  <p className="mt-2 text-[10px] text-[var(--text-muted)]">
+                    {formatThreadTime(thread.lastMessageAt, safeLocale)}
+                  </p>
                 </button>
               ))}
             </div>
@@ -291,6 +399,18 @@ export function SupportInbox() {
                   <p className="mt-1 text-xs text-[var(--text-muted)]">{activeThread.userEmail}</p>
                 )}
               </div>
+
+              {errorMessage && (
+                <div
+                  className="mx-5 mt-4 rounded-2xl border px-4 py-3 text-sm text-[var(--text-primary)]"
+                  style={{
+                    borderColor: 'rgba(245, 158, 11, 0.28)',
+                    backgroundColor: 'rgba(245, 158, 11, 0.12)',
+                  }}
+                >
+                  {errorMessage}
+                </div>
+              )}
 
               <div className="flex-1 space-y-3 overflow-y-auto px-5 py-4">
                 {messages.map((message) => (

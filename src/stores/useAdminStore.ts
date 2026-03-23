@@ -19,6 +19,7 @@ export interface AdminIssue {
   description: string
   timestamp: number
   resolved: boolean
+  reporterUserId?: string
   reporterEmail?: string
 }
 
@@ -328,6 +329,7 @@ export const useAdminStore = create<AdminState>()(
           description,
           timestamp: Date.now(),
           resolved: false,
+          reporterUserId: getCachedUserId() ?? undefined,
           reporterEmail: getCachedUserEmail() ?? undefined,
         }
 

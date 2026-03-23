@@ -33,21 +33,6 @@ function deriveWatchedEpisodes(videoIds: string[]) {
   return watchedEpisodes
 }
 
-function buildLatestWatchedAtMap(
-  records: ReturnType<typeof useWatchHistoryStore.getState>['watchRecords'],
-) {
-  const latestWatchedAtByVideoId = new Map<string, number>()
-
-  for (const record of records) {
-    const current = latestWatchedAtByVideoId.get(record.videoId) ?? 0
-    if (record.watchedAt > current) {
-      latestWatchedAtByVideoId.set(record.videoId, record.watchedAt)
-    }
-  }
-
-  return latestWatchedAtByVideoId
-}
-
 // ─── Debounce helper ──────────────────────────────────────────────
 const debounceTimers: Record<string, ReturnType<typeof setTimeout>> = {}
 
@@ -257,15 +242,11 @@ export async function syncOnLogin(userId: string, email?: string | null) {
     console.warn('[sync] syncOnLogin error:', err)
   }
 
-  // After pulling, push local-only data to server
+  // Keep server truth for collection data on login so a stale device cannot
+  // resurrect items deleted on another device. Live mutations still sync via
+  // the store-level fire-and-forget calls while the user is signed in.
   try {
-    await Promise.all([
-      pushProfile(userId),
-      pushWatchHistory(userId),
-      pushSavedPhrases(userId),
-      pushBookmarks(userId),
-      pushLikes(userId),
-    ])
+    await pushProfile(userId)
   } catch (err) {
     console.warn('[sync] push-back error:', err)
   }
@@ -499,94 +480,6 @@ async function pullLikes(userId: string) {
 
 async function pushProfile(userId: string) {
   await syncProfileToServer(userId)
-}
-
-async function pushWatchHistory(userId: string) {
-  if (!supabase) return
-  const { viewCounts, completionCounts, watchRecords } = useWatchHistoryStore.getState()
-  const entries = Object.entries(viewCounts)
-  if (entries.length === 0) return
-  const latestWatchedAtByVideoId = buildLatestWatchedAtMap(watchRecords)
-
-  // Batch upsert: build rows
-  const rows = entries.map(([videoId, count]) => ({
-    user_id: userId,
-    video_id: videoId,
-    view_count: count,
-    completion_count: completionCounts[videoId] ?? 0,
-    last_watched_at: new Date(
-      latestWatchedAtByVideoId.get(videoId) ?? Date.now(),
-    ).toISOString(),
-  }))
-
-  // Upsert in chunks of 50
-  for (let i = 0; i < rows.length; i += 50) {
-    const chunk = rows.slice(i, i + 50)
-    const { error } = await supabase
-      .from('watch_history')
-      .upsert(chunk, { onConflict: 'user_id,video_id' })
-    if (error) console.warn('[sync] push watch_history error:', error.message)
-  }
-}
-
-async function pushSavedPhrases(userId: string) {
-  if (!supabase) return
-  const { phrases } = usePhraseStore.getState()
-  if (phrases.length === 0) return
-
-  const rows = phrases.map((p) => ({
-    id: p.id,
-    user_id: userId,
-    video_id: p.videoId,
-    video_title: p.videoTitle,
-    en: p.en,
-    ko: p.ko,
-    timestamp_start: p.timestampStart,
-    timestamp_end: p.timestampEnd,
-    review_count: p.reviewCount,
-    saved_at: new Date(p.savedAt).toISOString(),
-  }))
-
-  for (let i = 0; i < rows.length; i += 50) {
-    const chunk = rows.slice(i, i + 50)
-    const { error } = await supabase
-      .from('saved_phrases')
-      .upsert(chunk, { onConflict: 'id' })
-    if (error) console.warn('[sync] push saved_phrases error:', error.message)
-  }
-}
-
-async function pushBookmarks(userId: string) {
-  if (!supabase) return
-  const { bookmarks } = useBookmarkStore.getState()
-  if (bookmarks.length === 0) return
-
-  const rows = bookmarks.map((videoId) => ({
-    user_id: userId,
-    video_id: videoId,
-  }))
-
-  const { error } = await supabase
-    .from('bookmarks')
-    .upsert(rows, { onConflict: 'user_id,video_id' })
-  if (error) console.warn('[sync] push bookmarks error:', error.message)
-}
-
-async function pushLikes(userId: string) {
-  if (!supabase) return
-  const { likes } = useLikeStore.getState()
-  const likedIds = Object.keys(likes)
-  if (likedIds.length === 0) return
-
-  const rows = likedIds.map((videoId) => ({
-    user_id: userId,
-    video_id: videoId,
-  }))
-
-  const { error } = await supabase
-    .from('likes')
-    .upsert(rows, { onConflict: 'user_id,video_id' })
-  if (error) console.warn('[sync] push likes error:', error.message)
 }
 
 // ─── Logout cleanup ──────────────────────────────────────────────

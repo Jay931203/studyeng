@@ -56,11 +56,27 @@ type SupportChatRequestBody =
       threadId: string
       status: SupportThreadStatus
     }
+  | {
+      mode: 'admin-open-thread'
+      targetUserId: string
+      targetUserEmail?: string | null
+      targetUserName?: string | null
+    }
 
 const MAX_MESSAGE_LENGTH = 2000
+const SUPPORT_THREAD_STATUSES: SupportThreadStatus[] = [
+  'open',
+  'waiting_admin',
+  'waiting_user',
+  'resolved',
+]
 
 function trimMessage(input: string) {
   return input.replace(/\s+/g, ' ').trim()
+}
+
+function isValidThreadStatus(value: string): value is SupportThreadStatus {
+  return SUPPORT_THREAD_STATUSES.includes(value as SupportThreadStatus)
 }
 
 function toThreadRecord(row: SupportThreadRow): SupportThreadRecord {
@@ -119,10 +135,26 @@ async function getOrCreateThread(
   supabase: NonNullable<Awaited<ReturnType<typeof createClient>>>,
   user: { id: string; email?: string | null; user_metadata?: Record<string, unknown> | null },
 ) {
+  return getOrCreateThreadForTargetUser(supabase, {
+    id: user.id,
+    email: user.email ?? null,
+    name:
+      typeof user.user_metadata?.full_name === 'string'
+        ? user.user_metadata.full_name
+        : typeof user.user_metadata?.name === 'string'
+          ? user.user_metadata.name
+          : null,
+  })
+}
+
+async function getOrCreateThreadForTargetUser(
+  supabase: NonNullable<Awaited<ReturnType<typeof createClient>>>,
+  target: { id: string; email?: string | null; name?: string | null },
+) {
   const existing = await supabase
     .from('support_threads')
     .select('*')
-    .eq('user_id', user.id)
+    .eq('user_id', target.id)
     .maybeSingle()
 
   if (existing.error) {
@@ -130,19 +162,12 @@ async function getOrCreateThread(
   }
 
   if (existing.data) {
-    const userName =
-      typeof user.user_metadata?.full_name === 'string'
-        ? user.user_metadata.full_name
-        : typeof user.user_metadata?.name === 'string'
-          ? user.user_metadata.name
-          : null
-
     const patch: Partial<SupportThreadRow> = {}
-    if (user.email && existing.data.user_email !== user.email) {
-      patch.user_email = user.email
+    if (target.email && existing.data.user_email !== target.email) {
+      patch.user_email = target.email
     }
-    if (userName && existing.data.user_name !== userName) {
-      patch.user_name = userName
+    if (target.name && existing.data.user_name !== target.name) {
+      patch.user_name = target.name
     }
 
     if (Object.keys(patch).length > 0) {
@@ -160,19 +185,12 @@ async function getOrCreateThread(
     return existing.data as SupportThreadRow
   }
 
-  const userName =
-    typeof user.user_metadata?.full_name === 'string'
-      ? user.user_metadata.full_name
-      : typeof user.user_metadata?.name === 'string'
-        ? user.user_metadata.name
-        : null
-
   const { data, error } = await supabase
     .from('support_threads')
     .insert({
-      user_id: user.id,
-      user_email: user.email ?? null,
-      user_name: userName,
+      user_id: target.id,
+      user_email: target.email ?? null,
+      user_name: target.name ?? null,
       status: 'open',
     })
     .select('*')
@@ -237,6 +255,7 @@ export async function GET(request: Request) {
   const url = new URL(request.url)
   const scope = url.searchParams.get('scope')
   const threadId = url.searchParams.get('threadId')
+  const locale = url.searchParams.get('locale')
   const isAdmin = await isAdminUser(supabase, user.id, user.email)
 
   try {
@@ -277,7 +296,7 @@ export async function GET(request: Request) {
       thread: resolvedThread,
       messages,
       isAdmin,
-      workingHours: getSupportWorkingHoursLabel('ko'),
+      workingHours: getSupportWorkingHoursLabel(locale ?? undefined),
     })
   } catch (error) {
     console.error('[support-chat] GET error:', error)
@@ -313,6 +332,34 @@ export async function POST(request: Request) {
   const isAdmin = await isAdminUser(supabase, user.id, user.email)
 
   try {
+    if (body.mode === 'admin-open-thread') {
+      if (!isAdmin) {
+        return NextResponse.json({ error: 'forbidden' }, { status: 403 })
+      }
+
+      const targetUserId =
+        typeof body.targetUserId === 'string' ? body.targetUserId.trim() : ''
+      if (!targetUserId) {
+        return NextResponse.json({ error: 'invalid-target-user' }, { status: 400 })
+      }
+
+      const thread = await getOrCreateThreadForTargetUser(supabase, {
+        id: targetUserId,
+        email:
+          typeof body.targetUserEmail === 'string' ? body.targetUserEmail.trim() : body.targetUserEmail ?? null,
+        name:
+          typeof body.targetUserName === 'string' ? body.targetUserName.trim() : body.targetUserName ?? null,
+      })
+      const messages = await loadThreadMessages(supabase, thread.id)
+
+      return NextResponse.json({
+        ok: true,
+        thread: toThreadRecord(thread),
+        messages,
+        workingHours: getSupportWorkingHoursLabel('ko'),
+      })
+    }
+
     if (body.mode === 'admin-reply') {
       if (!isAdmin) {
         return NextResponse.json({ error: 'forbidden' }, { status: 403 })
@@ -356,7 +403,7 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: 'forbidden' }, { status: 403 })
       }
 
-      if (!body.threadId || !body.status) {
+      if (!body.threadId || !body.status || !isValidThreadStatus(body.status)) {
         return NextResponse.json({ error: 'invalid-status' }, { status: 400 })
       }
 
@@ -394,6 +441,7 @@ export async function POST(request: Request) {
     const nowIso = new Date().toISOString()
 
     const adminClient = createAdminClient()
+    let assistantPersisted = false
     if (adminClient) {
       const adminDb = adminClient as unknown as {
         from: (table: string) => {
@@ -415,14 +463,19 @@ export async function POST(request: Request) {
 
       if (assistantInsertError) {
         console.warn('[support-chat] assistant insert failed:', assistantInsertError.message)
+      } else {
+        assistantPersisted = true
       }
     }
+
+    const assistantDeferredToHuman = !assistantPersisted
+    const needsHumanReview = autoReply.needsHuman || assistantDeferredToHuman
 
     const { error: threadUpdateError } = await supabase
       .from('support_threads')
       .update({
-        status: autoReply.needsHuman ? 'waiting_admin' : 'waiting_user',
-        needs_human: autoReply.needsHuman,
+        status: needsHumanReview ? 'waiting_admin' : 'waiting_user',
+        needs_human: needsHumanReview,
         last_message_preview: message.slice(0, 120),
         last_message_at: nowIso,
         user_last_read_at: nowIso,
@@ -438,8 +491,10 @@ export async function POST(request: Request) {
       ok: true,
       thread: nextThread,
       messages,
-      autoReply,
-      persistedAssistant: Boolean(adminClient),
+      autoReply: assistantPersisted ? autoReply : undefined,
+      persistedAssistant: assistantPersisted,
+      assistantDeferredToHuman,
+      workingHours: getSupportWorkingHoursLabel(locale),
     })
   } catch (error) {
     console.error('[support-chat] POST error:', error)

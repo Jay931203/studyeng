@@ -651,6 +651,38 @@ export default function ProfilePage() {
 
         {isAdminActive() && (
           <SurfaceCard className="p-6">
+            <SectionLabel label="ADMIN OPERATIONS" />
+
+            <div className="grid gap-3 sm:grid-cols-2">
+              <Link
+                href="/support?view=inbox"
+                className="rounded-2xl bg-[var(--bg-primary)] p-4 transition-colors hover:bg-[var(--bg-secondary)]"
+              >
+                <p className="text-sm font-semibold text-[var(--text-primary)]">
+                  OPEN SUPPORT INBOX
+                </p>
+                <p className="mt-1 text-xs text-[var(--text-muted)]">
+                  사용자 문의 확인, 답변, 상태 변경
+                </p>
+              </Link>
+
+              <a
+                href="#admin-reports"
+                className="rounded-2xl bg-[var(--bg-primary)] p-4 transition-colors hover:bg-[var(--bg-secondary)]"
+              >
+                <p className="text-sm font-semibold text-[var(--text-primary)]">
+                  JUMP TO REPORTS
+                </p>
+                <p className="mt-1 text-xs text-[var(--text-muted)]">
+                  OPEN {unresolvedCount} / FLAGS {flaggedSubtitles.length} / HIDDEN {hiddenVideos.length}
+                </p>
+              </a>
+            </div>
+          </SurfaceCard>
+        )}
+
+        {isAdminActive() && (
+          <SurfaceCard className="p-6">
             <SectionLabel label="REPORTS" />
 
             <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
@@ -697,7 +729,7 @@ export default function ProfilePage() {
         </div>
       )}
 
-      <div className="mt-6">
+      <div id="admin-reports" className="mt-6 scroll-mt-24">
         <AdminIssuesList />
       </div>
 

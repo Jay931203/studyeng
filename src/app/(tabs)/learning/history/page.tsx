@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -9,6 +8,7 @@ import {
   type LearningFeedFilterValue,
 } from '@/components/LearningFeedFilter'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import { type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import { getCategoryLabels } from '@/lib/uiTranslations'
@@ -180,8 +180,8 @@ export default function WatchHistoryPage() {
                             className="flex min-w-0 flex-1 items-center gap-3 text-left"
                           >
                             <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-xl">
-                              <Image
-                                src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                              <YouTubeThumbnail
+                                youtubeId={video.youtubeId}
                                 alt={video.title}
                                 fill
                                 sizes="80px"

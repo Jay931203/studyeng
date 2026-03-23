@@ -3,8 +3,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { PremiumModal } from '@/components/PremiumModal'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import { AppPage } from '@/components/ui/AppPage'
 import { useLearnAccessStore } from '@/stores/useLearnAccessStore'
 import { useReplayStore } from '@/stores/useReplayStore'
@@ -339,8 +339,8 @@ function ClipCard({
       }}
     >
       <div className="relative aspect-video w-full overflow-hidden">
-        <Image
-          src={`https://img.youtube.com/vi/${youtubeId}/mqdefault.jpg`}
+        <YouTubeThumbnail
+          youtubeId={youtubeId}
           alt={videoTitle}
           fill
           sizes="172px"

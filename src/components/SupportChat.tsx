@@ -34,6 +34,9 @@ const STRINGS: Record<
     waitingUser: string
     resolved: string
     open: string
+    loadError: string
+    sendError: string
+    queuedForHuman: string
   }
 > = {
   ko: {
@@ -55,6 +58,9 @@ const STRINGS: Record<
     waitingUser: '안내 완료',
     resolved: '해결됨',
     open: '접수됨',
+    loadError: '\uBB38\uC758 \uB0B4\uC5ED\uC744 \uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC5B4\uC694. \uC7A0\uC2DC \uD6C4 \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694.',
+    sendError: '\uBB38\uC758 \uC804\uC1A1\uC5D0 \uC2E4\uD328\uD588\uC5B4\uC694. \uC785\uB825\uD55C \uB0B4\uC6A9\uC740 \uADF8\uB300\uB85C \uB0A8\uACA8\uB450\uC5C8\uC5B4\uC694.',
+    queuedForHuman: '\uC790\uB3D9 \uC548\uB0B4\uAC00 \uC9C0\uAE08 \uC800\uC7A5\uB418\uC9C0 \uC54A\uC544 \uAD00\uB9AC\uC790 \uD655\uC778 \uD050\uC5D0 \uC811\uC218\uD588\uC5B4\uC694.',
   },
   ja: {
     chatTitle: 'お問い合わせ',
@@ -75,6 +81,9 @@ const STRINGS: Record<
     waitingUser: '案内済み',
     resolved: '解決済み',
     open: '受付済み',
+    loadError: 'Failed to load support messages. Please try again.',
+    sendError: 'Failed to send your message. Your draft is still here.',
+    queuedForHuman: 'Auto-reply is unavailable. Your message was queued for human review.',
   },
   'zh-TW': {
     chatTitle: '客服對話',
@@ -95,6 +104,9 @@ const STRINGS: Record<
     waitingUser: '已引導',
     resolved: '已解決',
     open: '已受理',
+    loadError: 'Failed to load support messages. Please try again.',
+    sendError: 'Failed to send your message. Your draft is still here.',
+    queuedForHuman: 'Auto-reply is unavailable. Your message was queued for human review.',
   },
   vi: {
     chatTitle: 'Chat ho tro',
@@ -115,6 +127,9 @@ const STRINGS: Record<
     waitingUser: 'Da huong dan',
     resolved: 'Da xu ly',
     open: 'Da tiep nhan',
+    loadError: 'Khong the tai noi dung ho tro. Vui long thu lai.',
+    sendError: 'Khong gui duoc tin nhan. Noi dung da duoc giu lai.',
+    queuedForHuman: 'Tra loi tu dong dang khong kha dung. Tin nhan da duoc chuyen cho nhan vien.',
   },
 }
 
@@ -126,6 +141,7 @@ interface ChatPayload {
     reply: string
   }
   persistedAssistant?: boolean
+  assistantDeferredToHuman?: boolean
 }
 
 function formatTime(timestamp: string, locale: SupportLocale) {
@@ -157,22 +173,32 @@ export function SupportChat() {
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isHydrated, setIsHydrated] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const [noticeMessage, setNoticeMessage] = useState<string | null>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
   const loadThread = useCallback(async () => {
     if (!user) return
 
-    const response = await fetch('/api/support/chat', { cache: 'no-store' })
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`)
-    }
+    try {
+      const response = await fetch(`/api/support/chat?locale=${encodeURIComponent(safeLocale)}`, {
+        cache: 'no-store',
+      })
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
 
-    const data = (await response.json()) as ChatPayload
-    setThread(data.thread)
-    setMessages(data.messages)
-    setWorkingHours(data.workingHours)
-  }, [user])
+      const data = (await response.json()) as ChatPayload
+      setThread(data.thread)
+      setMessages(data.messages)
+      setWorkingHours(data.workingHours)
+      setErrorMessage(null)
+    } catch (error) {
+      console.error('[support-chat] load failed:', error)
+      setErrorMessage(t.loadError)
+    }
+  }, [safeLocale, t.loadError, user])
 
   useEffect(() => {
     setIsHydrated(true)
@@ -211,7 +237,8 @@ export function SupportChat() {
     if (!trimmed || isLoading || !user) return
 
     setIsLoading(true)
-    setInput('')
+    setErrorMessage(null)
+    setNoticeMessage(null)
 
     try {
       const response = await fetch('/api/support/chat', {
@@ -229,28 +256,19 @@ export function SupportChat() {
 
       const data = (await response.json()) as ChatPayload
       setThread(data.thread)
-      if (data.autoReply && data.persistedAssistant === false) {
-        setMessages([
-          ...data.messages,
-          {
-            id: `local-auto-${Date.now()}`,
-            threadId: data.thread.id,
-            senderRole: 'assistant',
-            senderUserId: null,
-            content: data.autoReply.reply,
-            metadata: { automated: true, localOnly: true },
-            createdAt: new Date().toISOString(),
-          },
-        ])
-      } else {
-        setMessages(data.messages)
+      setMessages(data.messages)
+      setWorkingHours(data.workingHours)
+      setInput('')
+      if (data.assistantDeferredToHuman) {
+        setNoticeMessage(t.queuedForHuman)
       }
     } catch (error) {
       console.error('[support-chat] send failed:', error)
+      setErrorMessage(t.sendError)
     } finally {
       setIsLoading(false)
     }
-  }, [input, isLoading, safeLocale, user])
+  }, [input, isLoading, safeLocale, t.queuedForHuman, t.sendError, user])
 
   if (!isHydrated) return null
 
@@ -361,6 +379,30 @@ export function SupportChat() {
               ) : (
                 <>
                   <div className="flex-1 space-y-4 overflow-y-auto px-5 py-4">
+                    {errorMessage && (
+                      <div
+                        className="rounded-2xl border px-4 py-3 text-sm leading-relaxed text-[var(--text-primary)]"
+                        style={{
+                          borderColor: 'rgba(245, 158, 11, 0.28)',
+                          backgroundColor: 'rgba(245, 158, 11, 0.12)',
+                        }}
+                      >
+                        {errorMessage}
+                      </div>
+                    )}
+
+                    {noticeMessage && (
+                      <div
+                        className="rounded-2xl border px-4 py-3 text-sm leading-relaxed text-[var(--text-primary)]"
+                        style={{
+                          borderColor: 'rgba(var(--accent-primary-rgb), 0.28)',
+                          backgroundColor: 'rgba(var(--accent-primary-rgb), 0.12)',
+                        }}
+                      >
+                        {noticeMessage}
+                      </div>
+                    )}
+
                     {messages.length === 0 && (
                       <div className="rounded-2xl px-4 py-4 text-sm leading-relaxed text-[var(--text-primary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
                         {t.welcomeMessage}

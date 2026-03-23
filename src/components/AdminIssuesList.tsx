@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useMemo, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { seedVideos } from '@/data/seed-videos'
 import {
   useAdminStore,
@@ -48,21 +49,45 @@ function getVideoMeta(videoId: string) {
   return seedVideos.find((video) => video.id === videoId) ?? null
 }
 
+function buildIssueReplyMailto(issue: AdminIssue) {
+  if (!issue.reporterEmail) return null
+
+  const subject = encodeURIComponent(`[Shortee] Report follow-up for ${issue.videoId}`)
+  const body = encodeURIComponent(
+    [
+      'Hi,',
+      '',
+      `We reviewed your report for video ${issue.videoId}.`,
+      `Issue type: ${issue.type}`,
+      `YouTube ID: ${issue.youtubeId}`,
+      '',
+      'Reply here if you have more details to add.',
+    ].join('\n'),
+  )
+
+  return `mailto:${issue.reporterEmail}?subject=${subject}&body=${body}`
+}
+
 function IssueCard({
   issue,
   hidden,
   pending,
+  chatPending,
   onResolve,
   onToggleHidden,
+  onOpenChat,
 }: {
   issue: AdminIssue
   hidden: boolean
   pending: boolean
+  chatPending: boolean
   onResolve: () => void
   onToggleHidden: () => void
+  onOpenChat: () => void
 }) {
   const video = getVideoMeta(issue.videoId)
   const type = typeStyles[issue.type] ?? typeStyles.other
+  const replyMailto = buildIssueReplyMailto(issue)
 
   return (
     <motion.div
@@ -101,7 +126,25 @@ function IssueCard({
           </div>
         </div>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2 self-start">
+          {issue.reporterUserId && (
+            <button
+              type="button"
+              onClick={onOpenChat}
+              disabled={chatPending}
+              className="rounded-full bg-[var(--bg-card)] px-3 py-2 text-[10px] font-semibold text-[var(--text-secondary)] disabled:opacity-40"
+            >
+              {chatPending ? 'OPENING' : 'CHAT'}
+            </button>
+          )}
+          {replyMailto && (
+            <a
+              href={replyMailto}
+              className="rounded-full bg-[var(--bg-card)] px-3 py-2 text-[10px] font-semibold text-[var(--text-secondary)]"
+            >
+              EMAIL
+            </a>
+          )}
           <button
             type="button"
             onClick={onToggleHidden}
@@ -192,8 +235,10 @@ export function AdminIssuesList() {
   const resolveIssue = useAdminStore((state) => state.resolveIssue)
   const setAdminSyncError = useAdminStore((state) => state.setAdminSyncError)
   const showVideo = useAdminStore((state) => state.showVideo)
+  const router = useRouter()
 
   const [pendingVideoId, setPendingVideoId] = useState<string | null>(null)
+  const [pendingChatIssueId, setPendingChatIssueId] = useState<string | null>(null)
 
   const unresolvedIssues = useMemo(() => issues.filter((issue) => !issue.resolved), [issues])
   const resolvedCount = issues.length - unresolvedIssues.length
@@ -224,6 +269,40 @@ export function AdminIssuesList() {
       await hideVideo(videoId)
     }
     setPendingVideoId(null)
+  }
+
+  const handleOpenChat = async (issue: AdminIssue) => {
+    if (!issue.reporterUserId) {
+      setAdminSyncError('This report is missing the reporter account link.')
+      return
+    }
+
+    setPendingChatIssueId(issue.id)
+    setAdminSyncError(null)
+
+    try {
+      const response = await fetch('/api/support/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          mode: 'admin-open-thread',
+          targetUserId: issue.reporterUserId,
+          targetUserEmail: issue.reporterEmail ?? null,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+
+      const data = (await response.json()) as { thread: { id: string } }
+      router.push(`/support?view=inbox&threadId=${encodeURIComponent(data.thread.id)}`)
+    } catch (error) {
+      console.error('[admin-issues] open chat failed:', error)
+      setAdminSyncError('Could not open the support thread for this report.')
+    } finally {
+      setPendingChatIssueId(null)
+    }
   }
 
   return (
@@ -286,10 +365,12 @@ export function AdminIssuesList() {
                   issue={issue}
                   hidden={hiddenVideoIds.has(issue.videoId)}
                   pending={pendingVideoId === issue.videoId}
+                  chatPending={pendingChatIssueId === issue.id}
                   onResolve={() => resolveIssue(issue.id)}
                   onToggleHidden={() =>
                     void handleToggleHidden(issue.videoId, hiddenVideoIds.has(issue.videoId))
                   }
+                  onOpenChat={() => void handleOpenChat(issue)}
                 />
               ))}
             </AnimatePresence>

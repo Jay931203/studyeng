@@ -1,13 +1,13 @@
 'use client'
 
 import { memo } from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { type VideoData } from '@/data/seed-videos'
 import { ComprehensionBadge } from '@/components/ComprehensionBadge'
 import { getCatalogSeriesById } from '@/lib/catalog'
 import { getCategoryLabels } from '@/lib/uiTranslations'
 import { useLocaleStore } from '@/stores/useLocaleStore'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 
 interface VideoCardProps {
   video: VideoData
@@ -33,8 +33,8 @@ function VideoCardInner({ video, onClick }: VideoCardProps) {
       className="group w-full overflow-hidden rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)] transition-all"
     >
       <div className="relative aspect-video overflow-hidden">
-        <Image
-          src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+        <YouTubeThumbnail
+          youtubeId={video.youtubeId}
           alt={video.title}
           fill
           sizes="(min-width: 1280px) 22vw, (min-width: 640px) 48vw, 46vw"

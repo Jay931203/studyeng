@@ -1,10 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import {
   type CategoryId,
   type Series as SeriesType,
@@ -228,12 +228,13 @@ export default function ExploreSeriesPage() {
                       >
                         {thumbVideo && (
                           <div className="relative aspect-[2.2] overflow-hidden">
-                            <Image
-                              src={`https://img.youtube.com/vi/${thumbVideo.youtubeId}/hqdefault.jpg`}
+                            <YouTubeThumbnail
+                              youtubeId={thumbVideo.youtubeId}
                               alt={seriesItem.title}
                               fill
                               sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
                               className="object-cover"
+                              quality="hq"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">

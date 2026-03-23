@@ -10,6 +10,7 @@ import {
   type VideoData,
 } from '@/data/seed-videos'
 import { ComprehensionBadge } from '@/components/ComprehensionBadge'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
@@ -478,8 +479,8 @@ export default function ExplorePage() {
                     className="flex w-full items-center gap-3 rounded-[20px] border border-[var(--border-card)] bg-[var(--bg-card)] p-3 text-left shadow-[var(--card-shadow)]"
                   >
                     <div className="relative h-[56px] w-[100px] shrink-0 overflow-hidden rounded-xl">
-                      <Image
-                        src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                      <YouTubeThumbnail
+                        youtubeId={video.youtubeId}
                         alt={video.title}
                         fill
                         sizes="100px"
@@ -580,12 +581,13 @@ export default function ExplorePage() {
             </div>
 
             <div className="order-1 relative min-h-[168px] overflow-hidden lg:order-2 lg:min-h-full">
-              <Image
-                src={`https://img.youtube.com/vi/${spotlightVideo.youtubeId}/hqdefault.jpg`}
+              <YouTubeThumbnail
+                youtubeId={spotlightVideo.youtubeId}
                 alt={spotlightVideo.title}
                 fill
                 sizes="(min-width: 1280px) 34vw, 100vw"
                 className="object-cover"
+                quality="hq"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
               <div
@@ -628,12 +630,13 @@ export default function ExplorePage() {
                 className="w-[260px] shrink-0 overflow-hidden rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
               >
                 <div className="relative aspect-[2] overflow-hidden">
-                  <Image
-                    src={`https://img.youtube.com/vi/${item.nextVideo.youtubeId}/hqdefault.jpg`}
+                  <YouTubeThumbnail
+                    youtubeId={item.nextVideo.youtubeId}
                     alt={item.nextVideo.title}
                     fill
                     sizes="260px"
                     className="object-cover"
+                    quality="hq"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute inset-x-0 bottom-0 p-3">
@@ -667,8 +670,8 @@ export default function ExplorePage() {
                 className="w-[108px] shrink-0 overflow-hidden rounded-xl text-left"
               >
                 <div className="relative aspect-[3/5] overflow-hidden rounded-xl">
-                  <Image
-                    src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                  <YouTubeThumbnail
+                    youtubeId={video.youtubeId}
                     alt={video.title}
                     fill
                     sizes="108px"
@@ -764,12 +767,13 @@ export default function ExplorePage() {
               >
                 {thumbVideo && (
                   <div className="relative aspect-[2.2] overflow-hidden">
-                    <Image
-                      src={`https://img.youtube.com/vi/${thumbVideo.youtubeId}/hqdefault.jpg`}
+                    <YouTubeThumbnail
+                      youtubeId={thumbVideo.youtubeId}
                       alt={seriesItem.title}
                       fill
                       sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
                       className="object-cover"
+                      quality="hq"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">

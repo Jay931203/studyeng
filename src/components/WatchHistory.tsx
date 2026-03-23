@@ -1,11 +1,11 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SurfaceCard } from '@/components/ui/AppPage'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import { type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import { t as uiT, getCategoryLabels } from '@/lib/uiTranslations'
@@ -146,8 +146,8 @@ export function WatchHistory() {
                         className="flex min-w-0 flex-1 items-center gap-3 text-left"
                       >
                         <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-xl">
-                          <Image
-                            src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                          <YouTubeThumbnail
+                            youtubeId={video.youtubeId}
                             alt={video.title}
                             fill
                             sizes="80px"

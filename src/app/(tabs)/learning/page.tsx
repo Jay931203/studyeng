@@ -1,11 +1,11 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { ComprehensionBadge } from '@/components/ComprehensionBadge'
+import { YouTubeThumbnail } from '@/components/YouTubeThumbnail'
 import { TodayDashboard } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
@@ -180,8 +180,8 @@ export default function LearningPage() {
                     className="flex items-center gap-3 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-3 text-left shadow-[var(--card-shadow)]"
                   >
                     <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-xl">
-                      <Image
-                        src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                      <YouTubeThumbnail
+                        youtubeId={video.youtubeId}
                         alt={video.title}
                         fill
                         sizes="80px"

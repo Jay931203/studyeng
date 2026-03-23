@@ -1,9 +1,11 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useLocaleStore } from '@/stores/useLocaleStore'
+import { useAdminStore } from '@/stores/useAdminStore'
 import {
   FAQ_ITEMS,
   FAQ_CATEGORY_LABELS,
@@ -82,9 +84,12 @@ function FaqAccordionItem({
 
 export default function HelpCenterPage() {
   const locale = useLocaleStore((s) => s.locale)
+  const isAdminActive = useAdminStore((state) => state.isAdmin && state.adminEnabled)
+  const searchParams = useSearchParams()
   const [activeCategory, setActiveCategory] = useState<FaqCategory | 'all'>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [openItemId, setOpenItemId] = useState<string | null>(null)
+  const adminInboxRef = useRef<HTMLDivElement>(null)
 
   const filteredItems = useMemo(() => {
     let items = FAQ_ITEMS
@@ -120,6 +125,14 @@ export default function HelpCenterPage() {
     }
     return groups
   }, [activeCategory, filteredItems])
+
+  useEffect(() => {
+    if (!isAdminActive || searchParams.get('view') !== 'inbox') return
+    const timer = window.setTimeout(() => {
+      adminInboxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 120)
+    return () => window.clearTimeout(timer)
+  }, [isAdminActive, searchParams])
 
   return (
     <div className="min-h-dvh bg-[var(--bg-primary)] text-[var(--text-primary)]">
@@ -157,6 +170,33 @@ export default function HelpCenterPage() {
             {T.pageDescription[locale]}
           </p>
         </div>
+
+        {isAdminActive && (
+          <div className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]">
+              ADMIN SUPPORT
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
+              사용자 문의 답변은 여기서 처리하고, 영상 신고와 숨김 관리는 Profile의 REPORTS에서 처리합니다.
+            </p>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+              <button
+                type="button"
+                onClick={() => adminInboxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+                className="flex flex-1 items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold text-white"
+                style={{ backgroundColor: 'var(--accent-primary)' }}
+              >
+                OPEN SUPPORT INBOX
+              </button>
+              <Link
+                href="/profile#admin-reports"
+                className="flex flex-1 items-center justify-center rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3 text-sm font-semibold text-[var(--text-primary)]"
+              >
+                OPEN REPORTS
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* Search */}
         <div className="relative mb-5">
@@ -270,7 +310,9 @@ export default function HelpCenterPage() {
           </div>
         </div>
 
-        <SupportInbox />
+        <div ref={adminInboxRef}>
+          <SupportInbox />
+        </div>
       </div>
 
       {/* Floating Support Chat */}

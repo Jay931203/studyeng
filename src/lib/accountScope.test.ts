@@ -32,7 +32,10 @@ describe('accountScope', () => {
     useRecommendationStore.setState({ recentVideoIds: [], videoSignals: {} })
     useAdminStore.setState({
       isAdmin: false,
+      adminEnabled: true,
+      adminSyncError: null,
       flaggedSubtitles: [],
+      hiddenVideos: [],
       issues: [],
     })
     useDailyMissionStore.getState().resetState()
@@ -82,12 +85,21 @@ describe('accountScope', () => {
     })
     useAdminStore.setState({
       isAdmin: true,
+      adminEnabled: false,
+      adminSyncError: 'stale-admin-error',
       flaggedSubtitles: [
         {
           videoId: 'video-1',
           entryIndex: 0,
           en: 'Hello',
           flaggedAt: '2026-03-08T00:00:00.000Z',
+        },
+      ],
+      hiddenVideos: [
+        {
+          videoId: 'video-2',
+          hiddenAt: '2026-03-08T00:00:00.000Z',
+          hiddenBy: 'user-a',
         },
       ],
       issues: [
@@ -134,7 +146,10 @@ describe('accountScope', () => {
     expect(useWatchHistoryStore.getState().watchedVideoIds).toEqual([])
     expect(usePhraseStore.getState().phrases).toEqual([])
     expect(useAdminStore.getState().isAdmin).toBe(false)
+    expect(useAdminStore.getState().adminEnabled).toBe(true)
+    expect(useAdminStore.getState().adminSyncError).toBeNull()
     expect(useAdminStore.getState().flaggedSubtitles).toEqual([])
+    expect(useAdminStore.getState().hiddenVideos).toEqual([])
     expect(useAdminStore.getState().issues).toEqual([])
     expect(useDailyMissionStore.getState().lastResetDate).toBeNull()
     expect(useDailyMissionStore.getState().allCompleteBonus).toBe(false)
