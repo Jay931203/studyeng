@@ -9,3 +9,6 @@
   NEXT_PUBLIC_BILLING_ENABLED = "false"
   NEXT_PUBLIC_ENABLE_DEV_PREMIUM_OVERRIDE = "false"
   NETLIFY_NEXT_SKEW_PROTECTION = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
