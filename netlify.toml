@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+  NEXT_PUBLIC_APP_URL = "https://shortee.app"
+  NEXT_PUBLIC_SITE_URL = "https://shortee.app"
+  NEXT_PUBLIC_BILLING_ENABLED = "false"
+  NEXT_PUBLIC_ENABLE_DEV_PREMIUM_OVERRIDE = "false"
+  NETLIFY_NEXT_SKEW_PROTECTION = "true"

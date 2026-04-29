@@ -1,9 +1,9 @@
 name: Deploy Cloudflare Worker
 
 on:
-  push:
-    branches:
-      - master
+  # The current Next/OpenNext Worker bundle exceeds Cloudflare Workers Free size
+  # limits, so keep this manual until the account is upgraded or the bundle is
+  # split below the free limit.
   workflow_dispatch:
 
 concurrency:
