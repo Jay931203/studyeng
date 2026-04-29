@@ -1,8 +1,18 @@
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { config as loadEnv } from 'dotenv'
+
+loadEnv({ path: '.env.local', override: false, quiet: true })
+loadEnv({ quiet: true })
 
 const outDir = join(process.cwd(), 'out')
-const serverUrl = process.env.CAPACITOR_SERVER_URL ?? ''
+const serverUrl = process.env.CAPACITOR_SERVER_URL?.trim() ?? ''
+
+if (!serverUrl) {
+  throw new Error(
+    'CAPACITOR_SERVER_URL is required for cap:prepare. Set it in the shell or .env.local before syncing the native shell.',
+  )
+}
 
 mkdirSync(outDir, { recursive: true })
 
@@ -55,16 +65,8 @@ const html = `<!doctype html>
   <body>
     <main>
       <h1>StudyEng</h1>
-      <p>${
-        serverUrl
-          ? 'Loading the mobile app shell.'
-          : 'Set CAPACITOR_SERVER_URL before syncing this build so the native shell can open the deployed app.'
-      }</p>
-      ${
-        serverUrl
-          ? `<p style="margin-top: 12px;">If loading does not continue, open <a href="${serverUrl}">${serverUrl}</a>.</p>`
-          : ''
-      }
+      <p>Loading the mobile app shell.</p>
+      <p style="margin-top: 12px;">If loading does not continue, open <a href="${serverUrl}">${serverUrl}</a>.</p>
     </main>
   </body>
 </html>

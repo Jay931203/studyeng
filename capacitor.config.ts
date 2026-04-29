@@ -1,4 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli'
+import { config as loadEnv } from 'dotenv'
+
+loadEnv({ path: '.env.local', override: false, quiet: true })
+loadEnv({ quiet: true })
 
 const serverUrl = process.env.CAPACITOR_SERVER_URL
 

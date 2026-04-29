@@ -27,8 +27,28 @@ npm run cf:deploy
 - `Cloudflare Workers` is now scaffolded as a parallel target through OpenNext.
 - Cloudflare config lives in `wrangler.jsonc`.
 - Local Cloudflare preview should be run from `WSL/Linux` on this machine because `workerd` does not install cleanly on the current Windows ARM setup.
+- Run the Cloudflare build from a WSL home/ext4 path, not `/mnt/c/...`, or Next/OpenNext can fail on lockfile IO.
 - `src/middleware.ts` is intentionally kept for Cloudflare compatibility because the current OpenNext adapter does not support Node-style `proxy.ts` yet.
 - Keep app secrets in `.env.local`; use `.dev.vars` only for Wrangler-specific flags such as `NEXTJS_ENV=development`.
+
+### Release Checklist
+
+1. Set production URLs before any web or native release:
+   - `NEXT_PUBLIC_APP_URL`
+   - `NEXT_PUBLIC_SITE_URL`
+   - `CAPACITOR_SERVER_URL`
+2. Apply Supabase SQL migrations before deploying web or app binaries:
+   - `supabase/migrations/003_billing.sql`
+   - `supabase/migrations/004_premium_codes.sql`
+   - `supabase/migrations/006_support_chat.sql`
+   - `supabase/migrations/007_daily_view_usage.sql`
+3. Verify the release build paths:
+   - `npm run build`
+   - `npm run cf:build`
+   - `npm run cap:prepare`
+4. Only then run:
+   - `npm run cf:deploy`
+   - `npm run cap:sync`
 
 ## Key Docs
 
