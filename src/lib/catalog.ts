@@ -20,6 +20,7 @@ const EDUCATIONAL_SHORT_TITLE_PATTERNS = [
   /\b(?:\d+\s+)?(?:important\s+)?(?:phrases|expressions)\b/i,
   /\b(?:advanced phrase|tricky words?\s+in\s+english|short schwa sound|tongue twister)\b/i,
   /\b(?:confusing words?|conditional sentences?|grammar|clauses?)\b/i,
+  /\b(?:stop saying|can you guess|networking skills|business relationships)\b/i,
   /\b(?:don'?t|do not)\s+say\b.*\bin\s+english\b/i,
   /\b(?:how to say|can you say|if you can finish these phrases)\b/i,
   /\b(?:linkers for conversations|phrases you need for video calls|shortening your words)\b/i,
