@@ -115,7 +115,9 @@ export default function TabsLayout({
       {!isImmersiveRoute && (
         <div className="hidden border-r border-[var(--border-card)]/60 bg-black/15 px-5 py-6 lg:block">
           <div className="sticky top-6 h-[calc(100dvh-3rem)]">
-            <BottomNav mode="sidebar" />
+            <Suspense fallback={null}>
+              <BottomNav mode="sidebar" />
+            </Suspense>
           </div>
         </div>
       )}
@@ -133,12 +135,22 @@ export default function TabsLayout({
               bottom: 'max(72px, calc(env(safe-area-inset-bottom, 0px) + 56px))',
             }}
           >
-            <LandscapeFeedSwitcher />
+            <Suspense fallback={null}>
+              <LandscapeFeedSwitcher />
+            </Suspense>
           </div>
         )}
         <main className="flex-1 overflow-hidden">{children}</main>
-        {!isImmersiveRoute && <BottomNav />}
-        {isImmersiveRoute && !isLandscapeViewport && <BottomNav />}
+        {!isImmersiveRoute && (
+          <Suspense fallback={null}>
+            <BottomNav />
+          </Suspense>
+        )}
+        {isImmersiveRoute && !isLandscapeViewport && (
+          <Suspense fallback={null}>
+            <BottomNav />
+          </Suspense>
+        )}
       </div>
 
       <LoginGateModal
