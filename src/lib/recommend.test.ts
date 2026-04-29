@@ -4,14 +4,35 @@ import recommendationManifestData from '@/data/recommendation-manifest.json'
 import { catalogVideos } from '@/lib/catalog'
 import { getLevelAwareCandidateVideos, recommendVideos } from './recommend'
 
+const manifestById = new Map(
+  (recommendationManifestData.videos ?? []).map((feature) => [feature.id, feature]),
+)
+
+function isRecommendableCatalogVideo(video: (typeof catalogVideos)[number]) {
+  const feature = manifestById.get(video.id)
+  return (
+    feature?.qualityTier === 'ready' &&
+    feature?.recommendable !== false &&
+    feature?.externalPlaybackStatus !== 'blocked'
+  )
+}
+
 describe('recommendVideos', () => {
   it('uses saved phrase affinity to boost related categories', () => {
-    const source = catalogVideos.find((video) => video.category === 'music')
+    const source = catalogVideos.find(
+      (video) => video.category === 'music' && isRecommendableCatalogVideo(video),
+    )
     const sameCategory = catalogVideos.find(
-      (video) => video.category === 'music' && video.id !== source?.id,
+      (video) =>
+        video.category === 'music' &&
+        video.id !== source?.id &&
+        isRecommendableCatalogVideo(video),
     )
     const differentCategory = catalogVideos.find(
-      (video) => video.category === 'drama' && video.id !== source?.id,
+      (video) =>
+        video.category === 'drama' &&
+        video.id !== source?.id &&
+        isRecommendableCatalogVideo(video),
     )
 
     expect(source).toBeDefined()
@@ -33,12 +54,20 @@ describe('recommendVideos', () => {
   })
 
   it('uses completion-heavy behavior signals to favor similar clips', () => {
-    const source = catalogVideos.find((video) => video.category === 'daily')
+    const source = catalogVideos.find(
+      (video) => video.category === 'daily' && isRecommendableCatalogVideo(video),
+    )
     const sameCategory = catalogVideos.find(
-      (video) => video.category === 'daily' && video.id !== source?.id,
+      (video) =>
+        video.category === 'daily' &&
+        video.id !== source?.id &&
+        isRecommendableCatalogVideo(video),
     )
     const differentCategory = catalogVideos.find(
-      (video) => video.category === 'movie' && video.id !== source?.id,
+      (video) =>
+        video.category === 'movie' &&
+        video.id !== source?.id &&
+        isRecommendableCatalogVideo(video),
     )
 
     expect(source).toBeDefined()
@@ -88,13 +117,7 @@ describe('recommendVideos', () => {
   })
 
   it('filters out non-catalog clips even when they are passed explicitly', () => {
-    const manifestById = new Map(
-      (recommendationManifestData.videos ?? []).map((feature) => [feature.id, feature]),
-    )
-    const available = catalogVideos.find((video) => {
-      const feature = manifestById.get(video.id)
-      return feature?.recommendable !== false && feature?.externalPlaybackStatus !== 'blocked'
-    })
+    const available = catalogVideos.find(isRecommendableCatalogVideo)
     expect(available).toBeDefined()
 
     const unavailable = {
