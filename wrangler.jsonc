@@ -6,24 +6,14 @@
   "vars": {
     "NEXT_PUBLIC_APP_URL": "https://shortee.app",
     "NEXT_PUBLIC_SITE_URL": "https://shortee.app",
-    "NEXT_PUBLIC_BILLING_ENABLED": "true",
     "NEXT_PUBLIC_ENABLE_DEV_PREMIUM_OVERRIDE": "false"
   },
   "secrets": {
     "required": [
       "NEXT_PUBLIC_SUPABASE_URL",
       "NEXT_PUBLIC_SUPABASE_ANON_KEY",
-      "SUPABASE_SERVICE_ROLE_KEY",
       "DATABASE_URL",
-      "DIRECT_URL",
-      "VIEW_COUNT_SECRET",
-      "STRIPE_SECRET_KEY",
-      "STRIPE_WEBHOOK_SECRET",
-      "STRIPE_PREMIUM_MONTHLY_PRICE_ID",
-      "STRIPE_PREMIUM_YEARLY_PRICE_ID",
-      "NEXT_PUBLIC_REVENUECAT_API_KEY_APPLE",
-      "NEXT_PUBLIC_REVENUECAT_API_KEY_GOOGLE",
-      "ANTHROPIC_API_KEY"
+      "VIEW_COUNT_SECRET"
     ]
   },
   "assets": {
