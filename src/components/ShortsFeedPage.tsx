@@ -51,7 +51,14 @@ function ShortsFeedContent() {
   const seekTime = searchParams.get('t')
   const reviewPhraseId = searchParams.get('phraseId')
   const feedParam = searchParams.get('feed')
-  const feedMode: FeedMode = feedParam === 'shorts' ? 'shorts' : 'clips'
+  const requestedVideo = useMemo(
+    () => (videoId ? catalogVideos.find((video) => video.id === videoId) ?? null : null),
+    [videoId],
+  )
+  const feedMode: FeedMode =
+    feedParam === 'shorts' || (!feedParam && requestedVideo?.format === 'shorts')
+      ? 'shorts'
+      : 'clips'
   const setPlaybackOrderMode = usePlayerStore((state) => state.setPlaybackOrderMode)
 
   const entryPlaybackOrderMode =
@@ -66,6 +73,14 @@ function ShortsFeedContent() {
   useEffect(() => {
     setPlaybackOrderMode(entryPlaybackOrderMode)
   }, [entryPlaybackOrderMode, feedMode, playlistMode, seriesId, setPlaybackOrderMode, videoId])
+
+  useEffect(() => {
+    if (feedParam || requestedVideo?.format !== 'shorts') return
+
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('feed', 'shorts')
+    router.replace(`/shorts?${params.toString()}`, { scroll: false })
+  }, [feedParam, requestedVideo?.format, router, searchParams])
 
   const feedVideos = useMemo(() => {
     const baseVideos =
