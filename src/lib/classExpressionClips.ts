@@ -119,7 +119,8 @@ export async function getClipsForExpression(
     if (allowedVideoIds && !allowedVideoIds.has(youtubeId)) continue
 
     const video = getCatalogVideoByYoutubeId(youtubeId)
-    const videoTitle = video?.title ?? ''
+    if (!video) continue
+    const videoTitle = video.title
 
     clips.push({
       youtubeId,
