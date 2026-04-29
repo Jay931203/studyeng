@@ -24,7 +24,39 @@ const EDUCATIONAL_SHORT_TITLE_PATTERNS = [
   /\b(?:what'?s the difference|you are fluent|english in a snap|@instantenglishuk)\b/i,
 ]
 
-const SUPPRESSED_CATALOG_VIDEO_IDS = new Set(['shorts-fumc4cvm3Wg'])
+const SUPPRESSED_CATALOG_VIDEO_IDS = new Set([
+  // Manually blocked after product review.
+  'shorts-fumc4cvm3Wg',
+  // Exclude manifest entries that still need clip/visual review from every sync catalog path.
+  'fresh-prince-ep11',
+  'sherlock-ep25',
+  'pulp-fiction-ep9',
+  'the-intern-ep15',
+  'devil-wears-prada-ep9',
+  'home-alone-ep4',
+  'princess-bride-ep13',
+  'award-shows-ep15',
+  'award-shows-ep22',
+  'finding-nemo-dory-ep11',
+  'despicable-me-minions-ep3',
+  'despicable-me-minions-ep11',
+  'despicable-me-minions-ep15',
+  'pixar-moments-ep8',
+  'pixar-moments-ep9',
+  'inside-out-ep3',
+  'inside-out-ep6',
+  'inside-out-ep7',
+  'inside-out-ep15',
+  'up-ep17',
+  'how-to-train-your-dragon-ep3',
+  'madagascar-ep7',
+  'spider-verse-ep4',
+  'spider-verse-ep12',
+  'puss-in-boots-2-ep10',
+  'moana-ep10',
+  'coco-ep11',
+  'coco-ep12',
+])
 
 function isSuppressedCatalogVideo(video: VideoData) {
   if (SUPPRESSED_CATALOG_VIDEO_IDS.has(video.id)) return true

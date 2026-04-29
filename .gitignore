@@ -65,12 +65,33 @@ next-env.d.ts
 /scripts/fullcheck-batch2.mjs
 /scripts/retag-batch2.mjs
 /scripts/tag-batch1.mjs
+/scripts/_tmp_*
+/scripts/tmp-*
+/scripts/ki*_*.mjs
+/scripts/ki*_plot.html
+/scripts/ki*_results.json
 
 # local Codex / Playwright artifacts
 .codex-next-dev*.log
 .playwright-cli/
 tmp-vercel-inspect.json
 /output/playwright/
+/output/
+/tmp/
+/temp-audio-*.webm
+/temp-whisper-*.webm
+/temp-whisper-*.mp3
+/tmp-*.mjs
+/tmp-*.js
+/tmp-*.json
+/tmp_*.mjs
+/translations.json
+/all-words-*.txt
+/all-words-*.jsonl
+/all-segs-*.jsonl
+/final-check.txt
+/check-*.txt
+/new-video-ids.json
 
 # capacitor native local artifacts
 /android/.gradle/
