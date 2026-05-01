@@ -9,8 +9,8 @@ import type {
   SupportMessageRecord,
   SupportThreadRecord,
 } from '@/lib/supportChat'
+import { SUPPORT_EMAIL } from '@/lib/site'
 
-const SUPPORT_EMAIL = 'support@shortee.app'
 const POLL_INTERVAL_MS = 15000
 
 const STRINGS: Record<

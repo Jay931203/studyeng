@@ -1,7 +1,8 @@
 import { MetadataRoute } from 'next'
+import { getPublicSiteUrl } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://shortee.app'
+  const baseUrl = getPublicSiteUrl()
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },
     { url: `${baseUrl}/explore`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },

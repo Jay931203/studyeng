@@ -1,8 +1,10 @@
 import { MetadataRoute } from 'next'
+import { getPublicSiteUrl } from '@/lib/site'
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = getPublicSiteUrl()
   return {
     rules: { userAgent: '*', allow: '/', disallow: ['/api/', '/auth/'] },
-    sitemap: 'https://shortee.app/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }

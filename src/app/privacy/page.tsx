@@ -77,7 +77,7 @@ function PrivacyKo({ billingEnabled }: { billingEnabled: boolean }) {
       </Section>
 
       <Section title="6. 문의">
-        <p>개인정보 및 서비스 문의: support@shortee.app</p>
+        <p>개인정보 및 서비스 문의: hyunjae.park93@gmail.com</p>
       </Section>
     </>
   )
@@ -152,7 +152,7 @@ function PrivacyEn({ billingEnabled }: { billingEnabled: boolean }) {
       </Section>
 
       <Section title="6. Contact">
-        <p>Privacy and service inquiries: support@shortee.app</p>
+        <p>Privacy and service inquiries: hyunjae.park93@gmail.com</p>
       </Section>
     </>
   )

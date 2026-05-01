@@ -14,8 +14,7 @@ import {
 } from '@/data/support-faq'
 import { SupportChat } from '@/components/SupportChat'
 import { SupportInbox } from '@/components/SupportInbox'
-
-const SUPPORT_EMAIL = 'support@shortee.app'
+import { SUPPORT_EMAIL } from '@/lib/site'
 
 const CATEGORIES: Array<FaqCategory | 'all'> = [
   'all',

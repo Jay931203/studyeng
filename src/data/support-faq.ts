@@ -400,10 +400,10 @@ export const FAQ_ITEMS: FaqItem[] = [
       vi: 'Toi co the duoc hoan tien khong?',
     },
     answer: {
-      ko: '구독 취소는 즉시 가능하지만, 이미 결제된 기간에 대한 환불은 지원하지 않습니다. 환불이 필요하시면 support@shortee.app으로 문의해 주세요.',
-      ja: 'サブスクリプションの即時キャンセルは可能ですが、既に支払い済みの期間については返金に対応しておりません。返金が必要な場合はsupport@shortee.appまでお問い合わせください。',
-      'zh-TW': '可以立即取消訂閱，但已支付的期間不支援退款。如需退款，請聯繫support@shortee.app。',
-      vi: 'Ban co the huy dang ky ngay lap tuc, nhung khong ho tro hoan tien cho ky da thanh toan. Neu can hoan tien, vui long lien he support@shortee.app.',
+      ko: '구독 취소는 즉시 가능하지만, 이미 결제된 기간에 대한 환불은 지원하지 않습니다. 환불이 필요하시면 이 페이지의 1:1 문의를 이용해 주세요.',
+      ja: 'サブスクリプションの即時キャンセルは可能ですが、既に支払い済みの期間については返金に対応しておりません。返金が必要な場合は、このページの1:1サポートをご利用ください。',
+      'zh-TW': '可以立即取消訂閱，但已支付的期間不支援退款。如需退款，請使用本頁面的 1:1 客服。',
+      vi: 'Ban co the huy dang ky ngay lap tuc, nhung khong ho tro hoan tien cho ky da thanh toan. Neu can hoan tien, vui long dung ho tro 1:1 tren trang nay.',
     },
   },
   {
@@ -464,10 +464,10 @@ export const FAQ_ITEMS: FaqItem[] = [
       vi: 'Thanh toan that bai.',
     },
     answer: {
-      ko: '카드 정보가 올바른지, 잔액이 충분한지 확인해 주세요. 문제가 계속되면 다른 결제 수단을 등록하거나 support@shortee.app으로 문의해 주세요.',
-      ja: 'カード情報が正しいか、残高が十分かをご確認ください。問題が続く場合は、別の支払い方法を登録するか、support@shortee.appまでお問い合わせください。',
-      'zh-TW': '請確認信用卡資訊是否正確以及餘額是否充足。若問題持續，請更換付款方式或聯繫support@shortee.app。',
-      vi: 'Vui long kiem tra thong tin the va so du. Neu van gap loi, hay dang ky phuong thuc thanh toan khac hoac lien he support@shortee.app.',
+      ko: '카드 정보가 올바른지, 잔액이 충분한지 확인해 주세요. 문제가 계속되면 다른 결제 수단을 등록하거나 이 페이지의 1:1 문의를 이용해 주세요.',
+      ja: 'カード情報が正しいか、残高が十分かをご確認ください。問題が続く場合は、別の支払い方法を登録するか、このページの1:1サポートをご利用ください。',
+      'zh-TW': '請確認信用卡資訊是否正確以及餘額是否充足。若問題持續，請更換付款方式或使用本頁面的 1:1 客服。',
+      vi: 'Vui long kiem tra thong tin the va so du. Neu van gap loi, hay dang ky phuong thuc thanh toan khac hoac dung ho tro 1:1 tren trang nay.',
     },
   },
   {
@@ -530,10 +530,10 @@ export const FAQ_ITEMS: FaqItem[] = [
       vi: 'Ban dich phu de khong chinh xac.',
     },
     answer: {
-      ko: '번역 품질 개선을 위해 지속적으로 업데이트하고 있습니다. 오역을 발견하면 support@shortee.app으로 알려주세요.',
-      ja: '翻訳品質の向上のため、継続的に更新しています。誤訳を発見した場合はsupport@shortee.appまでお知らせください。',
-      'zh-TW': '我們持續更新以提升翻譯品質。如發現翻譯錯誤，請告知support@shortee.app。',
-      vi: 'Chung toi lien tuc cap nhat de nang cao chat luong dich. Neu phat hien loi dich, vui long bao cho support@shortee.app.',
+      ko: '번역 품질 개선을 위해 지속적으로 업데이트하고 있습니다. 오역을 발견하면 영상 신고 또는 1:1 문의로 알려주세요.',
+      ja: '翻訳品質の向上のため、継続的に更新しています。誤訳を発見した場合は、動画の報告または1:1サポートでお知らせください。',
+      'zh-TW': '我們持續更新以提升翻譯品質。如發現翻譯錯誤，請透過影片檢舉或 1:1 客服告知。',
+      vi: 'Chung toi lien tuc cap nhat de nang cao chat luong dich. Neu phat hien loi dich, vui long bao cao video hoac dung ho tro 1:1.',
     },
   },
   {
@@ -918,10 +918,10 @@ export const FAQ_ITEMS: FaqItem[] = [
       vi: 'Gui yeu cau ho tro o dau?',
     },
     answer: {
-      ko: 'support@shortee.app으로 이메일을 보내주시거나, 이 페이지의 AI 상담을 이용해 주세요.',
-      ja: 'support@shortee.appにメールを送るか、このページのAIサポートをご利用ください。',
-      'zh-TW': '請發送電子郵件至support@shortee.app，或使用本頁面的AI客服。',
-      vi: 'Gui email den support@shortee.app hoac su dung AI ho tro tren trang nay.',
+      ko: '이 페이지의 AI 상담 또는 1:1 문의를 이용해 주세요.',
+      ja: 'このページのAIサポートまたは1:1サポートをご利用ください。',
+      'zh-TW': '請使用本頁面的 AI 客服或 1:1 客服。',
+      vi: 'Vui long su dung AI ho tro hoac ho tro 1:1 tren trang nay.',
     },
   },
   {

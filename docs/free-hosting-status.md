@@ -3,8 +3,8 @@
 Current no-cost deployment status:
 
 - Vercel is not usable while the project/account is paused.
-- Cloudflare Workers Free rejects the current OpenNext Worker bundle because it exceeds the 3 MB script limit.
-- Netlify Free is the next practical target for this Next.js app because it supports App Router, SSR, route handlers/API routes, and middleware through its Next.js adapter.
+- Netlify Free is the current practical target for this Next.js app because it supports App Router, SSR, route handlers/API routes, and middleware through its Next.js adapter.
+- Until a owned custom domain is purchased and connected, use the Netlify default production URL.
 
 ## Netlify Free Setup
 

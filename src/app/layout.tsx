@@ -2,18 +2,10 @@ import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_KR, Space_Grotesk } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { getPublicSiteUrl } from '@/lib/site'
 import './globals.css'
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_APP_URL ??
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : process.env.CF_PAGES_URL
-        ? `https://${process.env.CF_PAGES_URL}`
-        : 'http://localhost:3000')
+const siteUrl = getPublicSiteUrl()
 
 const appTitle = 'Shortee - Learn English with Shorts'
 const appDescription = 'Pick up English naturally through short clips and review games'

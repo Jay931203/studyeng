@@ -82,7 +82,7 @@ function TermsKo({ billingEnabled }: { billingEnabled: boolean }) {
       </Section>
 
       <Section title="7. 문의">
-        <p>서비스 및 약관 문의: support@shortee.app</p>
+        <p>서비스 및 약관 문의: hyunjae.park93@gmail.com</p>
       </Section>
     </>
   )
@@ -162,7 +162,7 @@ function TermsEn({ billingEnabled }: { billingEnabled: boolean }) {
       </Section>
 
       <Section title="8. Contact">
-        <p>Service and terms inquiries: support@shortee.app</p>
+        <p>Service and terms inquiries: hyunjae.park93@gmail.com</p>
       </Section>
     </>
   )
