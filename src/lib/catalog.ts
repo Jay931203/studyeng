@@ -5,10 +5,14 @@ import {
   type Series,
   type VideoData,
 } from '@/data/seed-videos'
+import recommendationManifestData from '@/data/recommendation-manifest.json'
 
 interface CatalogFeature {
   id: string
   qualityTier?: string
+  externalPlaybackStatus?: string
+  recommendable?: boolean
+  workflowStatus?: string
 }
 
 const EDUCATIONAL_SHORT_TITLE_PATTERNS = [
@@ -68,6 +72,21 @@ function isSuppressedCatalogVideo(video: VideoData) {
   return EDUCATIONAL_SHORT_TITLE_PATTERNS.some((pattern) => pattern.test(video.title))
 }
 
+function isReleaseReadyCatalogFeature(feature: CatalogFeature) {
+  return (
+    feature.qualityTier === 'ready' &&
+    feature.recommendable === true &&
+    feature.workflowStatus === 'ready' &&
+    feature.externalPlaybackStatus !== 'blocked'
+  )
+}
+
+const releaseReadyVideoIds = new Set(
+  ((recommendationManifestData as { videos?: CatalogFeature[] }).videos ?? [])
+    .filter(isReleaseReadyCatalogFeature)
+    .map((feature) => feature.id),
+)
+
 // ---------------------------------------------------------------------------
 // Lazy-loaded recommendation manifest (3.4MB)
 // ---------------------------------------------------------------------------
@@ -78,14 +97,9 @@ let _manifestPromise: Promise<Set<string>> | null = null
 async function loadReadyVideoIds(): Promise<Set<string>> {
   if (_readyVideoIds) return _readyVideoIds
   if (!_manifestPromise) {
-    _manifestPromise = import('@/data/recommendation-manifest.json').then((m) => {
-      const manifest = m.default as { videos?: CatalogFeature[] }
-      _readyVideoIds = new Set(
-        (manifest.videos ?? [])
-          .filter((feature) => feature.qualityTier === 'ready')
-          .map((feature) => feature.id),
-      )
-      return _readyVideoIds
+    _manifestPromise = Promise.resolve(releaseReadyVideoIds).then((readyIds) => {
+      _readyVideoIds = readyIds
+      return readyIds
     })
   }
   return _manifestPromise
@@ -95,9 +109,9 @@ async function loadReadyVideoIds(): Promise<Set<string>> {
 // Eagerly computed catalog (uses all seed videos as fallback until manifest loads)
 // ---------------------------------------------------------------------------
 
-// For initial render before manifest loads, use all videos.
-// Once getFilteredCatalog() is called (async), it filters properly.
-const activeSeedVideos = seedVideos.filter((video) => !isSuppressedCatalogVideo(video))
+const activeSeedVideos = seedVideos.filter(
+  (video) => !isSuppressedCatalogVideo(video) && releaseReadyVideoIds.has(video.id),
+)
 const allVideoById = new Map(activeSeedVideos.map((video) => [video.id, video]))
 const allVideoByYoutubeId = new Map(activeSeedVideos.map((video) => [video.youtubeId, video]))
 

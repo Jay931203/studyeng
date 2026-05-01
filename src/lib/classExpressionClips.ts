@@ -35,6 +35,13 @@ interface IndexRowV3 {
   surfaceForm: string
 }
 
+interface TranscriptLine {
+  en?: string
+  ko?: string
+  start?: number
+  end?: number
+}
+
 export interface ClipInfo {
   youtubeId: string
   videoTitle: string
@@ -58,6 +65,7 @@ export interface ExpressionWithClips {
 let _entries: Record<string, ExpressionEntryV2> | null = null
 let _videoIndex: Record<string, IndexRowV3[]> | null = null
 let _dataPromise: Promise<void> | null = null
+const transcriptCache = new Map<string, Promise<TranscriptLine[]>>()
 
 async function ensureData() {
   if (_entries && _videoIndex) return
@@ -71,6 +79,27 @@ async function ensureData() {
     })
   }
   await _dataPromise
+}
+
+function loadTranscript(videoId: string): Promise<TranscriptLine[]> {
+  const cached = transcriptCache.get(videoId)
+  if (cached) return cached
+
+  const promise = (async () => {
+    if (typeof window === 'undefined') return []
+
+    try {
+      const response = await fetch(`/transcripts/${videoId}.json`)
+      if (!response.ok) return []
+      const data = await response.json()
+      return Array.isArray(data) ? data as TranscriptLine[] : []
+    } catch {
+      return []
+    }
+  })()
+
+  transcriptCache.set(videoId, promise)
+  return promise
 }
 
 // Build a reverse index: exprId -> [{youtubeId, row}]
@@ -121,15 +150,24 @@ export async function getClipsForExpression(
     const video = getCatalogVideoByYoutubeId(youtubeId)
     if (!video) continue
     const videoTitle = video.title
+    const transcript = await loadTranscript(youtubeId)
+    const subtitle = transcript[row.sentenceIdx]
+    if (
+      typeof subtitle?.start !== 'number' ||
+      typeof subtitle.end !== 'number' ||
+      subtitle.end <= subtitle.start
+    ) {
+      continue
+    }
 
     clips.push({
       youtubeId,
       videoTitle,
-      sentenceEn: row.en,
-      sentenceKo: row.ko,
+      sentenceEn: subtitle.en ?? row.en,
+      sentenceKo: subtitle.ko ?? row.ko,
       surfaceForm: row.surfaceForm ?? exprId,
-      start: 0,
-      end: 0,
+      start: subtitle.start,
+      end: subtitle.end,
       sentenceIdx: row.sentenceIdx,
     })
   }

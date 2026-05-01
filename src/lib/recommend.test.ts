@@ -12,7 +12,8 @@ function isRecommendableCatalogVideo(video: (typeof catalogVideos)[number]) {
   const feature = manifestById.get(video.id)
   return (
     feature?.qualityTier === 'ready' &&
-    feature?.recommendable !== false &&
+    feature?.recommendable === true &&
+    feature?.workflowStatus === 'ready' &&
     feature?.externalPlaybackStatus !== 'blocked'
   )
 }

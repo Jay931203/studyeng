@@ -354,16 +354,22 @@ export function PremiumModal({
       return
     }
 
-    if (native && nativePackages.length > 0) {
+    if (native) {
+      if (nativePackages.length === 0) {
+        setErrorMessage(t.errorPayment)
+        return
+      }
+
       const pkg = nativePackages.find((p) =>
         selectedPlan === 'yearly'
           ? p.packageType === 'ANNUAL'
           : p.packageType === 'MONTHLY',
       ) ?? nativePackages[0]
       void handleNativePurchase(pkg)
-    } else {
-      void handleWebCheckout()
+      return
     }
+
+    void handleWebCheckout()
   }
 
   return (

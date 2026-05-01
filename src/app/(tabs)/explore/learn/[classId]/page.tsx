@@ -23,6 +23,10 @@ import { getLocalizedMeaning, getLocalizedClassTitle } from '@/lib/localeUtils'
 
 type ExpressionClass = (typeof expressionClasses)[number]
 
+function getEffectiveLearnLevel(level: string) {
+  return level === 'C2' ? 'C1' : level
+}
+
 const TRANSLATIONS: Record<SupportedLocale, {
   catFunction: string
   catGrammar: string
@@ -588,6 +592,7 @@ export default function ClassDetailPage() {
   const [showPremiumModal, setShowPremiumModal] = useState(false)
 
   const tx = TRANSLATIONS[locale]
+  const effectiveLearnLevel = getEffectiveLearnLevel(currentLevel)
 
   const cls: ExpressionClass | undefined = useMemo(
     () => expressionClasses.find((entry) => entry.id === classId),
@@ -647,7 +652,7 @@ export default function ClassDetailPage() {
     ? Math.min(savedProgress.lastIndex, Math.max(0, replayQueue.length - 1))
     : 0
   const hasResume = Boolean(savedProgress && replayQueue.length > 0 && resumeIndex > 0)
-  const isLevelMismatch = cls ? cls.level !== currentLevel : false
+  const isLevelMismatch = cls ? cls.level !== effectiveLearnLevel : false
   const canUseClassToday = canAccessClassToday(classId, isPremium)
   const hasSessionRemaining = hasFreeSessionRemaining(isPremium)
   const unlockedIndex = isPremium

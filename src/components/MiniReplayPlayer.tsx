@@ -279,6 +279,7 @@ const MiniPlayerInner = forwardRef<
   const activeSequenceRef = useRef<PlaybackSequence>({ segments: [], totalDuration: 0 })
   const activeSegmentIndexRef = useRef(0)
   const sequenceFinishedRef = useRef(false)
+  const autoAdvanceOnFinishRef = useRef(true)
   const onActiveLineChangeRef = useRef(onActiveLineChange)
   onActiveLineChangeRef.current = onActiveLineChange
 
@@ -338,15 +339,30 @@ const MiniPlayerInner = forwardRef<
       setProgress(1)
       setIsPlaying(false)
       sequenceFinishedRef.current = true
+
+      const replayState = useReplayStore.getState()
+      if (
+        autoAdvanceOnFinishRef.current &&
+        replayState.clip?.source === 'learn' &&
+        replayState.queue.length > 0
+      ) {
+        advanceQueue()
+      }
     },
-    [clearMonitor, setIsPlaying, setProgress],
+    [advanceQueue, clearMonitor, setIsPlaying, setProgress],
   )
 
   const startSequenceFromIndex = useCallback(
-    (player: YT.Player, sequence: PlaybackSequence, segmentIndex: number) => {
+    (
+      player: YT.Player,
+      sequence: PlaybackSequence,
+      segmentIndex: number,
+      options: { autoAdvanceOnFinish?: boolean } = {},
+    ) => {
       const targetSegment = sequence.segments[segmentIndex]
       if (!targetSegment) return
 
+      autoAdvanceOnFinishRef.current = options.autoAdvanceOnFinish ?? true
       activeSequenceRef.current = sequence
       activeSegmentIndexRef.current = segmentIndex
       sequenceFinishedRef.current = false
@@ -466,12 +482,13 @@ const MiniPlayerInner = forwardRef<
                 end: playbackWindow.end,
                 lineId: 'manual-replay',
               },
-            ],
-            totalDuration: Math.max(0.01, playbackWindow.end - playbackWindow.start),
-          },
-          0,
-        )
-      },
+          ],
+          totalDuration: Math.max(0.01, playbackWindow.end - playbackWindow.start),
+        },
+        0,
+        { autoAdvanceOnFinish: false },
+      )
+    },
     }),
     [setIsPlaying, startSequenceFromIndex],
   )

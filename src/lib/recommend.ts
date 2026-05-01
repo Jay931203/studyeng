@@ -52,6 +52,7 @@ interface RecommendationFeature {
   externalPlaybackStatus?: string
   qualityTier?: string
   recommendable?: boolean
+  workflowStatus?: string
   titleTokens?: string[]
   subtitleTokens?: string[]
   topicTokens?: string[]
@@ -233,6 +234,7 @@ function buildFallbackFeature(video: VideoData): RecommendationFeature {
     externalPlaybackStatus: 'unchecked',
     qualityTier: 'candidate',
     recommendable: true,
+    workflowStatus: 'candidate',
     titleTokens,
     subtitleTokens,
     topicTokens: [...new Set([...titleTokens, ...subtitleTokens])].slice(0, 24),
@@ -250,7 +252,8 @@ function getFeature(video: VideoData) {
 function isRecommendableFeature(feature: RecommendationFeature) {
   return (
     feature.qualityTier === 'ready' &&
-    feature.recommendable !== false &&
+    feature.recommendable === true &&
+    feature.workflowStatus === 'ready' &&
     feature.externalPlaybackStatus !== 'blocked'
   )
 }
@@ -712,8 +715,13 @@ export function seriesPlaylist(
   const rotated =
     startIdx > 0 ? [...episodes.slice(startIdx), ...episodes.slice(0, startIdx)] : episodes
   const seriesIds = new Set(episodes.map((video) => video.id))
+  const seedFormat = rotated[0]?.format
   const others = seedVideos.filter(
-    (video) => !video.inactive && !seriesIds.has(video.id) && isRecommendableFeature(getFeature(video)),
+    (video) =>
+      !video.inactive &&
+      video.format === seedFormat &&
+      !seriesIds.has(video.id) &&
+      isRecommendableFeature(getFeature(video)),
   )
 
   return [

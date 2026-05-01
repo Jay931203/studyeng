@@ -646,7 +646,10 @@ function VideoFeedInner({
         }
       }
 
-    if (repeatMode === 'off') return
+    if (repeatMode === 'off') {
+      moveToNextVideo()
+      return
+    }
 
     const targetCount = repeatMode === 'x2' ? 2 : 3
     const newCount = currentRepeatCount + 1

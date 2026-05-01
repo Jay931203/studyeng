@@ -16,6 +16,10 @@ import expressionClasses from '@/data/expression-classes.json'
 type ExpressionClass = (typeof expressionClasses)[number]
 type Category = 'all' | 'function' | 'grammar' | 'situation' | 'level'
 
+function getEffectiveLearnLevel(level: string) {
+  return level === 'C2' ? 'C1' : level
+}
+
 const TRANSLATIONS: Record<SupportedLocale, {
   catAll: string
   catFunction: string
@@ -158,6 +162,7 @@ export default function LearnPage() {
   const [showPremiumModal, setShowPremiumModal] = useState(false)
 
   const tx = TRANSLATIONS[locale]
+  const effectiveLearnLevel = getEffectiveLearnLevel(currentLevel)
   const activeClassId = getActiveClassForToday()
   const canStartNewSession = hasFreeSessionRemaining(isPremium)
 
@@ -177,7 +182,7 @@ export default function LearnPage() {
 
   const filtered = useMemo(() => {
     let result: ExpressionClass[] = expressionClasses.filter(
-      (entry) => entry.level === currentLevel,
+      (entry) => entry.level === effectiveLearnLevel,
     )
 
     if (activeCategory !== 'all') {
@@ -185,7 +190,7 @@ export default function LearnPage() {
     }
 
     return result
-  }, [activeCategory, currentLevel])
+  }, [activeCategory, effectiveLearnLevel])
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -268,7 +273,7 @@ export default function LearnPage() {
       </div>
 
       <p className="mb-4 text-xs text-[var(--text-muted)]">
-        {tx.levelClassCount(currentLevel, filtered.length)}
+        {tx.levelClassCount(effectiveLearnLevel, filtered.length)}
       </p>
 
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
